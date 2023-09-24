@@ -37,6 +37,16 @@ Demo to drive RGB Screen.
 
 Demo with OV5640 camera and 480x272 rgb_screen.
 
+### ddr_test
+
+An example to test onboard ddr memory. 
+Burn the biststream via GAO and see the result via GAO.
+
+![ddr_test](./.assets/ddr_test.png)
+
+`init_calib_complete` is ddr initialization singal, `one` means initializing success.
+`error_int` signal is the ddr check result. `zero` means no error.
+
 ### Pcie
 
 Pcie Demo. Read its PDF for more information.

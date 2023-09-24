@@ -1,0 +1,14 @@
+<?xml version="1" encoding="UTF-8"?>
+<GAO_CONFIG>
+    <Version>3.0</Version>
+    <Mode>Lite</Mode>
+    <AoCore_Lite index="0" sample_clock="memory_clk" trig_type="0" capture_amount="1024" implemention="0" input_register_enabled="1" capture_init_data_enabled="1" module_name="top">
+        <SignalList>
+            <Signal>clk50m</Signal>
+            <Signal>init_calib_complete_d</Signal>
+            <Signal>error_int2</Signal>
+            <Signal>error_int1</Signal>
+        </SignalList>
+    </AoCore_Lite>
+    <GAO_ID>0011110010110000</GAO_ID>
+</GAO_CONFIG>
