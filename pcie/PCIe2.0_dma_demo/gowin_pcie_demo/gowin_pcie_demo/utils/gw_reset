@@ -1,0 +1,15 @@
+#!/bin/sh
+
+dev=`lspci | grep -e "GOWIN" -e "22c2:1100" -e "Gowin" | awk  '{print $1}'`
+
+[ -n "${dev}" ] && {
+	lsmod | grep -q gowin_demo && rmmod gowin_demo
+
+	echo "pci rescan : $dev"
+	utils/pcirescan "${dev}"
+
+	sleep 3
+
+	insmod ./driver/gowin_demo.ko
+	lspci | grep -e Gowin -e GOWIN
+}

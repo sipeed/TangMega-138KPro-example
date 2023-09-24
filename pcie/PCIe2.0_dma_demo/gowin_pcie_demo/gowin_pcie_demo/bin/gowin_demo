@@ -1,0 +1,111 @@
+#!/bin/bash
+
+bindir="$(dirname $0)"
+
+clear
+
+echo -e '\e[36m###########################################################################'
+echo -e '\e[36m#                                                                         #'
+echo -e '\e[36m# \e[36m                                   /\      /\                          \e[36m #'
+echo -e '\e[36m# \e[36m                                  /**\    /**\                         \e[36m #'
+echo -e '\e[36m# \e[36m                                 /\**/\  /\**/\                        \e[36m #'
+echo -e '\e[36m# \e[36m                                /**\/**\/**\/**\                       \e[36m #'
+echo -e '\e[36m# \e[34m    ,ad###ba,     ,ad###ba,    /\\\e[36m**/\**\e[34m/\\\e[36m**/\**\e[34m/\   ###  ####.    ### \e[36m  #'
+echo -e '\e[36m# \e[34m   ####"""#      ####"""####  /##\\\e[36m/**\\\e[34m/##\\\e[36m/**\\\e[34m/##\  ###  #####.   ### \e[36m  #'
+echo -e '\e[36m# \e[34m  ###"          ###"     "### \###\\\e[36m**\e[34m/####\\\e[36m**\e[34m/###/  ###  ######.  ### \e[36m  #'
+echo -e '\e[36m# \e[34m  ###     ..... ###       ###  \###\/######\/###/   ###  ###`###. ### \e[36m  #'
+echo -e '\e[36m# \e[34m  ###     ##### ###       ###   \######/\######/    ###  ### `###.### \e[36m  #'
+echo -e '\e[36m# \e[34m  ###,     ,### ###,     ,###    \####/  \####/     ###  ###  `###### \e[36m  #'
+echo -e '\e[36m# \e[34m   ####...####   ####...####      \##/    \##/      ###  ###   `##### \e[36m  #'
+echo -e '\e[36m# \e[34m    `"Y###Y"`     `"Y###Y"`        \/      \/       ###  ###    `#### \e[36m  #'
+echo -e '\e[36m#                                                                         #'
+echo -e '\e[36m###########################################################################\e[0m'
+
+dev=$(lspci -d 22c2:1100)
+
+[ -z "$dev" ] && {
+    echo "Could not find the Gowin's PCIe demo device."
+    exit 1
+}
+
+echo -e "Find PCIe device:\n$dev\n"
+
+grep -e 'Gowin' -e 'GOWIN'  /usr/share/misc/pci.ids -q || {
+  sudo sed -i '/Illegal Vendor ID/i\
+22c2  Gowin Semiconductor Corporation' /usr/share/misc/pci.ids
+}
+
+lsmod | grep -q 'gowin_demo' || {
+    sudo insmod ${bindir}/../driver/gowin_demo.ko
+}
+
+
+m=$1
+b=$2
+
+[ -z "$m" -o -z "$b" ] && {
+
+echo '*  Test mode:'
+echo '1. Performance test for copy_to_host'
+echo '2. Performance test for copy_to_card'
+
+m=0
+echo -n "Please enter your choice: 1 or 2:  "
+while true; do
+echo -n -e "\b \b"
+read -n 1 m
+[ $m -gt 0 -a $m -lt 3 ] 2>/dev/null && break
+done
+echo ''
+
+echo '*  Block size (bytes) :'
+echo '1. 256  2. 512  3. 1024  4. 2048  5. 4096 '
+echo -n "Please enter your choice: 1 ~ 5:  "
+b=0
+while true; do
+echo -n -e "\b \b"
+read -n 1 b
+[ $b -gt 0 -a $b -lt 6 ] 2>/dev/null && break
+done
+echo ''
+}
+
+# mode="rx"
+# [ "$m" == "1"] && mdoe="tx"
+case $m in
+1)
+    mode="c2h"
+    ;;
+*)
+    mode="h2c"
+    ;;
+esac
+
+case $b in
+1)
+    size=64
+    loop=1000000
+    ;;    
+2)
+    size=128
+    loop=500000
+    ;;    
+3)
+    size=256
+    loop=250000
+    ;;    
+4)
+    size=512
+    loop=125000
+    ;;    
+*)
+    size=1024
+    loop=62500
+    ;;    
+esac
+
+sudo ${bindir}/dma_demo ${mode} ${size} ${loop}
+
+#echo "mode : $m, block size: $b  $(dirname $0)"
+
+

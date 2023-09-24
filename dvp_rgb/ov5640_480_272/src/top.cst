@@ -1,0 +1,136 @@
+IO_LOC "clk" P16;
+IO_LOC "rst_n" G16;
+IO_LOC "sys_run" J14;
+IO_LOC "cam_run" R26;
+IO_LOC "rst_led" L20;
+IO_LOC "sys_led" M25;
+IO_LOC "clk_out" U22;
+
+IO_LOC "i2c_sel[0]" N19;
+IO_LOC "i2c_sel[1]" P19;
+IO_LOC "i2c_sel[2]" P26;
+
+//`define pmod_camera
+
+//`ifdef pmod_camera
+
+//IO_LOC "cmos_scl" H15;
+//IO_LOC "cmos_sda" C24;
+
+//IO_LOC "cmos_vsync" B24;
+//IO_LOC "cmos_href" H14;
+
+//IO_LOC "cmos_pclk" L18;
+//IO_LOC "cmos_xclk" E25;
+
+//IO_LOC "cmos_db[0]" A18;
+//IO_LOC "cmos_db[1]" A20;
+//IO_LOC "cmos_db[2]" A17;
+//IO_LOC "cmos_db[3]" B20;
+//IO_LOC "cmos_db[4]" A19;
+//IO_LOC "cmos_db[5]" B21;
+//IO_LOC "cmos_db[6]" B19;
+//IO_LOC "cmos_db[7]" C21;
+
+//`else
+
+IO_LOC "cmos_scl" K25;
+IO_LOC "cmos_sda" K26;
+IO_LOC "cmos_vsync" G17;
+
+IO_LOC "cmos_href" E16;
+IO_LOC "cmos_pclk" D20;
+IO_LOC "cmos_xclk" C17;
+IO_LOC "cmos_rst_n" F17;
+IO_LOC "cmos_pwdn" D16;
+
+IO_LOC "cmos_db[0]" D21;
+IO_LOC "cmos_db[1]" A22;
+IO_LOC "cmos_db[2]" B22;
+IO_LOC "cmos_db[3]" E21;
+IO_LOC "cmos_db[4]" E20;
+IO_LOC "cmos_db[5]" D18;
+IO_LOC "cmos_db[6]" C18;
+IO_LOC "cmos_db[7]" B17;
+
+//`endif
+
+IO_LOC "lcd_dclk" H21;
+IO_LOC "lcd_hs" H22;
+IO_LOC "lcd_vs" A23;
+IO_LOC "lcd_de" A24;
+
+IO_LOC "lcd_g[5]" J16;
+IO_LOC "lcd_g[4]" K15;
+IO_LOC "lcd_g[3]" F22;
+IO_LOC "lcd_g[2]" G22;
+IO_LOC "lcd_g[1]" G21;
+IO_LOC "lcd_g[0]" G20;
+
+IO_LOC "lcd_b[5]" F20;
+IO_LOC "lcd_b[4]" G19;
+IO_LOC "lcd_b[3]" F19;
+IO_LOC "lcd_b[2]" F18;
+IO_LOC "lcd_b[1]" M17;
+IO_LOC "lcd_b[0]" M16;
+
+IO_LOC "lcd_r[5]" H19;
+IO_LOC "lcd_r[4]" J19;
+IO_LOC "lcd_r[3]" G25;
+IO_LOC "lcd_r[2]" H18;
+IO_LOC "lcd_r[1]" J18;
+IO_LOC "lcd_r[0]" K17;
+
+//======================================
+IO_PORT "clk" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "rst_n" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "sys_run" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "cam_run" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "rst_led" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "clk_out" BANK_VCCIO=3.3 PULL_MODE=NONE;
+
+IO_PORT "cmos_scl" BANK_VCCIO=3.3 PULL_MODE=UP;
+IO_PORT "cmos_sda" BANK_VCCIO=3.3 PULL_MODE=UP;
+IO_PORT "cmos_vsync" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "cmos_href" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "cmos_pclk" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "cmos_xclk" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "cmos_rst_n" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "cmos_pwdn" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "cmos_db[0]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "cmos_db[1]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "cmos_db[2]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "cmos_db[3]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "cmos_db[4]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "cmos_db[5]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "cmos_db[6]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "cmos_db[7]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+
+IO_PORT "lcd_dclk" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "lcd_hs"   BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "lcd_vs"   BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "lcd_de"   BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "lcd_r[0]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "lcd_r[1]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "lcd_r[2]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "lcd_r[3]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "lcd_r[4]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "lcd_r[5]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+
+IO_PORT "lcd_g[0]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "lcd_g[1]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "lcd_g[2]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "lcd_g[3]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "lcd_g[4]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "lcd_g[5]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+
+IO_PORT "lcd_b[0]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "lcd_b[1]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "lcd_b[2]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "lcd_b[3]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "lcd_b[4]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "lcd_b[5]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+
+IO_PORT "i2c_sel[0]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "i2c_sel[1]" BANK_VCCIO=3.3 PULL_MODE=NONE;
+IO_PORT "i2c_sel[2]" BANK_VCCIO=3.3 PULL_MODE=NONE;

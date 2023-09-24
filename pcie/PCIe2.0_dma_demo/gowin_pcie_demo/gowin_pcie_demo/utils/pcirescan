@@ -1,0 +1,49 @@
+#!/bin/bash
+
+dev=$1
+
+syspath='/sys/bus/pci/devices'
+
+if [ -z "$dev" ]; then
+    echo "Error: no device specified"
+    exit 1
+fi
+
+if [ ! -e "$syspath/$dev" ]; then
+    dev="0000:$dev"
+fi
+
+if [ ! -e "$syspath/$dev" ]; then
+    echo "Error: device $dev not found"
+    exit 1
+fi
+
+port=$(basename $(dirname $(readlink "$syspath/$dev")))
+
+if [ ! -e "$syspath/$port" ]; then
+    echo "Error: device $port not found"
+    exit 1
+fi
+
+echo "Removing $dev..."
+
+echo 1 > "$syspath/$dev/remove"
+
+sleep 1
+
+echo "Performing hot reset of port $port..."
+
+bc=$(setpci -s $port BRIDGE_CONTROL)
+
+echo "Bridge control:" $bc
+
+setpci -s $port BRIDGE_CONTROL=$(printf "%04x" $(("0x$bc" | 0x40)))
+sleep 0.01
+setpci -s $port BRIDGE_CONTROL=$bc
+sleep 0.5
+
+# read -p 'Press ENTER' nnn
+
+echo "Rescanning bus..."
+
+echo 1 > "$syspath/$port/rescan"
