@@ -5,7 +5,7 @@
 //Part Number: GW5AST-LV138FPG676AC1/I0
 //Device: GW5AST-138B
 //Device Version: B
-//Created Time: Wed Oct 11 18:31:48 2023
+//Created Time: Wed Oct 11 22:28:52 2023
 
 module GMII_pll (clkout0, clkout1, clkin);
 

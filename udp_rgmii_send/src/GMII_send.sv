@@ -34,6 +34,9 @@ enum {IDLE, CHECK_SUM, PACKET_HEAD, SEND_MAC, SEND_HEADER, SEND_DATA, SEND_CRC,D
 reg [ 3:0] state;
 reg [10:0] send_cnt;
 
+wire [31:0] 	crc_data;
+reg 		 	crc_en;
+
 always@(posedge GMII_GTXCLK)begin
 	if(!rst_n)begin
 		send_cnt 	<= 'd0;
@@ -42,7 +45,6 @@ always@(posedge GMII_GTXCLK)begin
 	else
 		case(state)
 			IDLE:begin
-				crc_rst 		<= 'b1;
 				send_cnt 		<= 'd0;
 
 				GMII_TXEN 		<= 'b0;
@@ -66,7 +68,6 @@ always@(posedge GMII_GTXCLK)begin
 			CHECK_SUM:begin  //----------生成包头的校验和
 				send_cnt <= (send_cnt == 2) ? 0 : send_cnt + 1; // 纯计数，未发送
 				
-				crc_rst 		<= 'b0;
 				case(send_cnt)
 					'd0: check_buffer <= ((packet_header[0][15:0]+packet_header[0][31:16])+(packet_header[1][15:0]
 						+packet_header[1][31:16]))+(((packet_header[2][15:0]+packet_header[2][31:16])+((packet_header[3][15:0]
@@ -105,11 +106,11 @@ always@(posedge GMII_GTXCLK)begin
 			end
 
 			SEND_DATA:begin //-----------发送数据包
-				send_cnt 		<= (send_cnt == DATA_SIZE) ? 0 :send_cnt + 'b1;
+				send_cnt 		<= (send_cnt == DATA_SIZE-1) ? 0 :send_cnt + 'b1;
 
-				GMII_TXD 		<= send_cnt[7:0]; // 重复测试数据
+				GMII_TXD 		<= 16'HF0; // 重复测试数据
 
-				state 			<= (send_cnt == DATA_SIZE) ? SEND_CRC: state;
+				state 			<= (send_cnt == DATA_SIZE-1) ? SEND_CRC: state;
 			end
 
 			SEND_CRC:begin //------------发送CRC包
@@ -151,12 +152,10 @@ end
 //////////////////// 			      CRC校验  		        /////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
-wire [31:0] 	crc_data;
-reg 		 	crc_en;
-reg 			crc_rst;
+
 crc crc32_m0(
 	.Clk		(~GMII_GTXCLK 	), 
-	.Reset		(crc_rst 		), 
+	.Reset		(1'b0 			), 
 	.Data_in	(GMII_TXD 		), 
 	.Enable		(crc_en 		), 
 	.Crc		(crc_data 		),

@@ -7,6 +7,7 @@
     <FileList>
         <File path="src/GMII_send.sv" type="file.verilog" enable="1"/>
         <File path="src/crc.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_ddr/GMII2RGMII.v" type="file.verilog" enable="1"/>
         <File path="src/gowin_pll/GMII_pll.v" type="file.verilog" enable="1"/>
         <File path="src/top.sv" type="file.verilog" enable="1"/>
         <File path="src/top.cst" type="file.cst" enable="1"/>

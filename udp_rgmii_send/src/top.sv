@@ -1,6 +1,6 @@
 module top#(
-	parameter BOARD_MAC 	= 48'h03_08_35_01_AE_C2 		,//开发板MAC地址
-	parameter BOARD_IP 		= {8'd192,8'd168,8'd3,8'd2}	,//开发板IP地址
+	parameter BOARD_MAC 	= 48'h11_45_14_19_19_81 		,//开发板MAC地址
+	parameter BOARD_IP 		= {8'd192,8'd168,8'd3,8'd2}	, 	//开发板IP地址
 	parameter BOARD_PORT	= 16'h8000, 					 //开发板IP地址-端口 
 	parameter DES_MAC 		= 48'hff_ff_ff_ff_ff_ff 		,//目的MAC地址
 	parameter DES_IP 		= {8'd192,8'd168,8'd3,8'd3} 	,//目的IP地址
@@ -26,7 +26,7 @@ GMII_pll GMII_pll_m0(
 	.clkin 		(sys_clk 	 	),
 	.clkout0 	(RGMII_GTXCLK 	),
 	.clkout1 	(PHY_CLK 		)
-	);
+	);	
 
 wire GMII_TXEN;
 wire [7:0] GMII_TXD;
@@ -51,45 +51,18 @@ GMII_send #(
 //////////////////// 			    GMII 2 RGMII	        /////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
-ODDR#(
-	.TXCLK_POL (1'B0 		)
-	) GMII2RGMII_m0(
-	.CLK 	(RGMII_GTXCLK 	),
-	.D0 	(GMII_TXD[0] 	),
-	.D1 	(GMII_TXD[4] 	),
-	.Q0 	(RGMII_TXD[0] 	)
+reg [7:0] GMII_TXD_R;
+always@(posedge RGMII_GTXCLK) GMII_TXD_R <= GMII_TXD;
+
+GMII2RGMII GMII2RGMII_m0(
+	.clk 		(RGMII_GTXCLK 		),
+	.din 		(GMII_TXD_R 		),
+	.q 			(RGMII_TXD 			)
 	);
 
-ODDR#(
-	.TXCLK_POL (1'B0 		)
-	) GMII2RGMII_m1(
-	.CLK 	(RGMII_GTXCLK 	),
-	.D0 	(GMII_TXD[1] 	),
-	.D1 	(GMII_TXD[5] 	),
-	.Q0 	(RGMII_TXD[1] 	)
-	);
-
-ODDR#(
-	.TXCLK_POL (1'B0 		)
-	) GMII2RGMII_m2(
-	.CLK 	(RGMII_GTXCLK 	),
-	.D0 	(GMII_TXD[2] 	),
-	.D1 	(GMII_TXD[6] 	),
-	.Q0 	(RGMII_TXD[2] 	)
-	);
-
-ODDR#(
-	.TXCLK_POL (1'B0 		)
-	) GMII2RGMII_m3(
-	.CLK 	(RGMII_GTXCLK 	),
-	.D0 	(GMII_TXD[3] 	),
-	.D1 	(GMII_TXD[7] 	),
-	.Q0 	(RGMII_TXD[3] 	)
-	);
-
-reg GMII_TXEN_D0;
-always@(posedge RGMII_GTXCLK) GMII_TXEN_D0 <= GMII_TXEN;
-always@(posedge RGMII_GTXCLK) RGMII_TXEN <= GMII_TXEN_D0;
+reg [2:0] GMII_TXEN_R;
+always@(posedge RGMII_GTXCLK) GMII_TXEN_R <= {GMII_TXEN_R[1:0],GMII_TXEN};
+always@(posedge RGMII_GTXCLK) RGMII_TXEN <= GMII_TXEN_R[2];
 
 assign RGMII_RST_N = rst_n;
 
