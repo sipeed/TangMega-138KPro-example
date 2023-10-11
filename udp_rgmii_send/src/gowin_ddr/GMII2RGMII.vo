@@ -1,0 +1,74 @@
+//Copyright (C)2014-2023 Gowin Semiconductor Corporation.
+//All rights reserved.
+//File Title: Post-PnR Simulation Model file
+//GOWIN Version: V1.9.9 Beta-5
+//Created Time: Sun Oct 01 01:10:21 2023
+
+`timescale 100 ps/100 ps
+module GMII2RGMII(
+	din,
+	clk,
+	q
+);
+input [7:0] din;
+input clk;
+output [3:0] q;
+wire GND;
+wire VCC;
+wire clk;
+wire [7:0] din;
+wire \oddr_gen[0].oddr_inst_1_Q1 ;
+wire \oddr_gen[1].oddr_inst_1_Q1 ;
+wire \oddr_gen[2].oddr_inst_1_Q1 ;
+wire \oddr_gen[3].oddr_inst_1_Q1 ;
+wire [3:0] q;
+VCC VCC_cZ (
+  .V(VCC)
+);
+GND GND_cZ (
+  .G(GND)
+);
+GSR GSR (
+	.GSRI(VCC)
+);
+ODDR \oddr_gen[0].oddr_inst  (
+	.D0(din[0]),
+	.D1(din[4]),
+	.CLK(clk),
+	.TX(GND),
+	.Q0(q[0]),
+	.Q1(\oddr_gen[0].oddr_inst_1_Q1 )
+);
+defparam \oddr_gen[0].oddr_inst .INIT=1'b0;
+defparam \oddr_gen[0].oddr_inst .TXCLK_POL=1'b0;
+ODDR \oddr_gen[1].oddr_inst  (
+	.D0(din[1]),
+	.D1(din[5]),
+	.CLK(clk),
+	.TX(GND),
+	.Q0(q[1]),
+	.Q1(\oddr_gen[1].oddr_inst_1_Q1 )
+);
+defparam \oddr_gen[1].oddr_inst .INIT=1'b0;
+defparam \oddr_gen[1].oddr_inst .TXCLK_POL=1'b0;
+ODDR \oddr_gen[2].oddr_inst  (
+	.D0(din[2]),
+	.D1(din[6]),
+	.CLK(clk),
+	.TX(GND),
+	.Q0(q[2]),
+	.Q1(\oddr_gen[2].oddr_inst_1_Q1 )
+);
+defparam \oddr_gen[2].oddr_inst .INIT=1'b0;
+defparam \oddr_gen[2].oddr_inst .TXCLK_POL=1'b0;
+ODDR \oddr_gen[3].oddr_inst  (
+	.D0(din[3]),
+	.D1(din[7]),
+	.CLK(clk),
+	.TX(GND),
+	.Q0(q[3]),
+	.Q1(\oddr_gen[3].oddr_inst_1_Q1 )
+);
+defparam \oddr_gen[3].oddr_inst .INIT=1'b0;
+defparam \oddr_gen[3].oddr_inst .TXCLK_POL=1'b0;
+endmodule

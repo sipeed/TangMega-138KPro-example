@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW5AST-138B" package="FCPBGA676A" speed="1" partNumber="GW5AST-LV138FPG676AC1/I0"/>
+    <FileList>
+        <File path="D:/Gowin/Gowin_V1.9.9Beta-5/IDE/ipcore/DDR/data/ddr_138k.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="1"/>
+        <Option type="include_path" value="D:/Gowin/Gowin_V1.9.9Beta-5/IDE/ipcore/DDR/data"/>
+        <Option type="include_path" value="E:/FPGA_work/Gowin/TangMega_138k_pro/udp_rgmii_send/src/gowin_ddr/temp/DDR"/>
+        <Option type="output_file" value="GMII2RGMII.vg"/>
+        <Option type="output_template" value="GMII2RGMII_tmp.v"/>
+        <Option type="ram_balance" value="1"/>
+        <Option type="ram_rw_check" value="1"/>
+        <Option type="verilog_language" value="sysv-2017"/>
+    </OptionList>
+</Project>

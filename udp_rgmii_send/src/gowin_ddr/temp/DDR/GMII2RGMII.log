@@ -1,0 +1,27 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'D:\Gowin\Gowin_V1.9.9Beta-5\IDE\ipcore\DDR\data\ddr_138k.v'
+Analyzing included file 'ddr_param.v'("D:\Gowin\Gowin_V1.9.9Beta-5\IDE\ipcore\DDR\data\ddr_138k.v":1)
+Back to file 'D:\Gowin\Gowin_V1.9.9Beta-5\IDE\ipcore\DDR\data\ddr_138k.v'("D:\Gowin\Gowin_V1.9.9Beta-5\IDE\ipcore\DDR\data\ddr_138k.v":1)
+Compiling module 'GMII2RGMII'("D:\Gowin\Gowin_V1.9.9Beta-5\IDE\ipcore\DDR\data\ddr_138k.v":402)
+NOTE  (EX0101) : Current top module is "GMII2RGMII"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "E:\FPGA_work\Gowin\TangMega_138k_pro\udp_rgmii_send\src\gowin_ddr\temp\DDR\GMII2RGMII.vg" completed
+Generate template file "E:\FPGA_work\Gowin\TangMega_138k_pro\udp_rgmii_send\src\gowin_ddr\temp\DDR\GMII2RGMII_tmp.v" completed
+[100%] Generate report file "E:\FPGA_work\Gowin\TangMega_138k_pro\udp_rgmii_send\src\gowin_ddr\temp\DDR\GMII2RGMII_syn.rpt.html" completed
+GowinSynthesis finish
