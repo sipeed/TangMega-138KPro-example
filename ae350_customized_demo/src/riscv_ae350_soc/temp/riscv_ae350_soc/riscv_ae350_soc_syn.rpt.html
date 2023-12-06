@@ -1,0 +1,2291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>synthesis Report</title>
+<style type="text/css">
+body { font-family: Verdana, Arial, sans-serif; font-size: 12px; }
+div#main_wrapper{ width: 100%; }
+div#content { margin-left: 350px; margin-right: 30px; }
+div#catalog_wrapper {position: fixed; top: 30px; width: 350px; float: left; }
+div#catalog ul { list-style-type: none; }
+div#catalog li { text-align: left; list-style-type:circle; color: #0084ff; margin-top: 3px; margin-bottom: 3px; }
+div#catalog a { display:inline-block; text-decoration: none; color: #0084ff; font-weight: bold; padding: 3px; }
+div#catalog a:visited { color: #0084ff; }
+div#catalog a:hover { color: #fff; background: #0084ff; }
+hr { margin-top: 30px; margin-bottom: 30px; }
+h1, h3 { text-align: center; }
+h1 {margin-top: 50px; }
+table, th, td { border: 1px solid #aaa; }
+table { border-collapse:collapse; margin-top: 10px; margin-bottom: 20px; width: 100%; }
+th, td { padding: 5px 5px 5px 5px; }
+th { color: #fff; font-weight: bold; background-color: #0084ff; }
+table.summary_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.detail_table td.label { min-width: 100px; width: 8%;}
+</style>
+</head>
+<body>
+<div id="main_wrapper">
+<div id="catalog_wrapper">
+<div id="catalog">
+<ul>
+<li><a href="#about" style=" font-size: 16px;">Synthesis Messages</a></li>
+<li><a href="#summary" style=" font-size: 16px;">Synthesis Details</a></li>
+<li><a href="#resource" style=" font-size: 16px;">Resource</a>
+<ul>
+<li><a href="#usage" style=" font-size: 14px;">Resource Usage Summary</a></li>
+<li><a href="#utilization" style=" font-size: 14px;">Resource Utilization Summary</a></li>
+</ul>
+</li>
+<li><a href="#timing" style=" font-size: 16px;">Timing</a>
+<ul>
+<li><a href="#clock" style=" font-size: 14px;">Clock Summary</a></li>
+<li><a href="#performance" style=" font-size: 14px;">Max Frequency Summary</a></li>
+<li><a href="#detail timing" style=" font-size: 14px;">Detail Timing Paths Informations</a></li>
+</ul>
+</li>
+</ul>
+</div><!-- catalog -->
+</div><!-- catalog_wrapper -->
+<div id="content">
+<h1><a name="about">Synthesis Messages</a></h1>
+<table class="summary_table">
+<tr>
+<td class="label">Report Title</td>
+<td>GowinSynthesis Report</td>
+</tr>
+<tr>
+<td class="label">Design File</td>
+<td>D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_top.v<br>
+D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_soc.v<br>
+D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_ddr3.v<br>
+D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v<br>
+D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\ddr3_memory_interface.v<br>
+D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\ddr3_memory_rdfifo.v<br>
+D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\ddr3_memory_wrfifo.v<br>
+</td>
+</tr>
+<tr>
+<td class="label">GowinSynthesis Constraints File</td>
+<td>---</td>
+</tr>
+<tr>
+<td class="label">Tool Version</td>
+<td>V1.9.9 (64-bit)</td>
+</tr>
+<tr>
+<td class="label">Part Number</td>
+<td>GW5AST-LV138FPG676AES</td>
+</tr>
+<tr>
+<td class="label">Device</td>
+<td>GW5AST-138</td>
+</tr>
+<tr>
+<td class="label">Device Version</td>
+<td>B</td>
+</tr>
+<tr>
+<td class="label">Created Time</td>
+<td>Mon Nov 27 08:28:20 2023
+</td>
+</tr>
+<tr>
+<td class="label">Legal Announcement</td>
+<td>Copyright (C)2014-2023 Gowin Semiconductor Corporation. ALL rights reserved.</td>
+</tr>
+</table>
+<h1><a name="summary">Synthesis Details</a></h1>
+<table class="summary_table">
+<tr>
+<td class="label">Top Level Module</td>
+<td>RiscV_AE350_SOC_Top</td>
+</tr>
+<tr>
+<td class="label">Synthesis Process</td>
+<td>Running parser:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.687s, Elapsed time = 0h 0m 0.703s, Peak memory usage = 71.660MB<br/>Running netlist conversion:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.02s, Peak memory usage = 71.660MB<br/>Running device independent optimization:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 0: CPU time = 0h 0m 0.093s, Elapsed time = 0h 0m 0.095s, Peak memory usage = 71.660MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 1: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.017s, Peak memory usage = 71.660MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 2: CPU time = 0h 0m 0.062s, Elapsed time = 0h 0m 0.052s, Peak memory usage = 71.660MB<br/>Running inference:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 0: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.016s, Peak memory usage = 71.660MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 1: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 71.660MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 2: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.006s, Peak memory usage = 71.660MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.002s, Peak memory usage = 71.660MB<br/>Running technical mapping:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 0: CPU time = 0h 0m 0.093s, Elapsed time = 0h 0m 0.082s, Peak memory usage = 71.660MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 1: CPU time = 0h 0m 0.062s, Elapsed time = 0h 0m 0.075s, Peak memory usage = 71.660MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 2: CPU time = 0h 0m 0.046s, Elapsed time = 0h 0m 0.034s, Peak memory usage = 71.660MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 3: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s, Peak memory usage = 85.117MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 4: CPU time = 0h 0m 0.062s, Elapsed time = 0h 0m 0.107s, Peak memory usage = 85.117MB<br/>Generate output files:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.062s, Elapsed time = 0h 0m 0.12s, Peak memory usage = 85.117MB<br/></td>
+</tr>
+<tr>
+<td class="label">Total Time and Memory Usage</td>
+<td>CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s, Peak memory usage = 85.117MB</td>
+</tr>
+</table>
+<h1><a name="resource">Resource</a></h1>
+<h2><a name="usage">Resource Usage Summary</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>Resource</b></td>
+<td><b>Usage</b></td>
+</tr>
+<tr>
+<td class="label"><b>I/O Port </b></td>
+<td>238</td>
+</tr>
+<tr>
+<td class="label"><b>I/O Buf </b></td>
+<td>238</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspIBUF</td>
+<td>82</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspOBUF</td>
+<td>118</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspIOBUF</td>
+<td>38</td>
+</tr>
+<tr>
+<td class="label"><b>Register </b></td>
+<td>226</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspDFFRE</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspDFFPE</td>
+<td>5</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspDFFCE</td>
+<td>219</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspDLCE</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="label"><b>LUT </b></td>
+<td>709</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspLUT2</td>
+<td>125</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspLUT3</td>
+<td>245</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspLUT4</td>
+<td>339</td>
+</tr>
+<tr>
+<td class="label"><b>ALU </b></td>
+<td>55</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspALU</td>
+<td>55</td>
+</tr>
+<tr>
+<td class="label"><b>SSRAM </b></td>
+<td>64</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspRAM16SDP4</td>
+<td>64</td>
+</tr>
+<tr>
+<td class="label"><b>INV </b></td>
+<td>128</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspINV</td>
+<td>128</td>
+</tr>
+<tr>
+<td class="label"><b>AE350_SOC </b></td>
+<td>1</td>
+</tr>
+</table>
+<h2><a name="utilization">Resource Utilization Summary</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>Resource</b></td>
+<td><b>Usage</b></td>
+<td><b>Utilization</b></td>
+</tr>
+<tr>
+<td class="label">Logic</td>
+<td>1276(837 LUT, 55 ALU, 64 RAM16) / 138240</td>
+<td><1%</td>
+</tr>
+<tr>
+<td class="label">Register</td>
+<td>226 / 139140</td>
+<td><1%</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp--Register as Latch</td>
+<td>1 / 139140</td>
+<td><1%</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp--Register as FF</td>
+<td>225 / 139140</td>
+<td><1%</td>
+</tr>
+<tr>
+<td class="label">BSRAM</td>
+<td>0 / 340</td>
+<td>0%</td>
+</tr>
+</table>
+<h1><a name="timing">Timing</a></h1>
+<h2><a name="clock">Clock Summary:</a></h2>
+<table class="summary_table">
+<tr>
+<th>Clock Name</th>
+<th>Type</th>
+<th>Period</th>
+<th>Frequency(MHz)</th>
+<th>Rise</th>
+<th>Fall</th>
+<th>Source</th>
+<th>Master</th>
+<th>Object</th>
+</tr>
+<tr>
+<td>AHB_CLK</td>
+<td>Base</td>
+<td>10.000</td>
+<td>100.0</td>
+<td>0.000</td>
+<td>5.000</td>
+<td> </td>
+<td> </td>
+<td>AHB_CLK_ibuf/I </td>
+</tr>
+<tr>
+<td>FLASH_SPI_CLK_iobuf/I</td>
+<td>Base</td>
+<td>10.000</td>
+<td>100.0</td>
+<td>0.000</td>
+<td>5.000</td>
+<td> </td>
+<td> </td>
+<td>FLASH_SPI_CLK_iobuf/I </td>
+</tr>
+<tr>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_clock_inv_9</td>
+<td>Base</td>
+<td>10.000</td>
+<td>100.0</td>
+<td>0.000</td>
+<td>5.000</td>
+<td> </td>
+<td> </td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_clock_inv_s6/O </td>
+</tr>
+<tr>
+<td>FLASH_SPI_CLK_in</td>
+<td>Base</td>
+<td>10.000</td>
+<td>100.0</td>
+<td>0.000</td>
+<td>5.000</td>
+<td> </td>
+<td> </td>
+<td>FLASH_SPI_CLK_iobuf/O </td>
+</tr>
+</table>
+<h2><a name="performance">Max Frequency Summary:</a></h2>
+<table class="summary_table">
+<tr>
+<th>No.</th>
+<th>Clock Name</th>
+<th>Constraint</th>
+<th>Actual Fmax</th>
+<th>Logic Level</th>
+<th>Entity</th>
+</tr>
+<tr>
+<td>1</td>
+<td>AHB_CLK</td>
+<td>100.0(MHz)</td>
+<td>113.7(MHz)</td>
+<td>13</td>
+<td>TOP</td>
+</tr>
+</table>
+<h2><a name="detail timing">Detail Timing Paths Information</a></h2>
+<h3>Path&nbsp1</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>1.204</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>9.621</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>10.825</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_cs_r_0_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_2_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>AHB_CLK[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>AHB_CLK[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>AHB_CLK</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>AHB_CLK_ibuf/I</td>
+</tr>
+<tr>
+<td>0.683</td>
+<td>0.683</td>
+<td>tINS</td>
+<td>RR</td>
+<td>290</td>
+<td>AHB_CLK_ibuf/O</td>
+</tr>
+<tr>
+<td>0.889</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_cs_r_0_s0/CLK</td>
+</tr>
+<tr>
+<td>1.271</td>
+<td>0.382</td>
+<td>tC2Q</td>
+<td>RR</td>
+<td>25</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_cs_r_0_s0/Q</td>
+</tr>
+<tr>
+<td>1.477</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/master_clk_en_s5/I0</td>
+</tr>
+<tr>
+<td>2.056</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/master_clk_en_s5/F</td>
+</tr>
+<tr>
+<td>2.263</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/master_clk_en_s2/I0</td>
+</tr>
+<tr>
+<td>2.841</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>6</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/master_clk_en_s2/F</td>
+</tr>
+<tr>
+<td>3.047</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_ns_0_s16/I0</td>
+</tr>
+<tr>
+<td>3.626</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_ns_0_s16/F</td>
+</tr>
+<tr>
+<td>3.832</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_ns_0_s10/I1</td>
+</tr>
+<tr>
+<td>4.400</td>
+<td>0.567</td>
+<td>tINS</td>
+<td>RR</td>
+<td>15</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_ns_0_s10/F</td>
+</tr>
+<tr>
+<td>4.606</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_3_s3/I0</td>
+</tr>
+<tr>
+<td>5.185</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>3</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_3_s3/F</td>
+</tr>
+<tr>
+<td>5.391</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_0_s3/I2</td>
+</tr>
+<tr>
+<td>5.899</td>
+<td>0.507</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_0_s3/F</td>
+</tr>
+<tr>
+<td>6.105</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_0_s2/I0</td>
+</tr>
+<tr>
+<td>6.684</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>37</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_0_s2/F</td>
+</tr>
+<tr>
+<td>6.890</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n9_s0/I1</td>
+</tr>
+<tr>
+<td>7.490</td>
+<td>0.600</td>
+<td>tINS</td>
+<td>RF</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n9_s0/COUT</td>
+</tr>
+<tr>
+<td>7.490</td>
+<td>0.000</td>
+<td>tNET</td>
+<td>FF</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n10_s0/CIN</td>
+</tr>
+<tr>
+<td>7.540</td>
+<td>0.050</td>
+<td>tINS</td>
+<td>FR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n10_s0/COUT</td>
+</tr>
+<tr>
+<td>7.540</td>
+<td>0.000</td>
+<td>tNET</td>
+<td>RR</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n11_s0/CIN</td>
+</tr>
+<tr>
+<td>7.590</td>
+<td>0.050</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n11_s0/COUT</td>
+</tr>
+<tr>
+<td>7.590</td>
+<td>0.000</td>
+<td>tNET</td>
+<td>RR</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n12_s0/CIN</td>
+</tr>
+<tr>
+<td>7.640</td>
+<td>0.050</td>
+<td>tINS</td>
+<td>RR</td>
+<td>17</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n12_s0/COUT</td>
+</tr>
+<tr>
+<td>7.846</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_8_s5/I0</td>
+</tr>
+<tr>
+<td>8.425</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>7</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_8_s5/F</td>
+</tr>
+<tr>
+<td>8.631</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n501_s5/I3</td>
+</tr>
+<tr>
+<td>8.920</td>
+<td>0.289</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n501_s5/F</td>
+</tr>
+<tr>
+<td>9.126</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n501_s2/I3</td>
+</tr>
+<tr>
+<td>9.415</td>
+<td>0.289</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n501_s2/F</td>
+</tr>
+<tr>
+<td>9.621</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_2_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>10.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>AHB_CLK</td>
+</tr>
+<tr>
+<td>10.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>AHB_CLK_ibuf/I</td>
+</tr>
+<tr>
+<td>10.682</td>
+<td>0.683</td>
+<td>tINS</td>
+<td>RR</td>
+<td>290</td>
+<td>AHB_CLK_ibuf/O</td>
+</tr>
+<tr>
+<td>10.889</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_2_s1/CLK</td>
+</tr>
+<tr>
+<td>10.825</td>
+<td>-0.064</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_2_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>10.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>13</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.683, 76.793%; route: 0.206, 23.207%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 5.875, 67.278%; route: 2.475, 28.342%; tC2Q: 0.382, 4.380%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.683, 76.793%; route: 0.206, 23.207%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp2</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>1.204</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>9.621</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>10.825</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_cs_r_0_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_3_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>AHB_CLK[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>AHB_CLK[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>AHB_CLK</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>AHB_CLK_ibuf/I</td>
+</tr>
+<tr>
+<td>0.683</td>
+<td>0.683</td>
+<td>tINS</td>
+<td>RR</td>
+<td>290</td>
+<td>AHB_CLK_ibuf/O</td>
+</tr>
+<tr>
+<td>0.889</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_cs_r_0_s0/CLK</td>
+</tr>
+<tr>
+<td>1.271</td>
+<td>0.382</td>
+<td>tC2Q</td>
+<td>RR</td>
+<td>25</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_cs_r_0_s0/Q</td>
+</tr>
+<tr>
+<td>1.477</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/master_clk_en_s5/I0</td>
+</tr>
+<tr>
+<td>2.056</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/master_clk_en_s5/F</td>
+</tr>
+<tr>
+<td>2.263</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/master_clk_en_s2/I0</td>
+</tr>
+<tr>
+<td>2.841</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>6</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/master_clk_en_s2/F</td>
+</tr>
+<tr>
+<td>3.047</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_ns_0_s16/I0</td>
+</tr>
+<tr>
+<td>3.626</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_ns_0_s16/F</td>
+</tr>
+<tr>
+<td>3.832</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_ns_0_s10/I1</td>
+</tr>
+<tr>
+<td>4.400</td>
+<td>0.567</td>
+<td>tINS</td>
+<td>RR</td>
+<td>15</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_ns_0_s10/F</td>
+</tr>
+<tr>
+<td>4.606</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_3_s3/I0</td>
+</tr>
+<tr>
+<td>5.185</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>3</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_3_s3/F</td>
+</tr>
+<tr>
+<td>5.391</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_0_s3/I2</td>
+</tr>
+<tr>
+<td>5.899</td>
+<td>0.507</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_0_s3/F</td>
+</tr>
+<tr>
+<td>6.105</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_0_s2/I0</td>
+</tr>
+<tr>
+<td>6.684</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>37</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_0_s2/F</td>
+</tr>
+<tr>
+<td>6.890</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n9_s0/I1</td>
+</tr>
+<tr>
+<td>7.490</td>
+<td>0.600</td>
+<td>tINS</td>
+<td>RF</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n9_s0/COUT</td>
+</tr>
+<tr>
+<td>7.490</td>
+<td>0.000</td>
+<td>tNET</td>
+<td>FF</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n10_s0/CIN</td>
+</tr>
+<tr>
+<td>7.540</td>
+<td>0.050</td>
+<td>tINS</td>
+<td>FR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n10_s0/COUT</td>
+</tr>
+<tr>
+<td>7.540</td>
+<td>0.000</td>
+<td>tNET</td>
+<td>RR</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n11_s0/CIN</td>
+</tr>
+<tr>
+<td>7.590</td>
+<td>0.050</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n11_s0/COUT</td>
+</tr>
+<tr>
+<td>7.590</td>
+<td>0.000</td>
+<td>tNET</td>
+<td>RR</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n12_s0/CIN</td>
+</tr>
+<tr>
+<td>7.640</td>
+<td>0.050</td>
+<td>tINS</td>
+<td>RR</td>
+<td>17</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n12_s0/COUT</td>
+</tr>
+<tr>
+<td>7.846</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_8_s5/I0</td>
+</tr>
+<tr>
+<td>8.425</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>7</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_8_s5/F</td>
+</tr>
+<tr>
+<td>8.631</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n500_s3/I3</td>
+</tr>
+<tr>
+<td>8.920</td>
+<td>0.289</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n500_s3/F</td>
+</tr>
+<tr>
+<td>9.126</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n500_s2/I3</td>
+</tr>
+<tr>
+<td>9.415</td>
+<td>0.289</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n500_s2/F</td>
+</tr>
+<tr>
+<td>9.621</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_3_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>10.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>AHB_CLK</td>
+</tr>
+<tr>
+<td>10.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>AHB_CLK_ibuf/I</td>
+</tr>
+<tr>
+<td>10.682</td>
+<td>0.683</td>
+<td>tINS</td>
+<td>RR</td>
+<td>290</td>
+<td>AHB_CLK_ibuf/O</td>
+</tr>
+<tr>
+<td>10.889</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_3_s1/CLK</td>
+</tr>
+<tr>
+<td>10.825</td>
+<td>-0.064</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_3_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>10.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>13</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.683, 76.793%; route: 0.206, 23.207%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 5.875, 67.278%; route: 2.475, 28.342%; tC2Q: 0.382, 4.380%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.683, 76.793%; route: 0.206, 23.207%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp3</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>1.204</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>9.621</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>10.825</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_cs_r_0_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_6_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>AHB_CLK[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>AHB_CLK[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>AHB_CLK</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>AHB_CLK_ibuf/I</td>
+</tr>
+<tr>
+<td>0.683</td>
+<td>0.683</td>
+<td>tINS</td>
+<td>RR</td>
+<td>290</td>
+<td>AHB_CLK_ibuf/O</td>
+</tr>
+<tr>
+<td>0.889</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_cs_r_0_s0/CLK</td>
+</tr>
+<tr>
+<td>1.271</td>
+<td>0.382</td>
+<td>tC2Q</td>
+<td>RR</td>
+<td>25</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_cs_r_0_s0/Q</td>
+</tr>
+<tr>
+<td>1.477</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/master_clk_en_s5/I0</td>
+</tr>
+<tr>
+<td>2.056</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/master_clk_en_s5/F</td>
+</tr>
+<tr>
+<td>2.263</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/master_clk_en_s2/I0</td>
+</tr>
+<tr>
+<td>2.841</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>6</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/master_clk_en_s2/F</td>
+</tr>
+<tr>
+<td>3.047</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_ns_0_s16/I0</td>
+</tr>
+<tr>
+<td>3.626</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_ns_0_s16/F</td>
+</tr>
+<tr>
+<td>3.832</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_ns_0_s10/I1</td>
+</tr>
+<tr>
+<td>4.400</td>
+<td>0.567</td>
+<td>tINS</td>
+<td>RR</td>
+<td>15</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_ns_0_s10/F</td>
+</tr>
+<tr>
+<td>4.606</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_3_s3/I0</td>
+</tr>
+<tr>
+<td>5.185</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>3</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_3_s3/F</td>
+</tr>
+<tr>
+<td>5.391</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_0_s3/I2</td>
+</tr>
+<tr>
+<td>5.899</td>
+<td>0.507</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_0_s3/F</td>
+</tr>
+<tr>
+<td>6.105</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_0_s2/I0</td>
+</tr>
+<tr>
+<td>6.684</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>37</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_0_s2/F</td>
+</tr>
+<tr>
+<td>6.890</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n9_s0/I1</td>
+</tr>
+<tr>
+<td>7.490</td>
+<td>0.600</td>
+<td>tINS</td>
+<td>RF</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n9_s0/COUT</td>
+</tr>
+<tr>
+<td>7.490</td>
+<td>0.000</td>
+<td>tNET</td>
+<td>FF</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n10_s0/CIN</td>
+</tr>
+<tr>
+<td>7.540</td>
+<td>0.050</td>
+<td>tINS</td>
+<td>FR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n10_s0/COUT</td>
+</tr>
+<tr>
+<td>7.540</td>
+<td>0.000</td>
+<td>tNET</td>
+<td>RR</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n11_s0/CIN</td>
+</tr>
+<tr>
+<td>7.590</td>
+<td>0.050</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n11_s0/COUT</td>
+</tr>
+<tr>
+<td>7.590</td>
+<td>0.000</td>
+<td>tNET</td>
+<td>RR</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n12_s0/CIN</td>
+</tr>
+<tr>
+<td>7.640</td>
+<td>0.050</td>
+<td>tINS</td>
+<td>RR</td>
+<td>17</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n12_s0/COUT</td>
+</tr>
+<tr>
+<td>7.846</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_8_s5/I0</td>
+</tr>
+<tr>
+<td>8.425</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>7</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_8_s5/F</td>
+</tr>
+<tr>
+<td>8.631</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n497_s3/I3</td>
+</tr>
+<tr>
+<td>8.920</td>
+<td>0.289</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n497_s3/F</td>
+</tr>
+<tr>
+<td>9.126</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n497_s2/I3</td>
+</tr>
+<tr>
+<td>9.415</td>
+<td>0.289</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n497_s2/F</td>
+</tr>
+<tr>
+<td>9.621</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_6_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>10.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>AHB_CLK</td>
+</tr>
+<tr>
+<td>10.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>AHB_CLK_ibuf/I</td>
+</tr>
+<tr>
+<td>10.682</td>
+<td>0.683</td>
+<td>tINS</td>
+<td>RR</td>
+<td>290</td>
+<td>AHB_CLK_ibuf/O</td>
+</tr>
+<tr>
+<td>10.889</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_6_s1/CLK</td>
+</tr>
+<tr>
+<td>10.825</td>
+<td>-0.064</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_6_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>10.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>13</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.683, 76.793%; route: 0.206, 23.207%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 5.875, 67.278%; route: 2.475, 28.342%; tC2Q: 0.382, 4.380%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.683, 76.793%; route: 0.206, 23.207%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp4</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>1.204</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>9.621</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>10.825</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_cs_r_0_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_8_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>AHB_CLK[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>AHB_CLK[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>AHB_CLK</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>AHB_CLK_ibuf/I</td>
+</tr>
+<tr>
+<td>0.683</td>
+<td>0.683</td>
+<td>tINS</td>
+<td>RR</td>
+<td>290</td>
+<td>AHB_CLK_ibuf/O</td>
+</tr>
+<tr>
+<td>0.889</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_cs_r_0_s0/CLK</td>
+</tr>
+<tr>
+<td>1.271</td>
+<td>0.382</td>
+<td>tC2Q</td>
+<td>RR</td>
+<td>25</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_cs_r_0_s0/Q</td>
+</tr>
+<tr>
+<td>1.477</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/master_clk_en_s5/I0</td>
+</tr>
+<tr>
+<td>2.056</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/master_clk_en_s5/F</td>
+</tr>
+<tr>
+<td>2.263</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/master_clk_en_s2/I0</td>
+</tr>
+<tr>
+<td>2.841</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>6</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/master_clk_en_s2/F</td>
+</tr>
+<tr>
+<td>3.047</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_ns_0_s16/I0</td>
+</tr>
+<tr>
+<td>3.626</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_ns_0_s16/F</td>
+</tr>
+<tr>
+<td>3.832</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_ns_0_s10/I1</td>
+</tr>
+<tr>
+<td>4.400</td>
+<td>0.567</td>
+<td>tINS</td>
+<td>RR</td>
+<td>15</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_ns_0_s10/F</td>
+</tr>
+<tr>
+<td>4.606</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_3_s3/I0</td>
+</tr>
+<tr>
+<td>5.185</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>3</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_3_s3/F</td>
+</tr>
+<tr>
+<td>5.391</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_0_s3/I2</td>
+</tr>
+<tr>
+<td>5.899</td>
+<td>0.507</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_0_s3/F</td>
+</tr>
+<tr>
+<td>6.105</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_0_s2/I0</td>
+</tr>
+<tr>
+<td>6.684</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>37</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_0_s2/F</td>
+</tr>
+<tr>
+<td>6.890</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n9_s0/I1</td>
+</tr>
+<tr>
+<td>7.490</td>
+<td>0.600</td>
+<td>tINS</td>
+<td>RF</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n9_s0/COUT</td>
+</tr>
+<tr>
+<td>7.490</td>
+<td>0.000</td>
+<td>tNET</td>
+<td>FF</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n10_s0/CIN</td>
+</tr>
+<tr>
+<td>7.540</td>
+<td>0.050</td>
+<td>tINS</td>
+<td>FR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n10_s0/COUT</td>
+</tr>
+<tr>
+<td>7.540</td>
+<td>0.000</td>
+<td>tNET</td>
+<td>RR</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n11_s0/CIN</td>
+</tr>
+<tr>
+<td>7.590</td>
+<td>0.050</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n11_s0/COUT</td>
+</tr>
+<tr>
+<td>7.590</td>
+<td>0.000</td>
+<td>tNET</td>
+<td>RR</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n12_s0/CIN</td>
+</tr>
+<tr>
+<td>7.640</td>
+<td>0.050</td>
+<td>tINS</td>
+<td>RR</td>
+<td>17</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n12_s0/COUT</td>
+</tr>
+<tr>
+<td>7.846</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_8_s5/I0</td>
+</tr>
+<tr>
+<td>8.425</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>7</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_8_s5/F</td>
+</tr>
+<tr>
+<td>8.631</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n495_s3/I3</td>
+</tr>
+<tr>
+<td>8.920</td>
+<td>0.289</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n495_s3/F</td>
+</tr>
+<tr>
+<td>9.126</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n495_s2/I3</td>
+</tr>
+<tr>
+<td>9.415</td>
+<td>0.289</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/n495_s2/F</td>
+</tr>
+<tr>
+<td>9.621</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_8_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>10.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>AHB_CLK</td>
+</tr>
+<tr>
+<td>10.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>AHB_CLK_ibuf/I</td>
+</tr>
+<tr>
+<td>10.682</td>
+<td>0.683</td>
+<td>tINS</td>
+<td>RR</td>
+<td>290</td>
+<td>AHB_CLK_ibuf/O</td>
+</tr>
+<tr>
+<td>10.889</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_8_s1/CLK</td>
+</tr>
+<tr>
+<td>10.825</td>
+<td>-0.064</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/data_cnt_r_8_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>10.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>13</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.683, 76.793%; route: 0.206, 23.207%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 5.875, 67.278%; route: 2.475, 28.342%; tC2Q: 0.382, 4.380%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.683, 76.793%; route: 0.206, 23.207%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp5</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>1.275</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>9.550</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>10.825</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_cs_r_0_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/empty_s0</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>AHB_CLK[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>AHB_CLK[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>AHB_CLK</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>AHB_CLK_ibuf/I</td>
+</tr>
+<tr>
+<td>0.683</td>
+<td>0.683</td>
+<td>tINS</td>
+<td>RR</td>
+<td>290</td>
+<td>AHB_CLK_ibuf/O</td>
+</tr>
+<tr>
+<td>0.889</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_cs_r_0_s0/CLK</td>
+</tr>
+<tr>
+<td>1.271</td>
+<td>0.382</td>
+<td>tC2Q</td>
+<td>RR</td>
+<td>25</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_cs_r_0_s0/Q</td>
+</tr>
+<tr>
+<td>1.477</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/master_clk_en_s5/I0</td>
+</tr>
+<tr>
+<td>2.056</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/master_clk_en_s5/F</td>
+</tr>
+<tr>
+<td>2.263</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/master_clk_en_s2/I0</td>
+</tr>
+<tr>
+<td>2.841</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>6</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/master_clk_en_s2/F</td>
+</tr>
+<tr>
+<td>3.047</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_ns_0_s16/I0</td>
+</tr>
+<tr>
+<td>3.626</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_ns_0_s16/F</td>
+</tr>
+<tr>
+<td>3.832</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_ns_0_s10/I1</td>
+</tr>
+<tr>
+<td>4.400</td>
+<td>0.567</td>
+<td>tINS</td>
+<td>RR</td>
+<td>15</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_spiif/spi_ns_0_s10/F</td>
+</tr>
+<tr>
+<td>4.606</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_2_s8/I0</td>
+</tr>
+<tr>
+<td>5.185</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_2_s8/F</td>
+</tr>
+<tr>
+<td>5.391</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_2_s20/I0</td>
+</tr>
+<tr>
+<td>5.970</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>4</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_ctrl/ctrl_ns_2_s20/F</td>
+</tr>
+<tr>
+<td>6.176</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/next_gray_rd_ptr_0_s3/I1</td>
+</tr>
+<tr>
+<td>6.744</td>
+<td>0.567</td>
+<td>tINS</td>
+<td>RR</td>
+<td>19</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/next_gray_rd_ptr_0_s3/F</td>
+</tr>
+<tr>
+<td>6.950</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/next_bin_rd_ptr_0_s3/I0</td>
+</tr>
+<tr>
+<td>7.529</td>
+<td>0.579</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/next_bin_rd_ptr_0_s3/F</td>
+</tr>
+<tr>
+<td>7.735</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/next_gray_rd_ptr_0_s0/I0</td>
+</tr>
+<tr>
+<td>8.330</td>
+<td>0.595</td>
+<td>tINS</td>
+<td>RF</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/next_gray_rd_ptr_0_s0/COUT</td>
+</tr>
+<tr>
+<td>8.330</td>
+<td>0.000</td>
+<td>tNET</td>
+<td>FF</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/next_gray_rd_ptr_1_s0/CIN</td>
+</tr>
+<tr>
+<td>8.380</td>
+<td>0.050</td>
+<td>tINS</td>
+<td>FR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/next_gray_rd_ptr_1_s0/COUT</td>
+</tr>
+<tr>
+<td>8.380</td>
+<td>0.000</td>
+<td>tNET</td>
+<td>RR</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/next_gray_rd_ptr_2_s0/CIN</td>
+</tr>
+<tr>
+<td>8.430</td>
+<td>0.050</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/next_gray_rd_ptr_2_s0/COUT</td>
+</tr>
+<tr>
+<td>8.430</td>
+<td>0.000</td>
+<td>tNET</td>
+<td>RR</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/next_gray_rd_ptr_3_s0/CIN</td>
+</tr>
+<tr>
+<td>8.480</td>
+<td>0.050</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/next_gray_rd_ptr_3_s0/COUT</td>
+</tr>
+<tr>
+<td>8.480</td>
+<td>0.000</td>
+<td>tNET</td>
+<td>RR</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/next_gray_rd_ptr_4_s0/CIN</td>
+</tr>
+<tr>
+<td>8.530</td>
+<td>0.050</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/next_gray_rd_ptr_4_s0/COUT</td>
+</tr>
+<tr>
+<td>8.530</td>
+<td>0.000</td>
+<td>tNET</td>
+<td>RR</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/next_gray_rd_ptr_5_s0/CIN</td>
+</tr>
+<tr>
+<td>8.580</td>
+<td>0.050</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/next_gray_rd_ptr_5_s0/COUT</td>
+</tr>
+<tr>
+<td>8.580</td>
+<td>0.000</td>
+<td>tNET</td>
+<td>RR</td>
+<td>2</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/next_gray_rd_ptr_6_s0/CIN</td>
+</tr>
+<tr>
+<td>8.630</td>
+<td>0.050</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/next_gray_rd_ptr_6_s0/COUT</td>
+</tr>
+<tr>
+<td>8.836</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/n465_s1/I2</td>
+</tr>
+<tr>
+<td>9.344</td>
+<td>0.507</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/n465_s1/F</td>
+</tr>
+<tr>
+<td>9.550</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/empty_s0/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>10.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>AHB_CLK</td>
+</tr>
+<tr>
+<td>10.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>AHB_CLK_ibuf/I</td>
+</tr>
+<tr>
+<td>10.682</td>
+<td>0.683</td>
+<td>tINS</td>
+<td>RR</td>
+<td>290</td>
+<td>AHB_CLK_ibuf/O</td>
+</tr>
+<tr>
+<td>10.889</td>
+<td>0.206</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/empty_s0/CLK</td>
+</tr>
+<tr>
+<td>10.825</td>
+<td>-0.064</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>u_RiscV_AE350_SOC/u_riscv_ae350_flash_top/u_gwspiflash/u_spi_fifo/u_spi_txfifo/empty_s0</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>10.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>13</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.683, 76.793%; route: 0.206, 23.207%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 6.010, 69.390%; route: 2.269, 26.194%; tC2Q: 0.382, 4.416%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.683, 76.793%; route: 0.206, 23.207%</td></tr>
+</table>
+<br/>
+</div><!-- content -->
+</div><!-- main_wrapper -->
+</body>
+</html>

@@ -1,0 +1,82 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_top.v'
+Analyzing included file 'riscv_ae350_config.v'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_top.v":16)
+Back to file 'D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_top.v'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_top.v":16)
+Analyzing Verilog file 'D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_soc.v'
+Analyzing included file 'riscv_ae350_config.v'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_soc.v":634)
+Back to file 'D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_soc.v'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_soc.v":634)
+Analyzing Verilog file 'D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_ddr3.v'
+Analyzing Verilog file 'D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v'
+Analyzing included file 'riscv_ae350_config.v'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":3247)
+Back to file 'D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":3247)
+Analyzing Verilog file 'D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\ddr3_memory_interface.v'
+Analyzing Verilog file 'D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\ddr3_memory_rdfifo.v'
+Analyzing Verilog file 'D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\ddr3_memory_wrfifo.v'
+Compiling module 'RiscV_AE350_SOC_Top'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_top.v":21)
+Compiling module '**'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_soc.v":0)
+Compiling module '**'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+Compiling module '**'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+Compiling module '**'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+Compiling module '**'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+Compiling module '**'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+Compiling module '**'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+Compiling module '**'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+Compiling module '**'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+Compiling module '**'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+Compiling module '**'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+Compiling module '**'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+Extracting RAM for identifier '**'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+Compiling module '**'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+Compiling module '**'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+Compiling module '**'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+Compiling module '**'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+Compiling module '**'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (EX2420) : Latch inferred for net '**'; We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+Compiling module '**'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (EX1998) : Net '**' does not have a driver("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (EX3670) : Actual bit length ** differs from formal bit length ** for port '**'("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_soc.v":0)
+NOTE  (EX0101) : Current top module is "RiscV_AE350_SOC_Top"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+WARN  (DI0003) : Latch inferred for net 'latch_out';We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "gw_inout_pad" instantiated to "spi1_clk_pad" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gw_inout_pad" instantiated to "spi1_csn_pad" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gw_inout_pad" instantiated to "spi1_holdn_pad" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gw_inout_pad" instantiated to "spi1_mosi_pad" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gw_inout_pad" instantiated to "spi1_wpn_pad" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gw_sync_l2l" instantiated to "txf_clr_ack_sync" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gw_sync_l2l" instantiated to "txf_clr_sync" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gwspiflash_reg" instantiated to "u_spi_reg" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gwspiflash_regif" instantiated to "u_spi_regif" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gwspiflash_regif_ctrl" instantiated to "u_spi_regif_ctrl" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gw_gck" instantiated to "master_gclk_0" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gw_sync_l2l" instantiated to "spi_clk_in_syn" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gw_sync_l2l" instantiated to "spi_cs_n_syn" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gw_sync_l2l" instantiated to "dataonly_sync" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gw_sync_l2l" instantiated to "mem_intf_idle_clr_sync" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gw_sync_p2p" instantiated to "rxf_overrun_sync" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gw_sync_p2p" instantiated to "slave_cmd_wr_sync" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gw_sync_p2p" instantiated to "slave_rcnt_inc_sync" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gw_sync_p2p" instantiated to "slave_wcnt_inc_sync" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gw_sync_l2l" instantiated to "spi_reset_ack_sync" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gw_sync_l2l" instantiated to "spi_reset_sync" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+WARN  (NL0002) : The module "gw_sync_p2p" instantiated to "txf_underrun_sync" is swept in optimizing("D:\Gowin\Gowin_V1.9.9_x64\IDE\ipcore\RiscV_AE350_SOC\data\riscv_ae350_flash.v":0)
+[95%] Generate netlist file "C:\Users\liukai\Desktop\ae350_customized_demo\src\riscv_ae350_soc\temp\riscv_ae350_soc\riscv_ae350_soc.vg" completed
+Generate template file "C:\Users\liukai\Desktop\ae350_customized_demo\src\riscv_ae350_soc\temp\riscv_ae350_soc\riscv_ae350_soc_tmp.v" completed
+[100%] Generate report file "C:\Users\liukai\Desktop\ae350_customized_demo\src\riscv_ae350_soc\temp\riscv_ae350_soc\riscv_ae350_soc_syn.rpt.html" completed
+GowinSynthesis finish

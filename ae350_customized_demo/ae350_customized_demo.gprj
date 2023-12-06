@@ -1,0 +1,20 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW5AST-138B" pn="GW5AST-LV138FPG676AES">gw5ast138b-002</Device>
+    <FileList>
+        <File path="src/ae350_customized_demo.v" type="file.verilog" enable="1"/>
+        <File path="src/ddr3_memory/ddr3_memory_interface/ddr3_memory_interface.v" type="file.verilog" enable="1"/>
+        <File path="src/ddr3_memory/ddr3_memory_rdfifo/ddr3_memory_rdfifo.v" type="file.verilog" enable="1"/>
+        <File path="src/ddr3_memory/ddr3_memory_wrfifo/ddr3_memory_wrfifo.v" type="file.verilog" enable="1"/>
+        <File path="src/ddr3_memory/gw_ahb_ddr3.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_pll_ae350/gowin_pll_ae350.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_pll_ddr3/gowin_pll_ddr3.v" type="file.verilog" enable="1"/>
+        <File path="src/key_debounce.v" type="file.verilog" enable="1"/>
+        <File path="src/riscv_ae350_soc/riscv_ae350_soc.v" type="file.verilog" enable="1"/>
+        <File path="src/ae350_customized_demo.cst" type="file.cst" enable="1"/>
+        <File path="src/ae350_customized_demo.sdc" type="file.sdc" enable="1"/>
+    </FileList>
+</Project>

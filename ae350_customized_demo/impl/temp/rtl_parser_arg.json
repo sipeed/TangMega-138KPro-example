@@ -1,0 +1,49 @@
+{
+ "Device" : "GW5AST-138B",
+ "Files" : [
+  {
+   "Path" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ae350_customized_demo.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/ddr3_memory_interface/ddr3_memory_interface.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/ddr3_memory_rdfifo/ddr3_memory_rdfifo.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/ddr3_memory_wrfifo/ddr3_memory_wrfifo.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/gw_ahb_ddr3.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/gowin_pll_ae350/gowin_pll_ae350.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/gowin_pll_ddr3/gowin_pll_ddr3.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/key_debounce.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/riscv_ae350_soc/riscv_ae350_soc.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/impl/temp/rtl_parser.result",
+ "Top" : "ae350_customized_demo",
+ "VerilogStd" : "sysv",
+ "VhdlStd" : "vhdl_93"
+}

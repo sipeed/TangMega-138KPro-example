@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="ddr3_memory_wrfifo" Register="54" Alu="17" Lut="57" Bsram="4"/>

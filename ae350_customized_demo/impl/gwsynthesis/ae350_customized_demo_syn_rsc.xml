@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="ae350_customized_demo" Lut="1">
+    <SubModule name="u_Gowin_PLL_AE350"/>
+    <SubModule name="u_Gowin_PLL_DDR3"/>
+    <SubModule name="u_key_debounce_ddr3" Register="24" Alu="19" Lut="9"/>
+    <SubModule name="u_key_debounce_ae350" Register="24" Alu="19" Lut="9"/>
+    <SubModule name="u_gw_ahb_ddr3_top">
+        <SubModule name="u_gw_ahb_ddr3" Register="116" Lut="7">
+            <SubModule name="u_DDR3_Memory_Interface_Top" Register="3492" Alu="158" Lut="2252" Bsram="12"/>
+            <SubModule name="u_ddr3_memory_and_ahb_bus" Register="322" Lut="224">
+                <SubModule name="u_hwrite_buf" Register="53" Alu="11" Lut="49" Bsram="4"/>
+                <SubModule name="u_fifo_wr" Register="53" Alu="11" Lut="49" Bsram="4"/>
+                <SubModule name="u_fifo_rd" Register="52" Alu="5" Lut="41" Bsram="2"/>
+            </SubModule>
+        </SubModule>
+    </SubModule>
+    <SubModule name="u_RiscV_AE350_SOC_Top" Register="226" Alu="55" Lut="785" Ssram="64"/>
+</Module>

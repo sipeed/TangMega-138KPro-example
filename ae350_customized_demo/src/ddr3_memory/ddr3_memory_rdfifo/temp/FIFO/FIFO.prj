@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW5AST-138B" package="FCPBGA676A" speed="1" partNumber="GW5AST-LV138FPG676AES"/>
+    <FileList>
+        <File path="C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/ddr3_memory_rdfifo/temp/FIFO/fifo_define.v" type="verilog"/>
+        <File path="C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/ddr3_memory_rdfifo/temp/FIFO/fifo_parameter.v" type="verilog"/>
+        <File path="D:/Gowin/Gowin_V1.9.9_x64/IDE/ipcore/FIFO/data/edc.v" type="verilog"/>
+        <File path="D:/Gowin/Gowin_V1.9.9_x64/IDE/ipcore/FIFO/data/fifo.v" type="verilog"/>
+        <File path="D:/Gowin/Gowin_V1.9.9_x64/IDE/ipcore/FIFO/data/fifo_top.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="1"/>
+        <Option type="include_path" value="C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/ddr3_memory_rdfifo/temp/FIFO"/>
+        <Option type="output_file" value="ddr3_memory_rdfifo.vg"/>
+        <Option type="output_template" value="ddr3_memory_rdfifo_tmp.v"/>
+        <Option type="ram_balance" value="1"/>
+        <Option type="ram_rw_check" value="1"/>
+        <Option type="verilog_language" value="sysv-2017"/>
+    </OptionList>
+</Project>

@@ -1,0 +1,18 @@
+-d C:\Users\liukai\Desktop\ae350_customized_demo\impl\gwsynthesis\ae350_customized_demo.vg
+-p GW5AST-138B-FCPBGA676A-1
+-pn GW5AST-LV138FPG676AES
+-cst C:\Users\liukai\Desktop\ae350_customized_demo\src\ae350_customized_demo.cst
+-cfg C:\Users\liukai\Desktop\ae350_customized_demo\impl\pnr\device.cfg
+-sdc C:\Users\liukai\Desktop\ae350_customized_demo\src\ae350_customized_demo.sdc
+-bit
+-tr
+-ph
+-timing
+-ireg_not_in_iob
+-oreg_not_in_iob
+-ioreg_not_in_iob
+-cst_error
+-place_option 1
+-route_option 2
+-correct_hold 1
+-route_maxfan 23

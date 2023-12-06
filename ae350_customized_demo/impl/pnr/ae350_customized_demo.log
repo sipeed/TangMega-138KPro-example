@@ -1,0 +1,29 @@
+Reading netlist file: "C:\Users\liukai\Desktop\ae350_customized_demo\impl\gwsynthesis\ae350_customized_demo.vg"
+Parsing netlist file "C:\Users\liukai\Desktop\ae350_customized_demo\impl\gwsynthesis\ae350_customized_demo.vg" completed
+Processing netlist completed
+Reading constraint file: "C:\Users\liukai\Desktop\ae350_customized_demo\src\ae350_customized_demo.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+WARN  (PR1014) : Generic routing resource will be used to clock signal 'CLK_d' by the specified constraint. And then it may lead to the excessive delay or skew
+WARN  (PR1014) : Generic routing resource will be used to clock signal 'TCK_IN_d' by the specified constraint. And then it may lead to the excessive delay or skew
+WARN  (PR1014) : Generic routing resource will be used to clock signal '\u_RiscV_AE350_SOC_Top/FLASH_SPI_CLK_in ' by the specified constraint. And then it may lead to the excessive delay or skew
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Generate file "C:\Users\liukai\Desktop\ae350_customized_demo\impl\pnr\ae350_customized_demo.pin.html" completed
+Generate file "C:\Users\liukai\Desktop\ae350_customized_demo\impl\pnr\ae350_customized_demo.rpt.html" completed
+Generate file "C:\Users\liukai\Desktop\ae350_customized_demo\impl\pnr\ae350_customized_demo.rpt.txt" completed
+Generate file "C:\Users\liukai\Desktop\ae350_customized_demo\impl\pnr\ae350_customized_demo.tr.html" completed
+Mon Nov 27 09:13:17 2023
+

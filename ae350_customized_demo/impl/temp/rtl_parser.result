@@ -1,0 +1,164 @@
+[
+ {
+  "InstFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ae350_customized_demo.v",
+  "InstLine" : 4,
+  "InstName" : "ae350_customized_demo",
+  "ModuleFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ae350_customized_demo.v",
+  "ModuleLine" : 4,
+  "ModuleName" : "ae350_customized_demo",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ae350_customized_demo.v",
+    "InstLine" : 60,
+    "InstName" : "u_Gowin_PLL_AE350",
+    "ModuleFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/gowin_pll_ae350/gowin_pll_ae350.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_PLL_AE350"
+   },
+   {
+    "InstFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ae350_customized_demo.v",
+    "InstLine" : 77,
+    "InstName" : "u_Gowin_PLL_DDR3",
+    "ModuleFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/gowin_pll_ddr3/gowin_pll_ddr3.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_PLL_DDR3"
+   },
+   {
+    "InstFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ae350_customized_demo.v",
+    "InstLine" : 98,
+    "InstName" : "u_key_debounce_ddr3",
+    "ModuleFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/key_debounce.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "key_debounce"
+   },
+   {
+    "InstFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ae350_customized_demo.v",
+    "InstLine" : 109,
+    "InstName" : "u_key_debounce_ae350",
+    "ModuleFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/key_debounce.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "key_debounce"
+   },
+   {
+    "InstFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ae350_customized_demo.v",
+    "InstLine" : 134,
+    "InstName" : "u_gw_ahb_ddr3_top",
+    "ModuleFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/gw_ahb_ddr3.v",
+    "ModuleLine" : 15,
+    "ModuleName" : "gw_ahb_ddr3_top",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/gw_ahb_ddr3.v",
+      "InstLine" : 54,
+      "InstName" : "u_gw_ahb_ddr3",
+      "ModuleFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/gw_ahb_ddr3.v",
+      "ModuleLine" : 105,
+      "ModuleName" : "gw_ahb_ddr3",
+      "SubInsts" : [
+       {
+        "InstFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/gw_ahb_ddr3.v",
+        "InstLine" : 339,
+        "InstName" : "u_DDR3_Memory_Interface_Top",
+        "ModuleFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/ddr3_memory_interface/ddr3_memory_interface.v",
+        "ModuleLine" : 21629,
+        "ModuleName" : "DDR3_Memory_Interface_Top",
+        "SubInsts" : [
+         {
+          "InstFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/ddr3_memory_interface/ddr3_memory_interface.v",
+          "InstLine" : 21714,
+          "InstName" : "gw3_top",
+          "ModuleFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/ddr3_memory_interface/ddr3_memory_interface.v",
+          "ModuleLine" : 1,
+          "ModuleName" : "~GW_DDR3_PHY_MC.DDR3_Memory_Interface_Top"
+         }
+        ]
+       },
+       {
+        "InstFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/gw_ahb_ddr3.v",
+        "InstLine" : 385,
+        "InstName" : "u_ddr3_memory_and_ahb_bus",
+        "ModuleFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/gw_ahb_ddr3.v",
+        "ModuleLine" : 432,
+        "ModuleName" : "ddr3_memory_and_ahb_bus",
+        "SubInsts" : [
+         {
+          "InstFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/gw_ahb_ddr3.v",
+          "InstLine" : 851,
+          "InstName" : "u_hwrite_buf",
+          "ModuleFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/ddr3_memory_wrfifo/ddr3_memory_wrfifo.v",
+          "ModuleLine" : 478,
+          "ModuleName" : "ddr3_memory_wrfifo",
+          "SubInsts" : [
+           {
+            "InstFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/ddr3_memory_wrfifo/ddr3_memory_wrfifo.v",
+            "InstLine" : 505,
+            "InstName" : "fifo_inst",
+            "ModuleFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/ddr3_memory_wrfifo/ddr3_memory_wrfifo.v",
+            "ModuleLine" : 1,
+            "ModuleName" : "~fifo.ddr3_memory_wrfifo"
+           }
+          ]
+         },
+         {
+          "InstFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/gw_ahb_ddr3.v",
+          "InstLine" : 885,
+          "InstName" : "u_fifo_wr",
+          "ModuleFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/ddr3_memory_wrfifo/ddr3_memory_wrfifo.v",
+          "ModuleLine" : 478,
+          "ModuleName" : "ddr3_memory_wrfifo",
+          "SubInsts" : [
+           {
+            "InstFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/ddr3_memory_wrfifo/ddr3_memory_wrfifo.v",
+            "InstLine" : 505,
+            "InstName" : "fifo_inst",
+            "ModuleFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/ddr3_memory_wrfifo/ddr3_memory_wrfifo.v",
+            "ModuleLine" : 1,
+            "ModuleName" : "~fifo.ddr3_memory_wrfifo"
+           }
+          ]
+         },
+         {
+          "InstFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/gw_ahb_ddr3.v",
+          "InstLine" : 1031,
+          "InstName" : "u_fifo_rd",
+          "ModuleFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/ddr3_memory_rdfifo/ddr3_memory_rdfifo.v",
+          "ModuleLine" : 478,
+          "ModuleName" : "ddr3_memory_rdfifo",
+          "SubInsts" : [
+           {
+            "InstFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/ddr3_memory_rdfifo/ddr3_memory_rdfifo.v",
+            "InstLine" : 505,
+            "InstName" : "fifo_inst",
+            "ModuleFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ddr3_memory/ddr3_memory_rdfifo/ddr3_memory_rdfifo.v",
+            "ModuleLine" : 1,
+            "ModuleName" : "~fifo.ddr3_memory_rdfifo"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/ae350_customized_demo.v",
+    "InstLine" : 174,
+    "InstName" : "u_RiscV_AE350_SOC_Top",
+    "ModuleFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/riscv_ae350_soc/riscv_ae350_soc.v",
+    "ModuleLine" : 4868,
+    "ModuleName" : "RiscV_AE350_SOC_Top",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/riscv_ae350_soc/riscv_ae350_soc.v",
+      "InstLine" : 5261,
+      "InstName" : "u_RiscV_AE350_SOC",
+      "ModuleFile" : "C:/Users/liukai/Desktop/ae350_customized_demo/src/riscv_ae350_soc/riscv_ae350_soc.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "RiscV_AE350_SOC"
+     }
+    ]
+   }
+  ]
+ }
+]

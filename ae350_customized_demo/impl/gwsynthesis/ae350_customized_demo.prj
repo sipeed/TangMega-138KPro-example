@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW5AST-138B" package="FCPBGA676A" speed="1" partNumber="GW5AST-LV138FPG676AES"/>
+    <FileList>
+        <File path="C:\Users\liukai\Desktop\ae350_customized_demo\src\ae350_customized_demo.v" type="verilog"/>
+        <File path="C:\Users\liukai\Desktop\ae350_customized_demo\src\ddr3_memory\ddr3_memory_interface\ddr3_memory_interface.v" type="verilog"/>
+        <File path="C:\Users\liukai\Desktop\ae350_customized_demo\src\ddr3_memory\ddr3_memory_rdfifo\ddr3_memory_rdfifo.v" type="verilog"/>
+        <File path="C:\Users\liukai\Desktop\ae350_customized_demo\src\ddr3_memory\ddr3_memory_wrfifo\ddr3_memory_wrfifo.v" type="verilog"/>
+        <File path="C:\Users\liukai\Desktop\ae350_customized_demo\src\ddr3_memory\gw_ahb_ddr3.v" type="verilog"/>
+        <File path="C:\Users\liukai\Desktop\ae350_customized_demo\src\gowin_pll_ae350\gowin_pll_ae350.v" type="verilog"/>
+        <File path="C:\Users\liukai\Desktop\ae350_customized_demo\src\gowin_pll_ddr3\gowin_pll_ddr3.v" type="verilog"/>
+        <File path="C:\Users\liukai\Desktop\ae350_customized_demo\src\key_debounce.v" type="verilog"/>
+        <File path="C:\Users\liukai\Desktop\ae350_customized_demo\src\riscv_ae350_soc\riscv_ae350_soc.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="0"/>
+        <Option type="looplimit" value="2000"/>
+        <Option type="output_file" value="C:\Users\liukai\Desktop\ae350_customized_demo\impl\gwsynthesis\ae350_customized_demo.vg"/>
+        <Option type="print_all_synthesis_warning" value="0"/>
+        <Option type="ram_rw_check" value="0"/>
+        <Option type="top_module" value="ae350_customized_demo"/>
+        <Option type="verilog_language" value="sysv-2017"/>
+        <Option type="vhdl_language" value="vhdl-1993"/>
+    </OptionList>
+</Project>
