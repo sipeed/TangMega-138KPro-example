@@ -1,0 +1,88 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v'
+Analyzing Verilog file 'C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_test.v'
+Analyzing Verilog file 'C:\Users\zeroh\Desktop\todo\gw138\pro\src\fifo.v'
+Analyzing Verilog file 'C:\Users\zeroh\Desktop\todo\gw138\pro\src\gowin_pll\gowin_pll.v'
+Analyzing Verilog file 'C:\Users\zeroh\Desktop\todo\gw138\pro\src\top.v'
+Analyzing Verilog file 'C:\Users\zeroh\Desktop\todo\gw138\pro\src\uart_tx.v'
+Compiling module 'top'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\top.v":1)
+Compiling module 'FIFO(AWIDTH=13)'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\fifo.v":1)
+Extracting RAM for identifier 'array_reg'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\fifo.v":16)
+WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("C:\Users\zeroh\Desktop\todo\gw138\pro\src\fifo.v":67)
+WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("C:\Users\zeroh\Desktop\todo\gw138\pro\src\fifo.v":68)
+Compiling module 'BAUDGEN'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\uart_tx.v":125)
+WARN  (EX3791) : Expression size 23 truncated to fit in target size 22("C:\Users\zeroh\Desktop\todo\gw138\pro\src\uart_tx.v":147)
+Compiling module 'UART_TX'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\uart_tx.v":1)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\zeroh\Desktop\todo\gw138\pro\src\uart_tx.v":85)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\zeroh\Desktop\todo\gw138\pro\src\uart_tx.v":100)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\zeroh\Desktop\todo\gw138\pro\src\uart_tx.v":103)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\zeroh\Desktop\todo\gw138\pro\src\uart_tx.v":116)
+Compiling module 'Gowin_PLL'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\gowin_pll\gowin_pll.v":10)
+Compiling module 'DDR3_Memory_Interface_Top'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":31486)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module '**'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v":0)
+Compiling module 'ddr3_test'("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_test.v":1)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_test.v":59)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 29("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_test.v":91)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_test.v":113)
+WARN  (EX3791) : Expression size 25 truncated to fit in target size 24("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_test.v":126)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 29("C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_test.v":155)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\zeroh\Desktop\todo\gw138\pro\src\top.v":221)
+NOTE  (EX0101) : Current top module is "top"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "C:\Users\zeroh\Desktop\todo\gw138\pro\impl\gwsynthesis\pro.vg" completed
+[100%] Generate report file "C:\Users\zeroh\Desktop\todo\gw138\pro\impl\gwsynthesis\pro_syn.rpt.html" completed
+GowinSynthesis finish

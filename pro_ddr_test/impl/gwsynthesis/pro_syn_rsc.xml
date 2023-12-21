@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="top" Register="28" Lut="56">
+    <SubModule name="uFIFO_TX" Register="29" Lut="75" Bsram="4"/>
+    <SubModule name="uBAUDGEN" Register="22" Lut="32"/>
+    <SubModule name="uUART_TX" Register="27" Lut="46"/>
+    <SubModule name="upll"/>
+    <SubModule name="u_ddr3" Register="5597" Alu="207" Lut="3397" Bsram="24"/>
+    <SubModule name="u_ddr_test" Register="70" Lut="229"/>
+</Module>

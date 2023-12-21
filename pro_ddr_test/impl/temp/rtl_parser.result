@@ -1,0 +1,70 @@
+[
+ {
+  "InstFile" : "C:/Users/zeroh/Desktop/todo/gw138/pro/src/top.v",
+  "InstLine" : 1,
+  "InstName" : "top",
+  "ModuleFile" : "C:/Users/zeroh/Desktop/todo/gw138/pro/src/top.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "top",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/zeroh/Desktop/todo/gw138/pro/src/top.v",
+    "InstLine" : 34,
+    "InstName" : "uFIFO_TX",
+    "ModuleFile" : "C:/Users/zeroh/Desktop/todo/gw138/pro/src/fifo.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "FIFO"
+   },
+   {
+    "InstFile" : "C:/Users/zeroh/Desktop/todo/gw138/pro/src/top.v",
+    "InstLine" : 45,
+    "InstName" : "uBAUDGEN",
+    "ModuleFile" : "C:/Users/zeroh/Desktop/todo/gw138/pro/src/uart_tx.v",
+    "ModuleLine" : 125,
+    "ModuleName" : "BAUDGEN"
+   },
+   {
+    "InstFile" : "C:/Users/zeroh/Desktop/todo/gw138/pro/src/top.v",
+    "InstLine" : 51,
+    "InstName" : "uUART_TX",
+    "ModuleFile" : "C:/Users/zeroh/Desktop/todo/gw138/pro/src/uart_tx.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "UART_TX"
+   },
+   {
+    "InstFile" : "C:/Users/zeroh/Desktop/todo/gw138/pro/src/top.v",
+    "InstLine" : 65,
+    "InstName" : "upll",
+    "ModuleFile" : "C:/Users/zeroh/Desktop/todo/gw138/pro/src/gowin_pll/gowin_pll.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_PLL"
+   },
+   {
+    "InstFile" : "C:/Users/zeroh/Desktop/todo/gw138/pro/src/top.v",
+    "InstLine" : 93,
+    "InstName" : "u_ddr3",
+    "ModuleFile" : "C:/Users/zeroh/Desktop/todo/gw138/pro/src/ddr3_memory_interface/ddr3_memory_interface.v",
+    "ModuleLine" : 31486,
+    "ModuleName" : "DDR3_Memory_Interface_Top",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/zeroh/Desktop/todo/gw138/pro/src/ddr3_memory_interface/ddr3_memory_interface.v",
+      "InstLine" : 31571,
+      "InstName" : "gw3_top",
+      "ModuleFile" : "C:/Users/zeroh/Desktop/todo/gw138/pro/src/ddr3_memory_interface/ddr3_memory_interface.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "~GW_DDR3_PHY_MC.DDR3_Memory_Interface_Top"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/zeroh/Desktop/todo/gw138/pro/src/top.v",
+    "InstLine" : 143,
+    "InstName" : "u_ddr_test",
+    "ModuleFile" : "C:/Users/zeroh/Desktop/todo/gw138/pro/src/ddr3_test.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "ddr3_test"
+   }
+  ]
+ }
+]

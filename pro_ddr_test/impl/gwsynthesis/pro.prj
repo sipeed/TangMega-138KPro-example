@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW5AST-138B" package="FCPBGA676A" speed="1" partNumber="GW5AST-LV138FPG676AES"/>
+    <FileList>
+        <File path="C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_memory_interface\ddr3_memory_interface.v" type="verilog"/>
+        <File path="C:\Users\zeroh\Desktop\todo\gw138\pro\src\ddr3_test.v" type="verilog"/>
+        <File path="C:\Users\zeroh\Desktop\todo\gw138\pro\src\fifo.v" type="verilog"/>
+        <File path="C:\Users\zeroh\Desktop\todo\gw138\pro\src\gowin_pll\gowin_pll.v" type="verilog"/>
+        <File path="C:\Users\zeroh\Desktop\todo\gw138\pro\src\top.v" type="verilog"/>
+        <File path="C:\Users\zeroh\Desktop\todo\gw138\pro\src\uart_tx.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="0"/>
+        <Option type="looplimit" value="2000"/>
+        <Option type="output_file" value="C:\Users\zeroh\Desktop\todo\gw138\pro\impl\gwsynthesis\pro.vg"/>
+        <Option type="print_all_synthesis_warning" value="0"/>
+        <Option type="ram_rw_check" value="0"/>
+        <Option type="verilog_language" value="verilog-2001"/>
+        <Option type="vhdl_language" value="vhdl-1993"/>
+    </OptionList>
+</Project>
