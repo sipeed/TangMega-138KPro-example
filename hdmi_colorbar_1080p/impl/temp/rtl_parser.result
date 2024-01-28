@@ -1,0 +1,112 @@
+[
+ {
+  "InstFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/top.v",
+  "InstLine" : 1,
+  "InstName" : "top",
+  "ModuleFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/top.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "top",
+  "SubInsts" : [
+   {
+    "InstFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/top.v",
+    "InstLine" : 25,
+    "InstName" : "Gowin_PLL_inst",
+    "ModuleFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/gowin_pll/gowin_pll.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_PLL"
+   },
+   {
+    "InstFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/top.v",
+    "InstLine" : 32,
+    "InstName" : "u_Reset_Sync",
+    "ModuleFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/top.v",
+    "ModuleLine" : 68,
+    "ModuleName" : "Reset_Sync"
+   },
+   {
+    "InstFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/top.v",
+    "InstLine" : 38,
+    "InstName" : "dvi_tx_top_inst0",
+    "ModuleFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/dvi-tx/dvi_tx_top.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "dvi_tx_top",
+    "SubInsts" : [
+     {
+      "InstFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/dvi-tx/dvi_tx_top.v",
+      "InstLine" : 37,
+      "InstName" : "gen_enc[0].dvi_tx_tmds_enc_inst",
+      "ModuleFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/dvi-tx/dvi_tx_tmds_enc.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "dvi_tx_tmds_enc"
+     },
+     {
+      "InstFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/dvi-tx/dvi_tx_top.v",
+      "InstLine" : 48,
+      "InstName" : "gen_enc[0].dvi_tx_tmds_phy_inst",
+      "ModuleFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/dvi-tx/dvi_tx_tmds_phy.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "dvi_tx_tmds_phy"
+     },
+     {
+      "InstFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/dvi-tx/dvi_tx_top.v",
+      "InstLine" : 37,
+      "InstName" : "gen_enc[1].dvi_tx_tmds_enc_inst",
+      "ModuleFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/dvi-tx/dvi_tx_tmds_enc.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "dvi_tx_tmds_enc"
+     },
+     {
+      "InstFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/dvi-tx/dvi_tx_top.v",
+      "InstLine" : 48,
+      "InstName" : "gen_enc[1].dvi_tx_tmds_phy_inst",
+      "ModuleFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/dvi-tx/dvi_tx_tmds_phy.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "dvi_tx_tmds_phy"
+     },
+     {
+      "InstFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/dvi-tx/dvi_tx_top.v",
+      "InstLine" : 37,
+      "InstName" : "gen_enc[2].dvi_tx_tmds_enc_inst",
+      "ModuleFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/dvi-tx/dvi_tx_tmds_enc.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "dvi_tx_tmds_enc"
+     },
+     {
+      "InstFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/dvi-tx/dvi_tx_top.v",
+      "InstLine" : 48,
+      "InstName" : "gen_enc[2].dvi_tx_tmds_phy_inst",
+      "ModuleFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/dvi-tx/dvi_tx_tmds_phy.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "dvi_tx_tmds_phy"
+     },
+     {
+      "InstFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/dvi-tx/dvi_tx_top.v",
+      "InstLine" : 60,
+      "InstName" : "clock_phy",
+      "ModuleFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/dvi-tx/dvi_tx_clk_drv.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "dvi_tx_clk_drv"
+     }
+    ]
+   },
+   {
+    "InstFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/top.v",
+    "InstLine" : 55,
+    "InstName" : "test_gen0",
+    "ModuleFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/video-misc/test_pattern_gen.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "test_pattern_gen",
+    "SubInsts" : [
+     {
+      "InstFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/video-misc/test_pattern_gen.v",
+      "InstLine" : 81,
+      "InstName" : "video_timing_ctrl_inst0",
+      "ModuleFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/video-misc/video_timing_ctrl.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "video_timing_ctrl"
+     }
+    ]
+   }
+  ]
+ }
+]

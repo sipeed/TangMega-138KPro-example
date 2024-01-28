@@ -1,0 +1,27 @@
+Reading netlist file: "G:\TangMega138K\TangMega-138KPro-example\dvi\hdmi\impl\gwsynthesis\hdmi.vg"
+Parsing netlist file "G:\TangMega138K\TangMega-138KPro-example\dvi\hdmi\impl\gwsynthesis\hdmi.vg" completed
+Processing netlist completed
+Reading constraint file: "G:\TangMega138K\TangMega-138KPro-example\dvi\hdmi\src\hdmi.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+WARN  (PR1014) : Generic routing resource will be used to clock signal 'clk_d' by the specified constraint. And then it may lead to the excessive delay or skew
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Generate file "G:\TangMega138K\TangMega-138KPro-example\dvi\hdmi\impl\pnr\hdmi.pin.html" completed
+Generate file "G:\TangMega138K\TangMega-138KPro-example\dvi\hdmi\impl\pnr\hdmi.rpt.html" completed
+Generate file "G:\TangMega138K\TangMega-138KPro-example\dvi\hdmi\impl\pnr\hdmi.rpt.txt" completed
+Generate file "G:\TangMega138K\TangMega-138KPro-example\dvi\hdmi\impl\pnr\hdmi.tr.html" completed
+Sun Jan 28 08:04:57 2024
+

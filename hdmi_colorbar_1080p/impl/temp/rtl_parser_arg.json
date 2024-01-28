@@ -1,0 +1,45 @@
+{
+ "Device" : "GW5AST-138B",
+ "Files" : [
+  {
+   "Path" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/gowin_pll/gowin_pll.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/dvi-tx/dvi_tx_clk_drv.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/dvi-tx/dvi_tx_tmds_enc.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/dvi-tx/dvi_tx_tmds_phy.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/dvi-tx/dvi_tx_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/video-misc/test_pattern_gen.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/src/video-misc/video_timing_ctrl.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "G:/TangMega138K/TangMega-138KPro-example/dvi/hdmi/impl/temp/rtl_parser.result",
+ "Top" : "top",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}

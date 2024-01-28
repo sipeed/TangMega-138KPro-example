@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="top" Lut="1">
+    <SubModule name="Gowin_PLL_inst"/>
+    <SubModule name="u_Reset_Sync" Register="4" Alu="4" Lut="2"/>
+    <SubModule name="dvi_tx_top_inst0">
+        <SubModule name="gen_enc[0].dvi_tx_tmds_enc_inst" Register="19" Alu="32" Lut="52"/>
+        <SubModule name="gen_enc[0].dvi_tx_tmds_phy_inst" Register="1"/>
+        <SubModule name="gen_enc[1].dvi_tx_tmds_enc_inst" Register="16" Alu="32" Lut="50"/>
+        <SubModule name="gen_enc[1].dvi_tx_tmds_phy_inst"/>
+        <SubModule name="gen_enc[2].dvi_tx_tmds_enc_inst" Register="16" Alu="32" Lut="50"/>
+        <SubModule name="gen_enc[2].dvi_tx_tmds_phy_inst"/>
+        <SubModule name="clock_phy"/>
+    </SubModule>
+    <SubModule name="test_gen0" Lut="16">
+        <SubModule name="video_timing_ctrl_inst0" Register="28" Lut="65"/>
+    </SubModule>
+</Module>
