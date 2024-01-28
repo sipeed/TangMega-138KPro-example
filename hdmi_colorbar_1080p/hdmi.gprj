@@ -1,0 +1,19 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW5AST-138B" pn="GW5AST-LV138FPG676AES">gw5ast138b-002</Device>
+    <FileList>
+        <File path="src/dvi-tx/dvi_tx_clk_drv.v" type="file.verilog" enable="1"/>
+        <File path="src/dvi-tx/dvi_tx_tmds_enc.v" type="file.verilog" enable="1"/>
+        <File path="src/dvi-tx/dvi_tx_tmds_phy.v" type="file.verilog" enable="1"/>
+        <File path="src/dvi-tx/dvi_tx_top.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_pll/gowin_pll.v" type="file.verilog" enable="1"/>
+        <File path="src/top.v" type="file.verilog" enable="1"/>
+        <File path="src/video-misc/test_pattern_gen.v" type="file.verilog" enable="1"/>
+        <File path="src/video-misc/video_timing_ctrl.v" type="file.verilog" enable="1"/>
+        <File path="src/hdmi.cst" type="file.cst" enable="1"/>
+        <File path="src/hdmi.sdc" type="file.sdc" enable="1"/>
+    </FileList>
+</Project>
