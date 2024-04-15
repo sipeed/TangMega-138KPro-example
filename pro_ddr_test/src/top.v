@@ -140,6 +140,13 @@ wire [23:0] num_ok;
 
 wire [2:0] test_state;
 
+
+///////////////////////////////////////
+//2024/04/14
+//by:LAKKA
+//fix timing
+
+/*
 ddr3_test u_ddr_test(
     .clk                (clk_x1),
     .rst_n              (rst_n),  
@@ -160,7 +167,39 @@ ddr3_test u_ddr_test(
     .rdone              (rdone),
     .num_ok             (num_ok),
     .test_state         (test_state)
+);*/
+
+
+reg read_av;
+reg [255:0] read_data;
+
+always@(posedge clk_x1)begin
+    read_av <= app_rd_data_valid;
+    read_data <= app_rd_data;
+end
+
+ddr3_test u_ddr_test(
+    .clk                (clk_x1),
+    .rst_n              (rst_n),  
+    .app_rdy            (app_rdy),
+    .app_cmd            (app_cmd),
+    .app_en             (app_en),
+    .app_addr           (app_addr),
+    .wr_data_rdy        (app_wdf_rdy),
+    .app_wdf_data       (app_wdf_data),
+    .app_wdf_wren       (app_wdf_wren),
+    .app_wdf_end        (app_wdf_end),
+    .app_wdf_mask       (app_wdf_mask),
+    .app_burst          (app_burst),
+    .app_rd_data_valid  (read_av),
+    .app_rd_data        (read_data), 
+    .init_calib_complete(init_calib_complete),
+    .wdone              (wdone),
+    .rdone              (rdone),
+    .num_ok             (num_ok),
+    .test_state         (test_state)
 );
+///////////////////////////////////////
 
 always @(*) begin
     case(test_state)
