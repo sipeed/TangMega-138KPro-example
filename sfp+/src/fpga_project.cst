@@ -1,0 +1,21 @@
+//Copyright (C)2014-2023 Gowin Semiconductor Corporation.
+//All rights reserved. 
+//File Title: Physical Constraints file
+//GOWIN Version: 1.9.9 Beta-3
+//Part Number: GW5AST-LV138FPG676AES
+//Device: GW5AST-138
+//Device Version: B
+//Created Time: Fri 08 18 17:12:14 2023
+
+IO_LOC "led_ln0" R26;
+IO_PORT "led_ln0" PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "led_ln1" L20;
+IO_PORT "led_ln1" PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "led" J14;
+IO_PORT "led" PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "sfp_tx_disable_ln1" M20;
+IO_PORT "sfp_tx_disable_ln1" PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "sfp_tx_disable_ln0" R18;
+IO_PORT "sfp_tx_disable_ln0" PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "sw1" K16;
+IO_PORT "sw1" PULL_MODE=NONE DRIVE=OFF BANK_VCCIO=3.3;

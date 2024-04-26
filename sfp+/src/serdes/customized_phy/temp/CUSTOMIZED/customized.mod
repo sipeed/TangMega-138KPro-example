@@ -1,0 +1,6 @@
+-Customized_PHY_Topprotocol_module_type customized
+-Customized_PHY_TopQ1Lane0 true
+-Customized_PHY_TopQ1Lane1 true
+-Customized_PHY_TopClock_Correction None
+-Customized_PHY_TopWord_Alignment false
+-Customized_PHY_TopRX_Channel_Bonding None

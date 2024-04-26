@@ -1,0 +1,20 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW5AST-138B" pn="GW5AST-LV138FPG676AES">gw5ast138b-002</Device>
+    <FileList>
+        <File path="src/audio_driver.v" type="file.verilog" enable="1"/>
+        <File path="src/fifo_top/sd_ctrl_dcfifo.v" type="file.verilog" enable="1"/>
+        <File path="src/sd_card/sd_ctrl_read.v" type="file.verilog" enable="1"/>
+        <File path="src/sd_card/sd_ctrl_read_top.v" type="file.verilog" enable="1"/>
+        <File path="src/sd_card/sd_ctrl_top.v" type="file.verilog" enable="1"/>
+        <File path="src/sd_card/sd_init.v" type="file.verilog" enable="1"/>
+        <File path="src/sd_card/sd_read.v" type="file.verilog" enable="1"/>
+        <File path="src/sd_card/sd_write.v" type="file.verilog" enable="1"/>
+        <File path="src/sine_wave.v" type="file.verilog" enable="1"/>
+        <File path="src/top.v" type="file.verilog" enable="1"/>
+        <File path="src/audio.cst" type="file.cst" enable="1"/>
+    </FileList>
+</Project>

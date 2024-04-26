@@ -1,0 +1,33 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'F:\TangMega-138K-example\Pro_board\audio\audio\src\audio_driver.v'
+Analyzing Verilog file 'F:\TangMega-138K-example\Pro_board\audio\audio\src\sine_wave.v'
+Analyzing Verilog file 'F:\TangMega-138K-example\Pro_board\audio\audio\src\top.v'
+WARN  (EX3801) : Parameter 'clk_6m_cnt_para' becomes localparam in 'top' with formal parameter declaration list("F:\TangMega-138K-example\Pro_board\audio\audio\src\top.v":25)
+WARN  (EX3801) : Parameter 'clk_1p5m_cnt_para' becomes localparam in 'top' with formal parameter declaration list("F:\TangMega-138K-example\Pro_board\audio\audio\src\top.v":45)
+Compiling module 'top'("F:\TangMega-138K-example\Pro_board\audio\audio\src\top.v":1)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("F:\TangMega-138K-example\Pro_board\audio\audio\src\top.v":37)
+WARN  (EX3791) : Expression size 8 truncated to fit in target size 7("F:\TangMega-138K-example\Pro_board\audio\audio\src\top.v":57)
+Compiling module 'rom_save_sin'("F:\TangMega-138K-example\Pro_board\audio\audio\src\sine_wave.v":1)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("F:\TangMega-138K-example\Pro_board\audio\audio\src\sine_wave.v":13)
+Compiling module 'audio_drive'("F:\TangMega-138K-example\Pro_board\audio\audio\src\audio_driver.v":2)
+NOTE  (EX0101) : Current top module is "top"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "F:\TangMega-138K-example\Pro_board\audio\audio\impl\gwsynthesis\audio.vg" completed
+[100%] Generate report file "F:\TangMega-138K-example\Pro_board\audio\audio\impl\gwsynthesis\audio_syn.rpt.html" completed
+GowinSynthesis finish

@@ -1,0 +1,55 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'F:\TangMega-138K-example\Pro_board\audio\audio_music\src\audio_driver.v'
+Analyzing Verilog file 'F:\TangMega-138K-example\Pro_board\audio\audio_music\src\fifo_top\sd_ctrl_dcfifo.v'
+Analyzing Verilog file 'F:\TangMega-138K-example\Pro_board\audio\audio_music\src\sd_card\sd_ctrl_read.v'
+Analyzing Verilog file 'F:\TangMega-138K-example\Pro_board\audio\audio_music\src\sd_card\sd_ctrl_read_top.v'
+Analyzing Verilog file 'F:\TangMega-138K-example\Pro_board\audio\audio_music\src\sd_card\sd_ctrl_top.v'
+Analyzing Verilog file 'F:\TangMega-138K-example\Pro_board\audio\audio_music\src\sd_card\sd_init.v'
+Analyzing Verilog file 'F:\TangMega-138K-example\Pro_board\audio\audio_music\src\sd_card\sd_read.v'
+Analyzing Verilog file 'F:\TangMega-138K-example\Pro_board\audio\audio_music\src\sd_card\sd_write.v'
+Analyzing Verilog file 'F:\TangMega-138K-example\Pro_board\audio\audio_music\src\sine_wave.v'
+Analyzing Verilog file 'F:\TangMega-138K-example\Pro_board\audio\audio_music\src\top.v'
+Undeclared symbol 'HP_BCK_oppo', assumed default net type 'wire'("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\top.v":79)
+Undeclared symbol 'rd_empty', assumed default net type 'wire'("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\top.v":116)
+WARN  (EX3801) : Parameter 'start_section_parameter' becomes localparam in 'top' with formal parameter declaration list("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\top.v":27)
+WARN  (EX3801) : Parameter 'file_size' becomes localparam in 'top' with formal parameter declaration list("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\top.v":28)
+WARN  (EX3801) : Parameter 'end__section_parameter' becomes localparam in 'top' with formal parameter declaration list("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\top.v":29)
+WARN  (EX3801) : Parameter 'clk_6m_cnt_para' becomes localparam in 'top' with formal parameter declaration list("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\top.v":35)
+WARN  (EX3801) : Parameter 'clk_1p5m_cnt_para' becomes localparam in 'top' with formal parameter declaration list("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\top.v":47)
+Compiling module 'top'("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\top.v":1)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\top.v":41)
+WARN  (EX3791) : Expression size 3 truncated to fit in target size 2("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\top.v":53)
+Compiling module 'audio_drive'("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\audio_driver.v":2)
+Compiling module 'sd_ctrl_top'("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\sd_card\sd_ctrl_top.v":22)
+Compiling module 'sd_init'("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\sd_card\sd_init.v":22)
+Compiling module 'sd_write'("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\sd_card\sd_write.v":22)
+Compiling module 'sd_read'("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\sd_card\sd_read.v":22)
+WARN  (EX3670) : Actual bit length 32 differs from formal bit length 16 for port 'wr_data'("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\top.v":98)
+WARN  (EX3073) : Port 'Almost_Empty' remains unconnected for this instance("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\sd_card\sd_ctrl_read_top.v":52)
+Compiling module 'sd_ctrl_read_top'("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\sd_card\sd_ctrl_read_top.v":5)
+Compiling module 'sd_ctrl_read'("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\sd_card\sd_ctrl_read.v":2)
+Compiling module 'sd_ctrl_dcfifo'("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\fifo_top\sd_ctrl_dcfifo.v":819)
+Compiling module '**'("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\fifo_top\sd_ctrl_dcfifo.v":0)
+WARN  (EX3670) : Actual bit length 10 differs from formal bit length 11 for port 'Wnum'("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\sd_card\sd_ctrl_read_top.v":47)
+NOTE  (EX0101) : Current top module is "top"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "sd_write" instantiated to "u_sd_write" is swept in optimizing("F:\TangMega-138K-example\Pro_board\audio\audio_music\src\sd_card\sd_ctrl_top.v":110)
+[95%] Generate netlist file "F:\TangMega-138K-example\Pro_board\audio\audio_music\impl\gwsynthesis\audio_music.vg" completed
+[100%] Generate report file "F:\TangMega-138K-example\Pro_board\audio\audio_music\impl\gwsynthesis\audio_music_syn.rpt.html" completed
+GowinSynthesis finish

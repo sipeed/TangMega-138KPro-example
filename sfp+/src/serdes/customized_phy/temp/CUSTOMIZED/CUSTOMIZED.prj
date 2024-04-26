@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW5AST-138B" package="FCPBGA676A" speed="1" partNumber="GW5AST-LV138FPG676AES"/>
+    <FileList>
+        <File path="C:/Users/lee/Downloads/Gowin_V1.9.9Beta-4_win/Gowin_V1.9.9Beta-4_win/Gowin_V1.9.9Beta-4/IDE/ipcore/SERDES_IP/IPlib/CUSTOMIZED/data/customized_phy_wrapper.v" type="verilog"/>
+        <File path="C:/Users/lee/Downloads/Gowin_V1.9.9Beta-4_win/Gowin_V1.9.9Beta-4_win/Gowin_V1.9.9Beta-4/IDE/ipcore/SERDES_IP/IPlib/CUSTOMIZED/data/customized_phy.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="1"/>
+        <Option type="include_path" value="C:/Users/lee/Downloads/Gowin_V1.9.9Beta-4_win/Gowin_V1.9.9Beta-4_win/Gowin_V1.9.9Beta-4/IDE/ipcore/SERDES_IP/IPlib/CUSTOMIZED/data"/>
+        <Option type="include_path" value="F:/TangMega-138K-example/Pro_board/sfp+/src/serdes/customized_phy/temp/CUSTOMIZED"/>
+        <Option type="output_file" value="customized_phy.vg"/>
+        <Option type="output_template" value="customized_phy_tmp.v"/>
+        <Option type="ram_balance" value="1"/>
+        <Option type="ram_rw_check" value="1"/>
+        <Option type="top_module" value="Customized_PHY_Top"/>
+        <Option type="verilog_language" value="sysv-2017"/>
+    </OptionList>
+</Project>

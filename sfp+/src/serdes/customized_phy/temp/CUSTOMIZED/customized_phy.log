@@ -1,0 +1,54 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v'
+Analyzing included file 'C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\static_macro_define.vh'("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":2)
+Back to file 'C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v'("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":2)
+Analyzing included file 'define.vh'("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":3)
+Back to file 'C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v'("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":3)
+Analyzing Verilog file 'C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy.v'
+Analyzing included file 'define.vh'("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy.v":839)
+Back to file 'C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy.v'("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy.v":839)
+Analyzing included file 'C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\static_macro_define.vh'("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy.v":839)
+Back to file 'C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy.v'("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy.v":839)
+Analyzing included file 'param.v'("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy.v":839)
+Back to file 'C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy.v'("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy.v":839)
+Compiling module 'Customized_PHY_Top'("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":5)
+Compiling module '**'("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy.v":0)
+NOTE  (EX0101) : Current top module is "Customized_PHY_Top"
+[5%] Running netlist conversion ...
+WARN  (CV0016) : Input Q1_FABRIC_LANE0_CMU_CK_REF_O is unused("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":268)
+WARN  (CV0020) : Input Q1_FABRIC_LN0_ASTAT_O[4:0] is unused("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":269)
+WARN  (CV0016) : Input Q1_LANE0_ALIGN_LINK is unused("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":271)
+WARN  (CV0016) : Input Q1_LANE0_K_LOCK is unused("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":272)
+WARN  (CV0016) : Input Q1_FABRIC_LANE0_CMU_OK_O is unused("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":273)
+WARN  (CV0016) : Input Q1_FABRIC_LANE1_CMU_CK_REF_O is unused("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":328)
+WARN  (CV0020) : Input Q1_FABRIC_LN1_ASTAT_O[4:0] is unused("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":329)
+WARN  (CV0016) : Input Q1_LANE1_ALIGN_LINK is unused("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":331)
+WARN  (CV0016) : Input Q1_LANE1_K_LOCK is unused("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":332)
+WARN  (CV0016) : Input Q1_FABRIC_LANE1_CMU_OK_O is unused("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":333)
+WARN  (CV0016) : Input Q0_FABRIC_CMU_CK_REF_O is unused("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":487)
+WARN  (CV0016) : Input Q0_FABRIC_CMU1_CK_REF_O is unused("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":488)
+WARN  (CV0016) : Input Q0_FABRIC_CMU1_OK_O is unused("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":489)
+WARN  (CV0016) : Input Q0_FABRIC_CMU_OK_O is unused("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":490)
+WARN  (CV0016) : Input Q1_FABRIC_CMU_CK_REF_O is unused("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":491)
+WARN  (CV0016) : Input Q1_FABRIC_CMU_OK_O is unused("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":494)
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "~customized_phy_top.Customized_PHY_Top" instantiated to "customized_phy_top" is swept in optimizing("C:\Users\lee\Downloads\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4_win\Gowin_V1.9.9Beta-4\IDE\ipcore\SERDES_IP\IPlib\CUSTOMIZED\data\customized_phy_wrapper.v":988)
+[95%] Generate netlist file "F:\TangMega-138K-example\Pro_board\sfp+\src\serdes\customized_phy\temp\CUSTOMIZED\customized_phy.vg" completed
+Generate template file "F:\TangMega-138K-example\Pro_board\sfp+\src\serdes\customized_phy\temp\CUSTOMIZED\customized_phy_tmp.v" completed
+[100%] Generate report file "F:\TangMega-138K-example\Pro_board\sfp+\src\serdes\customized_phy\temp\CUSTOMIZED\customized_phy_syn.rpt.html" completed
+GowinSynthesis finish

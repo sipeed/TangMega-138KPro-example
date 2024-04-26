@@ -1,0 +1,82 @@
+[
+ {
+  "InstFile" : "F:/TangMega-138K-example/Pro_board/sfp+/src/top.v",
+  "InstLine" : 1,
+  "InstName" : "top",
+  "ModuleFile" : "F:/TangMega-138K-example/Pro_board/sfp+/src/top.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "top",
+  "SubInsts" : [
+   {
+    "InstFile" : "F:/TangMega-138K-example/Pro_board/sfp+/src/top.v",
+    "InstLine" : 77,
+    "InstName" : "Serdes_Top",
+    "ModuleFile" : "F:/TangMega-138K-example/Pro_board/sfp+/src/serdes/serdes.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Serdes_Top",
+    "SubInsts" : [
+     {
+      "InstFile" : "F:/TangMega-138K-example/Pro_board/sfp+/src/serdes/serdes.v",
+      "InstLine" : 473,
+      "InstName" : "Customized_PHY_Top_inst",
+      "ModuleFile" : "F:/TangMega-138K-example/Pro_board/sfp+/src/serdes/customized_phy/customized_phy.v",
+      "ModuleLine" : 10,
+      "ModuleName" : "Customized_PHY_Top"
+     }
+    ]
+   },
+   {
+    "InstFile" : "F:/TangMega-138K-example/Pro_board/sfp+/src/top.v",
+    "InstLine" : 153,
+    "InstName" : "q1ln1_prbs7_single_channel",
+    "ModuleFile" : "F:/TangMega-138K-example/Pro_board/sfp+/src/prbs7_single_channel.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "prbs7_single_channel",
+    "SubInsts" : [
+     {
+      "InstFile" : "F:/TangMega-138K-example/Pro_board/sfp+/src/prbs7_single_channel.v",
+      "InstLine" : 27,
+      "InstName" : "prbs7_gen",
+      "ModuleFile" : "F:/TangMega-138K-example/Pro_board/sfp+/src/prbs7_gen.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "prbs7_gen"
+     },
+     {
+      "InstFile" : "F:/TangMega-138K-example/Pro_board/sfp+/src/prbs7_single_channel.v",
+      "InstLine" : 39,
+      "InstName" : "prbs7_chk",
+      "ModuleFile" : "F:/TangMega-138K-example/Pro_board/sfp+/src/prbs7_chk.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "prbs7_chk"
+     }
+    ]
+   },
+   {
+    "InstFile" : "F:/TangMega-138K-example/Pro_board/sfp+/src/top.v",
+    "InstLine" : 195,
+    "InstName" : "q1ln0_prbs7_single_channel",
+    "ModuleFile" : "F:/TangMega-138K-example/Pro_board/sfp+/src/prbs7_single_channel.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "prbs7_single_channel",
+    "SubInsts" : [
+     {
+      "InstFile" : "F:/TangMega-138K-example/Pro_board/sfp+/src/prbs7_single_channel.v",
+      "InstLine" : 27,
+      "InstName" : "prbs7_gen",
+      "ModuleFile" : "F:/TangMega-138K-example/Pro_board/sfp+/src/prbs7_gen.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "prbs7_gen"
+     },
+     {
+      "InstFile" : "F:/TangMega-138K-example/Pro_board/sfp+/src/prbs7_single_channel.v",
+      "InstLine" : 39,
+      "InstName" : "prbs7_chk",
+      "ModuleFile" : "F:/TangMega-138K-example/Pro_board/sfp+/src/prbs7_chk.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "prbs7_chk"
+     }
+    ]
+   }
+  ]
+ }
+]
