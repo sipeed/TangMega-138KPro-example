@@ -1,0 +1,108 @@
+<?xml version="1" encoding="UTF-8"?>
+<GAO_CONFIG>
+    <Version>3.0</Version>
+    <Mode>Standard</Mode>
+    <AoCore index="0" sample_clock="q1_ln0_tx_clk" trig_type="0" storage_depth="2048" window_num="1" capture_amount="1024" implementation="0" trigger_pos="0" module_name="top" force_trigger_by_falling_edge="false" capture_init_data_enabled="false">
+        <SignalList>
+            <Signal capture_enable="true">prbs7_lock_ln0</Signal>
+            <Bus capture_enable="true" name="q1_ln0_prbs7_gen_data[7:0]">
+                <Signal>q1_ln0_prbs7_gen_data[7]</Signal>
+                <Signal>q1_ln0_prbs7_gen_data[6]</Signal>
+                <Signal>q1_ln0_prbs7_gen_data[5]</Signal>
+                <Signal>q1_ln0_prbs7_gen_data[4]</Signal>
+                <Signal>q1_ln0_prbs7_gen_data[3]</Signal>
+                <Signal>q1_ln0_prbs7_gen_data[2]</Signal>
+                <Signal>q1_ln0_prbs7_gen_data[1]</Signal>
+                <Signal>q1_ln0_prbs7_gen_data[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="q1_ln0_prbs7_chk_data[7:0]">
+                <Signal>q1_ln0_prbs7_chk_data[7]</Signal>
+                <Signal>q1_ln0_prbs7_chk_data[6]</Signal>
+                <Signal>q1_ln0_prbs7_chk_data[5]</Signal>
+                <Signal>q1_ln0_prbs7_chk_data[4]</Signal>
+                <Signal>q1_ln0_prbs7_chk_data[3]</Signal>
+                <Signal>q1_ln0_prbs7_chk_data[2]</Signal>
+                <Signal>q1_ln0_prbs7_chk_data[1]</Signal>
+                <Signal>q1_ln0_prbs7_chk_data[0]</Signal>
+            </Bus>
+            <Signal capture_enable="true">Q1L0_K_LOCK</Signal>
+            <Signal capture_enable="true">Q1L0_WordAlign_Link</Signal>
+            <Signal capture_enable="true">Customized_PHY_Top_q1_ln0_signal_detect_o</Signal>
+            <Signal capture_enable="true">Customized_PHY_Top_q1_ln0_rx_cdr_lock_o</Signal>
+            <Signal capture_enable="true">Customized_PHY_Top_q1_ln0_pll_lock_o</Signal>
+            <Signal capture_enable="true">q1_ln0_rx_clk</Signal>
+            <Signal capture_enable="true">prbs7_lock_ln1</Signal>
+            <Bus capture_enable="true" name="q1_ln1_prbs7_gen_data[7:0]">
+                <Signal>q1_ln1_prbs7_gen_data[7]</Signal>
+                <Signal>q1_ln1_prbs7_gen_data[6]</Signal>
+                <Signal>q1_ln1_prbs7_gen_data[5]</Signal>
+                <Signal>q1_ln1_prbs7_gen_data[4]</Signal>
+                <Signal>q1_ln1_prbs7_gen_data[3]</Signal>
+                <Signal>q1_ln1_prbs7_gen_data[2]</Signal>
+                <Signal>q1_ln1_prbs7_gen_data[1]</Signal>
+                <Signal>q1_ln1_prbs7_gen_data[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="q1_ln1_prbs7_chk_data[7:0]">
+                <Signal>q1_ln1_prbs7_chk_data[7]</Signal>
+                <Signal>q1_ln1_prbs7_chk_data[6]</Signal>
+                <Signal>q1_ln1_prbs7_chk_data[5]</Signal>
+                <Signal>q1_ln1_prbs7_chk_data[4]</Signal>
+                <Signal>q1_ln1_prbs7_chk_data[3]</Signal>
+                <Signal>q1_ln1_prbs7_chk_data[2]</Signal>
+                <Signal>q1_ln1_prbs7_chk_data[1]</Signal>
+                <Signal>q1_ln1_prbs7_chk_data[0]</Signal>
+            </Bus>
+            <Signal capture_enable="true">Q1L1_K_LOCK</Signal>
+            <Signal capture_enable="true">Q1L1_WordAlign_Link</Signal>
+            <Signal capture_enable="true">Customized_PHY_Top_q1_ln1_rx_cdr_lock_o</Signal>
+            <Signal capture_enable="true">Customized_PHY_Top_q1_ln1_pll_lock_o</Signal>
+            <Signal capture_enable="true">Customized_PHY_Top_q1_ln1_signal_detect_o</Signal>
+            <Signal capture_enable="true">q1_ln1_rx_clk</Signal>
+        </SignalList>
+        <Triggers>
+            <Trigger index="0">
+                <SignalList>
+                    <Signal>prbs7_lock_ln1</Signal>
+                    <Signal>prbs7_lock_ln0</Signal>
+                </SignalList>
+            </Trigger>
+            <Trigger index="1"/>
+            <Trigger index="2"/>
+            <Trigger index="3"/>
+            <Trigger index="4"/>
+            <Trigger index="5"/>
+            <Trigger index="6"/>
+            <Trigger index="7"/>
+            <Trigger index="8"/>
+            <Trigger index="9"/>
+            <Trigger index="10"/>
+            <Trigger index="11"/>
+            <Trigger index="12"/>
+            <Trigger index="13"/>
+            <Trigger index="14"/>
+            <Trigger index="15"/>
+        </Triggers>
+        <MatchUnits>
+            <MatchUnit index="0" enabled="1" match_type="1" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="XX" value1="00" trigger="0"/>
+            <MatchUnit index="1" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="2" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="3" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="4" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="5" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="6" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="7" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="8" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="9" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="10" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="11" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="12" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="13" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="14" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="15" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+        </MatchUnits>
+        <Expressions type="Static">
+            <Expression>M0</Expression>
+        </Expressions>
+    </AoCore>
+    <GAO_ID>0001100100100111</GAO_ID>
+</GAO_CONFIG>

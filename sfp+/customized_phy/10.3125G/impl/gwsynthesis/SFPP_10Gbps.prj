@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW5AST-138B" package="FCPBGA676A" speed="1" partNumber="GW5AST-LV138FPG676AC1/I0"/>
+    <FileList>
+        <File path="D:\sfp+\src\prbs7_chk.v" type="verilog"/>
+        <File path="D:\sfp+\src\prbs7_gen.v" type="verilog"/>
+        <File path="D:\sfp+\src\prbs7_single_channel.v" type="verilog"/>
+        <File path="D:\sfp+\src\serdes\customized_phy\customized_phy.v" type="verilog"/>
+        <File path="D:\sfp+\src\serdes\serdes.v" type="verilog"/>
+        <File path="D:\sfp+\src\top.v" type="verilog"/>
+        <File path="C:\Gowin\Gowin_V1.9.10_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_crc32.v" type="gao"/>
+        <File path="C:\Gowin\Gowin_V1.9.10_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_match.v" type="gao"/>
+        <File path="C:\Gowin\Gowin_V1.9.10_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_mem_ctrl.v" type="gao"/>
+        <File path="C:\Gowin\Gowin_V1.9.10_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_top.v" type="gao"/>
+        <File path="C:\Gowin\Gowin_V1.9.10_x64\IDE\data\ipcores\GAO\GW_CON\gw_con_top_138.v" type="gao"/>
+        <File path="C:\Gowin\Gowin_V1.9.10_x64\IDE\data\ipcores\gw_jtag.v" type="gao"/>
+        <File path="D:\sfp+\impl\gwsynthesis\RTL_GAO\gw_gao_top.v" type="gao"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="0"/>
+        <Option type="enable_dsrm" value="0"/>
+        <Option type="global_freq" value="100.000"/>
+        <Option type="include_path" value="C:/Gowin/Gowin_V1.9.10_x64/IDE/data/ipcores/GAO"/>
+        <Option type="include_path" value="D:/sfp+/impl/gwsynthesis/RTL_GAO"/>
+        <Option type="looplimit" value="2000"/>
+        <Option type="output_file" value="D:\sfp+\impl\gwsynthesis\SFPP_10Gbps.vg"/>
+        <Option type="print_all_synthesis_warning" value="1"/>
+        <Option type="ram_rw_check" value="0"/>
+        <Option type="top_module" value="top"/>
+        <Option type="vcc" value="0.9"/>
+        <Option type="vccx" value="1.8"/>
+        <Option type="verilog_language" value="verilog-2001"/>
+        <Option type="vhdl_language" value="vhdl-1993"/>
+    </OptionList>
+</Project>

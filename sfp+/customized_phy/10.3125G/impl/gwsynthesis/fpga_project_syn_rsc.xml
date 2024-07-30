@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="top" Register="53" Alu="52" Lut="28" T_Register="567(53)" T_Alu="98(52)" T_Lut="535(28)" T_Bsram="6(0)">
+    <SubModule name="Serdes_Top_inst"/>
+    <SubModule name="q1ln1_prbs7_single_channel" Register="40" Alu="16" Lut="18" T_Register="40(40)" T_Alu="16(16)" T_Lut="18(18)"/>
+    <SubModule name="q1ln0_prbs7_single_channel" Register="40" Alu="16" Lut="17" T_Register="40(40)" T_Alu="16(16)" T_Lut="17(17)"/>
+    <SubModule name="gw_gao_inst_0" Register="434" Alu="14" Lut="472" Bsram="6" T_Register="434(434)" T_Alu="14(14)" T_Lut="472(472)" T_Bsram="6(6)"/>
+</Module>

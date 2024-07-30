@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW5AST-138B" package="FCPBGA676A" speed="1" partNumber="GW5AST-LV138FPG676AC1/I0"/>
+    <FileList>
+        <File path="C:/Gowin/Gowin_V1.9.10_x64/IDE/ipcore/SERDES_IP/IPlib/CUSTOMIZED/data/customized_phy_wrapper.v" type="verilog"/>
+        <File path="C:/Gowin/Gowin_V1.9.10_x64/IDE/ipcore/SERDES_IP/IPlib/CUSTOMIZED/data/customized_phy.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="1"/>
+        <Option type="enable_dsrm" value="0"/>
+        <Option type="include_path" value="C:/Gowin/Gowin_V1.9.10_x64/IDE/ipcore/SERDES_IP/IPlib/CUSTOMIZED/data"/>
+        <Option type="include_path" value="D:/sfp+/src/serdes/customized_phy/temp/CUSTOMIZED"/>
+        <Option type="output_file" value="customized_phy.vg"/>
+        <Option type="output_template" value="customized_phy_tmp.v"/>
+        <Option type="ram_balance" value="1"/>
+        <Option type="ram_rw_check" value="1"/>
+        <Option type="top_module" value="Customized_PHY_Top"/>
+        <Option type="vcc" value="0.9"/>
+        <Option type="vccx" value="1.8"/>
+        <Option type="verilog_language" value="sysv-2017"/>
+    </OptionList>
+</Project>

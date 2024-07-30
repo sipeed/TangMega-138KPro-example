@@ -1,0 +1,37 @@
+{
+ "Device" : "GW5AST-138B",
+ "Files" : [
+  {
+   "Path" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/SFP_Fan/customized_phy/10.3125G/sfp+/src/prbs7_chk.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/SFP_Fan/customized_phy/10.3125G/sfp+/src/prbs7_gen.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/SFP_Fan/customized_phy/10.3125G/sfp+/src/prbs7_single_channel.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/SFP_Fan/customized_phy/10.3125G/sfp+/src/serdes/customized_phy/customized_phy.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/SFP_Fan/customized_phy/10.3125G/sfp+/src/serdes/serdes.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/SFP_Fan/customized_phy/10.3125G/sfp+/src/top.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/SFP_Fan/customized_phy/10.3125G/sfp+/impl/temp/rtl_parser.result",
+ "Top" : "top",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}
