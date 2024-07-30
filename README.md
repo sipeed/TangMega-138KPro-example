@@ -55,4 +55,4 @@ Pcie Demo. Read its PDF for more information.
 
 ### SFP+
 
-Read [Gowin Customized PHY IP](http://www.gowinsemi.com.cn/enrollment_view.aspx?TypeId=67&Id=942&FId=t27:67:27#IP) For more information.
+Read [Gowin Customized PHY IP](sfp+/docs/IPUG1024-1.5E.pdf) For more information.

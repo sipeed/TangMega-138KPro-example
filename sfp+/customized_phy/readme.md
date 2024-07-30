@@ -17,7 +17,10 @@ In theory, other GW5AST & GW5AT models can also use this demo, but the maximum s
 
 ```
 | -- docs  
-|    `-- images					          --> picture resources  
+|    |`-- images					      --> picture resources  
+|    |`-- python					      --> python script folder
+|    `-- SET_5351.md					  --> Manual for setting up exPLL   
+|    `-- IPUG1024-1.5E.pdf				  --> Gowin Customized PHY IP User Guide
 | -- customized_phy
 |    |-- 1.25G                            
 |        |	`-- fpga_project.gprj		  --> demo project
