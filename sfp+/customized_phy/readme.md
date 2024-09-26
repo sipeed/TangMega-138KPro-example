@@ -65,7 +65,7 @@ Here are quick instructions for the more experienced,
 <img src="../docs/images/GAO_cross-corresponding.png" width=400>
 
 Generally, you can see in GAO that the two sets of sent and received data are cross-corresponding.  
-A [step-by-step instructions](https://wiki.sipeed.com/hardware/en/tang/Tang-Nano-Doc/GAO.html) will available on sipeed wiki later.
+Here is a [step-by-step instructions](../docs/manual/SUG114-3.0E_Gowin%20Analyzer_Oscilloscope_User_Guide.pdf) for how to use the GAO.  
 
 ## LEDs & button
 
