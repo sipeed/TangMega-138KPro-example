@@ -16,17 +16,17 @@ In theory, other GW5AST & GW5AT models can also use this demo, but the maximum s
 ## Directory structure
 
 ```
-| -- docs  
-|    |`-- images					      --> picture resources  
-|    |`-- python					      --> python script folder
-|    `-- SET_5351.md					  --> Manual for setting up exPLL   
-|    `-- IPUG1024-1.5E.pdf				  --> Gowin Customized PHY IP User Guide
+| -- docs                                 --> manuals and documentation  
+|    |`-- images                          --> picture resources  
+|    |`-- python                          --> python script folder
+|    `-- SET_5351.md                      --> Manual for setting up exPLL   
+|    `-- IPUG1024-1.5E.pdf                --> Gowin Customized PHY IP User Guide
 | -- customized_phy
 |    |-- 1.25G                            
-|        |	`-- fpga_project.gprj		  --> demo project
-|        |	`-- fpga_project.gprj.user	  --> project conf.
+|        |	`-- fpga_project.gprj         --> demo project
+|        |	`-- fpga_project.gprj.user    --> project conf.
 |        |-- src
-|          |  `-- top.v		              --> top_module file
+|          |  `-- top.v                   --> top_module file
 |          |  `-- fpga_project.cst        --> physical constraints file
 |          |  `-- fpga_project.rao        --> RAO profile
 |          |  `-- fpga_project.sdc        --> timing constraints file
@@ -35,13 +35,13 @@ In theory, other GW5AST & GW5AT models can also use this demo, but the maximum s
 |          |  `-- prbs7_gen.v             --> prbs7 generator
 |          |  `-- prbs7_single_channel.v  --> prbs7 tester
 |    |-- 10.3125G
-|        |	`-- fpga_project.gprj		  --> demo project
+|        |	`-- fpga_project.gprj         --> demo project
 |        |	`-- ...
 |    |-- 12.5G
-|        |	`-- fpga_project.gprj		  --> demo project
+|        |	`-- fpga_project.gprj         --> demo project
 |        |	`-- ...
 | -- 10G_Serial_Ethernet 
-|    `-- ...					          --> TBD        
+|    `-- ...                              --> TBD        
 ```
 ## Getting start
 
