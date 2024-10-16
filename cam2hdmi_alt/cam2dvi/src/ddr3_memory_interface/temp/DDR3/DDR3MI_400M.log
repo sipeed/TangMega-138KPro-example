@@ -1,0 +1,59 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v'
+Analyzing included file '**'("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+Back to file '**'("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+Undeclared symbol '**', assumed default net type '**'("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+WARN  (EX3801) : Parameter '**' becomes localparam in '**' with formal parameter declaration list("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+Analyzing Verilog file 'D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\DDR3_TOP.v'
+Analyzing included file 'ddr3_name.v'("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\DDR3_TOP.v":4)
+Back to file 'D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\DDR3_TOP.v'("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\DDR3_TOP.v":4)
+Analyzing included file 'DDR3_define.v'("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\DDR3_TOP.v":5)
+Back to file 'D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\DDR3_TOP.v'("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\DDR3_TOP.v":5)
+Analyzing included file 'gwmc_param.v'("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\DDR3_TOP.v":99)
+Back to file 'D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\DDR3_TOP.v'("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\DDR3_TOP.v":99)
+Analyzing included file 'D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\gwmc_local_param.v'("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\DDR3_TOP.v":100)
+Back to file 'D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\DDR3_TOP.v'("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\DDR3_TOP.v":100)
+Compiling module 'DDR3MI'("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\DDR3_TOP.v":7)
+WARN  (EX3073) : Port '**' remains unconnected for this instance("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+Compiling module '**'("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+Extracting RAM for identifier '**'("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+WARN  (EX3791) : Expression size ** truncated to fit in target size **("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+WARN  (EX1998) : Net '**' does not have a driver("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+NOTE  (EX0101) : Current top module is "DDR3MI"
+WARN  (EX0211) : The output port "mc_cas_slot[1]" of module "~gwmc_top.DDR3MI" has no driver, assigning undriven bits to Z, simulation mismatch possible("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+WARN  (EX0211) : The output port "mc_cas_slot[0]" of module "~gwmc_top.DDR3MI" has no driver, assigning undriven bits to Z, simulation mismatch possible("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+WARN  (EX0211) : The output port "burst_num[5]" of module "~gwmc_cmd_buffer.DDR3MI" has no driver, assigning undriven bits to Z, simulation mismatch possible("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+WARN  (EX0211) : The output port "burst_num[4]" of module "~gwmc_cmd_buffer.DDR3MI" has no driver, assigning undriven bits to Z, simulation mismatch possible("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+WARN  (EX0211) : The output port "burst_num[3]" of module "~gwmc_cmd_buffer.DDR3MI" has no driver, assigning undriven bits to Z, simulation mismatch possible("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+WARN  (EX0211) : The output port "burst_num[2]" of module "~gwmc_cmd_buffer.DDR3MI" has no driver, assigning undriven bits to Z, simulation mismatch possible("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+WARN  (EX0211) : The output port "burst_num[1]" of module "~gwmc_cmd_buffer.DDR3MI" has no driver, assigning undriven bits to Z, simulation mismatch possible("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+WARN  (EX0211) : The output port "burst_num[0]" of module "~gwmc_cmd_buffer.DDR3MI" has no driver, assigning undriven bits to Z, simulation mismatch possible("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+WARN  (EX0211) : The output port "loop_en" of module "~gwmc_bank_ctrl.DDR3MI" has no driver, assigning undriven bits to Z, simulation mismatch possible("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+WARN  (EX0211) : The output port "updata_dqs_req" of module "~ddr_phy_top.DDR3MI" has no driver, assigning undriven bits to Z, simulation mismatch possible("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+WARN  (EX0211) : The output port "updata_dqs_finished" of module "~ddr_phy_top.DDR3MI" has no driver, assigning undriven bits to Z, simulation mismatch possible("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+[5%] Running netlist conversion ...
+WARN  (CV0018) : Input addr[28] is unused("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\DDR3_TOP.v":117)
+WARN  (CV0016) : Input ref_req is unused("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\DDR3_TOP.v":129)
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "~OUT_FIFO.DDR3MI" instantiated to "u_out_fifo" is swept in optimizing("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+WARN  (NL0002) : The module "~OUT_FIFO.DDR3MI" instantiated to "u_out_fifo" is swept in optimizing("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+WARN  (NL0002) : The module "~OUT_FIFO.DDR3MI" instantiated to "u_out_fifo" is swept in optimizing("D:\Applications\Gowin\Gowin_V1.9.9.03_x64\IDE\ipcore\DDR3\data\ddr3_1_4code_hs\ddr3_1_4code_hs.v":6953)
+[95%] Generate netlist file "C:\Users\Think\Documents\FPGA_Project\Gowin\Cam2HDMI_Fan_NEO\Cam2HDMI_ALT\src\ddr3_memory_interface\temp\DDR3\DDR3MI_400M.vg" completed
+Generate template file "C:\Users\Think\Documents\FPGA_Project\Gowin\Cam2HDMI_Fan_NEO\Cam2HDMI_ALT\src\ddr3_memory_interface\temp\DDR3\DDR3MI_400M_tmp.v" completed
+[100%] Generate report file "C:\Users\Think\Documents\FPGA_Project\Gowin\Cam2HDMI_Fan_NEO\Cam2HDMI_ALT\src\ddr3_memory_interface\temp\DDR3\DDR3MI_400M_syn.rpt.html" completed
+GowinSynthesis finish

@@ -1,0 +1,89 @@
+{
+ "Device" : "GW5AST-138B",
+ "Files" : [
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/cam2hdmi_alt/cam2dvi/src/cmos_8_16bit.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/cam2hdmi_alt/cam2dvi/src/ddr3_memory_interface/DDR3MI_400M.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/cam2hdmi_alt/cam2dvi/src/dvi_tx/DVI_TX_Top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/cam2hdmi_alt/cam2dvi/src/fifo_top/video_fifo.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/cam2hdmi_alt/cam2dvi/src/gowin_pll/TMDS_PLL_60HZ.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/cam2hdmi_alt/cam2dvi/src/gowin_pll/gowin_pll_400M.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/cam2hdmi_alt/cam2dvi/src/i2c_master/i2c_config.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/cam2hdmi_alt/cam2dvi/src/i2c_master/i2c_master_bit_ctrl.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/cam2hdmi_alt/cam2dvi/src/i2c_master/i2c_master_byte_ctrl.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/cam2hdmi_alt/cam2dvi/src/i2c_master/i2c_master_defines.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/cam2hdmi_alt/cam2dvi/src/i2c_master/i2c_master_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/cam2hdmi_alt/cam2dvi/src/i2c_master/timescale.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/cam2hdmi_alt/cam2dvi/src/lut_ov5640_rgb565_1280_720.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/cam2hdmi_alt/cam2dvi/src/syn_gen.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/cam2hdmi_alt/cam2dvi/src/testpattern.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/cam2hdmi_alt/cam2dvi/src/top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/cam2hdmi_alt/cam2dvi/src/vga_timing.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/cam2hdmi_alt/cam2dvi/src/video_frame_buffer/Video_Frame_Buffer_Top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/cam2hdmi_alt/cam2dvi/src/video_timing_check.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/cam2hdmi_alt/cam2dvi/impl/temp/rtl_parser.result",
+ "Top" : "top",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}

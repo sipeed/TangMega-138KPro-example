@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW5AST-138B" package="FCPBGA676A" speed="1" partNumber="GW5AST-LV138FPG676AES"/>
+    <FileList>
+        <File path="E:/Design_Tools/FPGA/Gowin/Gowin_V1.9.9.02_x64/IDE/ipcore/DVI_TX/data/dvi_tx_top.v" type="verilog"/>
+        <File path="E:/Design_Tools/FPGA/Gowin/Gowin_V1.9.9.02_x64/IDE/ipcore/DVI_TX/data/rgb2dvi.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="1"/>
+        <Option type="enable_dsrm" value="0"/>
+        <Option type="include_path" value="E:/Design_Tools/FPGA/Gowin/Gowin_V1.9.9.02_x64/IDE/ipcore/DVI_TX/data"/>
+        <Option type="include_path" value="E:/Downloads/TangMega-138K-example-main/Cam2HDMI/src/dvi_tx/temp/DviTx"/>
+        <Option type="output_file" value="DVI_TX_Top.vg"/>
+        <Option type="output_template" value="DVI_TX_Top_tmp.v"/>
+        <Option type="ram_balance" value="1"/>
+        <Option type="ram_rw_check" value="1"/>
+        <Option type="verilog_language" value="sysv-2017"/>
+    </OptionList>
+</Project>

@@ -1,0 +1,39 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\VFB\data\vfb_top.v'
+Analyzing included file 'top_define.v'("C:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\VFB\data\vfb_top.v":28)
+Back to file 'C:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\VFB\data\vfb_top.v'("C:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\VFB\data\vfb_top.v":28)
+Analyzing included file 'C:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\VFB\data\static_macro_define.v'("C:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\VFB\data\vfb_top.v":29)
+Back to file 'C:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\VFB\data\vfb_top.v'("C:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\VFB\data\vfb_top.v":29)
+Analyzing included file 'vfb_defines.v'("C:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\VFB\data\vfb_top.v":30)
+Back to file 'C:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\VFB\data\vfb_top.v'("C:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\VFB\data\vfb_top.v":30)
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\VFB\data\vfb_wrapper.v'
+Analyzing included file '**'("C:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\VFB\data\vfb_wrapper.v":6444)
+Back to file '**'("C:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\VFB\data\vfb_wrapper.v":6444)
+Compiling module 'Video_Frame_Buffer_Top'("C:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\VFB\data\vfb_top.v":32)
+Compiling module '**'("C:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\VFB\data\vfb_wrapper.v":6444)
+Extracting RAM for identifier '**'("C:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\VFB\data\vfb_wrapper.v":6444)
+WARN  (EX3791) : Expression size ** truncated to fit in target size **("C:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\VFB\data\vfb_wrapper.v":6444)
+WARN  (EX3670) : Actual bit length ** differs from formal bit length *** for port '**'("C:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\VFB\data\vfb_wrapper.v":6444)
+NOTE  (EX0101) : Current top module is "Video_Frame_Buffer_Top"
+[5%] Running netlist conversion ...
+WARN  (CV0016) : Input I_rd_data_end is unused("C:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\VFB\data\vfb_top.v":76)
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "C:\Users\Fanserasery\Desktop\Cam2HDMI\src\video_frame_buffer\temp\VFB\Video_Frame_Buffer_Top.vg" completed
+Generate template file "C:\Users\Fanserasery\Desktop\Cam2HDMI\src\video_frame_buffer\temp\VFB\Video_Frame_Buffer_Top_tmp.v" completed
+[100%] Generate report file "C:\Users\Fanserasery\Desktop\Cam2HDMI\src\video_frame_buffer\temp\VFB\Video_Frame_Buffer_Top_syn.rpt.html" completed
+GowinSynthesis finish
