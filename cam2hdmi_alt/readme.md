@@ -8,7 +8,7 @@ Main features,
 - 720P@60/30Hz RGB565 video capture via DVP Camera OV5640.
 - Use on board DDR3 memory as framebuffer .
 
-This demo now is only test on Sipeed [Tang MEGA 138K Pro](https://wiki.sipeed.com/hardware/en/tang/tang-mega-138k/mega-138k-pro.html), which mainchip is **GW5AST-LV138FP676AC1/10** or **GW5AST-LV138FP676AES**.   
+This demo now is only test on Sipeed [Tang MEGA 138K Pro](https://wiki.sipeed.com/hardware/en/tang/tang-mega-138k/mega-138k-pro.html), which mainchip is **GW5AST-LV138FP676AC1/l0** or **GW5AST-LV138FP676AES**.   
 
 ## Directory structure
 
