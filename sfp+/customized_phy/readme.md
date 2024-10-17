@@ -3,7 +3,7 @@
 
 This project is a demo to test the Serdes on GOWIN GW5AST-138K, it base on Sipeed [Tang MEGA 138K Pro](https://wiki.sipeed.com/hardware/en/tang/tang-mega-138k/mega-138k-pro.html), and uses the 2 SFP+ interfaces on the board for transceiver testing.
 
-Main features,
+## Main features
 
 - 1.25Gbps to 12.5Gbps transmission
 - 8B/l0B encoding with comma align(Except for the case of 1.25Gbps)
