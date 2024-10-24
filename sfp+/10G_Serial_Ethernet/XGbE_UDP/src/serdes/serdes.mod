@@ -1,0 +1,28 @@
+-type SERDES
+-path C:/Users/12161/OneDrive/Desktop/Files/Hoshi/Gowin_10G_Ethernet_MAC_RefDesign/fpga_project/src/serdes/
+-file_type vlg
+-file_name serdes
+-mod_name SerDes_Top
+-series GW5AST
+-device GW5AST-138
+-device_version B
+-package FCPBGA676A
+-part_number GW5AST-LV138FPG676AES
+
+
+-protocol_module_name0 Ten_Giga_Serial_Ethernet_Top
+-Ten_Giga_Serial_Ethernet_Topprotocol_module_type 10gsereth
+-Ten_Giga_Serial_Ethernet_TopReferenceClockSource Q1REFCLK0
+-Ten_Giga_Serial_Ethernet_TopPLLSource CPLL
+-Ten_Giga_Serial_Ethernet_TopQ1Lane0 true
+-Ten_Giga_Serial_Ethernet_TopLinkRate 10.3125
+-Ten_Giga_Serial_Ethernet_TopChannelSelection Q1Lane0
+-Ten_Giga_Serial_Ethernet_TopDebugPorts true
+-protocol_module_name1 Ten_Giga_Serial_Ethernet_Top_1
+-Ten_Giga_Serial_Ethernet_Top_1protocol_module_type 10gsereth
+-Ten_Giga_Serial_Ethernet_Top_1ReferenceClockSource Q1REFCLK0
+-Ten_Giga_Serial_Ethernet_Top_1PLLSource CPLL
+-Ten_Giga_Serial_Ethernet_Top_1Q1Lane1 true
+-Ten_Giga_Serial_Ethernet_Top_1LinkRate 10.3125
+-Ten_Giga_Serial_Ethernet_Top_1ChannelSelection Q1Lane1
+-Ten_Giga_Serial_Ethernet_Top_1DebugPorts true

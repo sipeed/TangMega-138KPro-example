@@ -1,0 +1,33 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'D:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\TENGETHERNETMAC\data\xgmac_wrapper.v'
+Analyzing included file 'define.vh'("D:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\TENGETHERNETMAC\data\xgmac_wrapper.v":1)
+Back to file 'D:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\TENGETHERNETMAC\data\xgmac_wrapper.v'("D:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\TENGETHERNETMAC\data\xgmac_wrapper.v":1)
+Analyzing included file 'D:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\TENGETHERNETMAC\data\static_macro_define.vh'("D:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\TENGETHERNETMAC\data\xgmac_wrapper.v":2)
+Back to file 'D:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\TENGETHERNETMAC\data\xgmac_wrapper.v'("D:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\TENGETHERNETMAC\data\xgmac_wrapper.v":2)
+Analyzing Verilog file 'D:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\TENGETHERNETMAC\data\xgmac.v'
+Analyzing included file '**'("D:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\TENGETHERNETMAC\data\xgmac.v":19084)
+Back to file '**'("D:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\TENGETHERNETMAC\data\xgmac.v":19084)
+Compiling module 'Ten_Giga_Ethernet_MAC_Top'("D:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\TENGETHERNETMAC\data\xgmac_wrapper.v":5)
+Compiling module '**'("D:\Gowin\Gowin_V1.9.9.01_x64\IDE\ipcore\TENGETHERNETMAC\data\xgmac.v":19084)
+NOTE  (EX0101) : Current top module is "Ten_Giga_Ethernet_MAC_Top"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "E:\work\2023\6_GW5AT-138K_XGMAC\code\Reference_Design\V1.0\Reference_Design\fpga_project\src\Ten_Giga_Ethernet_MAC\temp\Ten_Giga_Ethernet_MAC\Ten_Giga_Ethernet_MAC.vg" completed
+Generate template file "E:\work\2023\6_GW5AT-138K_XGMAC\code\Reference_Design\V1.0\Reference_Design\fpga_project\src\Ten_Giga_Ethernet_MAC\temp\Ten_Giga_Ethernet_MAC\Ten_Giga_Ethernet_MAC_tmp.v" completed
+[100%] Generate report file "E:\work\2023\6_GW5AT-138K_XGMAC\code\Reference_Design\V1.0\Reference_Design\fpga_project\src\Ten_Giga_Ethernet_MAC\temp\Ten_Giga_Ethernet_MAC\Ten_Giga_Ethernet_MAC_syn.rpt.html" completed
+GowinSynthesis finish

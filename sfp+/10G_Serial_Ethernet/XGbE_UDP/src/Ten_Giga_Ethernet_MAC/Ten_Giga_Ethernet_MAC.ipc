@@ -1,0 +1,12 @@
+[General]
+ipc_version=4
+file=Ten_Giga_Ethernet_MAC
+module=Ten_Giga_Ethernet_MAC_Top
+target_device=gw5ast138b-006
+type=ten_giga_ethernet_mac
+version=1.0
+
+[Config]
+Interface=SDR
+LANG=0
+Synthesis_tool=GowinSynthesis

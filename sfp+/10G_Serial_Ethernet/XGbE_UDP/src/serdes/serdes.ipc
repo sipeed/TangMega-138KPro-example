@@ -1,0 +1,55 @@
+[General]
+ipc_version=4
+target_device=gw5ast138b-002
+type=Serdes
+version=1.2
+
+[Config]
+LANG=0
+Synthesis_tool=GowinSynthesis
+file=serdes
+module=SerDes_Top
+
+[10G%20Serial%20Ethernet%3Aten_giga_serial_ethernet%3ATen_Giga_Serial_Ethernet_Top]
+ChannelSel=Q1 Lane0
+DIFFERENTIAL_SWING=900mV
+Debug_Ports=true
+FFEMODE=Auto
+FFE_C0=40
+FFE_C1=0
+FFE_CM=0
+LANG=0
+Line_Rate=10.3125
+Loopback_Mode=OFF
+PLL_Selection=CPLL
+Reference_CLK_Frequency=125.000
+Reference_CLK_Source=Q1 REFCLK0
+SD_THRESHOLD=100mV
+Synthesis_tool=GowinSynthesis
+file=ten_giga_serial_ethernet
+module=Ten_Giga_Serial_Ethernet_Top
+target_device=gw5ast138b-002
+type=ten_giga_serial_ethernet
+version=1.0
+
+[10G%20Serial%20Ethernet%3Aten_giga_serial_ethernet_1%3ATen_Giga_Serial_Ethernet_Top_1]
+ChannelSel=Q1 Lane1
+DIFFERENTIAL_SWING=900mV
+Debug_Ports=true
+FFEMODE=Auto
+FFE_C0=40
+FFE_C1=0
+FFE_CM=0
+LANG=0
+Line_Rate=10.3125
+Loopback_Mode=OFF
+PLL_Selection=CPLL
+Reference_CLK_Frequency=125.000
+Reference_CLK_Source=Q1 REFCLK0
+SD_THRESHOLD=100mV
+Synthesis_tool=GowinSynthesis
+file=ten_giga_serial_ethernet_1
+module=Ten_Giga_Serial_Ethernet_Top_1
+target_device=gw5ast138b-002
+type=ten_giga_serial_ethernet
+version=1.0

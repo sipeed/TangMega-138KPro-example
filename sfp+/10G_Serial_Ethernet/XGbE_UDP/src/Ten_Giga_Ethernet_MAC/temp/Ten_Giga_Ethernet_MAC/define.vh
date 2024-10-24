@@ -1,0 +1,1 @@
+`define module_name Ten_Giga_Ethernet_MAC_Top

@@ -1,0 +1,172 @@
+<?xml version="1" encoding="UTF-8"?>
+<GAO_CONFIG>
+    <Version>3.0</Version>
+    <Mode>Standard</Mode>
+    <AoCore index="0" sample_clock="Xge_2x/TenGbE_MAC_1_inst/u_Ten_Giga_Ethernet_MAC_Top/tx_mac_clk_o" trig_type="0" storage_depth="4096" window_num="1" capture_amount="4096" implementation="0" trigger_pos="20" module_name="top" force_trigger_by_falling_edge="false" capture_init_data_enabled="false">
+        <SignalList>
+            <Bus capture_enable="true" name="Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[63:0]">
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[63]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[62]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[61]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[60]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[59]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[58]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[57]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[56]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[55]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[54]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[53]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[52]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[51]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[50]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[49]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[48]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[47]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[46]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[45]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[44]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[43]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[42]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[41]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[40]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[39]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[38]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[37]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[36]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[35]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[34]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[33]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[32]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[31]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[30]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[29]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[28]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[27]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[26]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[25]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[24]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[23]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[22]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[21]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[20]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[19]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[18]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[17]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[16]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[15]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[14]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[13]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[12]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[11]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[10]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[9]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[8]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[7]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[6]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[5]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[4]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[3]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[2]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[1]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_data[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_byte[7:0]">
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_byte[7]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_byte[6]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_byte[5]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_byte[4]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_byte[3]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_byte[2]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_byte[1]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_byte[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/state[3:0]">
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/state[3]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/state[2]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/state[1]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/state[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/step[10:0]">
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/step[10]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/step[9]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/step[8]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/step[7]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/step[6]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/step[5]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/step[4]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/step[3]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/step[2]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/step[1]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/step[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/remain_byte[11:0]">
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/remain_byte[11]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/remain_byte[10]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/remain_byte[9]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/remain_byte[8]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/remain_byte[7]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/remain_byte[6]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/remain_byte[5]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/remain_byte[4]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/remain_byte[3]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/remain_byte[2]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/remain_byte[1]</Signal>
+                <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/remain_byte[0]</Signal>
+            </Bus>
+            <Signal capture_enable="true">Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/rst_n</Signal>
+            <Signal capture_enable="true">Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_ready</Signal>
+            <Signal capture_enable="true">Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_valid</Signal>
+            <Signal capture_enable="true">Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_last</Signal>
+            <Signal capture_enable="true">Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/tx_mac_error</Signal>
+        </SignalList>
+        <Triggers>
+            <Trigger index="0">
+                <SignalList>
+                    <Bus restorename="Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/state[3:0]">
+                        <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/state[3]</Signal>
+                        <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/state[2]</Signal>
+                        <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/state[1]</Signal>
+                        <Signal>Xge_2x/TenGbE_MAC_2_inst/XGbE_udp_inst/state[0]</Signal>
+                    </Bus>
+                </SignalList>
+            </Trigger>
+            <Trigger index="1"/>
+            <Trigger index="2"/>
+            <Trigger index="3"/>
+            <Trigger index="4"/>
+            <Trigger index="5"/>
+            <Trigger index="6"/>
+            <Trigger index="7"/>
+            <Trigger index="8"/>
+            <Trigger index="9"/>
+            <Trigger index="10"/>
+            <Trigger index="11"/>
+            <Trigger index="12"/>
+            <Trigger index="13"/>
+            <Trigger index="14"/>
+            <Trigger index="15"/>
+        </Triggers>
+        <MatchUnits>
+            <MatchUnit index="0" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0001" value1="0000" trigger="0"/>
+            <MatchUnit index="1" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="2" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="3" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="4" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="5" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="6" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="7" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="8" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="9" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="10" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="11" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="12" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="13" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="14" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="15" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+        </MatchUnits>
+        <Expressions type="Static">
+            <Expression>M0</Expression>
+        </Expressions>
+    </AoCore>
+    <GAO_ID>1111010111000101</GAO_ID>
+</GAO_CONFIG>
