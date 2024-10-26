@@ -13,7 +13,9 @@ This demo now is only test on Sipeed [Tang MEGA 138K Pro](https://wiki.sipeed.co
 ## Directory structure
 
 ```
-| -- docs                       --> manuals and documentation   
+| -- docs                       --> manuals and documentation  
+|    |--IPUG769-2.0             --> Gowin Video Frame Buffer IP User Guide(CN)
+|    |--IPUG769-2.0E            --> Gowin Video Frame Buffer IP User Guide(EN)
 |    |`-- images                --> picture resources  
 | -- cam2dvi 
 |    |-- src                    --> project sources 
@@ -28,8 +30,8 @@ This demo now is only test on Sipeed [Tang MEGA 138K Pro](https://wiki.sipeed.co
 ## Getting start
 Please confirm that you have the following conditions:
 - GOWIN IDE Version ≥ 1.9.9
-- **DO NOT** use GOWIN Programmer version **1.9.10.02**, for this version contains many issues
-- You can get a windows GOWIN Programmer version **1.9.10.03** Alpha for [HERE](https://api.dl.sipeed.com/shareURL/TANG/programmer)
+- **DO NOT** use GOWIN Programmer version **1.9.10.02**, for this version contains many issues with **onboard debugger**.
+~~ - You can get a windows GOWIN Programmer version **1.9.10.03** Alpha for [HERE](https://api.dl.sipeed.com/shareURL/TANG/programmer) ~~ GOWIN has released an update version **1.9.10.03**.
 - Sipeed [Tang MEGA 138K Pro](https://wiki.sipeed.com/hardware/en/tang/tang-mega-138k/mega-138k-pro.html)
 - An OV5640 Sensor, a HDMI/DVI Monitor and a HDMI cable
 - USB-C date cable, use to connect the board to  PC  
@@ -38,6 +40,7 @@ Please confirm that you have the following conditions:
 
 Here are quick instructions for the more experienced,
 - Assemble your sensor and board, then connect it to your monitor via an HDMI cable.
+- Note that the USB cable must be connected to the USB-C port on the side with the **JTAG|UART** mark.
 - Download & Complie the project, then downloading the bitstream to you board.
 - You can also try using the prebuilt bitstream, but remember to unzip it before downloading.
 - Observe whether the monitor is show the screen captured by the sensor correctly.
@@ -45,7 +48,7 @@ Here are quick instructions for the more experienced,
 
 ## LEDs & button
 
-This demo uses 4 LEDs to indicate status 
+This demo uses 5 LEDs to indicate status 
 Here are the details for LEDs:(LED0 is on the far right)
 | LEDs      | Description                     | Expected situation|
 | ----------| --------------------------------|-------------------|
