@@ -1,3 +1,5 @@
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)    [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)  
+
 # Tang Mega 138K Pro example
 
 ---
@@ -6,6 +8,13 @@ Introduction: [Click me](https://wiki.sipeed.com/hardware/en/tang/tang-mega-138k
 ---
 
 ## Examples
+
+This repository is being reorganized, and the verified DEMOs will be marked with ✅.
+
+
+If you have any suggestions for these routines or find any bugs, please submit an issue.
+
+***
 
 ### ae350_customized_demo
 
@@ -18,49 +27,92 @@ TODOs:
 - [ ] Transplant GOWIN official ref_design(In progress)
 - [ ] Check and upload the new demo.
 
+<br>
+
+***
+
 ### audio
 
 Play music or sine wave audio using the onboard audio DAC
 
-### cam2hdmi_alt
+<br>
+
+***
+
+### cam2hdmi_alt ✅
 
 Output the images captured by OV5640 via DVI (HDMI)
 
-### ddr_test
+<br>
+
+***
+
+### ddr_test ✅
 
 An example to test onboard ddr memory, use the onboard LEDs or GAO to view the results.
 
-### dvi
+<br>
 
-2 dvi intefaces both supports video out.
+***
 
 ### dvp_rgb
 
 Demo with OV5640 camera and 480x272 rgb_screen.
 
+Status: Unreviewed
+
+TODOs:
+
+- [ ] Add support for other screen resolutions(In progress)
+- [ ] Check and upload the new demo.
+
+<br>
+
+***
+
 ### key_led
 
 6 Leds with 5 Reset keys.
+
+<br>
+
+***
 
 ### led
 
 6 Leds with 1 Reset Keys
 
-#### svo
+<br>
+
+***
+
+#### simple_video_out
 
 Dual Hdmi Display example based on [svo](https://github.com/cliffordwolf/SimpleVOut)
 
 ![svo_example](./.assets/svo_example.png)
 
-### pro_ddr_test
+<br>
+
+***
+
+### pro_ddr_test ✅
 
 Another example to test onboard ddr memory, use uart to view test results.
+
+<br>
+
+***
 
 ### rgb_screen
 
 Demo to test RGB Screen.
 
-### Pcie
+<br>
+
+***
+
+### pcie_dma_demo 
 
 Pcie Demo. Read its PDF for more information.
 
@@ -72,7 +124,11 @@ TODOs:
 - [ ] Transplant [DEMO for 138K](https://github.com/sipeed/TangMega-138K-example/tree/main/pcie_dma_demo)(In progress)
 - [ ] Check and upload the new demo.
 
-### SFP+
+<br>
+
+***
+
+### SFP+ ✅
 
 **customized_phy**: Read [Gowin Customized PHY IP](sfp+/docs/IPUG1024-1.5E.pdf) For more information.
 
@@ -82,6 +138,14 @@ TODOs:
 
 DEMO for 1GbE Ethernet UDP Send Test Using RJ45.
 
+<br>
+
+***
+
 ### ws2812
 
 A demo to drive onboard ws2812, without reset key.
+
+<br>
+
+***
