@@ -54,7 +54,6 @@ Therefore, this demo is not recommended to be used for a long time without cooli
 
 ***
 
-
 ## How to use
 
 Here are quick instructions for the more experienced,
