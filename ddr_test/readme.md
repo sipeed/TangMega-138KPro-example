@@ -28,7 +28,7 @@ This demo now is only test on Sipeed [Tang MEGA 138K Pro](https://wiki.sipeed.co
 ...(The following is omitted)
 
 ```
-Note: The retail version of DDR3 models are:**H5TQ4G63EFR-RDC** x2.
+⚠️ Note: The retail version of DDR3 models are: **H5TQ4G63EFR-RDC** x2.
 
 ## Getting start
 Please confirm that you have the following conditions:
@@ -36,7 +36,7 @@ Please confirm that you have the following conditions:
 - **DO NOT** use GOWIN Programmer version **1.9.10.02**, for this version contains many issues with **onboard debugger**.
 ~~ - You can get a windows GOWIN Programmer version **1.9.10.03** Alpha for [HERE](https://api.dl.sipeed.com/shareURL/TANG/programmer) ~~ GOWIN has released an update version **1.9.10.03**.
 - Sipeed [Tang MEGA 138K Pro](https://wiki.sipeed.com/hardware/en/tang/tang-mega-138k/mega-138k-pro.html)
-- USB-C date cable, use to connect the board to your PC.  
+- USB-C date cable, use to connect the board to your PC 
 
 ## How to use
 
