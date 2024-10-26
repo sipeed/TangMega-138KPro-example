@@ -68,4 +68,10 @@ Here are the details for LEDs:(LED0 is on the far right)
 
 The main purpose of this DEMO is to show how to use the **[GOWIN DDR3 Memory Interface IP](https://www.gowinsemi.com/en/support/ip_detail/14/)** and test the quality of DDR3 hardware. Please refer to the **[manual](./docs/IPUG281-2.2E.pdf)** for details about IP.
 
+You can also enable the GAO in the project, then burn the biststream via GAO and see the result via GAO.
+
+![ddr_test](../.assets/ddr_test.png)
+`init_calib_complete` is ddr initialization singal, `one` means initializing success.
+`error_int` signal is the ddr check result. `zero` means no error.
+
 Please also see these DEMOs: [cam2hdmi_alt](../cam2hdmi_alt/), [pro_ddr_test](../pro_ddr_test/), They all used DDR3 and demonstrated different uses of DDR3.
