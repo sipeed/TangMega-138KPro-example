@@ -57,9 +57,9 @@ Here are the details for buttons:
 
 | buttons   | Description                     | Expected situation|
 | ----------| --------------------------------|-------------------|
-| S0        |  Pressed the reset key(KEY.2)   | ALL LEDs OFF      |
-| S1        |  Pressed the KEY.1              | ALL LEDs BLINK    |
-| S2        |  Pressed the KEY.0              | ALL LEDs OFF      |
+| S0        |  Pressed the reset key(S0)      | ALL LEDs OFF      |
+| S1        |  Pressed the S1                 | ALL LEDs BLINK    |
+| S2        |  Pressed the S2                 | ALL LEDs OFF      |
 | NONE      |  No keys are pressed            | ALL LEDs MARQUEE  |
 
 ## Development
