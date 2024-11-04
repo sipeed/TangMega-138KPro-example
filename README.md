@@ -70,9 +70,9 @@ TODOs:
 
 ***
 
-### key_led
+### key_led  ✅
 
-6 Leds with 5 Reset keys.
+6 Leds with 3 Function keys.
 
 <br>
 
