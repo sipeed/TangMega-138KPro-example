@@ -1,26 +1,54 @@
-IO_LOC "led[5]" N23;
-IO_LOC "led[4]" N21;
-IO_LOC "led[3]" M25;
-IO_LOC "led[2]" L20;
-IO_LOC "led[1]" R26;
-IO_LOC "led[0]" J14;
-IO_LOC "clk" P16;
-IO_LOC "rst" U4;
-IO_LOC "key[3]" G16;
-IO_LOC "key[2]" G15;
-IO_LOC "key[1]" F15;
-IO_LOC "key[0]" K16;
+//Copyright (C)2014-2024 Gowin Semiconductor Corporation.
+//All rights reserved. 
+//File Title: Physical Constraints file
+//Tool Version: V1.9.9.01 (64-bit)
+//Part Number: GW5AST-LV138FPG676AC1/I0
+//Device: GW5AST-138
+//Device Version: B
+//Created Time: Mon 03 11 11:24:27 2024
+
+IO_LOC "sys_clk" P16;
+IO_PORT "sys_clk" IO_TYPE=LVCMOS33 PULL_MODE=NONE BANK_VCCIO=3.3;
+
+//V22 is located on the left bottom side of the 2x20P PinHeader.
+IO_LOC "osc_clk" V22;
+IO_PORT "osc_clk" IO_TYPE=LVCMOS33 PULL_MODE=DOWN BANK_VCCIO=3.3;
+
+//========================== MS5351 ==============================
+
+IO_LOC "ms5351_clk" N22;
+IO_PORT "ms5351_clk" IO_TYPE=LVCMOS33 PULL_MODE=NONE BANK_VCCIO=3.3;
+ 
+//=========================== KEYs ===============================
+
+IO_LOC "rst_n" K16;
+IO_PORT "rst_n" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3; 
+IO_LOC "key1" G15;
+IO_PORT "key1" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3; 
+IO_LOC "key0" F15;
+IO_PORT "key0" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3; 
+
+//=========================== LEDs ===============================
+IO_LOC "led_o[0]" J14;
+IO_PORT "led_o[0]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "led_o[1]" R26;
+IO_PORT "led_o[1]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "led_o[2]" L20;
+IO_PORT "led_o[2]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "led_o[3]" M25;
+IO_PORT "led_o[3]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "led_o[4]" N21;
+IO_PORT "led_o[4]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "led_o[5]" N23;
+IO_PORT "led_o[5]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
 
 
-IO_PORT "led[5]" PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
-IO_PORT "led[4]" PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
-IO_PORT "led[3]" PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
-IO_PORT "led[2]" PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
-IO_PORT "led[1]" PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
-IO_PORT "led[0]" PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
-IO_PORT "clk" PULL_MODE=NONE DRIVE=OFF BANK_VCCIO=3.3;
-IO_PORT "rst" PULL_MODE=UP DRIVE=OFF BANK_VCCIO=3.3;
-IO_PORT "key[3]" PULL_MODE=NONE DRIVE=OFF BANK_VCCIO=3.3;
-IO_PORT "key[2]" PULL_MODE=NONE DRIVE=OFF BANK_VCCIO=3.3;
-IO_PORT "key[1]" PULL_MODE=NONE DRIVE=OFF BANK_VCCIO=3.3;
-IO_PORT "key[0]" PULL_MODE=NONE DRIVE=OFF BANK_VCCIO=3.3;
+
+
+
+
+
+
+
+
+

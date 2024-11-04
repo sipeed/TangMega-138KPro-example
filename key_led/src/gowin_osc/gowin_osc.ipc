@@ -1,0 +1,16 @@
+[General]
+ipc_version=4
+file=gowin_osc
+module=Gowin_OSC
+target_device=gw5ast138b-007
+type=clock_osc
+version=3.0
+
+[Config]
+FREQ=3
+LANG=0
+REGULATOR_ENABLE=false
+Enable_OSC_Ref=false
+Enable_Trim=true
+OSCILLATOR_FREQUENCY_210MHz=false
+OSCILLATOR_FREQUENCY_25MHz=false

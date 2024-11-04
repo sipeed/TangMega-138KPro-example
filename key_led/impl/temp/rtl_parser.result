@@ -1,0 +1,20 @@
+[
+ {
+  "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/key_led/src/top.v",
+  "InstLine" : 10,
+  "InstName" : "key_led",
+  "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/key_led/src/top.v",
+  "ModuleLine" : 10,
+  "ModuleName" : "key_led",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/key_led/src/top.v",
+    "InstLine" : 22,
+    "InstName" : "internal_osc_inst",
+    "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/key_led/src/gowin_osc/gowin_osc.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_OSC"
+   }
+  ]
+ }
+]
