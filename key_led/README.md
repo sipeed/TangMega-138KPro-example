@@ -63,6 +63,7 @@ Here are the details for buttons:
 | NONE      |  No keys are pressed            | ALL LEDs MARQUEE  |
 
 ## Development
-If you want to modify the change the speed of flashing, Please refer to the comments in the top file and the cst file.
-When using CKO2 of MS5351 as the system clock input, you can refer to [SET_5351](https://github.com/sipeed/TangMega-138KPro-example/blob/main/sfp%2B/docs/SET_5351.md) to change the frequency of its output clock.
+If you want to modify the change the speed of flashing, Please refer to the comments in the top and the cst file.
+
+When using the `CKO2` of `MS5351` as the **system clock** input, you can refer to [SET_5351](https://github.com/sipeed/TangMega-138KPro-example/blob/main/sfp%2B/docs/SET_5351.md) to change the frequency of its output clock.
 
