@@ -1,25 +1,25 @@
 [
  {
-  "InstFile" : "F:/TangMega-138K-example/Pro_board/audio/audio/src/top.v",
+  "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/audio/audio_sinewave/src/top.v",
   "InstLine" : 1,
   "InstName" : "top",
-  "ModuleFile" : "F:/TangMega-138K-example/Pro_board/audio/audio/src/top.v",
+  "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/audio/audio_sinewave/src/top.v",
   "ModuleLine" : 1,
   "ModuleName" : "top",
   "SubInsts" : [
    {
-    "InstFile" : "F:/TangMega-138K-example/Pro_board/audio/audio/src/top.v",
+    "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/audio/audio_sinewave/src/top.v",
     "InstLine" : 69,
     "InstName" : "rom_save_sin_inst",
-    "ModuleFile" : "F:/TangMega-138K-example/Pro_board/audio/audio/src/sine_wave.v",
+    "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/audio/audio_sinewave/src/sine_wave.v",
     "ModuleLine" : 1,
     "ModuleName" : "rom_save_sin"
    },
    {
-    "InstFile" : "F:/TangMega-138K-example/Pro_board/audio/audio/src/top.v",
+    "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/audio/audio_sinewave/src/top.v",
     "InstLine" : 76,
     "InstName" : "u_audio_drive_0",
-    "ModuleFile" : "F:/TangMega-138K-example/Pro_board/audio/audio/src/audio_driver.v",
+    "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/audio/audio_sinewave/src/audio_driver.v",
     "ModuleLine" : 2,
     "ModuleName" : "audio_drive"
    }

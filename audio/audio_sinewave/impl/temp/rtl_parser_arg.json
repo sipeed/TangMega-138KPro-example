@@ -2,15 +2,15 @@
  "Device" : "GW5AST-138B",
  "Files" : [
   {
-   "Path" : "F:/TangMega-138K-example/Pro_board/audio/audio/src/audio_driver.v",
+   "Path" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/audio/audio_sinewave/src/audio_driver.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "F:/TangMega-138K-example/Pro_board/audio/audio/src/sine_wave.v",
+   "Path" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/audio/audio_sinewave/src/sine_wave.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "F:/TangMega-138K-example/Pro_board/audio/audio/src/top.v",
+   "Path" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/audio/audio_sinewave/src/top.v",
    "Type" : "verilog"
   }
  ],
@@ -18,7 +18,7 @@
 
  ],
  "LoopLimit" : 2000,
- "ResultFile" : "F:/TangMega-138K-example/Pro_board/audio/audio/impl/temp/rtl_parser.result",
+ "ResultFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/audio/audio_sinewave/impl/temp/rtl_parser.result",
  "Top" : "",
  "VerilogStd" : "verilog_2001",
  "VhdlStd" : "vhdl_93"

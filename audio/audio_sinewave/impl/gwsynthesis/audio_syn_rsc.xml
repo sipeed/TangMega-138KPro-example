@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Module name="top" Register="7" Lut="11">
-    <SubModule name="rom_save_sin_inst" Register="8" Alu="7" Lut="1" Bsram="1"/>
-    <SubModule name="u_audio_drive_0" Register="25" Alu="4" Lut="20"/>
-</Module>
