@@ -1,0 +1,124 @@
+<?xml version="1" encoding="UTF-8"?>
+<GAO_CONFIG>
+    <Version>3.0</Version>
+    <Mode>Standard</Mode>
+    <AoCore index="0" sample_clock="PHY_CLKOUT" trig_type="0" storage_depth="8192" window_num="1" capture_amount="8192" implementation="0" trigger_pos="100" module_name="Top" force_trigger_by_falling_edge="false" capture_init_data_enabled="false">
+        <SignalList>
+            <Signal capture_enable="true">usb_fifo/i_ep2_tx_clk</Signal>
+            <Signal capture_enable="true">usb_fifo/i_ep2_tx_dval</Signal>
+            <Signal capture_enable="true">usb_fifo/i_ep2_rx_clk</Signal>
+            <Signal capture_enable="true">usb_fifo/i_ep2_rx_rdy</Signal>
+            <Bus capture_enable="true" name="usb_txdat[7:0]">
+                <Signal>usb_txdat[7]</Signal>
+                <Signal>usb_txdat[6]</Signal>
+                <Signal>usb_txdat[5]</Signal>
+                <Signal>usb_txdat[4]</Signal>
+                <Signal>usb_txdat[3]</Signal>
+                <Signal>usb_txdat[2]</Signal>
+                <Signal>usb_txdat[1]</Signal>
+                <Signal>usb_txdat[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="usb_txdat_len[11:0]">
+                <Signal>usb_txdat_len[11]</Signal>
+                <Signal>usb_txdat_len[10]</Signal>
+                <Signal>usb_txdat_len[9]</Signal>
+                <Signal>usb_txdat_len[8]</Signal>
+                <Signal>usb_txdat_len[7]</Signal>
+                <Signal>usb_txdat_len[6]</Signal>
+                <Signal>usb_txdat_len[5]</Signal>
+                <Signal>usb_txdat_len[4]</Signal>
+                <Signal>usb_txdat_len[3]</Signal>
+                <Signal>usb_txdat_len[2]</Signal>
+                <Signal>usb_txdat_len[1]</Signal>
+                <Signal>usb_txdat_len[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="usb_rxdat[7:0]">
+                <Signal>usb_rxdat[7]</Signal>
+                <Signal>usb_rxdat[6]</Signal>
+                <Signal>usb_rxdat[5]</Signal>
+                <Signal>usb_rxdat[4]</Signal>
+                <Signal>usb_rxdat[3]</Signal>
+                <Signal>usb_rxdat[2]</Signal>
+                <Signal>usb_rxdat[1]</Signal>
+                <Signal>usb_rxdat[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="ep_usb_txlen[11:0]">
+                <Signal>ep_usb_txlen[11]</Signal>
+                <Signal>ep_usb_txlen[10]</Signal>
+                <Signal>ep_usb_txlen[9]</Signal>
+                <Signal>ep_usb_txlen[8]</Signal>
+                <Signal>ep_usb_txlen[7]</Signal>
+                <Signal>ep_usb_txlen[6]</Signal>
+                <Signal>ep_usb_txlen[5]</Signal>
+                <Signal>ep_usb_txlen[4]</Signal>
+                <Signal>ep_usb_txlen[3]</Signal>
+                <Signal>ep_usb_txlen[2]</Signal>
+                <Signal>ep_usb_txlen[1]</Signal>
+                <Signal>ep_usb_txlen[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="ep_usb_txdat[7:0]">
+                <Signal>ep_usb_txdat[7]</Signal>
+                <Signal>ep_usb_txdat[6]</Signal>
+                <Signal>ep_usb_txdat[5]</Signal>
+                <Signal>ep_usb_txdat[4]</Signal>
+                <Signal>ep_usb_txdat[3]</Signal>
+                <Signal>ep_usb_txdat[2]</Signal>
+                <Signal>ep_usb_txdat[1]</Signal>
+                <Signal>ep_usb_txdat[0]</Signal>
+            </Bus>
+            <Signal capture_enable="true">usb_txcork</Signal>
+            <Signal capture_enable="true">usb_txpop</Signal>
+            <Signal capture_enable="true">usb_txact</Signal>
+            <Signal capture_enable="true">usb_rxval</Signal>
+            <Signal capture_enable="true">usb_rxpktval</Signal>
+            <Signal capture_enable="true">usb_rxact</Signal>
+            <Signal capture_enable="true">usb_rxrdy</Signal>
+            <Signal capture_enable="true">ep_usb_rxrdy</Signal>
+            <Signal capture_enable="true">ep_usb_txcork</Signal>
+        </SignalList>
+        <Triggers>
+            <Trigger index="0">
+                <SignalList>
+                    <Signal>ep2_data_valid</Signal>
+                </SignalList>
+            </Trigger>
+            <Trigger index="1"/>
+            <Trigger index="2"/>
+            <Trigger index="3"/>
+            <Trigger index="4"/>
+            <Trigger index="5"/>
+            <Trigger index="6"/>
+            <Trigger index="7"/>
+            <Trigger index="8"/>
+            <Trigger index="9"/>
+            <Trigger index="10"/>
+            <Trigger index="11"/>
+            <Trigger index="12"/>
+            <Trigger index="13"/>
+            <Trigger index="14"/>
+            <Trigger index="15"/>
+        </Triggers>
+        <MatchUnits>
+            <MatchUnit index="0" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="1" value1="0" trigger="0"/>
+            <MatchUnit index="1" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="2" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="3" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="4" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="5" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="6" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="7" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="8" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="9" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="10" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="11" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="12" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="13" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="14" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="15" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+        </MatchUnits>
+        <Expressions type="Static">
+            <Expression>M0</Expression>
+        </Expressions>
+    </AoCore>
+    <GAO_ID>0011010111001010</GAO_ID>
+</GAO_CONFIG>

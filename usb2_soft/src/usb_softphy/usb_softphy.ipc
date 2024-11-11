@@ -1,0 +1,13 @@
+[General]
+ipc_version=4
+file=usb_softphy
+module=USB_SoftPHY_Top
+target_device=gw5ast138b-007
+type=usb_11_softphy
+version=1.0
+
+[Config]
+Clock_Frequency=60MHz
+DisableIO=false
+LANG=0
+Synthesis_tool=GowinSynthesis

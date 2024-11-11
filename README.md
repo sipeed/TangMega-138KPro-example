@@ -142,6 +142,15 @@ DEMO for 1GbE Ethernet UDP Send Test Using RJ45.
 
 ***
 
+### usb2_soft
+
+A USB_to_UART(CDC_ACM) loopback demo to show the refdesign of usb-softphy & device-controllor.
+Support both high-speed & full-speed, use the onboard USB-C port marked **SOFT-USB**.
+
+<br>
+
+***
+
 ### ws2812
 
 A demo to drive onboard ws2812, without reset key.

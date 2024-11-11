@@ -1,0 +1,15 @@
+[General]
+ipc_version=4
+file=fixed_point_divider
+module=Fixed_Point_Divider_Top
+target_device=gw1n2-002
+type=divider
+version=3.0
+
+[Config]
+DECIMAL_PRECISION=3
+DISABLEIO=true
+INPUT_DATA_WIDTH=32
+LANG=0
+OUTPUT_DATA_WIDTH=32
+Synthesis_tool=GowinSynthesis
