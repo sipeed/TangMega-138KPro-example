@@ -1,8 +1,17 @@
+//Copyright (C)2014-2024 Gowin Semiconductor Corporation.
+//All rights reserved. 
+//File Title: Physical Constraints file
+//Tool Version: V1.9.10.03 (64-bit)
+//Part Number: GW5AST-LV138FPG676AC1/I0
+//Device: GW5AST-138
+//Device Version: B
+//Created Time: Mon 11 11 11:11:11 2024
+
 IO_LOC "CLK_IN" P16;
 IO_PORT "CLK_IN" IO_TYPE=LVCMOS33 PULL_MODE=NONE BANK_VCCIO=3.3;
 
 IO_LOC "usb_dxp_io" M21,M22;
-IO_PORT "usb_dxp_io" IO_TYPE=LVPECL33E PULL_MODE=NONE DRIVE=8;
+IO_PORT "usb_dxp_io" IO_TYPE=LVPECL33E PULL_MODE=NONE DRIVE=8 DIFF_RESISTOR=OFF BANK_VCCIO=3.3;
 
 IO_LOC "usb_pullup_en_o" M19;
 IO_PORT "usb_pullup_en_o" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
