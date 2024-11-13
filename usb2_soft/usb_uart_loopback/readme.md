@@ -16,7 +16,20 @@ Please confirm that you have the following conditions:
 - **DO NOT** use GOWIN Programmer version **1.9.10.02**, for this version contains many issues with **onboard debugger**.
 ~~ - You can get a windows GOWIN Programmer version **1.9.10.03** Alpha for [HERE](https://api.dl.sipeed.com/shareURL/TANG/programmer) ~~ GOWIN has released an update version **1.9.10.03**.
 - Sipeed [Tang MEGA 138K Pro](https://wiki.sipeed.com/hardware/en/tang/tang-mega-138k/mega-138k-pro.html)
-- USB-C date cable, use to connect the board to your PC.
+- 2 USB-C date cable, use to connect the board to your PC.
+
+***
+
+## How to use
+
+Here are quick instructions for the more experienced,
+- Connect your board to your PC via an USB-C date cable. 
+- Note that the cable must be connected to the USB-C port on the side with the **JTAG|UART** mark.
+- Download & Complie the project, then downloading the bitstream to you board.
+- You can also try using the prebuilt bitstream, but remember to unzip it before downloading.
+- Then plug another USB-C cable to the USB-C port with the **SOFT_USB** mark.
+- Observe the status of the 6 indicator LEDs.
+- Running UART loopbak test on you PC.
 
 ***
 
