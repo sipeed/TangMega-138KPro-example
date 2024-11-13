@@ -4,8 +4,8 @@ This directory is a demo of USB-Serial loopbadk devices on Sipeed [Tang MEGA 138
 ***
 
 ## Main features
-- Baudrate: Fixed to 115200, maybe variable baudrate will be updated in the future.
-- Standard CDC-ACM device, which can be plug and play without installing drivers.
+- **Baudrate**: Fixed to `115200`, maybe variable baudrate will be updated in the future.
+- Standard `CDC-ACM` device, which can be plug and play without installing drivers.
 - Automatic loopback: what you send will be what you receive.
 
 ***
