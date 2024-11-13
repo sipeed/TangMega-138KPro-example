@@ -14,8 +14,8 @@ This demo now is only test on Sipeed [Tang MEGA 138K Pro](https://wiki.sipeed.co
 ```
 | -- docs                       --> manuals and documentation   
 |    |`-- images                --> picture resources  
-|    |-- IPUG281-2.2            --> Gowin DDR3 Memory Interface IP User Guide(CN)
-|    |-- IPUG281-2.2E           --> Gowin DDR3 Memory Interface IP User Guide(CN)
+|    |-- IPUG281-2.2            --> Gowin DDR3 Memory Interface IP User Guide(ZH)
+|    |-- IPUG281-2.2E           --> Gowin DDR3 Memory Interface IP User Guide(EN)
 |
 | -- Hynix_400MHz               --> project for normal retail version
 |    |-- src                    --> project sources 
@@ -36,7 +36,7 @@ Please confirm that you have the following conditions:
 - **DO NOT** use GOWIN Programmer version **1.9.10.02**, for this version contains many issues with **onboard debugger**.
 ~~ - You can get a windows GOWIN Programmer version **1.9.10.03** Alpha for [HERE](https://api.dl.sipeed.com/shareURL/TANG/programmer) ~~ GOWIN has released an update version **1.9.10.03**.
 - Sipeed [Tang MEGA 138K Pro](https://wiki.sipeed.com/hardware/en/tang/tang-mega-138k/mega-138k-pro.html)
-- USB-C date cable, use to connect the board to your PC 
+- USB-C date cable, use to connect the board to your PC.
 
 ## How to use
 
