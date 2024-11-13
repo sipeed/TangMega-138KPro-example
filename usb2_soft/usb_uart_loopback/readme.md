@@ -36,9 +36,9 @@ Please confirm that you have the following conditions:
 
 - How it works
 ![Working_principle](../docs/images/Working_principle.png "Working principle")
-**Open COM36 in COMTool, set baudrate to 115200,than send anything you want**
+**This is just a simple schematic, please refer to the LEDs description below**
 
-## LEDs & button
+## LEDs
 
 This demo uses 6 LEDs to indicate status 
 Here are the details for LEDs:(LED0 is on the far right)
@@ -54,4 +54,6 @@ Here are the details for LEDs:(LED0 is on the far right)
 Note: LED[3:4] **ALL OFF** when PHY is in HS mode.
 
 ## Development
-TBD
+The main purpose of this DEMO is to show how to use the **[GOWIN USB 2.0 SoftPHY IP](https://www.gowinsemi.com/en/support/ip_detail/98/)** and the **[GOWIN USB 2.0 Device Controller IP](https://www.gowinsemi.com/en/support/ip_detail/91/)**. Please refer to the **[manuals](../docs/manuals/)** for details about IP.
+
+You can also enable the GAO in the project, then burn the biststream via GAO and see the result via GAO.
