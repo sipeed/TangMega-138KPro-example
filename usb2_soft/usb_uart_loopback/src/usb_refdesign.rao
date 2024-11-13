@@ -1,0 +1,239 @@
+<?xml version="1" encoding="UTF-8"?>
+<GAO_CONFIG>
+    <Version>3.0</Version>
+    <Mode>Standard</Mode>
+    <AoCore index="0" sample_clock="PHY_CLKOUT" trig_type="0" storage_depth="8192" window_num="1" capture_amount="8192" implementation="0" trigger_pos="100" module_name="Top" force_trigger_by_falling_edge="false" capture_init_data_enabled="false">
+        <SignalList>
+            <Bus capture_enable="true" name="uart_dte_rate[31:0]">
+                <Signal>uart_dte_rate[31]</Signal>
+                <Signal>uart_dte_rate[30]</Signal>
+                <Signal>uart_dte_rate[29]</Signal>
+                <Signal>uart_dte_rate[28]</Signal>
+                <Signal>uart_dte_rate[27]</Signal>
+                <Signal>uart_dte_rate[26]</Signal>
+                <Signal>uart_dte_rate[25]</Signal>
+                <Signal>uart_dte_rate[24]</Signal>
+                <Signal>uart_dte_rate[23]</Signal>
+                <Signal>uart_dte_rate[22]</Signal>
+                <Signal>uart_dte_rate[21]</Signal>
+                <Signal>uart_dte_rate[20]</Signal>
+                <Signal>uart_dte_rate[19]</Signal>
+                <Signal>uart_dte_rate[18]</Signal>
+                <Signal>uart_dte_rate[17]</Signal>
+                <Signal>uart_dte_rate[16]</Signal>
+                <Signal>uart_dte_rate[15]</Signal>
+                <Signal>uart_dte_rate[14]</Signal>
+                <Signal>uart_dte_rate[13]</Signal>
+                <Signal>uart_dte_rate[12]</Signal>
+                <Signal>uart_dte_rate[11]</Signal>
+                <Signal>uart_dte_rate[10]</Signal>
+                <Signal>uart_dte_rate[9]</Signal>
+                <Signal>uart_dte_rate[8]</Signal>
+                <Signal>uart_dte_rate[7]</Signal>
+                <Signal>uart_dte_rate[6]</Signal>
+                <Signal>uart_dte_rate[5]</Signal>
+                <Signal>uart_dte_rate[4]</Signal>
+                <Signal>uart_dte_rate[3]</Signal>
+                <Signal>uart_dte_rate[2]</Signal>
+                <Signal>uart_dte_rate[1]</Signal>
+                <Signal>uart_dte_rate[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="uart_char_format[7:0]">
+                <Signal>uart_char_format[7]</Signal>
+                <Signal>uart_char_format[6]</Signal>
+                <Signal>uart_char_format[5]</Signal>
+                <Signal>uart_char_format[4]</Signal>
+                <Signal>uart_char_format[3]</Signal>
+                <Signal>uart_char_format[2]</Signal>
+                <Signal>uart_char_format[1]</Signal>
+                <Signal>uart_char_format[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="uart_parity_type[7:0]">
+                <Signal>uart_parity_type[7]</Signal>
+                <Signal>uart_parity_type[6]</Signal>
+                <Signal>uart_parity_type[5]</Signal>
+                <Signal>uart_parity_type[4]</Signal>
+                <Signal>uart_parity_type[3]</Signal>
+                <Signal>uart_parity_type[2]</Signal>
+                <Signal>uart_parity_type[1]</Signal>
+                <Signal>uart_parity_type[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="uart_data_bits[7:0]">
+                <Signal>uart_data_bits[7]</Signal>
+                <Signal>uart_data_bits[6]</Signal>
+                <Signal>uart_data_bits[5]</Signal>
+                <Signal>uart_data_bits[4]</Signal>
+                <Signal>uart_data_bits[3]</Signal>
+                <Signal>uart_data_bits[2]</Signal>
+                <Signal>uart_data_bits[1]</Signal>
+                <Signal>uart_data_bits[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="uart_config_txdat_len[11:0]">
+                <Signal>uart_config_txdat_len[11]</Signal>
+                <Signal>uart_config_txdat_len[10]</Signal>
+                <Signal>uart_config_txdat_len[9]</Signal>
+                <Signal>uart_config_txdat_len[8]</Signal>
+                <Signal>uart_config_txdat_len[7]</Signal>
+                <Signal>uart_config_txdat_len[6]</Signal>
+                <Signal>uart_config_txdat_len[5]</Signal>
+                <Signal>uart_config_txdat_len[4]</Signal>
+                <Signal>uart_config_txdat_len[3]</Signal>
+                <Signal>uart_config_txdat_len[2]</Signal>
+                <Signal>uart_config_txdat_len[1]</Signal>
+                <Signal>uart_config_txdat_len[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="uart_tx_data[15:0]">
+                <Signal>uart_tx_data[15]</Signal>
+                <Signal>uart_tx_data[14]</Signal>
+                <Signal>uart_tx_data[13]</Signal>
+                <Signal>uart_tx_data[12]</Signal>
+                <Signal>uart_tx_data[11]</Signal>
+                <Signal>uart_tx_data[10]</Signal>
+                <Signal>uart_tx_data[9]</Signal>
+                <Signal>uart_tx_data[8]</Signal>
+                <Signal>uart_tx_data[7]</Signal>
+                <Signal>uart_tx_data[6]</Signal>
+                <Signal>uart_tx_data[5]</Signal>
+                <Signal>uart_tx_data[4]</Signal>
+                <Signal>uart_tx_data[3]</Signal>
+                <Signal>uart_tx_data[2]</Signal>
+                <Signal>uart_tx_data[1]</Signal>
+                <Signal>uart_tx_data[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="uart_rx_data[15:0]">
+                <Signal>uart_rx_data[15]</Signal>
+                <Signal>uart_rx_data[14]</Signal>
+                <Signal>uart_rx_data[13]</Signal>
+                <Signal>uart_rx_data[12]</Signal>
+                <Signal>uart_rx_data[11]</Signal>
+                <Signal>uart_rx_data[10]</Signal>
+                <Signal>uart_rx_data[9]</Signal>
+                <Signal>uart_rx_data[8]</Signal>
+                <Signal>uart_rx_data[7]</Signal>
+                <Signal>uart_rx_data[6]</Signal>
+                <Signal>uart_rx_data[5]</Signal>
+                <Signal>uart_rx_data[4]</Signal>
+                <Signal>uart_rx_data[3]</Signal>
+                <Signal>uart_rx_data[2]</Signal>
+                <Signal>uart_rx_data[1]</Signal>
+                <Signal>uart_rx_data[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="u_UART/div_out[31:0]">
+                <Signal>u_UART/div_out[31]</Signal>
+                <Signal>u_UART/div_out[30]</Signal>
+                <Signal>u_UART/div_out[29]</Signal>
+                <Signal>u_UART/div_out[28]</Signal>
+                <Signal>u_UART/div_out[27]</Signal>
+                <Signal>u_UART/div_out[26]</Signal>
+                <Signal>u_UART/div_out[25]</Signal>
+                <Signal>u_UART/div_out[24]</Signal>
+                <Signal>u_UART/div_out[23]</Signal>
+                <Signal>u_UART/div_out[22]</Signal>
+                <Signal>u_UART/div_out[21]</Signal>
+                <Signal>u_UART/div_out[20]</Signal>
+                <Signal>u_UART/div_out[19]</Signal>
+                <Signal>u_UART/div_out[18]</Signal>
+                <Signal>u_UART/div_out[17]</Signal>
+                <Signal>u_UART/div_out[16]</Signal>
+                <Signal>u_UART/div_out[15]</Signal>
+                <Signal>u_UART/div_out[14]</Signal>
+                <Signal>u_UART/div_out[13]</Signal>
+                <Signal>u_UART/div_out[12]</Signal>
+                <Signal>u_UART/div_out[11]</Signal>
+                <Signal>u_UART/div_out[10]</Signal>
+                <Signal>u_UART/div_out[9]</Signal>
+                <Signal>u_UART/div_out[8]</Signal>
+                <Signal>u_UART/div_out[7]</Signal>
+                <Signal>u_UART/div_out[6]</Signal>
+                <Signal>u_UART/div_out[5]</Signal>
+                <Signal>u_UART/div_out[4]</Signal>
+                <Signal>u_UART/div_out[3]</Signal>
+                <Signal>u_UART/div_out[2]</Signal>
+                <Signal>u_UART/div_out[1]</Signal>
+                <Signal>u_UART/div_out[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="u_UART/divider_value[23:0]">
+                <Signal>u_UART/divider_value[23]</Signal>
+                <Signal>u_UART/divider_value[22]</Signal>
+                <Signal>u_UART/divider_value[21]</Signal>
+                <Signal>u_UART/divider_value[20]</Signal>
+                <Signal>u_UART/divider_value[19]</Signal>
+                <Signal>u_UART/divider_value[18]</Signal>
+                <Signal>u_UART/divider_value[17]</Signal>
+                <Signal>u_UART/divider_value[16]</Signal>
+                <Signal>u_UART/divider_value[15]</Signal>
+                <Signal>u_UART/divider_value[14]</Signal>
+                <Signal>u_UART/divider_value[13]</Signal>
+                <Signal>u_UART/divider_value[12]</Signal>
+                <Signal>u_UART/divider_value[11]</Signal>
+                <Signal>u_UART/divider_value[10]</Signal>
+                <Signal>u_UART/divider_value[9]</Signal>
+                <Signal>u_UART/divider_value[8]</Signal>
+                <Signal>u_UART/divider_value[7]</Signal>
+                <Signal>u_UART/divider_value[6]</Signal>
+                <Signal>u_UART/divider_value[5]</Signal>
+                <Signal>u_UART/divider_value[4]</Signal>
+                <Signal>u_UART/divider_value[3]</Signal>
+                <Signal>u_UART/divider_value[2]</Signal>
+                <Signal>u_UART/divider_value[1]</Signal>
+                <Signal>u_UART/divider_value[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="u_UART/div_correct[1:0]">
+                <Signal>u_UART/div_correct[1]</Signal>
+                <Signal>u_UART/div_correct[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="u_UART/remainder[2:0]">
+                <Signal>u_UART/remainder[2]</Signal>
+                <Signal>u_UART/remainder[1]</Signal>
+                <Signal>u_UART/remainder[0]</Signal>
+            </Bus>
+            <Signal capture_enable="true">uart_tx_data_val</Signal>
+            <Signal capture_enable="true">uart_rx_data_val</Signal>
+            <Signal capture_enable="true">uart_tx_busy</Signal>
+        </SignalList>
+        <Triggers>
+            <Trigger index="0">
+                <SignalList>
+                    <Signal>uart_tx_data_val</Signal>
+                </SignalList>
+            </Trigger>
+            <Trigger index="1"/>
+            <Trigger index="2"/>
+            <Trigger index="3"/>
+            <Trigger index="4"/>
+            <Trigger index="5"/>
+            <Trigger index="6"/>
+            <Trigger index="7"/>
+            <Trigger index="8"/>
+            <Trigger index="9"/>
+            <Trigger index="10"/>
+            <Trigger index="11"/>
+            <Trigger index="12"/>
+            <Trigger index="13"/>
+            <Trigger index="14"/>
+            <Trigger index="15"/>
+        </Triggers>
+        <MatchUnits>
+            <MatchUnit index="0" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="1" value1="0" trigger="0"/>
+            <MatchUnit index="1" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="2" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="3" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="4" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="5" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="6" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="7" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="8" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="9" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="10" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="11" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="12" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="13" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="14" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="15" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+        </MatchUnits>
+        <Expressions type="Static">
+            <Expression>M0</Expression>
+        </Expressions>
+    </AoCore>
+    <GAO_ID>0011000111011111</GAO_ID>
+</GAO_CONFIG>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW5AST-138B" package="FCPBGA676A" speed="1" partNumber="GW5AST-LV138FPG676AC1/I0"/>
+    <FileList>
+        <File path="D:/Applications/Gowin/Gowin_V1.9.10.03_x64/IDE/ipcore/USBTwoSoftPHY/data/usb2_0_softphy_top.v" type="verilog"/>
+        <File path="D:/Applications/Gowin/Gowin_V1.9.10.03_x64/IDE/ipcore/USBTwoSoftPHY/data/usb2_0_softphy.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="0"/>
+        <Option type="enable_dsrm" value="0"/>
+        <Option type="include_path" value="D:/Applications/Gowin/Gowin_V1.9.10.03_x64/IDE/ipcore/USBTwoSoftPHY/data"/>
+        <Option type="include_path" value="C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/CYPRESS_STREAMER_MAXSPEED_138Pro/138K-FPG676A/src/usb2_0_softphy/temp/USBTwoSoftPHY"/>
+        <Option type="output_file" value="usb2_0_softphy.vg"/>
+        <Option type="output_template" value="usb2_0_softphy_tmp.v"/>
+        <Option type="ram_balance" value="1"/>
+        <Option type="ram_rw_check" value="1"/>
+        <Option type="vcc" value="0.9"/>
+        <Option type="vccx" value="1.8"/>
+        <Option type="verilog_language" value="sysv-2017"/>
+    </OptionList>
+</Project>
