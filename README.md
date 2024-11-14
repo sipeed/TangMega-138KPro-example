@@ -130,7 +130,7 @@ TODOs:
 
 ### SFP+ ✅
 
-**customized_phy**: Read [Gowin Customized PHY IP](sfp+/docs/IPUG1024-1.5E.pdf) For more information.
+**customized_phy**: Read [Gowin Customized PHY IP](sfp+/docs/manual/IPUG1024-1.5E_Gowin_Customized_PHY_IP%20User_Guide.pdf) For more information.
 
 **10G_Serial_Ethernet**: DEMO for 10GbE Ethernet UDP Send Test Using SFP+.
 
