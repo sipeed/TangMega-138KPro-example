@@ -33,7 +33,7 @@ Here are quick instructions for the more experienced,
 
 ***
 
-### Demonstration of demo USB devices
+### Demonstration of demo USB device
 
 - What you can see in **Windows Device Manager**
 ![COM in Windows Device Manager](../docs/images/COM_in_Windows_Device_Manager.png "COM in Windows Device Manager")
@@ -60,13 +60,19 @@ Here are the details for LEDs:(LED0 is on the far right)
 | LED0      |  Running indicator              | Blink             |
 | LED1      |  Main PLL Locked                | ON                |
 | LED2      |  System reset enabled           | OFF               |
-| LED3      |  PHY FS Mode*                   | OFF               |
-| LED4      |  PHY LS Mode*                   | OFF               |
-| LED4      |  Device is High-Speed           | ON                |
+| LED3      |  PHY is FS Mode*                | OFF               |
+| LED4      |  PHY is LS Mode*                | OFF               |
+| LED5      |  Device is High-Speed**         | ON                |
 
-Note: LED[3:4] **ALL OFF** when PHY is in HS mode.
+ \* Note: `LED[3:4]` **ALL OFF** when **USB PHY** is in HS mode.
+
+\*\*Note: `LED5` is controlled by **USB Controller**. In this demo, the **USB controller** is fixed in **High-Speed** mode. If `LED5` is **ON** and `LED3` and `LED4` are not **ALL OFF**, it means something went wrong with the test. You need to re-plug the USB cable and re-test. 
+
+**
 
 ## Development
 The main purpose of this DEMO is to show how to use the **[GOWIN USB 2.0 SoftPHY IP](https://www.gowinsemi.com/en/support/ip_detail/98/)** and the **[GOWIN USB 2.0 Device Controller IP](https://www.gowinsemi.com/en/support/ip_detail/91/)**. Please refer to the **[manuals](../docs/manuals/)** for details about IP.
 
 You can also enable the GAO in the project, then burn the biststream via GAO and see the result via GAO.
+
+If you encounter any problems, please submit an issue to this repository.

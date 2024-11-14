@@ -8,7 +8,7 @@ This directory is a series demo to test the **USB2** `soft_PHY` & `device_contro
 
 - Solution without any chip, only need **RC network** & **9 FPGA pins**.
 - Provides a custom USB2 controller, both **high-speed(480Mbps)** or **full-speed(12Mbps)**.
-- Up to 16 bidirectional custom USB EndPoints.
+- Up to 16 custom IN/OUT USB EndPoints.
 - Transfer rate up to 39.8MB/s(318.4Mbps).
 
 
@@ -47,5 +47,13 @@ This directory is a series demo to test the **USB2** `soft_PHY` & `device_contro
 ⚠️ Note: Please refer to the relevant documents for the use of Cypress C++ streamer. Related programs and drivers are not provided here.
 
 ## How to use
+
+See the corresponding project's readme for details
 - [usb_uart_loopback](./usb_uart_loopback/readme.md)
 - [usb_cy_streamer](./usb_cy_streamer/readme.md)
+
+***
+
+## Troubleshoot
+
+If you encounter any problems, please submit an issue to this repository.
