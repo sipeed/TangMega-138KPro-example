@@ -1,0 +1,63 @@
+//Copyright (C)2014-2024 Gowin Semiconductor Corporation.
+//All rights reserved. 
+//File Title: Physical Constraints file
+//Tool Version: V1.9.10.03 (64-bit)
+//Part Number: GW5AST-LV138FPG676AC1/I0
+//Device: GW5AST-138
+//Device Version: B
+//Created Time: Thu 11 14 21:54:10 2024
+
+IO_LOC "CLK_IN" P16;
+IO_PORT "CLK_IN" IO_TYPE=LVCMOS33 PULL_MODE=NONE BANK_VCCIO=3.3;
+
+IO_LOC "usb_dxp_io" M21,M22;
+IO_PORT "usb_dxp_io" IO_TYPE=LVPECL33E PULL_MODE=NONE DRIVE=8 DIFF_RESISTOR=OFF CTLE=MEDIUM BANK_VCCIO=3.3;
+
+IO_LOC "usb_pullup_en_o" M19;
+IO_PORT "usb_pullup_en_o" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+
+IO_LOC "usb_term_dn_io" U19;
+IO_PORT "usb_term_dn_io" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "usb_term_dp_io" T19;
+IO_PORT "usb_term_dp_io" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+
+IO_LOC "usb_rxdn_i" T20;
+IO_PORT "usb_rxdn_i" IO_TYPE=LVDS25 PULL_MODE=NONE DIFF_RESISTOR=OFF CTLE=MEDIUM BANK_VCCIO=3.3;
+IO_LOC "usb_rxdp_i" U21;
+IO_PORT "usb_rxdp_i" IO_TYPE=LVDS25 PULL_MODE=NONE DIFF_RESISTOR=OFF CTLE=MEDIUM BANK_VCCIO=3.3;
+
+IO_LOC "LED[5]" N23;
+IO_PORT "LED[5]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "LED[4]" N21;
+IO_PORT "LED[4]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "LED[3]" M25;
+IO_PORT "LED[3]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "LED[2]" L20;
+IO_PORT "LED[2]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "LED[1]" R26;
+IO_PORT "LED[1]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "LED[0]" J14;
+IO_PORT "LED[0]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+
+INS_LOC "u_USB_SoftPHY_Top/usb2_0_softphy/u_usb_20_phy_utmi/u_usb2_0_softphy/u_usb_phy_hs/i_rx_phy/u_cdr_serdes_x8_dx/dp_ref_ides8" U21;
+INS_LOC "u_USB_SoftPHY_Top/usb2_0_softphy/u_usb_20_phy_utmi/u_usb2_0_softphy/u_usb_phy_hs/i_rx_phy/u_cdr_serdes_x8_dx/dn_ref_ides8" T20;
+
+INS_LOC "u_pll_F/PLL_inst" PLL_R[1];
+INS_LOC "u_pll_B/PLL_inst" PLL_R[0];
+
+INS_LOC "u_USB_SoftPHY_Top/usb2_0_softphy/u_usb_20_phy_utmi/u_usb2_0_softphy/u_usb_phy_hs/i_rx_phy/u_cdr_serdes_x8_dx/DRU_500M_Top/u_dru_500m_logic/II_15_s0" R58C154[1][A];
+INS_LOC "u_USB_SoftPHY_Top/usb2_0_softphy/u_usb_20_phy_utmi/u_usb2_0_softphy/u_usb_phy_hs/i_rx_phy/u_cdr_serdes_x8_dx/DRU_500M_Top/u_dru_500m_logic/II_14_s0" R58C152[1][A];
+INS_LOC "u_USB_SoftPHY_Top/usb2_0_softphy/u_usb_20_phy_utmi/u_usb2_0_softphy/u_usb_phy_hs/i_rx_phy/u_cdr_serdes_x8_dx/DRU_500M_Top/u_dru_500m_logic/II_13_s0" R57C152[2][B];
+INS_LOC "u_USB_SoftPHY_Top/usb2_0_softphy/u_usb_20_phy_utmi/u_usb2_0_softphy/u_usb_phy_hs/i_rx_phy/u_cdr_serdes_x8_dx/DRU_500M_Top/u_dru_500m_logic/II_12_s0" R57C154[0][A];
+INS_LOC "u_USB_SoftPHY_Top/usb2_0_softphy/u_usb_20_phy_utmi/u_usb2_0_softphy/u_usb_phy_hs/i_rx_phy/u_cdr_serdes_x8_dx/DRU_500M_Top/u_dru_500m_logic/II_11_s0" R58C153[2][B];
+INS_LOC "u_USB_SoftPHY_Top/usb2_0_softphy/u_usb_20_phy_utmi/u_usb2_0_softphy/u_usb_phy_hs/i_rx_phy/u_cdr_serdes_x8_dx/DRU_500M_Top/u_dru_500m_logic/II_10_s0" R58C151[1][B];
+INS_LOC "u_USB_SoftPHY_Top/usb2_0_softphy/u_usb_20_phy_utmi/u_usb2_0_softphy/u_usb_phy_hs/i_rx_phy/u_cdr_serdes_x8_dx/DRU_500M_Top/u_dru_500m_logic/II_9_s0" R57C152[0][A];
+INS_LOC "u_USB_SoftPHY_Top/usb2_0_softphy/u_usb_20_phy_utmi/u_usb2_0_softphy/u_usb_phy_hs/i_rx_phy/u_cdr_serdes_x8_dx/DRU_500M_Top/u_dru_500m_logic/II_8_s0" R57C154[0][B];
+INS_LOC "u_USB_SoftPHY_Top/usb2_0_softphy/u_usb_20_phy_utmi/u_usb2_0_softphy/u_usb_phy_hs/i_rx_phy/u_cdr_serdes_x8_dx/DRU_500M_Top/u_dru_500m_logic/II_7_s0" R57C154[2][A];
+INS_LOC "u_USB_SoftPHY_Top/usb2_0_softphy/u_usb_20_phy_utmi/u_usb2_0_softphy/u_usb_phy_hs/i_rx_phy/u_cdr_serdes_x8_dx/DRU_500M_Top/u_dru_500m_logic/II_6_s0" R58C152[3][A];
+INS_LOC "u_USB_SoftPHY_Top/usb2_0_softphy/u_usb_20_phy_utmi/u_usb2_0_softphy/u_usb_phy_hs/i_rx_phy/u_cdr_serdes_x8_dx/DRU_500M_Top/u_dru_500m_logic/II_5_s0" R57C151[1][A];
+INS_LOC "u_USB_SoftPHY_Top/usb2_0_softphy/u_usb_20_phy_utmi/u_usb2_0_softphy/u_usb_phy_hs/i_rx_phy/u_cdr_serdes_x8_dx/DRU_500M_Top/u_dru_500m_logic/II_4_s0" R57C154[3][A];
+INS_LOC "u_USB_SoftPHY_Top/usb2_0_softphy/u_usb_20_phy_utmi/u_usb2_0_softphy/u_usb_phy_hs/i_rx_phy/u_cdr_serdes_x8_dx/DRU_500M_Top/u_dru_500m_logic/II_3_s0" R58C154[0][A];
+INS_LOC "u_USB_SoftPHY_Top/usb2_0_softphy/u_usb_20_phy_utmi/u_usb2_0_softphy/u_usb_phy_hs/i_rx_phy/u_cdr_serdes_x8_dx/DRU_500M_Top/u_dru_500m_logic/II_2_s0" R58C152[1][B];
+INS_LOC "u_USB_SoftPHY_Top/usb2_0_softphy/u_usb_20_phy_utmi/u_usb2_0_softphy/u_usb_phy_hs/i_rx_phy/u_cdr_serdes_x8_dx/DRU_500M_Top/u_dru_500m_logic/II_1_s0" R58C154[0][B];
+INS_LOC "u_USB_SoftPHY_Top/usb2_0_softphy/u_usb_20_phy_utmi/u_usb2_0_softphy/u_usb_phy_hs/i_rx_phy/u_cdr_serdes_x8_dx/DRU_500M_Top/u_dru_500m_logic/II_0_s0" R57C154[1][B];

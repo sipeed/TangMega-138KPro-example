@@ -1,0 +1,1996 @@
+//Copyright (C)2014-2024 Gowin Semiconductor Corporation.
+//All rights reserved.
+//File Title: Post-PnR Verilog Simulation Model file
+//Tool Version: V1.9.10.03 (64-bit)
+//Created Time: Sun Nov 10 19:49:36 2024
+
+`timescale 100 ps/100 ps
+module USB_SoftPHY_Top(
+	clk_i,
+	rst_i,
+	utmi_data_out_i,
+	utmi_txvalid_i,
+	utmi_op_mode_i,
+	utmi_xcvrselect_i,
+	utmi_termselect_i,
+	utmi_data_in_o,
+	utmi_txready_o,
+	utmi_rxvalid_o,
+	utmi_rxactive_o,
+	utmi_rxerror_o,
+	utmi_linestate_o,
+	usb_dp_io,
+	usb_dn_io
+);
+input clk_i;
+input rst_i;
+input [7:0] utmi_data_out_i;
+input utmi_txvalid_i;
+input [1:0] utmi_op_mode_i;
+input [1:0] utmi_xcvrselect_i;
+input utmi_termselect_i;
+output [7:0] utmi_data_in_o;
+output utmi_txready_o;
+output utmi_rxvalid_o;
+output utmi_rxactive_o;
+output utmi_rxerror_o;
+output [1:0] utmi_linestate_o;
+inout usb_dp_io;
+inout usb_dn_io;
+wire [3:3] CLK_FREQ_Z;
+wire GND;
+wire VCC;
+wire clk_i;
+wire clk_i_d;
+wire rst_i;
+wire rst_i_d;
+wire usb_dn_io;
+wire usb_dn_io_in;
+wire usb_dp_io;
+wire usb_dp_io_in;
+wire usb_pads_tx_dn_w;
+wire usb_pads_tx_dp_w;
+wire usb_pads_tx_oen_w;
+wire [7:0] utmi_data_in_o;
+wire [7:0] utmi_data_in_o_d;
+wire [7:0] utmi_data_out_i;
+wire [7:0] utmi_data_out_i_d;
+wire [1:0] utmi_linestate_o;
+wire [1:0] utmi_linestate_o_d;
+wire [1:0] utmi_op_mode_i;
+wire [1:0] utmi_op_mode_i_d;
+wire utmi_rxactive_o;
+wire utmi_rxactive_o_d;
+wire utmi_rxerror_o;
+wire utmi_rxerror_o_d;
+wire utmi_rxvalid_o;
+wire utmi_rxvalid_o_d;
+wire utmi_termselect_i;
+wire utmi_termselect_i_d;
+wire utmi_txready_o;
+wire utmi_txready_o_d;
+wire utmi_txvalid_i;
+wire utmi_txvalid_i_d;
+wire [1:0] utmi_xcvrselect_i;
+wire [0:0] utmi_xcvrselect_i_d;
+wire \u_usb_phy/u_usb_phy_rt/n262_3 ;
+wire \u_usb_phy/u_usb_phy_rt/n527_4 ;
+wire \u_usb_phy/u_usb_phy_rt/n528_4 ;
+wire \u_usb_phy/u_usb_phy_rt/n529_4 ;
+wire \u_usb_phy/u_usb_phy_rt/n530_4 ;
+wire \u_usb_phy/u_usb_phy_rt/n531_4 ;
+wire \u_usb_phy/u_usb_phy_rt/n532_4 ;
+wire \u_usb_phy/u_usb_phy_rt/n533_4 ;
+wire \u_usb_phy/u_usb_phy_rt/n534_4 ;
+wire \u_usb_phy/u_usb_phy_rt/n616_4 ;
+wire \u_usb_phy/u_usb_phy_rt/n697_5 ;
+wire \u_usb_phy/u_usb_phy_rt/n698_4 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_32 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_34 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_36 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_40 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_41 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_43 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_45 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_47 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_0_33 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_0_35 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_0_37 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_0_39 ;
+wire \u_usb_phy/u_usb_phy_rt/bit_count_q_2_8 ;
+wire \u_usb_phy/u_usb_phy_rt/data_q_7_6 ;
+wire \u_usb_phy/u_usb_phy_rt/send_eop_q_8 ;
+wire \u_usb_phy/u_usb_phy_rt/rx_en_q_6 ;
+wire \u_usb_phy/u_usb_phy_rt/n424_7 ;
+wire \u_usb_phy/u_usb_phy_rt/n423_6 ;
+wire \u_usb_phy/u_usb_phy_rt/n422_6 ;
+wire \u_usb_phy/u_usb_phy_rt/n362_7 ;
+wire \u_usb_phy/u_usb_phy_rt/n361_8 ;
+wire \u_usb_phy/u_usb_phy_rt/n296_6 ;
+wire \u_usb_phy/u_usb_phy_rt/n295_6 ;
+wire \u_usb_phy/u_usb_phy_rt/n294_6 ;
+wire \u_usb_phy/u_usb_phy_rt/n293_6 ;
+wire \u_usb_phy/u_usb_phy_rt/n292_6 ;
+wire \u_usb_phy/u_usb_phy_rt/n291_6 ;
+wire \u_usb_phy/u_usb_phy_rt/in_j_w ;
+wire \u_usb_phy/u_usb_phy_rt/n363_6 ;
+wire \u_usb_phy/u_usb_phy_rt/n696_6 ;
+wire \u_usb_phy/u_usb_phy_rt/n609_5 ;
+wire \u_usb_phy/u_usb_phy_rt/n255_5 ;
+wire \u_usb_phy/u_usb_phy_rt/n697_7 ;
+wire \u_usb_phy/u_usb_phy_rt/state_q_3_8 ;
+wire \u_usb_phy/u_usb_phy_rt/n327_4 ;
+wire \u_usb_phy/u_usb_phy_rt/utmi_rxactive_o_d_3 ;
+wire \u_usb_phy/u_usb_phy_rt/n527_5 ;
+wire \u_usb_phy/u_usb_phy_rt/n527_7 ;
+wire \u_usb_phy/u_usb_phy_rt/n572_5 ;
+wire \u_usb_phy/u_usb_phy_rt/n572_6 ;
+wire \u_usb_phy/u_usb_phy_rt/n697_8 ;
+wire \u_usb_phy/u_usb_phy_rt/n697_10 ;
+wire \u_usb_phy/u_usb_phy_rt/n697_11 ;
+wire \u_usb_phy/u_usb_phy_rt/n698_5 ;
+wire \u_usb_phy/u_usb_phy_rt/n698_6 ;
+wire \u_usb_phy/u_usb_phy_rt/n698_7 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_3_36 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_3_37 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_42 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_43 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_44 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_47 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_54 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_56 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_58 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_59 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_60 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_61 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_62 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_0_41 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_0_42 ;
+wire \u_usb_phy/u_usb_phy_rt/sync_j_detected_q_9 ;
+wire \u_usb_phy/u_usb_phy_rt/ones_count_q_2_10 ;
+wire \u_usb_phy/u_usb_phy_rt/bit_count_q_2_9 ;
+wire \u_usb_phy/u_usb_phy_rt/bit_count_q_2_10 ;
+wire \u_usb_phy/u_usb_phy_rt/data_q_7_7 ;
+wire \u_usb_phy/u_usb_phy_rt/send_eop_q_9 ;
+wire \u_usb_phy/u_usb_phy_rt/n362_8 ;
+wire \u_usb_phy/u_usb_phy_rt/n362_9 ;
+wire \u_usb_phy/u_usb_phy_rt/n361_9 ;
+wire \u_usb_phy/u_usb_phy_rt/n361_10 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_63 ;
+wire \u_usb_phy/u_usb_phy_rt/n296_7 ;
+wire \u_usb_phy/u_usb_phy_rt/n293_7 ;
+wire \u_usb_phy/u_usb_phy_rt/n609_7 ;
+wire \u_usb_phy/u_usb_phy_rt/n609_8 ;
+wire \u_usb_phy/u_usb_phy_rt/n255_6 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_64 ;
+wire \u_usb_phy/u_usb_phy_rt/state_q_3_9 ;
+wire \u_usb_phy/u_usb_phy_rt/state_q_3_10 ;
+wire \u_usb_phy/u_usb_phy_rt/n327_5 ;
+wire \u_usb_phy/u_usb_phy_rt/n527_8 ;
+wire \u_usb_phy/u_usb_phy_rt/n697_14 ;
+wire \u_usb_phy/u_usb_phy_rt/n697_15 ;
+wire \u_usb_phy/u_usb_phy_rt/n697_16 ;
+wire \u_usb_phy/u_usb_phy_rt/n697_18 ;
+wire \u_usb_phy/u_usb_phy_rt/n697_19 ;
+wire \u_usb_phy/u_usb_phy_rt/n698_9 ;
+wire \u_usb_phy/u_usb_phy_rt/n698_10 ;
+wire \u_usb_phy/u_usb_phy_rt/n698_11 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_48 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_50 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_51 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_52 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_53 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_54 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_65 ;
+wire \u_usb_phy/u_usb_phy_rt/bit_count_q_2_12 ;
+wire \u_usb_phy/u_usb_phy_rt/n296_8 ;
+wire \u_usb_phy/u_usb_phy_rt/n296_9 ;
+wire \u_usb_phy/u_usb_phy_rt/n255_7 ;
+wire \u_usb_phy/u_usb_phy_rt/n296_10 ;
+wire \u_usb_phy/u_usb_phy_rt/n292_9 ;
+wire \u_usb_phy/u_usb_phy_rt/n697_21 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_3_40 ;
+wire \u_usb_phy/u_usb_phy_rt/n527_10 ;
+wire \u_usb_phy/u_usb_phy_rt/n697_23 ;
+wire \u_usb_phy/u_usb_phy_rt/n697_25 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_67 ;
+wire \u_usb_phy/u_usb_phy_rt/n698_13 ;
+wire \u_usb_phy/u_usb_phy_rt/n609_10 ;
+wire \u_usb_phy/u_usb_phy_rt/ones_count_q_2_12 ;
+wire \u_usb_phy/u_usb_phy_rt/bit_count_q_2_17 ;
+wire \u_usb_phy/u_usb_phy_rt/sync_j_detected_q_11 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_0_45 ;
+wire \u_usb_phy/u_usb_phy_rt/n572_8 ;
+wire \u_usb_phy/u_usb_phy_rt/n697_27 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_71 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_56 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_58 ;
+wire \u_usb_phy/u_usb_phy_rt/bit_count_q_2_19 ;
+wire \u_usb_phy/u_usb_phy_rt/n237_10 ;
+wire \u_usb_phy/u_usb_phy_rt/n616_9 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_60 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_62 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_0_47 ;
+wire \u_usb_phy/u_usb_phy_rt/n194_7 ;
+wire \u_usb_phy/u_usb_phy_rt/n165_8 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_73 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_75 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_64 ;
+wire \u_usb_phy/u_usb_phy_rt/n327_7 ;
+wire \u_usb_phy/u_usb_phy_rt/n29_10 ;
+wire \u_usb_phy/u_usb_phy_rt/n39_6 ;
+wire \u_usb_phy/u_usb_phy_rt/n45_6 ;
+wire \u_usb_phy/u_usb_phy_rt/n51_6 ;
+wire \u_usb_phy/u_usb_phy_rt/ones_count_q_2_14 ;
+wire \u_usb_phy/u_usb_phy_rt/rx_dn_ms ;
+wire \u_usb_phy/u_usb_phy_rt/rx_dp0_q ;
+wire \u_usb_phy/u_usb_phy_rt/rx_dn0_q ;
+wire \u_usb_phy/u_usb_phy_rt/rx_dp1_q ;
+wire \u_usb_phy/u_usb_phy_rt/rx_dn1_q ;
+wire \u_usb_phy/u_usb_phy_rt/rxd0_q ;
+wire \u_usb_phy/u_usb_phy_rt/rxd1_q ;
+wire \u_usb_phy/u_usb_phy_rt/rxd_last_q ;
+wire \u_usb_phy/u_usb_phy_rt/in_j_edge ;
+wire \u_usb_phy/u_usb_phy_rt/rxd_last_j_q ;
+wire \u_usb_phy/u_usb_phy_rt/rx_dp_ms ;
+wire \u_usb_phy/u_usb_phy_rt/sync_j_detected_q ;
+wire \u_usb_phy/u_usb_phy_rt/send_eop_q ;
+wire \u_usb_phy/u_usb_phy_rt/rxd_ms ;
+wire \u_usb_phy/u_usb_phy_rt/rx_dp_q ;
+wire \u_usb_phy/u_usb_phy_rt/rx_dn_q ;
+wire \u_usb_phy/u_usb_phy_rt/rxd_q ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_28 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_2_30 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_29 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_31 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_33 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_35 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_37 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_1_39 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_0_29 ;
+wire \u_usb_phy/u_usb_phy_rt/next_state_r_0_31 ;
+wire [3:0] \u_usb_phy/u_usb_phy_rt/next_state_r ;
+wire [3:0] \u_usb_phy/u_usb_phy_rt/state_q ;
+wire [5:0] \u_usb_phy/u_usb_phy_rt/sample_cnt_q ;
+wire [2:0] \u_usb_phy/u_usb_phy_rt/ones_count_q ;
+wire [2:0] \u_usb_phy/u_usb_phy_rt/bit_count_q ;
+VCC VCC_cZ (
+  .V(VCC)
+);
+GND GND_cZ (
+  .G(GND)
+);
+GSR GSR (
+	.GSRI(VCC)
+);
+IBUF clk_i_ibuf (
+	.I(clk_i),
+	.O(clk_i_d)
+);
+IBUF rst_i_ibuf (
+	.I(rst_i),
+	.O(rst_i_d)
+);
+IBUF utmi_data_out_i_0_ibuf (
+	.I(utmi_data_out_i[0]),
+	.O(utmi_data_out_i_d[0])
+);
+IBUF utmi_data_out_i_1_ibuf (
+	.I(utmi_data_out_i[1]),
+	.O(utmi_data_out_i_d[1])
+);
+IBUF utmi_data_out_i_2_ibuf (
+	.I(utmi_data_out_i[2]),
+	.O(utmi_data_out_i_d[2])
+);
+IBUF utmi_data_out_i_3_ibuf (
+	.I(utmi_data_out_i[3]),
+	.O(utmi_data_out_i_d[3])
+);
+IBUF utmi_data_out_i_4_ibuf (
+	.I(utmi_data_out_i[4]),
+	.O(utmi_data_out_i_d[4])
+);
+IBUF utmi_data_out_i_5_ibuf (
+	.I(utmi_data_out_i[5]),
+	.O(utmi_data_out_i_d[5])
+);
+IBUF utmi_data_out_i_6_ibuf (
+	.I(utmi_data_out_i[6]),
+	.O(utmi_data_out_i_d[6])
+);
+IBUF utmi_data_out_i_7_ibuf (
+	.I(utmi_data_out_i[7]),
+	.O(utmi_data_out_i_d[7])
+);
+IBUF utmi_txvalid_i_ibuf (
+	.I(utmi_txvalid_i),
+	.O(utmi_txvalid_i_d)
+);
+IBUF utmi_op_mode_i_0_ibuf (
+	.I(utmi_op_mode_i[0]),
+	.O(utmi_op_mode_i_d[0])
+);
+IBUF utmi_op_mode_i_1_ibuf (
+	.I(utmi_op_mode_i[1]),
+	.O(utmi_op_mode_i_d[1])
+);
+IBUF utmi_xcvrselect_i_0_ibuf (
+	.I(utmi_xcvrselect_i[0]),
+	.O(utmi_xcvrselect_i_d[0])
+);
+IBUF utmi_xcvrselect_i_1_ibuf (
+	.I(utmi_xcvrselect_i[1]),
+	.O(CLK_FREQ_Z[3])
+);
+IBUF utmi_termselect_i_ibuf (
+	.I(utmi_termselect_i),
+	.O(utmi_termselect_i_d)
+);
+IOBUF usb_dp_io_iobuf (
+	.I(usb_pads_tx_dp_w),
+	.OEN(usb_pads_tx_oen_w),
+	.IO(usb_dp_io),
+	.O(usb_dp_io_in)
+);
+IOBUF usb_dn_io_iobuf (
+	.I(usb_pads_tx_dn_w),
+	.OEN(usb_pads_tx_oen_w),
+	.IO(usb_dn_io),
+	.O(usb_dn_io_in)
+);
+OBUF utmi_data_in_o_0_obuf (
+	.I(utmi_data_in_o_d[0]),
+	.O(utmi_data_in_o[0])
+);
+OBUF utmi_data_in_o_1_obuf (
+	.I(utmi_data_in_o_d[1]),
+	.O(utmi_data_in_o[1])
+);
+OBUF utmi_data_in_o_2_obuf (
+	.I(utmi_data_in_o_d[2]),
+	.O(utmi_data_in_o[2])
+);
+OBUF utmi_data_in_o_3_obuf (
+	.I(utmi_data_in_o_d[3]),
+	.O(utmi_data_in_o[3])
+);
+OBUF utmi_data_in_o_4_obuf (
+	.I(utmi_data_in_o_d[4]),
+	.O(utmi_data_in_o[4])
+);
+OBUF utmi_data_in_o_5_obuf (
+	.I(utmi_data_in_o_d[5]),
+	.O(utmi_data_in_o[5])
+);
+OBUF utmi_data_in_o_6_obuf (
+	.I(utmi_data_in_o_d[6]),
+	.O(utmi_data_in_o[6])
+);
+OBUF utmi_data_in_o_7_obuf (
+	.I(utmi_data_in_o_d[7]),
+	.O(utmi_data_in_o[7])
+);
+OBUF utmi_txready_o_obuf (
+	.I(utmi_txready_o_d),
+	.O(utmi_txready_o)
+);
+OBUF utmi_rxvalid_o_obuf (
+	.I(utmi_rxvalid_o_d),
+	.O(utmi_rxvalid_o)
+);
+OBUF utmi_rxactive_o_obuf (
+	.I(utmi_rxactive_o_d),
+	.O(utmi_rxactive_o)
+);
+OBUF utmi_rxerror_o_obuf (
+	.I(utmi_rxerror_o_d),
+	.O(utmi_rxerror_o)
+);
+OBUF utmi_linestate_o_0_obuf (
+	.I(utmi_linestate_o_d[0]),
+	.O(utmi_linestate_o[0])
+);
+OBUF utmi_linestate_o_1_obuf (
+	.I(utmi_linestate_o_d[1]),
+	.O(utmi_linestate_o[1])
+);
+LUT3 \u_usb_phy/u_usb_phy_rt/utmi_linestate_o_d_1_s  (
+	.I0(\u_usb_phy/u_usb_phy_rt/rx_dn_q ),
+	.I1(usb_pads_tx_dn_w),
+	.I2(usb_pads_tx_oen_w),
+	.F(utmi_linestate_o_d[1])
+);
+defparam \u_usb_phy/u_usb_phy_rt/utmi_linestate_o_d_1_s .INIT=8'hAC;
+LUT3 \u_usb_phy/u_usb_phy_rt/utmi_linestate_o_d_0_s  (
+	.I0(\u_usb_phy/u_usb_phy_rt/rx_dp_q ),
+	.I1(usb_pads_tx_dp_w),
+	.I2(usb_pads_tx_oen_w),
+	.F(utmi_linestate_o_d[0])
+);
+defparam \u_usb_phy/u_usb_phy_rt/utmi_linestate_o_d_0_s .INIT=8'hAC;
+LUT2 \u_usb_phy/u_usb_phy_rt/n262_s0  (
+	.I0(\u_usb_phy/u_usb_phy_rt/rxd0_q ),
+	.I1(\u_usb_phy/u_usb_phy_rt/rxd1_q ),
+	.F(\u_usb_phy/u_usb_phy_rt/n262_3 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n262_s0 .INIT=4'h6;
+LUT4 \u_usb_phy/u_usb_phy_rt/n527_s1  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n527_5 ),
+	.I1(utmi_data_out_i_d[7]),
+	.I2(\u_usb_phy/u_usb_phy_rt/n527_10 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n527_7 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n527_4 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n527_s1 .INIT=16'h0C05;
+LUT4 \u_usb_phy/u_usb_phy_rt/n528_s1  (
+	.I0(utmi_data_in_o_d[7]),
+	.I1(utmi_data_out_i_d[6]),
+	.I2(\u_usb_phy/u_usb_phy_rt/n527_10 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n527_7 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n528_4 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n528_s1 .INIT=16'h0C0A;
+LUT4 \u_usb_phy/u_usb_phy_rt/n529_s1  (
+	.I0(utmi_data_in_o_d[6]),
+	.I1(utmi_data_out_i_d[5]),
+	.I2(\u_usb_phy/u_usb_phy_rt/n527_10 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n527_7 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n529_4 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n529_s1 .INIT=16'hFCFA;
+LUT4 \u_usb_phy/u_usb_phy_rt/n530_s1  (
+	.I0(utmi_data_in_o_d[5]),
+	.I1(utmi_data_out_i_d[4]),
+	.I2(\u_usb_phy/u_usb_phy_rt/n527_10 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n527_7 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n530_4 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n530_s1 .INIT=16'h0C0A;
+LUT4 \u_usb_phy/u_usb_phy_rt/n531_s1  (
+	.I0(utmi_data_in_o_d[4]),
+	.I1(utmi_data_out_i_d[3]),
+	.I2(\u_usb_phy/u_usb_phy_rt/n527_10 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n527_7 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n531_4 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n531_s1 .INIT=16'hFCFA;
+LUT4 \u_usb_phy/u_usb_phy_rt/n532_s1  (
+	.I0(utmi_data_in_o_d[3]),
+	.I1(utmi_data_out_i_d[2]),
+	.I2(\u_usb_phy/u_usb_phy_rt/n527_10 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n527_7 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n532_4 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n532_s1 .INIT=16'h0C0A;
+LUT4 \u_usb_phy/u_usb_phy_rt/n533_s1  (
+	.I0(utmi_data_in_o_d[2]),
+	.I1(utmi_data_out_i_d[1]),
+	.I2(\u_usb_phy/u_usb_phy_rt/n527_10 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n527_7 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n533_4 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n533_s1 .INIT=16'hFCFA;
+LUT4 \u_usb_phy/u_usb_phy_rt/n534_s1  (
+	.I0(utmi_data_in_o_d[1]),
+	.I1(utmi_data_out_i_d[0]),
+	.I2(\u_usb_phy/u_usb_phy_rt/n527_10 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n527_7 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n534_4 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n534_s1 .INIT=16'h0C0A;
+LUT2 \u_usb_phy/u_usb_phy_rt/n616_s1  (
+	.I0(utmi_txvalid_i_d),
+	.I1(\u_usb_phy/u_usb_phy_rt/n616_9 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n616_4 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n616_s1 .INIT=4'h4;
+LUT4 \u_usb_phy/u_usb_phy_rt/n697_s2  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n697_8 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n697_10 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n697_11 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n697_5 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n697_s2 .INIT=16'h8FFF;
+LUT4 \u_usb_phy/u_usb_phy_rt/n698_s1  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n698_5 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n698_6 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n698_7 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n697_10 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n698_4 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n698_s1 .INIT=16'h1F00;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_3_s28  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_3_36 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_3_37 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.I3(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r [3])
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_3_s28 .INIT=16'h0AFC;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s51  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_3_36 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_2_60 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I3(\u_usb_phy/u_usb_phy_rt/n327_4 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_2_32 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_2_s51 .INIT=16'hEAF0;
+LUT2 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s24  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_2_34 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_2_s24 .INIT=4'h9;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s49  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_2_42 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_3_36 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/next_state_r_2_43 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/next_state_r_2_44 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_2_36 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_2_s49 .INIT=16'hFFF4;
+LUT2 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s52  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_2_47 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_2_40 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_2_s52 .INIT=4'h4;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s59  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n327_4 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I2(\u_usb_phy/u_usb_phy_rt/next_state_r_1_54 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/next_state_r_1_71 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_1_41 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_1_s59 .INIT=16'hC870;
+LUT3 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s60  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_1_56 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.I2(\u_usb_phy/u_usb_phy_rt/next_state_r_1_67 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_1_43 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_1_s60 .INIT=8'hF4;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s61  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_1_58 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_1_59 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/next_state_r_1_60 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_1_45 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_1_s61 .INIT=16'h8F88;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s65  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n327_4 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_1_61 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I3(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_1_47 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_1_s65 .INIT=16'hC500;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_0_s38  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_1_62 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I3(\u_usb_phy/u_usb_phy_rt/n327_4 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_0_33 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_0_s38 .INIT=16'h0EF4;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_0_s36  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_0_41 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I2(\u_usb_phy/u_usb_phy_rt/next_state_r_0_42 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n327_4 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_0_35 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_0_s36 .INIT=16'hF5FC;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_0_s37  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_2_58 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_0_45 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I3(\u_usb_phy/u_usb_phy_rt/n327_4 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_0_37 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_0_s37 .INIT=16'hCEFC;
+LUT3 \u_usb_phy/u_usb_phy_rt/next_state_r_0_s39  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_1_61 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_0_39 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_0_s39 .INIT=8'hE0;
+LUT4 \u_usb_phy/u_usb_phy_rt/bit_count_q_2_s3  (
+	.I0(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_9 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n327_4 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_10 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_17 ),
+	.F(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_8 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/bit_count_q_2_s3 .INIT=16'hFFF8;
+LUT4 \u_usb_phy/u_usb_phy_rt/data_q_7_s3  (
+	.I0(\u_usb_phy/u_usb_phy_rt/ones_count_q_2_12 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/data_q_7_7 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_10 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/ones_count_q_2_10 ),
+	.F(\u_usb_phy/u_usb_phy_rt/data_q_7_6 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/data_q_7_s3 .INIT=16'hF2FF;
+LUT4 \u_usb_phy/u_usb_phy_rt/send_eop_q_s3  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.I1(utmi_txvalid_i_d),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I3(\u_usb_phy/u_usb_phy_rt/send_eop_q_9 ),
+	.F(\u_usb_phy/u_usb_phy_rt/send_eop_q_8 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/send_eop_q_s3 .INIT=16'h0B00;
+LUT4 \u_usb_phy/u_usb_phy_rt/rx_en_q_s3  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I3(\u_usb_phy/u_usb_phy_rt/utmi_rxactive_o_d_3 ),
+	.F(\u_usb_phy/u_usb_phy_rt/rx_en_q_6 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/rx_en_q_s3 .INIT=16'h8300;
+LUT2 \u_usb_phy/u_usb_phy_rt/n424_s3  (
+	.I0(\u_usb_phy/u_usb_phy_rt/bit_count_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_17 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n424_7 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n424_s3 .INIT=4'h1;
+LUT3 \u_usb_phy/u_usb_phy_rt/n423_s2  (
+	.I0(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_17 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/bit_count_q [0]),
+	.I2(\u_usb_phy/u_usb_phy_rt/bit_count_q [1]),
+	.F(\u_usb_phy/u_usb_phy_rt/n423_6 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n423_s2 .INIT=8'h14;
+LUT4 \u_usb_phy/u_usb_phy_rt/n422_s2  (
+	.I0(\u_usb_phy/u_usb_phy_rt/bit_count_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/bit_count_q [1]),
+	.I2(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_17 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/bit_count_q [2]),
+	.F(\u_usb_phy/u_usb_phy_rt/n422_6 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n422_s2 .INIT=16'h0708;
+LUT2 \u_usb_phy/u_usb_phy_rt/n362_s3  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n362_8 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n362_9 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n362_7 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n362_s3 .INIT=4'h4;
+LUT3 \u_usb_phy/u_usb_phy_rt/n361_s4  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n362_8 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n361_9 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n361_10 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n361_8 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n361_s4 .INIT=8'h10;
+LUT2 \u_usb_phy/u_usb_phy_rt/n296_s2  (
+	.I0(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/n296_7 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n296_6 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n296_s2 .INIT=4'h4;
+LUT3 \u_usb_phy/u_usb_phy_rt/n295_s2  (
+	.I0(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [1]),
+	.I2(\u_usb_phy/u_usb_phy_rt/n296_7 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n295_6 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n295_s2 .INIT=8'h60;
+LUT4 \u_usb_phy/u_usb_phy_rt/n294_s2  (
+	.I0(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [1]),
+	.I2(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [2]),
+	.I3(\u_usb_phy/u_usb_phy_rt/n296_7 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n294_6 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n294_s2 .INIT=16'h7800;
+LUT4 \u_usb_phy/u_usb_phy_rt/n293_s2  (
+	.I0(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [1]),
+	.I1(\u_usb_phy/u_usb_phy_rt/n293_7 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [3]),
+	.I3(\u_usb_phy/u_usb_phy_rt/n296_7 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n293_6 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n293_s2 .INIT=16'h7800;
+LUT3 \u_usb_phy/u_usb_phy_rt/n292_s2  (
+	.I0(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [4]),
+	.I1(\u_usb_phy/u_usb_phy_rt/n292_9 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n296_7 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n292_6 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n292_s2 .INIT=8'h60;
+LUT4 \u_usb_phy/u_usb_phy_rt/n291_s2  (
+	.I0(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [4]),
+	.I1(\u_usb_phy/u_usb_phy_rt/n292_9 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [5]),
+	.I3(\u_usb_phy/u_usb_phy_rt/n296_7 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n291_6 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n291_s2 .INIT=16'h7800;
+LUT4 \u_usb_phy/u_usb_phy_rt/in_j_w_s2  (
+	.I0(\u_usb_phy/u_usb_phy_rt/rx_dp_q ),
+	.I1(\u_usb_phy/u_usb_phy_rt/rx_dn_q ),
+	.I2(\u_usb_phy/u_usb_phy_rt/rxd_q ),
+	.I3(CLK_FREQ_Z[3]),
+	.F(\u_usb_phy/u_usb_phy_rt/in_j_w )
+);
+defparam \u_usb_phy/u_usb_phy_rt/in_j_w_s2 .INIT=16'h0EE0;
+LUT4 \u_usb_phy/u_usb_phy_rt/n363_s2  (
+	.I0(\u_usb_phy/u_usb_phy_rt/ones_count_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/n362_8 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n361_9 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n237_10 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n363_6 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n363_s2 .INIT=16'h01FF;
+LUT3 \u_usb_phy/u_usb_phy_rt/n696_s2  (
+	.I0(utmi_txvalid_i_d),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_1_61 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n237_10 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n696_6 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n696_s2 .INIT=8'hF1;
+LUT4 \u_usb_phy/u_usb_phy_rt/n609_s1  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n609_10 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n609_7 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/bit_count_q [0]),
+	.I3(\u_usb_phy/u_usb_phy_rt/n609_8 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n609_5 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n609_s1 .INIT=16'h3A00;
+LUT4 \u_usb_phy/u_usb_phy_rt/n255_s1  (
+	.I0(\u_usb_phy/u_usb_phy_rt/ones_count_q [1]),
+	.I1(\u_usb_phy/u_usb_phy_rt/ones_count_q [2]),
+	.I2(\u_usb_phy/u_usb_phy_rt/ones_count_q [0]),
+	.I3(\u_usb_phy/u_usb_phy_rt/n255_6 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n255_5 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n255_s1 .INIT=16'hFF80;
+LUT2 \u_usb_phy/u_usb_phy_rt/n697_s3  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n697_25 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n697_27 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n697_7 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n697_s3 .INIT=4'h7;
+LUT4 \u_usb_phy/u_usb_phy_rt/state_q_3_s3  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_2_62 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q_3_9 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q_3_10 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/next_state_r_2_47 ),
+	.F(\u_usb_phy/u_usb_phy_rt/state_q_3_8 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/state_q_3_s3 .INIT=16'hF111;
+LUT2 \u_usb_phy/u_usb_phy_rt/n327_s1  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n327_5 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n327_4 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n327_s1 .INIT=4'h4;
+LUT2 \u_usb_phy/u_usb_phy_rt/utmi_rxactive_o_d_s0  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.F(\u_usb_phy/u_usb_phy_rt/utmi_rxactive_o_d_3 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/utmi_rxactive_o_d_s0 .INIT=4'h1;
+LUT4 \u_usb_phy/u_usb_phy_rt/n527_s2  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n327_5 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/rxd_last_j_q ),
+	.I2(\u_usb_phy/u_usb_phy_rt/in_j_w ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n527_5 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n527_s2 .INIT=16'h1400;
+LUT3 \u_usb_phy/u_usb_phy_rt/n527_s4  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n572_5 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n237_10 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n572_6 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n527_7 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n527_s4 .INIT=8'h0B;
+LUT3 \u_usb_phy/u_usb_phy_rt/n572_s2  (
+	.I0(\u_usb_phy/u_usb_phy_rt/bit_count_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/bit_count_q [1]),
+	.I2(\u_usb_phy/u_usb_phy_rt/bit_count_q [2]),
+	.F(\u_usb_phy/u_usb_phy_rt/n572_5 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n572_s2 .INIT=8'h80;
+LUT4 \u_usb_phy/u_usb_phy_rt/n572_s3  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n327_5 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/data_q_7_7 ),
+	.I2(utmi_rxactive_o_d),
+	.I3(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n572_6 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n572_s3 .INIT=16'h1000;
+LUT4 \u_usb_phy/u_usb_phy_rt/n697_s4  (
+	.I0(CLK_FREQ_Z[3]),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I3(\u_usb_phy/u_usb_phy_rt/n697_14 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n697_8 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n697_s4 .INIT=16'h1000;
+LUT3 \u_usb_phy/u_usb_phy_rt/n697_s6  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n237_10 ),
+	.I1(CLK_FREQ_Z[3]),
+	.I2(\u_usb_phy/u_usb_phy_rt/n697_23 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n697_10 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n697_s6 .INIT=8'h0E;
+LUT4 \u_usb_phy/u_usb_phy_rt/n697_s7  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n698_5 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n697_18 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n697_25 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n697_19 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n697_11 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n697_s7 .INIT=16'h0FBB;
+LUT4 \u_usb_phy/u_usb_phy_rt/n698_s2  (
+	.I0(\u_usb_phy/u_usb_phy_rt/utmi_rxactive_o_d_3 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I2(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.F(\u_usb_phy/u_usb_phy_rt/n698_5 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n698_s2 .INIT=16'hB000;
+LUT4 \u_usb_phy/u_usb_phy_rt/n698_s3  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n698_13 ),
+	.I1(usb_pads_tx_dn_w),
+	.I2(\u_usb_phy/u_usb_phy_rt/n698_9 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n698_10 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n698_6 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n698_s3 .INIT=16'hF0BB;
+LUT4 \u_usb_phy/u_usb_phy_rt/n698_s4  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n698_11 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n697_14 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n697_18 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n698_7 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n698_s4 .INIT=16'hBF00;
+LUT2 \u_usb_phy/u_usb_phy_rt/next_state_r_3_s29  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_3_36 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_3_s29 .INIT=4'h8;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_3_s30  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_1_61 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_3_40 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/next_state_r_1_71 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/utmi_rxactive_o_d_3 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_3_37 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_3_s30 .INIT=16'h0E00;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s29  (
+	.I0(\u_usb_phy/u_usb_phy_rt/sync_j_detected_q ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_2_48 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I3(\u_usb_phy/u_usb_phy_rt/next_state_r_2_56 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_2_42 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_2_s29 .INIT=16'hDD0F;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s30  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_1_71 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_2_50 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n327_4 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/next_state_r_2_51 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_2_43 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_2_s30 .INIT=16'h1F00;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s31  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_2_52 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I2(\u_usb_phy/u_usb_phy_rt/next_state_r_1_58 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/next_state_r_2_53 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_2_44 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_2_s31 .INIT=16'h0E00;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s34  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n327_4 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_1_61 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/next_state_r_1_63 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_2_47 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_2_s34 .INIT=16'h030A;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s36  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_1_61 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I3(\u_usb_phy/u_usb_phy_rt/next_state_r_1_65 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_1_54 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_1_s36 .INIT=16'hCFC4;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s38  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_2_50 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_1_59 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I3(\u_usb_phy/u_usb_phy_rt/n327_4 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_1_56 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_1_s38 .INIT=16'h3A00;
+LUT3 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s40  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n327_5 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I2(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_1_58 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_1_s40 .INIT=8'h40;
+LUT2 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s41  (
+	.I0(\u_usb_phy/u_usb_phy_rt/rx_dp_q ),
+	.I1(\u_usb_phy/u_usb_phy_rt/rx_dn_q ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_1_59 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_1_s41 .INIT=4'h1;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s42  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/rx_dn_q ),
+	.I2(\u_usb_phy/u_usb_phy_rt/rx_dp_q ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n327_4 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_1_60 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_1_s42 .INIT=16'hEB00;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s43  (
+	.I0(utmi_xcvrselect_i_d[0]),
+	.I1(CLK_FREQ_Z[3]),
+	.I2(utmi_termselect_i_d),
+	.I3(\u_usb_phy/u_usb_phy_rt/n527_8 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_1_61 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_1_s43 .INIT=16'h0E00;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s44  (
+	.I0(\u_usb_phy/u_usb_phy_rt/ones_count_q [1]),
+	.I1(\u_usb_phy/u_usb_phy_rt/n527_5 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/ones_count_q [2]),
+	.I3(\u_usb_phy/u_usb_phy_rt/ones_count_q [0]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_1_62 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_1_s44 .INIT=16'h1000;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_0_s29  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_2_48 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I3(\u_usb_phy/u_usb_phy_rt/next_state_r_1_59 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_0_41 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_0_s29 .INIT=16'h3FFA;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_0_s30  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_3_40 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_2_52 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/next_state_r_1_71 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_0_42 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_0_s30 .INIT=16'h00F4;
+LUT2 \u_usb_phy/u_usb_phy_rt/sync_j_detected_q_s4  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.F(\u_usb_phy/u_usb_phy_rt/sync_j_detected_q_9 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/sync_j_detected_q_s4 .INIT=4'h1;
+LUT2 \u_usb_phy/u_usb_phy_rt/ones_count_q_2_s5  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n698_10 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n237_10 ),
+	.F(\u_usb_phy/u_usb_phy_rt/ones_count_q_2_10 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/ones_count_q_2_s5 .INIT=4'h4;
+LUT4 \u_usb_phy/u_usb_phy_rt/bit_count_q_2_s4  (
+	.I0(\u_usb_phy/u_usb_phy_rt/data_q_7_7 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.I3(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_12 ),
+	.F(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_9 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/bit_count_q_2_s4 .INIT=16'h0130;
+LUT2 \u_usb_phy/u_usb_phy_rt/bit_count_q_2_s5  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_19 ),
+	.F(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_10 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/bit_count_q_2_s5 .INIT=4'h8;
+LUT3 \u_usb_phy/u_usb_phy_rt/data_q_7_s4  (
+	.I0(\u_usb_phy/u_usb_phy_rt/ones_count_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/ones_count_q [1]),
+	.I2(\u_usb_phy/u_usb_phy_rt/ones_count_q [2]),
+	.F(\u_usb_phy/u_usb_phy_rt/data_q_7_7 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/data_q_7_s4 .INIT=8'h40;
+LUT2 \u_usb_phy/u_usb_phy_rt/send_eop_q_s4  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.F(\u_usb_phy/u_usb_phy_rt/send_eop_q_9 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/send_eop_q_s4 .INIT=4'h4;
+LUT4 \u_usb_phy/u_usb_phy_rt/n362_s4  (
+	.I0(\u_usb_phy/u_usb_phy_rt/rxd_last_j_q ),
+	.I1(\u_usb_phy/u_usb_phy_rt/in_j_w ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n327_4 ),
+	.I3(utmi_rxactive_o_d),
+	.F(\u_usb_phy/u_usb_phy_rt/n362_8 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n362_s4 .INIT=16'h6000;
+LUT4 \u_usb_phy/u_usb_phy_rt/n362_s5  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n361_9 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/ones_count_q [0]),
+	.I2(\u_usb_phy/u_usb_phy_rt/ones_count_q [1]),
+	.I3(\u_usb_phy/u_usb_phy_rt/n237_10 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n362_9 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n362_s5 .INIT=16'h1400;
+LUT4 \u_usb_phy/u_usb_phy_rt/n361_s5  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n697_27 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n616_9 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n609_10 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n361_9 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n361_s5 .INIT=16'hF400;
+LUT4 \u_usb_phy/u_usb_phy_rt/n361_s6  (
+	.I0(\u_usb_phy/u_usb_phy_rt/ones_count_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/ones_count_q [1]),
+	.I2(\u_usb_phy/u_usb_phy_rt/ones_count_q [2]),
+	.I3(\u_usb_phy/u_usb_phy_rt/n237_10 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n361_10 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n361_s6 .INIT=16'h7800;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s45  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I1(utmi_txvalid_i_d),
+	.I2(\u_usb_phy/u_usb_phy_rt/n572_5 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_1_63 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_1_s45 .INIT=16'hEF00;
+LUT4 \u_usb_phy/u_usb_phy_rt/n296_s3  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n296_8 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/in_j_w ),
+	.I2(\u_usb_phy/u_usb_phy_rt/rxd_last_q ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n296_9 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n296_7 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n296_s3 .INIT=16'h00D7;
+LUT2 \u_usb_phy/u_usb_phy_rt/n293_s3  (
+	.I0(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [2]),
+	.F(\u_usb_phy/u_usb_phy_rt/n293_7 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n293_s3 .INIT=4'h8;
+LUT4 \u_usb_phy/u_usb_phy_rt/n609_s3  (
+	.I0(\u_usb_phy/u_usb_phy_rt/data_q_7_7 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/send_eop_q ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n616_9 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_19 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n609_7 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n609_s3 .INIT=16'h00EF;
+LUT3 \u_usb_phy/u_usb_phy_rt/n609_s4  (
+	.I0(\u_usb_phy/u_usb_phy_rt/bit_count_q [1]),
+	.I1(\u_usb_phy/u_usb_phy_rt/bit_count_q [2]),
+	.I2(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n609_8 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n609_s4 .INIT=8'h80;
+LUT4 \u_usb_phy/u_usb_phy_rt/n255_s2  (
+	.I0(\u_usb_phy/u_usb_phy_rt/rx_dn_q ),
+	.I1(\u_usb_phy/u_usb_phy_rt/rx_dp_q ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n255_7 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n327_4 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n255_6 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n255_s2 .INIT=16'hF800;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s46  (
+	.I0(\u_usb_phy/u_usb_phy_rt/send_eop_q ),
+	.I1(utmi_txvalid_i_d),
+	.I2(\u_usb_phy/u_usb_phy_rt/data_q_7_7 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n572_5 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_1_64 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_1_s46 .INIT=16'h0B00;
+LUT4 \u_usb_phy/u_usb_phy_rt/state_q_3_s4  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_2_60 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n327_4 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.F(\u_usb_phy/u_usb_phy_rt/state_q_3_9 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/state_q_3_s4 .INIT=16'hEF00;
+LUT2 \u_usb_phy/u_usb_phy_rt/state_q_3_s5  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.F(\u_usb_phy/u_usb_phy_rt/state_q_3_10 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/state_q_3_s5 .INIT=4'h8;
+LUT4 \u_usb_phy/u_usb_phy_rt/n327_s2  (
+	.I0(\u_usb_phy/u_usb_phy_rt/in_j_edge ),
+	.I1(\u_usb_phy/u_usb_phy_rt/rxd_last_q ),
+	.I2(\u_usb_phy/u_usb_phy_rt/in_j_w ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n296_8 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n327_5 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n327_s2 .INIT=16'hBE00;
+LUT2 \u_usb_phy/u_usb_phy_rt/n527_s5  (
+	.I0(utmi_op_mode_i_d[0]),
+	.I1(utmi_op_mode_i_d[1]),
+	.F(\u_usb_phy/u_usb_phy_rt/n527_8 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n527_s5 .INIT=4'h4;
+LUT2 \u_usb_phy/u_usb_phy_rt/n697_s10  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.F(\u_usb_phy/u_usb_phy_rt/n697_14 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n697_s10 .INIT=4'h4;
+LUT4 \u_usb_phy/u_usb_phy_rt/n697_s11  (
+	.I0(CLK_FREQ_Z[3]),
+	.I1(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [0]),
+	.I2(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [4]),
+	.I3(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [1]),
+	.F(\u_usb_phy/u_usb_phy_rt/n697_15 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n697_s11 .INIT=16'h7FFE;
+LUT3 \u_usb_phy/u_usb_phy_rt/n697_s12  (
+	.I0(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [5]),
+	.I1(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [2]),
+	.I2(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [3]),
+	.F(\u_usb_phy/u_usb_phy_rt/n697_16 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n697_s12 .INIT=8'h01;
+LUT3 \u_usb_phy/u_usb_phy_rt/n697_s14  (
+	.I0(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_19 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n237_10 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n697_18 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n697_s14 .INIT=8'h70;
+LUT4 \u_usb_phy/u_usb_phy_rt/n697_s15  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n698_13 ),
+	.I1(usb_pads_tx_dp_w),
+	.I2(\u_usb_phy/u_usb_phy_rt/n698_9 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n698_10 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n697_19 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n697_s15 .INIT=16'h0FBB;
+LUT2 \u_usb_phy/u_usb_phy_rt/n698_s6  (
+	.I0(CLK_FREQ_Z[3]),
+	.I1(utmi_data_in_o_d[0]),
+	.F(\u_usb_phy/u_usb_phy_rt/n698_9 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n698_s6 .INIT=4'h6;
+LUT4 \u_usb_phy/u_usb_phy_rt/n698_s7  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n697_15 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.I2(\u_usb_phy/u_usb_phy_rt/n697_16 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/next_state_r_2_51 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n698_10 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n698_s7 .INIT=16'h4000;
+LUT4 \u_usb_phy/u_usb_phy_rt/n698_s8  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I1(CLK_FREQ_Z[3]),
+	.I2(usb_pads_tx_dn_w),
+	.I3(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.F(\u_usb_phy/u_usb_phy_rt/n698_11 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n698_s8 .INIT=16'hBBF0;
+LUT2 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s35  (
+	.I0(\u_usb_phy/u_usb_phy_rt/rxd_q ),
+	.I1(CLK_FREQ_Z[3]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_2_48 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_2_s35 .INIT=4'h6;
+LUT3 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s37  (
+	.I0(\u_usb_phy/u_usb_phy_rt/bit_count_q [1]),
+	.I1(\u_usb_phy/u_usb_phy_rt/bit_count_q [2]),
+	.I2(\u_usb_phy/u_usb_phy_rt/bit_count_q [0]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_2_50 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_2_s37 .INIT=8'h10;
+LUT3 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s38  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_2_51 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_2_s38 .INIT=8'h40;
+LUT3 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s39  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_1_65 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_1_61 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_2_52 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_2_s39 .INIT=8'h0E;
+LUT3 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s40  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_1_71 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_2_53 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_2_s40 .INIT=8'h0D;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s41  (
+	.I0(\u_usb_phy/u_usb_phy_rt/utmi_rxactive_o_d_3 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/rx_dn_q ),
+	.I2(\u_usb_phy/u_usb_phy_rt/rx_dp_q ),
+	.I3(\u_usb_phy/u_usb_phy_rt/next_state_r_0_45 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_2_54 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_2_s41 .INIT=16'h00D7;
+LUT3 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s47  (
+	.I0(utmi_op_mode_i_d[1]),
+	.I1(utmi_op_mode_i_d[0]),
+	.I2(utmi_txvalid_i_d),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_1_65 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_1_s47 .INIT=8'hB0;
+LUT2 \u_usb_phy/u_usb_phy_rt/bit_count_q_2_s7  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.F(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_12 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/bit_count_q_2_s7 .INIT=4'h6;
+LUT4 \u_usb_phy/u_usb_phy_rt/n296_s4  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I3(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.F(\u_usb_phy/u_usb_phy_rt/n296_8 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n296_s4 .INIT=16'h007F;
+LUT4 \u_usb_phy/u_usb_phy_rt/n296_s5  (
+	.I0(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [3]),
+	.I1(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [4]),
+	.I2(\u_usb_phy/u_usb_phy_rt/n296_10 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [2]),
+	.F(\u_usb_phy/u_usb_phy_rt/n296_9 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n296_s5 .INIT=16'h0100;
+LUT4 \u_usb_phy/u_usb_phy_rt/n255_s3  (
+	.I0(\u_usb_phy/u_usb_phy_rt/sync_j_detected_q ),
+	.I1(\u_usb_phy/u_usb_phy_rt/sync_j_detected_q_9 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/next_state_r_3_36 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/next_state_r_1_71 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n255_7 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n255_s3 .INIT=16'h4000;
+LUT4 \u_usb_phy/u_usb_phy_rt/n296_s6  (
+	.I0(CLK_FREQ_Z[3]),
+	.I1(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [0]),
+	.I2(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [5]),
+	.I3(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [1]),
+	.F(\u_usb_phy/u_usb_phy_rt/n296_10 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n296_s6 .INIT=16'h7FFE;
+LUT4 \u_usb_phy/u_usb_phy_rt/n292_s4  (
+	.I0(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [3]),
+	.I1(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [1]),
+	.I2(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [0]),
+	.I3(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [2]),
+	.F(\u_usb_phy/u_usb_phy_rt/n292_9 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n292_s4 .INIT=16'h8000;
+LUT4 \u_usb_phy/u_usb_phy_rt/n697_s16  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n697_15 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [5]),
+	.I2(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [2]),
+	.I3(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [3]),
+	.F(\u_usb_phy/u_usb_phy_rt/n697_21 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n697_s16 .INIT=16'h0001;
+LUT3 \u_usb_phy/u_usb_phy_rt/next_state_r_3_s32  (
+	.I0(utmi_txvalid_i_d),
+	.I1(utmi_op_mode_i_d[0]),
+	.I2(utmi_op_mode_i_d[1]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_3_40 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_3_s32 .INIT=8'h20;
+LUT3 \u_usb_phy/u_usb_phy_rt/n527_s6  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n237_10 ),
+	.I1(utmi_op_mode_i_d[0]),
+	.I2(utmi_op_mode_i_d[1]),
+	.F(\u_usb_phy/u_usb_phy_rt/n527_10 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n527_s6 .INIT=8'h45;
+LUT4 \u_usb_phy/u_usb_phy_rt/n697_s17  (
+	.I0(CLK_FREQ_Z[3]),
+	.I1(utmi_data_in_o_d[0]),
+	.I2(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_19 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n697_23 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n697_s17 .INIT=16'h6000;
+LUT4 \u_usb_phy/u_usb_phy_rt/n697_s18  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.I1(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I3(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.F(\u_usb_phy/u_usb_phy_rt/n697_25 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n697_s18 .INIT=16'h0400;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s48  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/rxd_q ),
+	.I2(CLK_FREQ_Z[3]),
+	.I3(\u_usb_phy/u_usb_phy_rt/next_state_r_2_56 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_1_67 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_1_s48 .INIT=16'h6900;
+LUT4 \u_usb_phy/u_usb_phy_rt/n698_s9  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I3(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.F(\u_usb_phy/u_usb_phy_rt/n698_13 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n698_s9 .INIT=16'h4000;
+LUT4 \u_usb_phy/u_usb_phy_rt/n609_s5  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I3(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.F(\u_usb_phy/u_usb_phy_rt/n609_10 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n609_s5 .INIT=16'h4000;
+LUT4 \u_usb_phy/u_usb_phy_rt/ones_count_q_2_s6  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.I2(\u_usb_phy/u_usb_phy_rt/utmi_rxactive_o_d_3 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n327_4 ),
+	.F(\u_usb_phy/u_usb_phy_rt/ones_count_q_2_12 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/ones_count_q_2_s6 .INIT=16'h7000;
+LUT4 \u_usb_phy/u_usb_phy_rt/bit_count_q_2_s10  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I3(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.F(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_17 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/bit_count_q_2_s10 .INIT=16'h1001;
+LUT3 \u_usb_phy/u_usb_phy_rt/sync_j_detected_q_s5  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.F(\u_usb_phy/u_usb_phy_rt/sync_j_detected_q_11 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/sync_j_detected_q_s5 .INIT=8'h01;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_0_s32  (
+	.I0(\u_usb_phy/u_usb_phy_rt/bit_count_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/bit_count_q [1]),
+	.I2(\u_usb_phy/u_usb_phy_rt/bit_count_q [2]),
+	.I3(\u_usb_phy/u_usb_phy_rt/next_state_r_3_36 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_0_45 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_0_s32 .INIT=16'h7F00;
+LUT4 \u_usb_phy/u_usb_phy_rt/n572_s4  (
+	.I0(\u_usb_phy/u_usb_phy_rt/bit_count_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/bit_count_q [1]),
+	.I2(\u_usb_phy/u_usb_phy_rt/bit_count_q [2]),
+	.I3(\u_usb_phy/u_usb_phy_rt/n572_6 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n572_8 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n572_s4 .INIT=16'h8000;
+LUT4 \u_usb_phy/u_usb_phy_rt/n697_s19  (
+	.I0(\u_usb_phy/u_usb_phy_rt/ones_count_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/ones_count_q [1]),
+	.I2(\u_usb_phy/u_usb_phy_rt/ones_count_q [2]),
+	.I3(utmi_data_in_o_d[0]),
+	.F(\u_usb_phy/u_usb_phy_rt/n697_27 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n697_s19 .INIT=16'hBF00;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s50  (
+	.I0(\u_usb_phy/u_usb_phy_rt/rx_dp_q ),
+	.I1(\u_usb_phy/u_usb_phy_rt/rx_dn_q ),
+	.I2(\u_usb_phy/u_usb_phy_rt/rxd_q ),
+	.I3(CLK_FREQ_Z[3]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_1_71 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_1_s50 .INIT=16'hE00E;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s42  (
+	.I0(\u_usb_phy/u_usb_phy_rt/rx_dp_q ),
+	.I1(\u_usb_phy/u_usb_phy_rt/rx_dn_q ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n327_5 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_2_56 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_2_s42 .INIT=16'h0E00;
+LUT3 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s43  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.I1(\u_usb_phy/u_usb_phy_rt/rx_dp_q ),
+	.I2(\u_usb_phy/u_usb_phy_rt/rx_dn_q ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_2_58 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_2_s43 .INIT=8'h01;
+LUT4 \u_usb_phy/u_usb_phy_rt/bit_count_q_2_s11  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I3(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.F(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_19 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/bit_count_q_2_s11 .INIT=16'h4000;
+LUT4 \u_usb_phy/u_usb_phy_rt/n237_s4  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I3(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.F(\u_usb_phy/u_usb_phy_rt/n237_10 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n237_s4 .INIT=16'hFFFE;
+LUT4 \u_usb_phy/u_usb_phy_rt/n616_s4  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I3(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.F(\u_usb_phy/u_usb_phy_rt/n616_9 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n616_s4 .INIT=16'h0100;
+LUT3 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s44  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_1_64 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_2_60 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_2_s44 .INIT=8'h01;
+LUT4 \u_usb_phy/u_usb_phy_rt/utmi_rxactive_o_d_s1  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.I1(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [0]),
+	.I3(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.F(utmi_rxactive_o_d)
+);
+defparam \u_usb_phy/u_usb_phy_rt/utmi_rxactive_o_d_s1 .INIT=16'h0004;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s45  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_2_54 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n327_5 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_2_62 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_2_s45 .INIT=16'hDF00;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_0_s33  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n327_5 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/next_state_r_1_64 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/n616_9 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_0_47 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_0_s33 .INIT=16'h40FF;
+LUT3 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s63  (
+	.I0(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.I1(\u_usb_phy/u_usb_phy_rt/n327_5 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n194_7 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_1_s63 .INIT=8'hBA;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s62  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n327_5 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.I3(\u_usb_phy/u_usb_phy_rt/next_state_r_0_45 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n165_8 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_1_s62 .INIT=16'hFFB0;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s66  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n327_5 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.I3(\u_usb_phy/u_usb_phy_rt/next_state_r_1_63 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_1_73 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_1_s66 .INIT=16'hFFB0;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s64  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_1_62 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n327_5 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_1_75 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_1_s64 .INIT=16'hCF55;
+LUT4 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s50  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_2_58 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n327_5 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.I3(\u_usb_phy/u_usb_phy_rt/next_state_r_2_62 ),
+	.F(\u_usb_phy/u_usb_phy_rt/next_state_r_2_64 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/next_state_r_2_s50 .INIT=16'hFF20;
+LUT3 \u_usb_phy/u_usb_phy_rt/n327_s3  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n327_5 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n697_21 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n237_10 ),
+	.F(\u_usb_phy/u_usb_phy_rt/n327_7 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n327_s3 .INIT=8'h4F;
+LUT3 \u_usb_phy/u_usb_phy_rt/n29_s2  (
+	.I0(\u_usb_phy/u_usb_phy_rt/rxd_ms ),
+	.I1(usb_dn_io_in),
+	.I2(usb_dp_io_in),
+	.F(\u_usb_phy/u_usb_phy_rt/n29_10 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n29_s2 .INIT=8'hB2;
+LUT3 \u_usb_phy/u_usb_phy_rt/n39_s2  (
+	.I0(\u_usb_phy/u_usb_phy_rt/rx_dp_q ),
+	.I1(\u_usb_phy/u_usb_phy_rt/rx_dp0_q ),
+	.I2(\u_usb_phy/u_usb_phy_rt/rx_dp1_q ),
+	.F(\u_usb_phy/u_usb_phy_rt/n39_6 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n39_s2 .INIT=8'hE8;
+LUT3 \u_usb_phy/u_usb_phy_rt/n45_s2  (
+	.I0(\u_usb_phy/u_usb_phy_rt/rx_dn_q ),
+	.I1(\u_usb_phy/u_usb_phy_rt/rx_dn0_q ),
+	.I2(\u_usb_phy/u_usb_phy_rt/rx_dn1_q ),
+	.F(\u_usb_phy/u_usb_phy_rt/n45_6 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n45_s2 .INIT=8'hE8;
+LUT3 \u_usb_phy/u_usb_phy_rt/n51_s2  (
+	.I0(\u_usb_phy/u_usb_phy_rt/rxd_q ),
+	.I1(\u_usb_phy/u_usb_phy_rt/rxd0_q ),
+	.I2(\u_usb_phy/u_usb_phy_rt/rxd1_q ),
+	.F(\u_usb_phy/u_usb_phy_rt/n51_6 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/n51_s2 .INIT=8'hE8;
+LUT3 \u_usb_phy/u_usb_phy_rt/ones_count_q_2_s7  (
+	.I0(\u_usb_phy/u_usb_phy_rt/ones_count_q_2_12 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n698_10 ),
+	.I2(\u_usb_phy/u_usb_phy_rt/n237_10 ),
+	.F(\u_usb_phy/u_usb_phy_rt/ones_count_q_2_14 )
+);
+defparam \u_usb_phy/u_usb_phy_rt/ones_count_q_2_s7 .INIT=8'hEF;
+DFFCE \u_usb_phy/u_usb_phy_rt/rx_dn_ms_s0  (
+	.D(usb_dn_io_in),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/rx_dn_ms )
+);
+defparam \u_usb_phy/u_usb_phy_rt/rx_dn_ms_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/rx_dp0_q_s0  (
+	.D(\u_usb_phy/u_usb_phy_rt/rx_dp_ms ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/rx_dp0_q )
+);
+defparam \u_usb_phy/u_usb_phy_rt/rx_dp0_q_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/rx_dn0_q_s0  (
+	.D(\u_usb_phy/u_usb_phy_rt/rx_dn_ms ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/rx_dn0_q )
+);
+defparam \u_usb_phy/u_usb_phy_rt/rx_dn0_q_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/rx_dp1_q_s0  (
+	.D(\u_usb_phy/u_usb_phy_rt/rx_dp0_q ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/rx_dp1_q )
+);
+defparam \u_usb_phy/u_usb_phy_rt/rx_dp1_q_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/rx_dn1_q_s0  (
+	.D(\u_usb_phy/u_usb_phy_rt/rx_dn0_q ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/rx_dn1_q )
+);
+defparam \u_usb_phy/u_usb_phy_rt/rx_dn1_q_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/rxd0_q_s0  (
+	.D(\u_usb_phy/u_usb_phy_rt/rxd_ms ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/rxd0_q )
+);
+defparam \u_usb_phy/u_usb_phy_rt/rxd0_q_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/rxd1_q_s0  (
+	.D(\u_usb_phy/u_usb_phy_rt/rxd0_q ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/rxd1_q )
+);
+defparam \u_usb_phy/u_usb_phy_rt/rxd1_q_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/state_q_2_s0  (
+	.D(\u_usb_phy/u_usb_phy_rt/next_state_r [2]),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/state_q [2])
+);
+defparam \u_usb_phy/u_usb_phy_rt/state_q_2_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/rx_error_q_s0  (
+	.D(\u_usb_phy/u_usb_phy_rt/n255_5 ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(utmi_rxerror_o_d)
+);
+defparam \u_usb_phy/u_usb_phy_rt/rx_error_q_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/rxd_last_q_s0  (
+	.D(\u_usb_phy/u_usb_phy_rt/in_j_w ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/rxd_last_q )
+);
+defparam \u_usb_phy/u_usb_phy_rt/rxd_last_q_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/in_j_edge_s0  (
+	.D(\u_usb_phy/u_usb_phy_rt/n262_3 ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/in_j_edge )
+);
+defparam \u_usb_phy/u_usb_phy_rt/in_j_edge_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/sample_cnt_q_5_s0  (
+	.D(\u_usb_phy/u_usb_phy_rt/n291_6 ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [5])
+);
+defparam \u_usb_phy/u_usb_phy_rt/sample_cnt_q_5_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/sample_cnt_q_4_s0  (
+	.D(\u_usb_phy/u_usb_phy_rt/n292_6 ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [4])
+);
+defparam \u_usb_phy/u_usb_phy_rt/sample_cnt_q_4_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/sample_cnt_q_3_s0  (
+	.D(\u_usb_phy/u_usb_phy_rt/n293_6 ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [3])
+);
+defparam \u_usb_phy/u_usb_phy_rt/sample_cnt_q_3_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/sample_cnt_q_2_s0  (
+	.D(\u_usb_phy/u_usb_phy_rt/n294_6 ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [2])
+);
+defparam \u_usb_phy/u_usb_phy_rt/sample_cnt_q_2_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/sample_cnt_q_1_s0  (
+	.D(\u_usb_phy/u_usb_phy_rt/n295_6 ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [1])
+);
+defparam \u_usb_phy/u_usb_phy_rt/sample_cnt_q_1_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/sample_cnt_q_0_s0  (
+	.D(\u_usb_phy/u_usb_phy_rt/n296_6 ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/sample_cnt_q [0])
+);
+defparam \u_usb_phy/u_usb_phy_rt/sample_cnt_q_0_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/rxd_last_j_q_s0  (
+	.D(\u_usb_phy/u_usb_phy_rt/in_j_w ),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/n327_7 ),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/rxd_last_j_q )
+);
+defparam \u_usb_phy/u_usb_phy_rt/rxd_last_j_q_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/rx_ready_q_s0  (
+	.D(\u_usb_phy/u_usb_phy_rt/n572_8 ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(utmi_rxvalid_o_d)
+);
+defparam \u_usb_phy/u_usb_phy_rt/rx_ready_q_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/tx_ready_q_s0  (
+	.D(\u_usb_phy/u_usb_phy_rt/n609_5 ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(utmi_txready_o_d)
+);
+defparam \u_usb_phy/u_usb_phy_rt/tx_ready_q_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/rx_dp_ms_s0  (
+	.D(usb_dp_io_in),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/rx_dp_ms )
+);
+defparam \u_usb_phy/u_usb_phy_rt/rx_dp_ms_s0 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/sync_j_detected_q_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/n237_10 ),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/sync_j_detected_q_11 ),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/sync_j_detected_q )
+);
+defparam \u_usb_phy/u_usb_phy_rt/sync_j_detected_q_s1 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/ones_count_q_2_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/n361_8 ),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/ones_count_q_2_14 ),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/ones_count_q [2])
+);
+defparam \u_usb_phy/u_usb_phy_rt/ones_count_q_2_s1 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/ones_count_q_1_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/n362_7 ),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/ones_count_q_2_14 ),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/ones_count_q [1])
+);
+defparam \u_usb_phy/u_usb_phy_rt/ones_count_q_1_s1 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/bit_count_q_2_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/n422_6 ),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_8 ),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/bit_count_q [2])
+);
+defparam \u_usb_phy/u_usb_phy_rt/bit_count_q_2_s1 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/bit_count_q_1_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/n423_6 ),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_8 ),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/bit_count_q [1])
+);
+defparam \u_usb_phy/u_usb_phy_rt/bit_count_q_1_s1 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/bit_count_q_0_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/n424_7 ),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/bit_count_q_2_8 ),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/bit_count_q [0])
+);
+defparam \u_usb_phy/u_usb_phy_rt/bit_count_q_0_s1 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/data_q_7_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/n527_4 ),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/data_q_7_6 ),
+	.CLEAR(rst_i_d),
+	.Q(utmi_data_in_o_d[7])
+);
+defparam \u_usb_phy/u_usb_phy_rt/data_q_7_s1 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/data_q_6_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/n528_4 ),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/data_q_7_6 ),
+	.CLEAR(rst_i_d),
+	.Q(utmi_data_in_o_d[6])
+);
+defparam \u_usb_phy/u_usb_phy_rt/data_q_6_s1 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/data_q_5_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/n529_4 ),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/data_q_7_6 ),
+	.CLEAR(rst_i_d),
+	.Q(utmi_data_in_o_d[5])
+);
+defparam \u_usb_phy/u_usb_phy_rt/data_q_5_s1 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/data_q_4_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/n530_4 ),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/data_q_7_6 ),
+	.CLEAR(rst_i_d),
+	.Q(utmi_data_in_o_d[4])
+);
+defparam \u_usb_phy/u_usb_phy_rt/data_q_4_s1 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/data_q_3_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/n531_4 ),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/data_q_7_6 ),
+	.CLEAR(rst_i_d),
+	.Q(utmi_data_in_o_d[3])
+);
+defparam \u_usb_phy/u_usb_phy_rt/data_q_3_s1 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/data_q_2_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/n532_4 ),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/data_q_7_6 ),
+	.CLEAR(rst_i_d),
+	.Q(utmi_data_in_o_d[2])
+);
+defparam \u_usb_phy/u_usb_phy_rt/data_q_2_s1 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/data_q_1_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/n533_4 ),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/data_q_7_6 ),
+	.CLEAR(rst_i_d),
+	.Q(utmi_data_in_o_d[1])
+);
+defparam \u_usb_phy/u_usb_phy_rt/data_q_1_s1 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/data_q_0_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/n534_4 ),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/data_q_7_6 ),
+	.CLEAR(rst_i_d),
+	.Q(utmi_data_in_o_d[0])
+);
+defparam \u_usb_phy/u_usb_phy_rt/data_q_0_s1 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/send_eop_q_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/n616_4 ),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/send_eop_q_8 ),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/send_eop_q )
+);
+defparam \u_usb_phy/u_usb_phy_rt/send_eop_q_s1 .INIT=1'b0;
+DFFPE \u_usb_phy/u_usb_phy_rt/rx_en_q_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/n696_6 ),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/rx_en_q_6 ),
+	.PRESET(rst_i_d),
+	.Q(usb_pads_tx_oen_w)
+);
+defparam \u_usb_phy/u_usb_phy_rt/rx_en_q_s1 .INIT=1'b1;
+DFFPE \u_usb_phy/u_usb_phy_rt/ones_count_q_0_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/n363_6 ),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/ones_count_q_2_14 ),
+	.PRESET(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/ones_count_q [0])
+);
+defparam \u_usb_phy/u_usb_phy_rt/ones_count_q_0_s1 .INIT=1'b1;
+DFFCE \u_usb_phy/u_usb_phy_rt/state_q_3_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/next_state_r [3]),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/state_q_3_8 ),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/state_q [3])
+);
+defparam \u_usb_phy/u_usb_phy_rt/state_q_3_s1 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/state_q_1_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/next_state_r [1]),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/next_state_r_0_47 ),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/state_q [1])
+);
+defparam \u_usb_phy/u_usb_phy_rt/state_q_1_s1 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/state_q_0_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/next_state_r [0]),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/next_state_r_0_47 ),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/state_q [0])
+);
+defparam \u_usb_phy/u_usb_phy_rt/state_q_0_s1 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/out_dp_q_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/n697_5 ),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/n697_7 ),
+	.CLEAR(rst_i_d),
+	.Q(usb_pads_tx_dp_w)
+);
+defparam \u_usb_phy/u_usb_phy_rt/out_dp_q_s1 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/out_dn_q_s1  (
+	.D(\u_usb_phy/u_usb_phy_rt/n698_4 ),
+	.CLK(clk_i_d),
+	.CE(\u_usb_phy/u_usb_phy_rt/n697_7 ),
+	.CLEAR(rst_i_d),
+	.Q(usb_pads_tx_dn_w)
+);
+defparam \u_usb_phy/u_usb_phy_rt/out_dn_q_s1 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/rxd_ms_s4  (
+	.D(\u_usb_phy/u_usb_phy_rt/n29_10 ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/rxd_ms )
+);
+defparam \u_usb_phy/u_usb_phy_rt/rxd_ms_s4 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/rx_dp_q_s4  (
+	.D(\u_usb_phy/u_usb_phy_rt/n39_6 ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/rx_dp_q )
+);
+defparam \u_usb_phy/u_usb_phy_rt/rx_dp_q_s4 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/rx_dn_q_s4  (
+	.D(\u_usb_phy/u_usb_phy_rt/n45_6 ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/rx_dn_q )
+);
+defparam \u_usb_phy/u_usb_phy_rt/rx_dn_q_s4 .INIT=1'b0;
+DFFCE \u_usb_phy/u_usb_phy_rt/rxd_q_s5  (
+	.D(\u_usb_phy/u_usb_phy_rt/n51_6 ),
+	.CLK(clk_i_d),
+	.CE(VCC),
+	.CLEAR(rst_i_d),
+	.Q(\u_usb_phy/u_usb_phy_rt/rxd_q )
+);
+defparam \u_usb_phy/u_usb_phy_rt/rxd_q_s5 .INIT=1'b0;
+MUX2_LUT6 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s20  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_2_28 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_2_30 ),
+	.S0(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.O(\u_usb_phy/u_usb_phy_rt/next_state_r [2])
+);
+MUX2_LUT5 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s47  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_2_36 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_2_64 ),
+	.S0(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.O(\u_usb_phy/u_usb_phy_rt/next_state_r_2_28 )
+);
+MUX2_LUT5 \u_usb_phy/u_usb_phy_rt/next_state_r_2_s48  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_2_32 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_2_40 ),
+	.S0(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.O(\u_usb_phy/u_usb_phy_rt/next_state_r_2_30 )
+);
+MUX2_LUT7 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s22  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_1_29 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_1_31 ),
+	.S0(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.O(\u_usb_phy/u_usb_phy_rt/next_state_r [1])
+);
+MUX2_LUT6 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s53  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_1_33 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_1_35 ),
+	.S0(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.O(\u_usb_phy/u_usb_phy_rt/next_state_r_1_29 )
+);
+MUX2_LUT6 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s54  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_1_37 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_1_39 ),
+	.S0(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.O(\u_usb_phy/u_usb_phy_rt/next_state_r_1_31 )
+);
+MUX2_LUT5 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s55  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_1_41 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_1_43 ),
+	.S0(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.O(\u_usb_phy/u_usb_phy_rt/next_state_r_1_33 )
+);
+MUX2_LUT5 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s56  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_1_45 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/n165_8 ),
+	.S0(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.O(\u_usb_phy/u_usb_phy_rt/next_state_r_1_35 )
+);
+MUX2_LUT5 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s57  (
+	.I0(\u_usb_phy/u_usb_phy_rt/n194_7 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_1_75 ),
+	.S0(\u_usb_phy/u_usb_phy_rt/next_state_r_2_34 ),
+	.O(\u_usb_phy/u_usb_phy_rt/next_state_r_1_37 )
+);
+MUX2_LUT5 \u_usb_phy/u_usb_phy_rt/next_state_r_1_s58  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_1_47 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_1_73 ),
+	.S0(\u_usb_phy/u_usb_phy_rt/state_q [1]),
+	.O(\u_usb_phy/u_usb_phy_rt/next_state_r_1_39 )
+);
+MUX2_LUT6 \u_usb_phy/u_usb_phy_rt/next_state_r_0_s22  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_0_29 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_0_31 ),
+	.S0(\u_usb_phy/u_usb_phy_rt/state_q [3]),
+	.O(\u_usb_phy/u_usb_phy_rt/next_state_r [0])
+);
+MUX2_LUT5 \u_usb_phy/u_usb_phy_rt/next_state_r_0_s34  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_0_35 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_0_37 ),
+	.S0(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.O(\u_usb_phy/u_usb_phy_rt/next_state_r_0_29 )
+);
+MUX2_LUT5 \u_usb_phy/u_usb_phy_rt/next_state_r_0_s35  (
+	.I0(\u_usb_phy/u_usb_phy_rt/next_state_r_0_33 ),
+	.I1(\u_usb_phy/u_usb_phy_rt/next_state_r_0_39 ),
+	.S0(\u_usb_phy/u_usb_phy_rt/state_q [2]),
+	.O(\u_usb_phy/u_usb_phy_rt/next_state_r_0_31 )
+);
+endmodule

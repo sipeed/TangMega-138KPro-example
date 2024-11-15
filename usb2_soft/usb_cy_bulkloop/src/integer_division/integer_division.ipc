@@ -1,0 +1,17 @@
+[General]
+ipc_version=4
+file=integer_division
+module=Integer_Division_Top
+target_device=gw5ast138b-007
+type=integer_division
+version=1.0
+
+[Config]
+DATA_TYPE=0
+DIVIDEND_DATA_WIDTH=32
+DIVISOR_DATA_WIDTH=32
+FRACTIONAL_DATA_WIDTH=3
+LANG=0
+LATENCY=37
+REMAINDER=fractional
+Synthesis_tool=GowinSynthesis

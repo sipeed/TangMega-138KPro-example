@@ -1,0 +1,21 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="" pn="GW5AST-LV138FPG676AC1/I0">gw5ast138b-007</Device>
+    <FileList>
+        <File path="src/Cypress_TOP.v" type="file.verilog" enable="1"/>
+        <File path="src/FX2_desc.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_pll/gowin_pll_b.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_pll/gowin_pll_f.v" type="file.verilog" enable="1"/>
+        <File path="src/sync_fifo/sync_rx_pkt_fifo.v" type="file.verilog" enable="1"/>
+        <File path="src/sync_fifo/sync_tx_pkt_fifo.v" type="file.verilog" enable="1"/>
+        <File path="src/sync_fifo/usb_fifo.v" type="file.verilog" enable="1"/>
+        <File path="src/usb2_0_softphy/usb2_0_softphy.v" type="file.verilog" enable="1"/>
+        <File path="src/usb_device_controller/usb_device_controller.v" type="file.verilog" enable="1"/>
+        <File path="src/usb_ref.cst" type="file.cst" enable="1"/>
+        <File path="src/usb_ref.sdc" type="file.sdc" enable="1"/>
+        <File path="src/EP2.rao" type="file.gao" enable="0"/>
+    </FileList>
+</Project>
