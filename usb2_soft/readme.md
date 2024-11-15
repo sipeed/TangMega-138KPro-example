@@ -51,6 +51,7 @@ This directory is a series demo to test the **USB2** `soft_PHY` & `device_contro
 See the corresponding project's readme for details
 - [usb_uart_loopback](./usb_uart_loopback/readme.md)
 - [usb_cy_streamer](./usb_cy_streamer/readme.md)
+- [cy_usb_bulkloop](./usb_cy_bulkloop/readme.md)
 
 ***
 
