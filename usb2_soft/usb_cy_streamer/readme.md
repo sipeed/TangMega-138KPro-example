@@ -62,4 +62,6 @@ The main purpose of this DEMO is to show how to use the **[GOWIN USB 2.0 SoftPHY
 
 You can also enable the GAO in the project, then burn the biststream via GAO and see the result via GAO.
 
+Here is a [step-by-step instructions](../../sfp+/docs/manual/SUG114-3.0E_Gowin%20Analyzer_Oscilloscope_User_Guide.pdf) for how to use the GAO.
+
 If you encounter any problems, please submit an issue to this repository.
