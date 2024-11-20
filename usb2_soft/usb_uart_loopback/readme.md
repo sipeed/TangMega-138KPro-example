@@ -44,7 +44,7 @@ Here are quick instructions for the more experienced,
 **As you can see, this is a high-speed USB device**
 
 - UART loopback test with **[COMToool](https://github.com/neutree/COMTool)**
-![COMToool](../docs/images/COMTOOL.png "COM in USB Tree View")
+![COMToool](../docs/images/COMTOOL.png "Test with COMTOOL")
 **Open COM36 in COMTool, set baudrate to 115200,than send anything you want**
 
 - How it works
