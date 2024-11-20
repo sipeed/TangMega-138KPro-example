@@ -39,12 +39,12 @@ This directory is a series demo to test the **USB2** `soft_PHY` & `device_contro
 |    |
 |    |`-- usb_uart_loopback.fs.7z     --> prbuild bitstream(zipped)                       
 |    |`-- usb_uart_loopback.gprj      --> demo project
-| -- usb_cy_streamer                  --> project for speedtest(Cypress FX2 driver)
+| -- usb_cy_streamer                  --> project for speedtest(need Cypress FX3 driver)
 ...
 ...(The following is omitted)
 
 ```
-⚠️ Note: Please refer to the relevant documents for the use of Cypress C++ streamer. Related programs and drivers are not provided here.
+⚠️ Note: Please refer to the relevant documents for the use of Cypress C++ streamer/bulkloop. Related programs and drivers are not provided here.
 
 ## How to use
 
@@ -57,4 +57,33 @@ See the corresponding project's readme for details
 
 ## Troubleshoot
 
-If you encounter any problems, please submit an issue to this repository.
+### FAQ
+
+- **Q:** Can I use this demo with **[138K (NEO) Dock](https://wiki.sipeed.com/hardware/en/tang/tang-mega-138k/mega-138k.html)** ?
+  
+  **A:** No, it just work with **[Tang MEGA 138K Pro](https://wiki.sipeed.com/hardware/en/tang/tang-mega-138k/mega-138k-pro.html)**. USB demo for **[138K (NEO) Dock](https://wiki.sipeed.com/hardware/en/tang/tang-mega-138k/mega-138k.html)** is ***[ch569_hspi2cdc](https://github.com/sipeed/TangMega-138K-example/tree/main/ch569_hspi2cdc)***.
+
+  ***
+
+- **Q:** USB cannot be recognized or error with USB device.
+
+- **A:** Possible reasons are as follows:
+    
+    1. The board is not powered enough and needs to be connected to an aux power supply, usually it is the **12V DC** jack.
+
+    2. The USB cable used is too long or of poor quality. Generally, the length of the USB cable is not recommended to exceed 1m, and 0.5m is best. 
+
+    3. Maybe there's just a minor issue with your computer's USB host controller. 
+    Replugging the USB cable may fix it. 
+
+***
+
+- **Q:** Where could I get those tools for test?
+
+  **A:** For the UART test, There are many such tools. We recommend you use the one you like, or you can use this [COMToool](https://github.com/neutree/COMTool).
+
+  For the test with *Cypress Proprietary Tools*, The relevant tools can be found on the [Infineon official website](https://softwaretools.infineon.com/tools/com.ifx.tb.tool.ezusbfx3sdk) here.
+
+***
+
+If you have any other problems, please submit an issue to this repository.
