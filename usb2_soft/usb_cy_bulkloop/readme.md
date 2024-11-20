@@ -34,7 +34,12 @@ Here are quick instructions for the more experienced,
 ***
 
 ### Demonstration of demo USB device
-TBD
+
+- Test result with **Cypress C++ bulkloop**:
+
+<img src="../docs/images/HS_BULKLOOP.png" width="400" style="left;">
+
+**As you can see, As you can see, this demo runs very stably.**
 
 ***
 
