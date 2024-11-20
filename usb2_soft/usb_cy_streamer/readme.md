@@ -1,10 +1,10 @@
 # usb_cy_streamer
-This directory is a demo of Simulating a `Cypress FX2` device on Sipeed [Tang MEGA 138K Pro](https://wiki.sipeed.com/hardware/en/tang/tang-mega-138k/mega-138k-pro.html). The main purpose of this demo is to use **Cypress C++ Streamer** to measure the speed of GOWIN's **SOFT_USB2**.
+This directory is a demo of Simulating a `Cypress FX3` device on Sipeed [Tang MEGA 138K Pro](https://wiki.sipeed.com/hardware/en/tang/tang-mega-138k/mega-138k-pro.html). The main purpose of this demo is to use **Cypress C++ Streamer** to measure the speed of GOWIN's **SOFT_USB2**.
 
 ***
 
 ## Main features
-- Simulating a `Cypress FX2` device on GOWIN's FPGA.
+- Simulating a `Cypress FX3` device on GOWIN's FPGA.
 - Could use **Cypress C++ Streamer** to measure the speed of USB *(requires Cypress proprietary driver)*.
 
 ***
@@ -28,7 +28,7 @@ Here are quick instructions for the more experienced,
 - You can also try using the prebuilt bitstream, but remember to unzip it before downloading.
 - Then plug another USB-C cable to the USB-C port with the **SOFT_USB** mark.
 - Observe the status of the 6 indicator LEDs.
-- Installing the Cypress FX2 proprietary driver.
+- Installing the Cypress FX3 proprietary driver.
 - Use **Cypress C++ Streamer** to measure the speed of USB.
 
 ***
