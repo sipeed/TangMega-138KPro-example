@@ -55,9 +55,9 @@ module usb_desc #(
     localparam  DESC_QUAL_ADDR        = 20;
     localparam  DESC_QUAL_LEN         = 10;
     localparam  DESC_FSCFG_ADDR       = 32;
-    localparam  DESC_FSCFG_LEN        = 39;
+    localparam  DESC_FSCFG_LEN        = 67;
     localparam  DESC_HSCFG_ADDR       = DESC_FSCFG_ADDR + DESC_FSCFG_LEN;
-    localparam  DESC_HSCFG_LEN        = 32;
+    localparam  DESC_HSCFG_LEN        = 67;
     localparam  DESC_OSCFG_ADDR       = DESC_HSCFG_ADDR + DESC_HSCFG_LEN;
     localparam  DESC_OSCFG_LEN        = 1 ;
     localparam  DESC_STRLANG_ADDR     = DESC_OSCFG_ADDR + DESC_OSCFG_LEN;
@@ -124,8 +124,8 @@ module usb_desc #(
         // 10 bytes device qualifier
         descrom[20 + 0] <= 8'h0a;// bLength = 10 bytes
         descrom[20 + 1] <= 8'h06;// bDescriptorType = device qualifier
-        descrom[20 + 2] <= 8'h00;
-        descrom[20 + 3] <= 8'h02;// bcdUSB = 2.0
+        descrom[20 + 2] <= 8'h10;// bcdUSB = 2.1, low 8 bits of 16'h0210
+        descrom[20 + 3] <= 8'h02;// bcdUSB = 2.1, high 8 bits of 16'h0210
         descrom[20 + 4] <= 8'h02;// bDeviceClass = Communication Device Class
         descrom[20 + 5] <= 8'h00;// bDeviceSubClass = none
         descrom[20 + 6] <= 8'h00;// bDeviceProtocol = none
@@ -142,49 +142,79 @@ module usb_desc #(
         descrom[DESC_FSCFG_ADDR + 1] <= 8'h02;// bDescriptorType = configuration descriptor
         descrom[DESC_FSCFG_ADDR + 2] <= DESC_FSCFG_LEN[7:0];// 39 bytes
         descrom[DESC_FSCFG_ADDR + 3] <= DESC_FSCFG_LEN[15:8];// wTotalLength = 55 bytes
-        descrom[DESC_FSCFG_ADDR + 4] <= 8'h01;// bNumInterfaces = 1
+        descrom[DESC_FSCFG_ADDR + 4] <= 8'h02;// bNumInterfaces = 2
         descrom[DESC_FSCFG_ADDR + 5] <= 8'h01;// bConfigurationValue = 1
         descrom[DESC_FSCFG_ADDR + 6] <= 8'h00;// iConfiguration = none
-        descrom[DESC_FSCFG_ADDR + 7] <= (SELFPOWERED)? 8'hc0 : 8'h80; // bmAttributes
+        descrom[DESC_FSCFG_ADDR + 7] <= (SELFPOWERED)? 8'hc0 : 8'h80;// bmAttributes
         descrom[DESC_FSCFG_ADDR + 8] <= 8'hFA;// bMaxPower = 500 mA
         //---------------- Interface Descriptor -----------------
-        //------------Serial COM 0 interface------------------
-        // 9 bytes standard interface AS descriptor(Interface 2, Alternate Setting 0):
-        // bNumEndpoints = 0x00,bInterFaceClass = 0x01(audio),bInterfaceSubClass = 0x02
-        descrom[DESC_FSCFG_ADDR + 9] <= 8'h09;// bLength = 9 bytes
+        descrom[DESC_FSCFG_ADDR + 9]  <= 8'h09;// bLength = 9 bytes
         descrom[DESC_FSCFG_ADDR + 10] <= 8'h04;// bDescriptorType = interface descriptor
         descrom[DESC_FSCFG_ADDR + 11] <= 8'h00;// bInterfaceNumber = 0
         descrom[DESC_FSCFG_ADDR + 12] <= 8'h00;// bAlternateSetting = 0
-        descrom[DESC_FSCFG_ADDR + 13] <= 8'h03;// bNumEndpoints = 3
+        descrom[DESC_FSCFG_ADDR + 13] <= 8'h01;// bNumEndpoints = 1
         descrom[DESC_FSCFG_ADDR + 14] <= 8'h02;// bInterfaceClass = CDC
-        descrom[DESC_FSCFG_ADDR + 15] <= 8'h02;// bInterfaceSubClass = none
+        descrom[DESC_FSCFG_ADDR + 15] <= 8'h02;// bInterfaceSubClass = ACM
         descrom[DESC_FSCFG_ADDR + 16] <= 8'h01;// bInterafceProtocol = none
         descrom[DESC_FSCFG_ADDR + 17] <= 8'h00;// iInterface = none
+        //----------------- CDC Interface Descriptor -----------------
+        descrom[DESC_FSCFG_ADDR + 18] <= 8'h05;// bFunctionLength
+        descrom[DESC_FSCFG_ADDR + 19] <= 8'h24;// bDescriptorType :Interface         
+        descrom[DESC_FSCFG_ADDR + 20] <= 8'h00;// bDescriptorSubType : Header Functional Descriptor       
+        descrom[DESC_FSCFG_ADDR + 21] <= 8'h10;// bcdCDC                   
+        descrom[DESC_FSCFG_ADDR + 22] <= 8'h01;// bcdCDC         
+        //----------------- CDC Interface Descriptor -----------------
+        descrom[DESC_FSCFG_ADDR + 23] <= 8'h05;// bFunctionLength
+        descrom[DESC_FSCFG_ADDR + 24] <= 8'h24;// bDescriptorType :Interface         
+        descrom[DESC_FSCFG_ADDR + 25] <= 8'h01;// bDescriptorSubType : Call Management Functional Descriptor       
+        descrom[DESC_FSCFG_ADDR + 26] <= 8'h00;// bmCapabilities                              
+        descrom[DESC_FSCFG_ADDR + 27] <= 8'h01;// bDataInterface         
+        //----------------- CDC Interface Descriptor -----------------
+        descrom[DESC_FSCFG_ADDR + 28] <= 8'h04;// bFunctionLength
+        descrom[DESC_FSCFG_ADDR + 29] <= 8'h24;// bDescriptorType :Interface         
+        descrom[DESC_FSCFG_ADDR + 30] <= 8'h02;// bDescriptorSubType : Abstract Control Management Functional Descriptor
+        descrom[DESC_FSCFG_ADDR + 31] <= 8'h02;// bmCapabilities                              
+        //----------------- CDC Interface Descriptor -----------------
+        descrom[DESC_FSCFG_ADDR + 32] <= 8'h05;// bFunctionLength
+        descrom[DESC_FSCFG_ADDR + 33] <= 8'h24;// bDescriptorType :Interface         
+        descrom[DESC_FSCFG_ADDR + 34] <= 8'h06;// bDescriptorSubType : Union Functional Descriptor
+        descrom[DESC_FSCFG_ADDR + 35] <= 8'h00;// bControlInterface          
+        descrom[DESC_FSCFG_ADDR + 36] <= 8'h01;// bSubordinateInterface[0]  
         //----------------- Endpoint Descriptor -----------------
-        descrom[DESC_FSCFG_ADDR + 18] <= 8'h07;// bLength = 9 bytes
-        descrom[DESC_FSCFG_ADDR + 19] <= 8'h05;// bDescriptorType = endpoint descriptor
-        descrom[DESC_FSCFG_ADDR + 20] <= 8'h82;// bEndpointAddress = INPUT 2
-        descrom[DESC_FSCFG_ADDR + 21] <= 8'h02;// bmAttributes = TransferType=Isochronous  SyncType=Adaptive  EndpointType=Data
-        descrom[DESC_FSCFG_ADDR + 22] <= 8'h40;
-        descrom[DESC_FSCFG_ADDR + 23] <= 8'h00;// wMaxPacketSize = 64 bytes
-        descrom[DESC_FSCFG_ADDR + 24] <= 8'h00;// bInterval = 0 ms
+        descrom[DESC_FSCFG_ADDR + 37] <= 8'h07;// bLength = 9 bytes
+        descrom[DESC_FSCFG_ADDR + 38] <= 8'h05;// bDescriptorType = endpoint descriptor
+        descrom[DESC_FSCFG_ADDR + 39] <= 8'h83;// bEndpointAddress = INPUT 2
+        descrom[DESC_FSCFG_ADDR + 40] <= 8'h03;// TransferType=Interrupt
+        descrom[DESC_FSCFG_ADDR + 41] <= 8'h10;
+        descrom[DESC_FSCFG_ADDR + 42] <= 8'h00;// wMaxPacketSize = 16 bytes
+        descrom[DESC_FSCFG_ADDR + 43] <= 8'h01;// bInterval = 1 ms
+        //---------------- Interface Descriptor -----------------
+        descrom[DESC_FSCFG_ADDR + 44] <= 8'h09;// bLength = 9 bytes
+        descrom[DESC_FSCFG_ADDR + 45] <= 8'h04;// bDescriptorType = interface descriptor
+        descrom[DESC_FSCFG_ADDR + 46] <= 8'h01;// bInterfaceNumber = 1
+        descrom[DESC_FSCFG_ADDR + 47] <= 8'h00;// bAlternateSetting = 0
+        descrom[DESC_FSCFG_ADDR + 48] <= 8'h02;// bNumEndpoints = 2
+        descrom[DESC_FSCFG_ADDR + 49] <= 8'h0A;// bInterfaceClass = CDC-DATA
+        descrom[DESC_FSCFG_ADDR + 50] <= 8'h00;// bInterfaceSubClass = none
+        descrom[DESC_FSCFG_ADDR + 51] <= 8'h00;// bInterafceProtocol = none
+        descrom[DESC_FSCFG_ADDR + 52] <= 8'h00;// iInterface = none
         //----------------- Endpoint Descriptor -----------------
-        descrom[DESC_FSCFG_ADDR + 25] <= 8'h07;// bLength = 7 bytes
-        descrom[DESC_FSCFG_ADDR + 26] <= 8'h05;// bDescriptorType = endpoint descriptor
-        descrom[DESC_FSCFG_ADDR + 27] <= 8'h02;// bEndpointAddress = OUTPUT 2
-        descrom[DESC_FSCFG_ADDR + 28] <= 8'h02;// TransferType = Bulk
-        descrom[DESC_FSCFG_ADDR + 29] <= 8'h40;
-        descrom[DESC_FSCFG_ADDR + 30] <= 8'h00;// wMaxPacketSize = 64 bytes
-        descrom[DESC_FSCFG_ADDR + 31] <= 8'h00;// bInterval = 0 ms
+        descrom[DESC_FSCFG_ADDR + 53] <= 8'h07;// bLength = 7 bytes
+        descrom[DESC_FSCFG_ADDR + 54] <= 8'h05;// bDescriptorType = endpoint descriptor
+        descrom[DESC_FSCFG_ADDR + 55] <= 8'h02;// bEndpointAddress = OUTPUT 2
+        descrom[DESC_FSCFG_ADDR + 56] <= 8'h02;// TransferType = Bulk
+        descrom[DESC_FSCFG_ADDR + 57] <= 8'h40;
+        descrom[DESC_FSCFG_ADDR + 58] <= 8'h00;// wMaxPacketSize = 64 bytes
+        descrom[DESC_FSCFG_ADDR + 59] <= 8'h00;// bInterval = 0 ms
         //----------------- Endpoint Descriptor -----------------
-        descrom[DESC_FSCFG_ADDR + 32] <= 8'h07;// bLength = 7 bytes
-        descrom[DESC_FSCFG_ADDR + 33] <= 8'h05;// bDescriptorType = endpoint descriptor
-        descrom[DESC_FSCFG_ADDR + 34] <= 8'h81;// bEndpointAddress = INPUT 1
-        descrom[DESC_FSCFG_ADDR + 35] <= 8'h03;// TransferType = Interrupt
-        descrom[DESC_FSCFG_ADDR + 36] <= 8'h08;
-        descrom[DESC_FSCFG_ADDR + 37] <= 8'h00;// wMaxPacketSize = 8 bytes
-        descrom[DESC_FSCFG_ADDR + 38] <= 8'h01;// bInterval = 0 ms
-          //13 bytes padding 
+        descrom[DESC_FSCFG_ADDR + 60] <= 8'h07;// bLength = 7 bytes
+        descrom[DESC_FSCFG_ADDR + 61] <= 8'h05;// bDescriptorType = endpoint descriptor
+        descrom[DESC_FSCFG_ADDR + 62] <= 8'h82;// bEndpointAddress = OUTPUT 2
+        descrom[DESC_FSCFG_ADDR + 63] <= 8'h02;// TransferType = Bulk
+        descrom[DESC_FSCFG_ADDR + 64] <= 8'h40;
+        descrom[DESC_FSCFG_ADDR + 65] <= 8'h00;// wMaxPacketSize = 64 bytes
+        descrom[DESC_FSCFG_ADDR + 66] <= 8'h00;// bInterval = 0 ms
+        //13 bytes padding 
           //======HIGH Speed Cfg
           // 190 bytes full-speed configuration descriptor
             // 9 bytes configuration header
@@ -192,40 +222,78 @@ module usb_desc #(
           descrom[DESC_HSCFG_ADDR + 1] <= 8'h02;// bDescriptorType = configuration descriptor
           descrom[DESC_HSCFG_ADDR + 2] <= DESC_HSCFG_LEN[7:0];// 39 bytes
           descrom[DESC_HSCFG_ADDR + 3] <= DESC_HSCFG_LEN[15:8];// wTotalLength = 55 bytes
-          descrom[DESC_HSCFG_ADDR + 4] <= 8'h01;// bNumInterfaces = 1
+          descrom[DESC_HSCFG_ADDR + 4] <= 8'h02;// bNumInterfaces = 2
           descrom[DESC_HSCFG_ADDR + 5] <= 8'h01;// bConfigurationValue = 1
           descrom[DESC_HSCFG_ADDR + 6] <= 8'h00;// iConfiguration = none
           descrom[DESC_HSCFG_ADDR + 7] <= (SELFPOWERED)? 8'hc0 : 8'h80;// bmAttributes
           descrom[DESC_HSCFG_ADDR + 8] <= 8'hFA;// bMaxPower = 500 mA
           //---------------- Interface Descriptor -----------------
-          //------------Serial COM 0 interface------------------
-          // 9 bytes standard interface AS descriptor(Interface 2, Alternate Setting 0):
-          // bNumEndpoints = 0x00,bInterFaceClass = 0x01(audio),bInterfaceSubClass = 0x02
-          descrom[DESC_HSCFG_ADDR + 9] <= 8'h09;// bLength = 9 bytes
+          descrom[DESC_HSCFG_ADDR + 9]  <= 8'h09;// bLength = 9 bytes
           descrom[DESC_HSCFG_ADDR + 10] <= 8'h04;// bDescriptorType = interface descriptor
           descrom[DESC_HSCFG_ADDR + 11] <= 8'h00;// bInterfaceNumber = 0
           descrom[DESC_HSCFG_ADDR + 12] <= 8'h00;// bAlternateSetting = 0
-          descrom[DESC_HSCFG_ADDR + 13] <= 8'h02;// bNumEndpoints = 3
+          descrom[DESC_HSCFG_ADDR + 13] <= 8'h01;// bNumEndpoints = 1
           descrom[DESC_HSCFG_ADDR + 14] <= 8'h02;// bInterfaceClass = CDC
-          descrom[DESC_HSCFG_ADDR + 15] <= 8'h02;// bInterfaceSubClass = none
+          descrom[DESC_HSCFG_ADDR + 15] <= 8'h02;// bInterfaceSubClass = ACM
           descrom[DESC_HSCFG_ADDR + 16] <= 8'h01;// bInterafceProtocol = none
-          descrom[DESC_HSCFG_ADDR + 17] <= 8'h02;// iInterface = none
+          descrom[DESC_HSCFG_ADDR + 17] <= 8'h00;// iInterface = none
+          //----------------- CDC Interface Descriptor -----------------
+          descrom[DESC_HSCFG_ADDR + 18] <= 8'h05;// bFunctionLength
+          descrom[DESC_HSCFG_ADDR + 19] <= 8'h24;// bDescriptorType :Interface         
+          descrom[DESC_HSCFG_ADDR + 20] <= 8'h00;// bDescriptorSubType : Header Functional Descriptor       
+          descrom[DESC_HSCFG_ADDR + 21] <= 8'h10;// bcdCDC                   
+          descrom[DESC_HSCFG_ADDR + 22] <= 8'h01;// bcdCDC         
+          //----------------- CDC Interface Descriptor -----------------
+          descrom[DESC_HSCFG_ADDR + 23] <= 8'h05;// bFunctionLength
+          descrom[DESC_HSCFG_ADDR + 24] <= 8'h24;// bDescriptorType :Interface         
+          descrom[DESC_HSCFG_ADDR + 25] <= 8'h01;// bDescriptorSubType : Call Management Functional Descriptor       
+          descrom[DESC_HSCFG_ADDR + 26] <= 8'h00;// bmCapabilities                              
+          descrom[DESC_HSCFG_ADDR + 27] <= 8'h01;// bDataInterface         
+          //----------------- CDC Interface Descriptor -----------------
+          descrom[DESC_HSCFG_ADDR + 28] <= 8'h04;// bFunctionLength
+          descrom[DESC_HSCFG_ADDR + 29] <= 8'h24;// bDescriptorType :Interface         
+          descrom[DESC_HSCFG_ADDR + 30] <= 8'h02;// bDescriptorSubType : Abstract Control Management Functional Descriptor
+          descrom[DESC_HSCFG_ADDR + 31] <= 8'h02;// bmCapabilities                              
+          //----------------- CDC Interface Descriptor -----------------
+          descrom[DESC_HSCFG_ADDR + 32] <= 8'h05;// bFunctionLength
+          descrom[DESC_HSCFG_ADDR + 33] <= 8'h24;// bDescriptorType :Interface         
+          descrom[DESC_HSCFG_ADDR + 34] <= 8'h06;// bDescriptorSubType : Union Functional Descriptor
+          descrom[DESC_HSCFG_ADDR + 35] <= 8'h00;// bControlInterface          
+          descrom[DESC_HSCFG_ADDR + 36] <= 8'h01;// bSubordinateInterface[0]  
           //----------------- Endpoint Descriptor -----------------
-          descrom[DESC_HSCFG_ADDR + 18] <= 8'h07;// bLength = 9 bytes
-          descrom[DESC_HSCFG_ADDR + 19] <= 8'h05;// bDescriptorType = endpoint descriptor
-          descrom[DESC_HSCFG_ADDR + 20] <= 8'h82;// bEndpointAddress = INPUT 2
-          descrom[DESC_HSCFG_ADDR + 21] <= 8'h02;// bmAttributes = TransferType=Isochronous  SyncType=Adaptive  EndpointType=Data
-          descrom[DESC_HSCFG_ADDR + 22] <= 8'h00;
-          descrom[DESC_HSCFG_ADDR + 23] <= 8'h02;// wMaxPacketSize = 512 bytes
-          descrom[DESC_HSCFG_ADDR + 24] <= 8'h00;// bInterval = 0 ms
+          descrom[DESC_HSCFG_ADDR + 37] <= 8'h07;// bLength = 9 bytes
+          descrom[DESC_HSCFG_ADDR + 38] <= 8'h05;// bDescriptorType = endpoint descriptor
+          descrom[DESC_HSCFG_ADDR + 39] <= 8'h83;// bEndpointAddress = INPUT 2
+          descrom[DESC_HSCFG_ADDR + 40] <= 8'h03;// TransferType=Interrupt
+          descrom[DESC_HSCFG_ADDR + 41] <= 8'h10;
+          descrom[DESC_HSCFG_ADDR + 42] <= 8'h00;// wMaxPacketSize = 16 bytes
+          descrom[DESC_HSCFG_ADDR + 43] <= 8'h01;// bInterval = 1 ms
+          //---------------- Interface Descriptor -----------------
+          descrom[DESC_HSCFG_ADDR + 44] <= 8'h09;// bLength = 9 bytes
+          descrom[DESC_HSCFG_ADDR + 45] <= 8'h04;// bDescriptorType = interface descriptor
+          descrom[DESC_HSCFG_ADDR + 46] <= 8'h01;// bInterfaceNumber = 1
+          descrom[DESC_HSCFG_ADDR + 47] <= 8'h00;// bAlternateSetting = 0
+          descrom[DESC_HSCFG_ADDR + 48] <= 8'h02;// bNumEndpoints = 2
+          descrom[DESC_HSCFG_ADDR + 49] <= 8'h0A;// bInterfaceClass = CDC-DATA
+          descrom[DESC_HSCFG_ADDR + 50] <= 8'h00;// bInterfaceSubClass = none
+          descrom[DESC_HSCFG_ADDR + 51] <= 8'h00;// bInterafceProtocol = none
+          descrom[DESC_HSCFG_ADDR + 52] <= 8'h00;// iInterface = none
           //----------------- Endpoint Descriptor -----------------
-          descrom[DESC_HSCFG_ADDR + 25] <= 8'h07;// bLength = 7 bytes
-          descrom[DESC_HSCFG_ADDR + 26] <= 8'h05;// bDescriptorType = endpoint descriptor
-          descrom[DESC_HSCFG_ADDR + 27] <= 8'h02;// bEndpointAddress = OUTPUT 2
-          descrom[DESC_HSCFG_ADDR + 28] <= 8'h02;// TransferType = Bulk
-          descrom[DESC_HSCFG_ADDR + 29] <= 8'h00;
-          descrom[DESC_HSCFG_ADDR + 30] <= 8'h02;// wMaxPacketSize = 512 bytes
-          descrom[DESC_HSCFG_ADDR + 31] <= 8'h00;// bInterval = 0 ms
+          descrom[DESC_HSCFG_ADDR + 53] <= 8'h07;// bLength = 7 bytes
+          descrom[DESC_HSCFG_ADDR + 54] <= 8'h05;// bDescriptorType = endpoint descriptor
+          descrom[DESC_HSCFG_ADDR + 55] <= 8'h02;// bEndpointAddress = OUTPUT 2
+          descrom[DESC_HSCFG_ADDR + 56] <= 8'h02;// TransferType = Bulk
+          descrom[DESC_HSCFG_ADDR + 57] <= 8'h00;
+          descrom[DESC_HSCFG_ADDR + 58] <= 8'h02;// wMaxPacketSize = 512 bytes
+          descrom[DESC_HSCFG_ADDR + 59] <= 8'h00;// bInterval = 0 ms
+          //----------------- Endpoint Descriptor -----------------
+          descrom[DESC_HSCFG_ADDR + 60] <= 8'h07;// bLength = 7 bytes
+          descrom[DESC_HSCFG_ADDR + 61] <= 8'h05;// bDescriptorType = endpoint descriptor
+          descrom[DESC_HSCFG_ADDR + 62] <= 8'h82;// bEndpointAddress = OUTPUT 2
+          descrom[DESC_HSCFG_ADDR + 63] <= 8'h02;// TransferType = Bulk
+          descrom[DESC_HSCFG_ADDR + 64] <= 8'h00;
+          descrom[DESC_HSCFG_ADDR + 65] <= 8'h02;// wMaxPacketSize = 512 bytes
+          descrom[DESC_HSCFG_ADDR + 66] <= 8'h00;// bInterval = 0 ms
           //----------------- Endpoint Descriptor -----------------
           //descrom[DESC_HSCFG_ADDR + 32] <= 8'h07;// bLength = 9 bytes
           //descrom[DESC_HSCFG_ADDR + 33] <= 8'h05;// bDescriptorType = endpoint descriptor

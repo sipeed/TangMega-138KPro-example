@@ -137,13 +137,16 @@ assign pll_locked = pll1_locked;
 assign RESET = ~pll_locked;
 
 wire usb_highspeed;
+wire reset_led = ~RESET;
+wire phy_speed_ls= ~PHY_XCVRSELECT[0];
+wire phy_speed_fs= ~PHY_XCVRSELECT[1];
 
 assign LED[0] = ~running;           //LED[0]: Running indicator
 assign LED[1] = ~pll1_locked;       //LED[1]: ON = Main PLL Locked
-assign LED[2] = ~RESET;             //LED[2]: ON = System reset enabled 
-assign LED[3] = ~PHY_XCVRSELECT[0]; //LED[3]: ON = FS
-assign LED[4] = ~PHY_XCVRSELECT[1]; //LED[4]: ON = LS, LED[3:4]ALL OFF: HS
-assign LED[5] = ~usb_highspeed;     //LED[5]: ON = USB HS Mode
+assign LED[2] = ~reset_led;         //LED[2]: ON = System reset disabled 
+assign LED[3] = ~phy_speed_ls;      //LED[3]: ON = USB PHY in LS mode
+assign LED[4] = ~phy_speed_fs;      //LED[4]: ON = FS, LED[3:4]ALL ON: HS
+assign LED[5] = ~usb_highspeed;     //LED[5]: ON = USB Device Controller HS Mode
 //==============================================================
 //======
 
@@ -276,12 +279,17 @@ end
 //==============================================================
 //======USB Device descriptor Demo
 usb_desc#(
-
-     .VENDORID    (16'h33AA),
-     .PRODUCTID   (16'h0000),
-     .VERSIONBCD  (16'h0100),
-     .HSSUPPORT   (1       ),
-     .SELFPOWERED (1       )
+     .SERIALSTR       ("11252024"       ),
+     .SERIALSTR_LEN   (8                ),
+     .VENDORSTR       ("Sipeed"         ),
+     .VENDORSTR_LEN   (6                ),
+     .PRODUCTSTR      ("Tang USB2Serial"),
+     .PRODUCTSTR_LEN  (15               ),
+     .VENDORID        (16'h359F         ),
+     .PRODUCTID       (16'h2010         ),
+     .VERSIONBCD      (16'h0112         ),
+     .HSSUPPORT       (1                ),
+     .SELFPOWERED     (0                )
 ) u_usb_desc (
      .CLK                    (PHY_CLKOUT          ),
      .RESET                  (RESET               ),
