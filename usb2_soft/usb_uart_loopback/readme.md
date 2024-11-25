@@ -128,6 +128,7 @@ Here are the details for LED[3..4]: (1 means the LED is on)
 
 - [ ] Supports variable baudrate
 - [ ] Supports UART PIN connection to physical interface
+
 ...
 
 ***
