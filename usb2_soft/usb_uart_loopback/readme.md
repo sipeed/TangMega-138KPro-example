@@ -52,14 +52,14 @@ Here are quick instructions for the more experienced,
 
     ![COM in Windows Device Manager](../docs/images/COM_in_Windows_Device_Manager.png "COM in Windows Device Manager")
     
-    **`COM40` is the target device, Windows 10 and above do not require additional drivers.**
+    **`COM40` is the target device, Windows 10 and above do not require additional drivers**
 
 
 - What you can see in **Linux dmesg**
 
     ![ttyACM in Linux dmesg](../docs/images/ttyACM_in_Linux_dmesg.png "COM in Windows Device Manager")
     
-    **`ttyACM0` is the target device, Linux kernel above 2.4.0 do not require additional drivers.**
+    **`ttyACM0` is the target device, Linux kernel above 2.4.0 do not require additional drivers**
 
 
 - What you can see in **macOS /dev/tty.usbmodem\***
