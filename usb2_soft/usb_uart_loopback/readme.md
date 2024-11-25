@@ -80,7 +80,7 @@ Here are quick instructions for the more experienced,
 
     ![COMToool](../docs/images/COMTOOL.png "Test with COMTOOL")
 
-    **Open COM40 in COMTool, set baudrate to 115200,than send anything you want**
+    **Open COM40 in COMTool, set baudrate to **`115200`**, than send anything you want**
 
 
 - How it works
