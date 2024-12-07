@@ -1,0 +1,54 @@
+[
+ {
+  "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/ddr_test/Micron_400MHz/src/button.v",
+  "InstLine" : 1,
+  "InstName" : "button",
+  "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/ddr_test/Micron_400MHz/src/button.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "button"
+ },
+ {
+  "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/ddr_test/Micron_400MHz/src/top.v",
+  "InstLine" : 1,
+  "InstName" : "top",
+  "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/ddr_test/Micron_400MHz/src/top.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "top",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/ddr_test/Micron_400MHz/src/top.v",
+    "InstLine" : 99,
+    "InstName" : "Gowin_PLL_inst",
+    "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/ddr_test/Micron_400MHz/src/gowin_pll/gowin_pll.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_PLL"
+   },
+   {
+    "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/ddr_test/Micron_400MHz/src/top.v",
+    "InstLine" : 117,
+    "InstName" : "u_rd",
+    "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/ddr_test/Micron_400MHz/src/ddrtest.v",
+    "ModuleLine" : 25,
+    "ModuleName" : "ddr3_test1"
+   },
+   {
+    "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/ddr_test/Micron_400MHz/src/top.v",
+    "InstLine" : 139,
+    "InstName" : "u_ddr3",
+    "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/ddr_test/Micron_400MHz/src/ddr3_memory_interface/DDR3_400.v",
+    "ModuleLine" : 28121,
+    "ModuleName" : "D3_400",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/ddr_test/Micron_400MHz/src/ddr3_memory_interface/DDR3_400.v",
+      "InstLine" : 28206,
+      "InstName" : "gw3_top",
+      "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/ddr_test/Micron_400MHz/src/ddr3_memory_interface/DDR3_400.v",
+      "ModuleLine" : 10,
+      "ModuleName" : "~GW_DDR3_PHY_MC.D3_400"
+     }
+    ]
+   }
+  ]
+ }
+]
