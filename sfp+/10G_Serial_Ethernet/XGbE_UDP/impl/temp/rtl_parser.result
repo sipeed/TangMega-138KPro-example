@@ -1,0 +1,158 @@
+[
+ {
+  "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/top.v",
+  "InstLine" : 2,
+  "InstName" : "top",
+  "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/top.v",
+  "ModuleLine" : 2,
+  "ModuleName" : "top",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/top.v",
+    "InstLine" : 13,
+    "InstName" : "Xge_2x",
+    "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/Xge_top.v",
+    "ModuleLine" : 2,
+    "ModuleName" : "Xge_top",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/Xge_top.v",
+      "InstLine" : 31,
+      "InstName" : "Xge_pll",
+      "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/gowin_pll/gowin_pll.v",
+      "ModuleLine" : 10,
+      "ModuleName" : "Xge_pll"
+     },
+     {
+      "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/Xge_top.v",
+      "InstLine" : 54,
+      "InstName" : "xgmii_serdes",
+      "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/XGMII_top.v",
+      "ModuleLine" : 2,
+      "ModuleName" : "XGMII_top",
+      "SubInsts" : [
+       {
+        "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/XGMII_top.v",
+        "InstLine" : 91,
+        "InstName" : "u_SerDes_Top",
+        "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/serdes/serdes.v",
+        "ModuleLine" : 10,
+        "ModuleName" : "SerDes_Top",
+        "SubInsts" : [
+         {
+          "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/serdes/serdes.v",
+          "InstLine" : 469,
+          "InstName" : "Ten_Giga_Serial_Ethernet_Top_inst",
+          "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/serdes/ten_giga_serial_ethernet/ten_giga_serial_ethernet.v",
+          "ModuleLine" : 23774,
+          "ModuleName" : "Ten_Giga_Serial_Ethernet_Top",
+          "SubInsts" : [
+           {
+            "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/serdes/ten_giga_serial_ethernet/ten_giga_serial_ethernet.v",
+            "InstLine" : 23863,
+            "InstName" : "u_xg_baser",
+            "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/serdes/ten_giga_serial_ethernet/ten_giga_serial_ethernet.v",
+            "ModuleLine" : 10,
+            "ModuleName" : "~xg_baser.Ten_Giga_Serial_Ethernet_Top"
+           }
+          ]
+         },
+         {
+          "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/serdes/serdes.v",
+          "InstLine" : 514,
+          "InstName" : "Ten_Giga_Serial_Ethernet_Top_1_inst",
+          "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/serdes/ten_giga_serial_ethernet_1/ten_giga_serial_ethernet_1.v",
+          "ModuleLine" : 23777,
+          "ModuleName" : "Ten_Giga_Serial_Ethernet_Top_1",
+          "SubInsts" : [
+           {
+            "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/serdes/ten_giga_serial_ethernet_1/ten_giga_serial_ethernet_1.v",
+            "InstLine" : 23866,
+            "InstName" : "u_xg_baser",
+            "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/serdes/ten_giga_serial_ethernet_1/ten_giga_serial_ethernet_1.v",
+            "ModuleLine" : 10,
+            "ModuleName" : "~xg_baser.Ten_Giga_Serial_Ethernet_Top_1"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/Xge_top.v",
+      "InstLine" : 118,
+      "InstName" : "TenGbE_MAC_1_inst",
+      "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/Xge_MAC_top.v",
+      "ModuleLine" : 2,
+      "ModuleName" : "Xge_MAC_top",
+      "SubInsts" : [
+       {
+        "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/Xge_MAC_top.v",
+        "InstLine" : 46,
+        "InstName" : "u_Ten_Giga_Ethernet_MAC_Top",
+        "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/Ten_Giga_Ethernet_MAC/Ten_Giga_Ethernet_MAC.v",
+        "ModuleLine" : 19472,
+        "ModuleName" : "Ten_Giga_Ethernet_MAC_Top",
+        "SubInsts" : [
+         {
+          "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/Ten_Giga_Ethernet_MAC/Ten_Giga_Ethernet_MAC.v",
+          "InstLine" : 19543,
+          "InstName" : "xgmac",
+          "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/Ten_Giga_Ethernet_MAC/Ten_Giga_Ethernet_MAC.v",
+          "ModuleLine" : 10,
+          "ModuleName" : "~xgmac.Ten_Giga_Ethernet_MAC_Top"
+         }
+        ]
+       },
+       {
+        "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/Xge_MAC_top.v",
+        "InstLine" : 100,
+        "InstName" : "XGbE_udp_inst",
+        "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/XGbE_Send_UDP.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "XGbE_Send_UDP"
+       }
+      ]
+     },
+     {
+      "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/Xge_top.v",
+      "InstLine" : 137,
+      "InstName" : "TenGbE_MAC_2_inst",
+      "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/Xge_MAC_top.v",
+      "ModuleLine" : 2,
+      "ModuleName" : "Xge_MAC_top",
+      "SubInsts" : [
+       {
+        "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/Xge_MAC_top.v",
+        "InstLine" : 46,
+        "InstName" : "u_Ten_Giga_Ethernet_MAC_Top",
+        "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/Ten_Giga_Ethernet_MAC/Ten_Giga_Ethernet_MAC.v",
+        "ModuleLine" : 19472,
+        "ModuleName" : "Ten_Giga_Ethernet_MAC_Top",
+        "SubInsts" : [
+         {
+          "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/Ten_Giga_Ethernet_MAC/Ten_Giga_Ethernet_MAC.v",
+          "InstLine" : 19543,
+          "InstName" : "xgmac",
+          "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/Ten_Giga_Ethernet_MAC/Ten_Giga_Ethernet_MAC.v",
+          "ModuleLine" : 10,
+          "ModuleName" : "~xgmac.Ten_Giga_Ethernet_MAC_Top"
+         }
+        ]
+       },
+       {
+        "InstFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/Xge_MAC_top.v",
+        "InstLine" : 100,
+        "InstName" : "XGbE_udp_inst",
+        "ModuleFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/XGbE_Send_UDP.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "XGbE_Send_UDP"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+]

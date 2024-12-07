@@ -1,0 +1,37 @@
+{
+ "Device" : "GW5AST-138B",
+ "Files" : [
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/pro_ddr_test/src/ddr3_memory_interface/ddr3_memory_interface.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/pro_ddr_test/src/ddr3_test.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/pro_ddr_test/src/fifo.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/pro_ddr_test/src/gowin_pll/gowin_pll.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/pro_ddr_test/src/top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/pro_ddr_test/src/uart_tx.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/pro_ddr_test/impl/temp/rtl_parser.result",
+ "Top" : "top",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}

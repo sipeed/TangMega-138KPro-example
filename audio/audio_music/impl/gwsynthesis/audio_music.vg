@@ -1,0 +1,6083 @@
+//
+//Written by GowinSynthesis
+//Product Version "V1.9.9 Beta-3"
+//Tue Sep 12 17:31:12 2023
+
+//Source file index table:
+//file0 "\F:/TangMega-138K-example/Pro_board/audio/audio_music/src/audio_driver.v"
+//file1 "\F:/TangMega-138K-example/Pro_board/audio/audio_music/src/fifo_top/sd_ctrl_dcfifo.v"
+//file2 "\F:/TangMega-138K-example/Pro_board/audio/audio_music/src/sd_card/sd_ctrl_read.v"
+//file3 "\F:/TangMega-138K-example/Pro_board/audio/audio_music/src/sd_card/sd_ctrl_read_top.v"
+//file4 "\F:/TangMega-138K-example/Pro_board/audio/audio_music/src/sd_card/sd_ctrl_top.v"
+//file5 "\F:/TangMega-138K-example/Pro_board/audio/audio_music/src/sd_card/sd_init.v"
+//file6 "\F:/TangMega-138K-example/Pro_board/audio/audio_music/src/sd_card/sd_read.v"
+//file7 "\F:/TangMega-138K-example/Pro_board/audio/audio_music/src/sd_card/sd_write.v"
+//file8 "\F:/TangMega-138K-example/Pro_board/audio/audio_music/src/sine_wave.v"
+//file9 "\F:/TangMega-138K-example/Pro_board/audio/audio_music/src/top.v"
+`timescale 100 ps/100 ps
+module audio_drive (
+  HP_BCK_d,
+  rst_d,
+  q_w,
+  req_w,
+  HP_DIN_d,
+  HP_WS_d
+)
+;
+input HP_BCK_d;
+input rst_d;
+input [15:0] q_w;
+output req_w;
+output HP_DIN_d;
+output HP_WS_d;
+wire n28_3;
+wire n33_3;
+wire n34_3;
+wire n35_3;
+wire n36_3;
+wire n37_3;
+wire n38_3;
+wire n39_3;
+wire n40_3;
+wire n41_3;
+wire n42_3;
+wire n43_3;
+wire n44_3;
+wire n45_3;
+wire n46_3;
+wire n47_3;
+wire HP_WS_r_6;
+wire n48_5;
+wire n80_6;
+wire req_r1;
+wire n15_1;
+wire n15_2;
+wire n14_1;
+wire n14_2;
+wire n13_1;
+wire n13_2;
+wire n12_1;
+wire n12_0_COUT;
+wire n16_6;
+wire [4:0] b_cnt;
+wire [15:0] idata_r;
+wire VCC;
+wire GND;
+  LUT4 n28_s0 (
+    .F(n28_3),
+    .I0(b_cnt[0]),
+    .I1(b_cnt[1]),
+    .I2(b_cnt[2]),
+    .I3(b_cnt[3]) 
+);
+defparam n28_s0.INIT=16'h0001;
+  LUT3 n33_s0 (
+    .F(n33_3),
+    .I0(q_w[15]),
+    .I1(idata_r[14]),
+    .I2(req_r1) 
+);
+defparam n33_s0.INIT=8'hAC;
+  LUT3 n34_s0 (
+    .F(n34_3),
+    .I0(idata_r[13]),
+    .I1(q_w[14]),
+    .I2(req_r1) 
+);
+defparam n34_s0.INIT=8'hCA;
+  LUT3 n35_s0 (
+    .F(n35_3),
+    .I0(idata_r[12]),
+    .I1(q_w[13]),
+    .I2(req_r1) 
+);
+defparam n35_s0.INIT=8'hCA;
+  LUT3 n36_s0 (
+    .F(n36_3),
+    .I0(idata_r[11]),
+    .I1(q_w[12]),
+    .I2(req_r1) 
+);
+defparam n36_s0.INIT=8'hCA;
+  LUT3 n37_s0 (
+    .F(n37_3),
+    .I0(idata_r[10]),
+    .I1(q_w[11]),
+    .I2(req_r1) 
+);
+defparam n37_s0.INIT=8'hCA;
+  LUT3 n38_s0 (
+    .F(n38_3),
+    .I0(idata_r[9]),
+    .I1(q_w[10]),
+    .I2(req_r1) 
+);
+defparam n38_s0.INIT=8'hCA;
+  LUT3 n39_s0 (
+    .F(n39_3),
+    .I0(idata_r[8]),
+    .I1(q_w[9]),
+    .I2(req_r1) 
+);
+defparam n39_s0.INIT=8'hCA;
+  LUT3 n40_s0 (
+    .F(n40_3),
+    .I0(idata_r[7]),
+    .I1(q_w[8]),
+    .I2(req_r1) 
+);
+defparam n40_s0.INIT=8'hCA;
+  LUT3 n41_s0 (
+    .F(n41_3),
+    .I0(idata_r[6]),
+    .I1(q_w[7]),
+    .I2(req_r1) 
+);
+defparam n41_s0.INIT=8'hCA;
+  LUT3 n42_s0 (
+    .F(n42_3),
+    .I0(idata_r[5]),
+    .I1(q_w[6]),
+    .I2(req_r1) 
+);
+defparam n42_s0.INIT=8'hCA;
+  LUT3 n43_s0 (
+    .F(n43_3),
+    .I0(idata_r[4]),
+    .I1(q_w[5]),
+    .I2(req_r1) 
+);
+defparam n43_s0.INIT=8'hCA;
+  LUT3 n44_s0 (
+    .F(n44_3),
+    .I0(idata_r[3]),
+    .I1(q_w[4]),
+    .I2(req_r1) 
+);
+defparam n44_s0.INIT=8'hCA;
+  LUT3 n45_s0 (
+    .F(n45_3),
+    .I0(idata_r[2]),
+    .I1(q_w[3]),
+    .I2(req_r1) 
+);
+defparam n45_s0.INIT=8'hCA;
+  LUT3 n46_s0 (
+    .F(n46_3),
+    .I0(idata_r[1]),
+    .I1(q_w[2]),
+    .I2(req_r1) 
+);
+defparam n46_s0.INIT=8'hCA;
+  LUT3 n47_s0 (
+    .F(n47_3),
+    .I0(idata_r[0]),
+    .I1(q_w[1]),
+    .I2(req_r1) 
+);
+defparam n47_s0.INIT=8'hCA;
+  LUT4 HP_WS_r_s3 (
+    .F(HP_WS_r_6),
+    .I0(b_cnt[2]),
+    .I1(b_cnt[3]),
+    .I2(b_cnt[0]),
+    .I3(b_cnt[1]) 
+);
+defparam HP_WS_r_s3.INIT=16'h1000;
+  LUT2 n48_s1 (
+    .F(n48_5),
+    .I0(req_r1),
+    .I1(q_w[0]) 
+);
+defparam n48_s1.INIT=4'h8;
+  LUT2 n80_s2 (
+    .F(n80_6),
+    .I0(b_cnt[4]),
+    .I1(HP_WS_r_6) 
+);
+defparam n80_s2.INIT=4'hB;
+  DFFCE b_cnt_3_s0 (
+    .Q(b_cnt[3]),
+    .D(n13_1),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE b_cnt_2_s0 (
+    .Q(b_cnt[2]),
+    .D(n14_1),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE b_cnt_1_s0 (
+    .Q(b_cnt[1]),
+    .D(n15_1),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE b_cnt_0_s0 (
+    .Q(b_cnt[0]),
+    .D(n16_6),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE req_r_s0 (
+    .Q(req_w),
+    .D(n28_3),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE req_r1_s0 (
+    .Q(req_r1),
+    .D(req_w),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE idata_r_15_s0 (
+    .Q(idata_r[15]),
+    .D(n33_3),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE idata_r_14_s0 (
+    .Q(idata_r[14]),
+    .D(n34_3),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE idata_r_13_s0 (
+    .Q(idata_r[13]),
+    .D(n35_3),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE idata_r_12_s0 (
+    .Q(idata_r[12]),
+    .D(n36_3),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE idata_r_11_s0 (
+    .Q(idata_r[11]),
+    .D(n37_3),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE idata_r_10_s0 (
+    .Q(idata_r[10]),
+    .D(n38_3),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE idata_r_9_s0 (
+    .Q(idata_r[9]),
+    .D(n39_3),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE idata_r_8_s0 (
+    .Q(idata_r[8]),
+    .D(n40_3),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE idata_r_7_s0 (
+    .Q(idata_r[7]),
+    .D(n41_3),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE idata_r_6_s0 (
+    .Q(idata_r[6]),
+    .D(n42_3),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE idata_r_5_s0 (
+    .Q(idata_r[5]),
+    .D(n43_3),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE idata_r_4_s0 (
+    .Q(idata_r[4]),
+    .D(n44_3),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE idata_r_3_s0 (
+    .Q(idata_r[3]),
+    .D(n45_3),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE idata_r_2_s0 (
+    .Q(idata_r[2]),
+    .D(n46_3),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE idata_r_1_s0 (
+    .Q(idata_r[1]),
+    .D(n47_3),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE idata_r_0_s0 (
+    .Q(idata_r[0]),
+    .D(n48_5),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE HP_DIN_r_s0 (
+    .Q(HP_DIN_d),
+    .D(idata_r[15]),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE b_cnt_4_s0 (
+    .Q(b_cnt[4]),
+    .D(n12_1),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE HP_WS_r_s1 (
+    .Q(HP_WS_d),
+    .D(n80_6),
+    .CLK(HP_BCK_d),
+    .CLEAR(rst_d),
+    .CE(HP_WS_r_6) 
+);
+defparam HP_WS_r_s1.INIT=1'b0;
+  ALU n15_s (
+    .SUM(n15_1),
+    .COUT(n15_2),
+    .I0(b_cnt[1]),
+    .I1(b_cnt[0]),
+    .I3(GND),
+    .CIN(GND) 
+);
+defparam n15_s.ALU_MODE=0;
+  ALU n14_s (
+    .SUM(n14_1),
+    .COUT(n14_2),
+    .I0(b_cnt[2]),
+    .I1(GND),
+    .I3(GND),
+    .CIN(n15_2) 
+);
+defparam n14_s.ALU_MODE=0;
+  ALU n13_s (
+    .SUM(n13_1),
+    .COUT(n13_2),
+    .I0(b_cnt[3]),
+    .I1(GND),
+    .I3(GND),
+    .CIN(n14_2) 
+);
+defparam n13_s.ALU_MODE=0;
+  ALU n12_s (
+    .SUM(n12_1),
+    .COUT(n12_0_COUT),
+    .I0(b_cnt[4]),
+    .I1(GND),
+    .I3(GND),
+    .CIN(n13_2) 
+);
+defparam n12_s.ALU_MODE=0;
+  INV n16_s2 (
+    .O(n16_6),
+    .I(b_cnt[0]) 
+);
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+endmodule /* audio_drive */
+module sd_init (
+  clk_d,
+  rst_d,
+  n9_6,
+  sd_miso_d,
+  init_sd_cs,
+  init_sd_mosi,
+  sd_init_done_Z
+)
+;
+input clk_d;
+input rst_d;
+input n9_6;
+input sd_miso_d;
+output init_sd_cs;
+output init_sd_mosi;
+output sd_init_done_Z;
+wire n247_5;
+wire res_en_8;
+wire \next_state.st_send_cmd0 ;
+wire \next_state.st_wait_cmd0_15 ;
+wire \next_state.st_send_cmd55 ;
+wire \next_state.st_init_done_11 ;
+wire n517_10;
+wire n515_12;
+wire n529_18;
+wire n118_6;
+wire n117_6;
+wire n116_6;
+wire n115_7;
+wire n7_30;
+wire n555_5;
+wire n407_7;
+wire n406_6;
+wire n405_6;
+wire n404_6;
+wire n403_6;
+wire n402_6;
+wire n401_6;
+wire n400_6;
+wire n399_6;
+wire n398_6;
+wire n397_6;
+wire n396_6;
+wire n395_6;
+wire n394_6;
+wire n393_6;
+wire n392_6;
+wire n391_6;
+wire n390_6;
+wire n389_6;
+wire n388_6;
+wire n387_6;
+wire n386_6;
+wire n385_6;
+wire n384_6;
+wire n383_6;
+wire \cur_state.st_wait_cmd0_8 ;
+wire \cur_state.st_send_cmd8_8 ;
+wire cmd_bit_cnt_4_7;
+wire cmd_bit_cnt_2_8;
+wire cmd_bit_cnt_1_8;
+wire n527_24;
+wire n523_24;
+wire n521_24;
+wire n519_26;
+wire n247_6;
+wire n247_7;
+wire res_en_9;
+wire n519_27;
+wire \next_state.st_send_cmd0_11 ;
+wire \next_state.st_send_cmd0_12 ;
+wire \next_state.st_send_cmd0_13 ;
+wire \next_state.st_wait_cmd0_16 ;
+wire \next_state.st_send_cmd55_10 ;
+wire \next_state.st_send_cmd55_11 ;
+wire \next_state.st_init_done_12 ;
+wire n517_11;
+wire n517_12;
+wire n517_13;
+wire n517_14;
+wire n515_13;
+wire n529_19;
+wire n529_20;
+wire n555_6;
+wire n555_7;
+wire n555_9;
+wire n404_7;
+wire n403_7;
+wire n399_7;
+wire n397_7;
+wire n396_7;
+wire n394_7;
+wire n392_7;
+wire n391_7;
+wire n389_7;
+wire n386_7;
+wire n383_7;
+wire cmd_bit_cnt_5_9;
+wire cmd_bit_cnt_2_9;
+wire n521_25;
+wire n519_28;
+wire \next_state.st_send_cmd55_12 ;
+wire \next_state.st_send_cmd55_13 ;
+wire \next_state.st_init_done_13 ;
+wire n517_15;
+wire n517_16;
+wire n517_17;
+wire n517_18;
+wire n517_19;
+wire n555_10;
+wire n555_11;
+wire n555_12;
+wire n396_8;
+wire n517_20;
+wire n517_21;
+wire n517_22;
+wire n517_23;
+wire n517_24;
+wire n555_14;
+wire n525_26;
+wire \next_state.st_send_acmd41_18 ;
+wire \next_state.st_send_cmd8_17 ;
+wire n519_30;
+wire n384_9;
+wire n385_9;
+wire n387_9;
+wire n388_9;
+wire n38_8;
+wire n38_10;
+wire n119_9;
+wire res_data_0_10;
+wire n120_10;
+wire cmd_bit_cnt_3_10;
+wire \cur_state.st_send_cmd0 ;
+wire \cur_state.st_send_cmd55 ;
+wire over_time_en;
+wire res_en;
+wire \cur_state.st_wait_cmd0 ;
+wire \cur_state.st_send_cmd8 ;
+wire \cur_state.st_send_acmd41 ;
+wire \cur_state.st_init_done ;
+wire \cur_state.st_idle ;
+wire res_flag;
+wire n15_1;
+wire n15_2;
+wire n14_1;
+wire n14_2;
+wire n13_1;
+wire n13_2;
+wire n12_1;
+wire n12_2;
+wire n11_1;
+wire n11_2;
+wire n10_1;
+wire n10_2;
+wire n9_1;
+wire n9_0_COUT;
+wire n16_6;
+wire [7:0] poweron_cnt;
+wire [47:0] res_data;
+wire [24:0] over_time_cnt;
+wire [5:0] res_bit_cnt;
+wire [5:0] cmd_bit_cnt;
+wire VCC;
+wire GND;
+  LUT4 n247_s2 (
+    .F(n247_5),
+    .I0(poweron_cnt[5]),
+    .I1(poweron_cnt[4]),
+    .I2(n247_6),
+    .I3(n247_7) 
+);
+defparam n247_s2.INIT=16'h4000;
+  LUT4 res_en_s3 (
+    .F(res_en_8),
+    .I0(res_bit_cnt[4]),
+    .I1(res_bit_cnt[5]),
+    .I2(res_en_9),
+    .I3(res_flag) 
+);
+defparam res_en_s3.INIT=16'h40FF;
+  LUT4 \next_state.st_send_cmd0_s6  (
+    .F(\next_state.st_send_cmd0 ),
+    .I0(\next_state.st_send_cmd0_11 ),
+    .I1(\next_state.st_send_cmd0_12 ),
+    .I2(\cur_state.st_wait_cmd0 ),
+    .I3(\next_state.st_send_cmd0_13 ) 
+);
+defparam \next_state.st_send_cmd0_s6 .INIT=16'h10FF;
+  LUT4 \next_state.st_wait_cmd0_s9  (
+    .F(\next_state.st_wait_cmd0_15 ),
+    .I0(cmd_bit_cnt[4]),
+    .I1(cmd_bit_cnt[5]),
+    .I2(\cur_state.st_send_cmd0 ),
+    .I3(\next_state.st_wait_cmd0_16 ) 
+);
+defparam \next_state.st_wait_cmd0_s9 .INIT=16'h4000;
+  LUT3 \next_state.st_send_cmd55_s5  (
+    .F(\next_state.st_send_cmd55 ),
+    .I0(\next_state.st_send_cmd55_10 ),
+    .I1(\cur_state.st_send_cmd8 ),
+    .I2(\next_state.st_send_cmd55_11 ) 
+);
+defparam \next_state.st_send_cmd55_s5 .INIT=8'hF8;
+  LUT4 \next_state.st_init_done_s6  (
+    .F(\next_state.st_init_done_11 ),
+    .I0(res_data[40]),
+    .I1(res_en),
+    .I2(\cur_state.st_send_acmd41 ),
+    .I3(\next_state.st_init_done_12 ) 
+);
+defparam \next_state.st_init_done_s6 .INIT=16'h4000;
+  LUT4 n517_s6 (
+    .F(n517_10),
+    .I0(n517_11),
+    .I1(n517_12),
+    .I2(n517_13),
+    .I3(n517_14) 
+);
+defparam n517_s6.INIT=16'hEFFF;
+  LUT3 n515_s8 (
+    .F(n515_12),
+    .I0(n515_13),
+    .I1(\cur_state.st_idle ),
+    .I2(\cur_state.st_init_done ) 
+);
+defparam n515_s8.INIT=8'hFE;
+  LUT4 n529_s13 (
+    .F(n529_18),
+    .I0(res_en),
+    .I1(n529_19),
+    .I2(n529_20),
+    .I3(cmd_bit_cnt[0]) 
+);
+defparam n529_s13.INIT=16'h440F;
+  LUT3 n118_s2 (
+    .F(n118_6),
+    .I0(res_bit_cnt[0]),
+    .I1(res_bit_cnt[1]),
+    .I2(res_bit_cnt[2]) 
+);
+defparam n118_s2.INIT=8'h78;
+  LUT4 n117_s2 (
+    .F(n117_6),
+    .I0(res_bit_cnt[0]),
+    .I1(res_bit_cnt[1]),
+    .I2(res_bit_cnt[2]),
+    .I3(res_bit_cnt[3]) 
+);
+defparam n117_s2.INIT=16'h7F80;
+  LUT4 n116_s2 (
+    .F(n116_6),
+    .I0(n38_10),
+    .I1(res_bit_cnt[5]),
+    .I2(res_bit_cnt[4]),
+    .I3(res_en_9) 
+);
+defparam n116_s2.INIT=16'h0BF0;
+  LUT4 n115_s3 (
+    .F(n115_7),
+    .I0(n38_10),
+    .I1(res_en_9),
+    .I2(res_bit_cnt[4]),
+    .I3(res_bit_cnt[5]) 
+);
+defparam n115_s3.INIT=16'h3BC0;
+  LUT4 n7_s22 (
+    .F(n7_30),
+    .I0(poweron_cnt[5]),
+    .I1(poweron_cnt[4]),
+    .I2(poweron_cnt[6]),
+    .I3(poweron_cnt[7]) 
+);
+defparam n7_s22.INIT=16'h001F;
+  LUT4 n555_s1 (
+    .F(n555_5),
+    .I0(n555_6),
+    .I1(n555_7),
+    .I2(n555_14),
+    .I3(n555_9) 
+);
+defparam n555_s1.INIT=16'h8000;
+  LUT2 n407_s3 (
+    .F(n407_7),
+    .I0(over_time_en),
+    .I1(over_time_cnt[0]) 
+);
+defparam n407_s3.INIT=4'h1;
+  LUT3 n406_s2 (
+    .F(n406_6),
+    .I0(over_time_en),
+    .I1(over_time_cnt[0]),
+    .I2(over_time_cnt[1]) 
+);
+defparam n406_s2.INIT=8'h14;
+  LUT4 n405_s2 (
+    .F(n405_6),
+    .I0(over_time_cnt[0]),
+    .I1(over_time_cnt[1]),
+    .I2(over_time_en),
+    .I3(over_time_cnt[2]) 
+);
+defparam n405_s2.INIT=16'h0708;
+  LUT3 n404_s2 (
+    .F(n404_6),
+    .I0(over_time_en),
+    .I1(n404_7),
+    .I2(over_time_cnt[3]) 
+);
+defparam n404_s2.INIT=8'h14;
+  LUT3 n403_s2 (
+    .F(n403_6),
+    .I0(over_time_en),
+    .I1(over_time_cnt[4]),
+    .I2(n403_7) 
+);
+defparam n403_s2.INIT=8'h14;
+  LUT4 n402_s2 (
+    .F(n402_6),
+    .I0(over_time_cnt[4]),
+    .I1(n403_7),
+    .I2(over_time_en),
+    .I3(over_time_cnt[5]) 
+);
+defparam n402_s2.INIT=16'h0708;
+  LUT3 n401_s2 (
+    .F(n401_6),
+    .I0(over_time_en),
+    .I1(over_time_cnt[6]),
+    .I2(n555_7) 
+);
+defparam n401_s2.INIT=8'h14;
+  LUT4 n400_s2 (
+    .F(n400_6),
+    .I0(over_time_cnt[6]),
+    .I1(n555_7),
+    .I2(over_time_en),
+    .I3(over_time_cnt[7]) 
+);
+defparam n400_s2.INIT=16'h0708;
+  LUT3 n399_s2 (
+    .F(n399_6),
+    .I0(over_time_en),
+    .I1(over_time_cnt[8]),
+    .I2(n399_7) 
+);
+defparam n399_s2.INIT=8'h14;
+  LUT4 n398_s2 (
+    .F(n398_6),
+    .I0(over_time_cnt[8]),
+    .I1(n399_7),
+    .I2(over_time_en),
+    .I3(over_time_cnt[9]) 
+);
+defparam n398_s2.INIT=16'h0708;
+  LUT4 n397_s2 (
+    .F(n397_6),
+    .I0(n399_7),
+    .I1(n397_7),
+    .I2(over_time_en),
+    .I3(over_time_cnt[10]) 
+);
+defparam n397_s2.INIT=16'h0708;
+  LUT3 n396_s2 (
+    .F(n396_6),
+    .I0(over_time_en),
+    .I1(over_time_cnt[11]),
+    .I2(n396_7) 
+);
+defparam n396_s2.INIT=8'h14;
+  LUT4 n395_s2 (
+    .F(n395_6),
+    .I0(over_time_cnt[11]),
+    .I1(n396_7),
+    .I2(over_time_en),
+    .I3(over_time_cnt[12]) 
+);
+defparam n395_s2.INIT=16'h0708;
+  LUT3 n394_s2 (
+    .F(n394_6),
+    .I0(over_time_en),
+    .I1(over_time_cnt[13]),
+    .I2(n394_7) 
+);
+defparam n394_s2.INIT=8'h14;
+  LUT4 n393_s2 (
+    .F(n393_6),
+    .I0(over_time_cnt[13]),
+    .I1(n394_7),
+    .I2(over_time_en),
+    .I3(over_time_cnt[14]) 
+);
+defparam n393_s2.INIT=16'h0708;
+  LUT4 n392_s2 (
+    .F(n392_6),
+    .I0(n392_7),
+    .I1(n394_7),
+    .I2(over_time_en),
+    .I3(over_time_cnt[15]) 
+);
+defparam n392_s2.INIT=16'h0708;
+  LUT3 n391_s2 (
+    .F(n391_6),
+    .I0(over_time_en),
+    .I1(over_time_cnt[16]),
+    .I2(n391_7) 
+);
+defparam n391_s2.INIT=8'h14;
+  LUT4 n390_s2 (
+    .F(n390_6),
+    .I0(over_time_cnt[16]),
+    .I1(n391_7),
+    .I2(over_time_en),
+    .I3(over_time_cnt[17]) 
+);
+defparam n390_s2.INIT=16'h0708;
+  LUT4 n389_s2 (
+    .F(n389_6),
+    .I0(n391_7),
+    .I1(n389_7),
+    .I2(over_time_en),
+    .I3(over_time_cnt[18]) 
+);
+defparam n389_s2.INIT=16'h0708;
+  LUT4 n388_s2 (
+    .F(n388_6),
+    .I0(n391_7),
+    .I1(n388_9),
+    .I2(over_time_en),
+    .I3(over_time_cnt[19]) 
+);
+defparam n388_s2.INIT=16'h0708;
+  LUT4 n387_s2 (
+    .F(n387_6),
+    .I0(n391_7),
+    .I1(n387_9),
+    .I2(over_time_en),
+    .I3(over_time_cnt[20]) 
+);
+defparam n387_s2.INIT=16'h0708;
+  LUT4 n386_s2 (
+    .F(n386_6),
+    .I0(n391_7),
+    .I1(n386_7),
+    .I2(over_time_en),
+    .I3(over_time_cnt[21]) 
+);
+defparam n386_s2.INIT=16'h0708;
+  LUT4 n385_s2 (
+    .F(n385_6),
+    .I0(n391_7),
+    .I1(n385_9),
+    .I2(over_time_en),
+    .I3(over_time_cnt[22]) 
+);
+defparam n385_s2.INIT=16'h0708;
+  LUT4 n384_s2 (
+    .F(n384_6),
+    .I0(n391_7),
+    .I1(n384_9),
+    .I2(over_time_en),
+    .I3(over_time_cnt[23]) 
+);
+defparam n384_s2.INIT=16'h0708;
+  LUT4 n383_s2 (
+    .F(n383_6),
+    .I0(n383_7),
+    .I1(n391_7),
+    .I2(over_time_en),
+    .I3(over_time_cnt[24]) 
+);
+defparam n383_s2.INIT=16'h0708;
+  LUT3 \cur_state.st_wait_cmd0_s3  (
+    .F(\cur_state.st_wait_cmd0_8 ),
+    .I0(over_time_en),
+    .I1(res_en),
+    .I2(\next_state.st_wait_cmd0_15 ) 
+);
+defparam \cur_state.st_wait_cmd0_s3 .INIT=8'hFE;
+  LUT3 \cur_state.st_send_cmd8_s3  (
+    .F(\cur_state.st_send_cmd8_8 ),
+    .I0(\next_state.st_send_cmd0_11 ),
+    .I1(\cur_state.st_wait_cmd0 ),
+    .I2(\next_state.st_send_cmd55_10 ) 
+);
+defparam \cur_state.st_send_cmd8_s3 .INIT=8'hF8;
+  LUT3 cmd_bit_cnt_5_s3 (
+    .F(cmd_bit_cnt_4_7),
+    .I0(\next_state.st_wait_cmd0_16 ),
+    .I1(\cur_state.st_send_cmd0 ),
+    .I2(cmd_bit_cnt_5_9) 
+);
+defparam cmd_bit_cnt_5_s3.INIT=8'hF4;
+  LUT4 cmd_bit_cnt_2_s3 (
+    .F(cmd_bit_cnt_2_8),
+    .I0(cmd_bit_cnt_5_9),
+    .I1(cmd_bit_cnt[2]),
+    .I2(cmd_bit_cnt_2_9),
+    .I3(\cur_state.st_send_cmd0 ) 
+);
+defparam cmd_bit_cnt_2_s3.INIT=16'hBEAA;
+  LUT4 cmd_bit_cnt_1_s3 (
+    .F(cmd_bit_cnt_1_8),
+    .I0(cmd_bit_cnt_5_9),
+    .I1(cmd_bit_cnt[0]),
+    .I2(cmd_bit_cnt[1]),
+    .I3(\cur_state.st_send_cmd0 ) 
+);
+defparam cmd_bit_cnt_1_s3.INIT=16'hBEAA;
+  LUT3 n527_s18 (
+    .F(n527_24),
+    .I0(n529_20),
+    .I1(cmd_bit_cnt[0]),
+    .I2(cmd_bit_cnt[1]) 
+);
+defparam n527_s18.INIT=8'h14;
+  LUT4 n523_s18 (
+    .F(n523_24),
+    .I0(cmd_bit_cnt[2]),
+    .I1(cmd_bit_cnt_2_9),
+    .I2(n529_20),
+    .I3(cmd_bit_cnt[3]) 
+);
+defparam n523_s18.INIT=16'h0708;
+  LUT3 n521_s18 (
+    .F(n521_24),
+    .I0(n521_25),
+    .I1(cmd_bit_cnt[4]),
+    .I2(\next_state.st_wait_cmd0_16 ) 
+);
+defparam n521_s18.INIT=8'h24;
+  LUT4 n519_s19 (
+    .F(n519_26),
+    .I0(cmd_bit_cnt[4]),
+    .I1(\next_state.st_wait_cmd0_16 ),
+    .I2(cmd_bit_cnt[5]),
+    .I3(n519_28) 
+);
+defparam n519_s19.INIT=16'h7800;
+  LUT2 n247_s3 (
+    .F(n247_6),
+    .I0(poweron_cnt[7]),
+    .I1(poweron_cnt[6]) 
+);
+defparam n247_s3.INIT=4'h4;
+  LUT4 n247_s4 (
+    .F(n247_7),
+    .I0(poweron_cnt[0]),
+    .I1(poweron_cnt[1]),
+    .I2(poweron_cnt[2]),
+    .I3(poweron_cnt[3]) 
+);
+defparam n247_s4.INIT=16'h0001;
+  LUT4 res_en_s4 (
+    .F(res_en_9),
+    .I0(res_bit_cnt[0]),
+    .I1(res_bit_cnt[1]),
+    .I2(res_bit_cnt[2]),
+    .I3(res_bit_cnt[3]) 
+);
+defparam res_en_s4.INIT=16'h8000;
+  LUT3 n519_s20 (
+    .F(n519_27),
+    .I0(\cur_state.st_send_acmd41 ),
+    .I1(\cur_state.st_send_cmd55 ),
+    .I2(\cur_state.st_send_cmd8 ) 
+);
+defparam n519_s20.INIT=8'h01;
+  LUT3 \next_state.st_send_cmd0_s7  (
+    .F(\next_state.st_send_cmd0_11 ),
+    .I0(res_data[40]),
+    .I1(res_en),
+    .I2(\next_state.st_init_done_12 ) 
+);
+defparam \next_state.st_send_cmd0_s7 .INIT=8'h80;
+  LUT2 \next_state.st_send_cmd0_s8  (
+    .F(\next_state.st_send_cmd0_12 ),
+    .I0(over_time_en),
+    .I1(res_en) 
+);
+defparam \next_state.st_send_cmd0_s8 .INIT=4'h1;
+  LUT4 \next_state.st_send_cmd0_s9  (
+    .F(\next_state.st_send_cmd0_13 ),
+    .I0(\cur_state.st_idle ),
+    .I1(n247_5),
+    .I2(\cur_state.st_send_cmd0 ),
+    .I3(\next_state.st_wait_cmd0_15 ) 
+);
+defparam \next_state.st_send_cmd0_s9 .INIT=16'h7707;
+  LUT4 \next_state.st_wait_cmd0_s10  (
+    .F(\next_state.st_wait_cmd0_16 ),
+    .I0(cmd_bit_cnt[0]),
+    .I1(cmd_bit_cnt[1]),
+    .I2(cmd_bit_cnt[2]),
+    .I3(cmd_bit_cnt[3]) 
+);
+defparam \next_state.st_wait_cmd0_s10 .INIT=16'h8000;
+  LUT4 \next_state.st_send_cmd55_s6  (
+    .F(\next_state.st_send_cmd55_10 ),
+    .I0(res_data[17]),
+    .I1(res_en),
+    .I2(res_data[16]),
+    .I3(\next_state.st_send_cmd55_12 ) 
+);
+defparam \next_state.st_send_cmd55_s6 .INIT=16'h4000;
+  LUT4 \next_state.st_send_cmd55_s7  (
+    .F(\next_state.st_send_cmd55_11 ),
+    .I0(\next_state.st_send_cmd55_13 ),
+    .I1(\cur_state.st_send_cmd55 ),
+    .I2(res_data[40]),
+    .I3(\next_state.st_init_done_12 ) 
+);
+defparam \next_state.st_send_cmd55_s7 .INIT=16'hACEE;
+  LUT4 \next_state.st_init_done_s7  (
+    .F(\next_state.st_init_done_12 ),
+    .I0(res_data[41]),
+    .I1(res_data[42]),
+    .I2(res_data[43]),
+    .I3(\next_state.st_init_done_13 ) 
+);
+defparam \next_state.st_init_done_s7 .INIT=16'h0100;
+  LUT3 n517_s7 (
+    .F(n517_11),
+    .I0(cmd_bit_cnt[4]),
+    .I1(n517_15),
+    .I2(\cur_state.st_send_cmd0 ) 
+);
+defparam n517_s7.INIT=8'h10;
+  LUT4 n517_s8 (
+    .F(n517_12),
+    .I0(cmd_bit_cnt[5]),
+    .I1(n517_16),
+    .I2(cmd_bit_cnt[4]),
+    .I3(\cur_state.st_send_acmd41 ) 
+);
+defparam n517_s8.INIT=16'hAC00;
+  LUT3 n517_s9 (
+    .F(n517_13),
+    .I0(\cur_state.st_idle ),
+    .I1(\cur_state.st_init_done ),
+    .I2(\cur_state.st_wait_cmd0 ) 
+);
+defparam n517_s9.INIT=8'h01;
+  LUT4 n517_s10 (
+    .F(n517_14),
+    .I0(n517_17),
+    .I1(n517_18),
+    .I2(\cur_state.st_send_cmd55 ),
+    .I3(n517_19) 
+);
+defparam n517_s10.INIT=16'h0BBB;
+  LUT4 n515_s9 (
+    .F(n515_13),
+    .I0(\cur_state.st_wait_cmd0 ),
+    .I1(n529_19),
+    .I2(init_sd_cs),
+    .I3(res_en) 
+);
+defparam n515_s9.INIT=16'hEEE0;
+  LUT3 n529_s14 (
+    .F(n529_19),
+    .I0(n519_27),
+    .I1(cmd_bit_cnt[5]),
+    .I2(cmd_bit_cnt[4]) 
+);
+defparam n529_s14.INIT=8'h40;
+  LUT4 n529_s15 (
+    .F(n529_20),
+    .I0(cmd_bit_cnt[5]),
+    .I1(cmd_bit_cnt[4]),
+    .I2(n519_27),
+    .I3(\cur_state.st_send_cmd0 ) 
+);
+defparam n529_s15.INIT=16'h00F8;
+  LUT3 n555_s2 (
+    .F(n555_6),
+    .I0(over_time_cnt[6]),
+    .I1(over_time_cnt[7]),
+    .I2(\cur_state.st_wait_cmd0 ) 
+);
+defparam n555_s2.INIT=8'h10;
+  LUT3 n555_s3 (
+    .F(n555_7),
+    .I0(over_time_cnt[4]),
+    .I1(over_time_cnt[5]),
+    .I2(n403_7) 
+);
+defparam n555_s3.INIT=8'h80;
+  LUT4 n555_s5 (
+    .F(n555_9),
+    .I0(n555_10),
+    .I1(over_time_cnt[16]),
+    .I2(n555_11),
+    .I3(n555_12) 
+);
+defparam n555_s5.INIT=16'h8000;
+  LUT3 n404_s3 (
+    .F(n404_7),
+    .I0(over_time_cnt[0]),
+    .I1(over_time_cnt[1]),
+    .I2(over_time_cnt[2]) 
+);
+defparam n404_s3.INIT=8'h80;
+  LUT4 n403_s3 (
+    .F(n403_7),
+    .I0(over_time_cnt[0]),
+    .I1(over_time_cnt[1]),
+    .I2(over_time_cnt[2]),
+    .I3(over_time_cnt[3]) 
+);
+defparam n403_s3.INIT=16'h8000;
+  LUT3 n399_s3 (
+    .F(n399_7),
+    .I0(over_time_cnt[6]),
+    .I1(over_time_cnt[7]),
+    .I2(n555_7) 
+);
+defparam n399_s3.INIT=8'h80;
+  LUT2 n397_s3 (
+    .F(n397_7),
+    .I0(over_time_cnt[8]),
+    .I1(over_time_cnt[9]) 
+);
+defparam n397_s3.INIT=4'h8;
+  LUT4 n396_s3 (
+    .F(n396_7),
+    .I0(n396_8),
+    .I1(over_time_cnt[4]),
+    .I2(n403_7),
+    .I3(n397_7) 
+);
+defparam n396_s3.INIT=16'h8000;
+  LUT3 n394_s3 (
+    .F(n394_7),
+    .I0(over_time_cnt[11]),
+    .I1(over_time_cnt[12]),
+    .I2(n396_7) 
+);
+defparam n394_s3.INIT=8'h80;
+  LUT2 n392_s3 (
+    .F(n392_7),
+    .I0(over_time_cnt[13]),
+    .I1(over_time_cnt[14]) 
+);
+defparam n392_s3.INIT=4'h8;
+  LUT3 n391_s3 (
+    .F(n391_7),
+    .I0(over_time_cnt[15]),
+    .I1(n555_14),
+    .I2(n396_7) 
+);
+defparam n391_s3.INIT=8'h80;
+  LUT2 n389_s3 (
+    .F(n389_7),
+    .I0(over_time_cnt[16]),
+    .I1(over_time_cnt[17]) 
+);
+defparam n389_s3.INIT=4'h8;
+  LUT2 n386_s3 (
+    .F(n386_7),
+    .I0(over_time_cnt[20]),
+    .I1(n387_9) 
+);
+defparam n386_s3.INIT=4'h8;
+  LUT4 n383_s3 (
+    .F(n383_7),
+    .I0(over_time_cnt[22]),
+    .I1(over_time_cnt[23]),
+    .I2(n555_11),
+    .I3(n389_7) 
+);
+defparam n383_s3.INIT=16'h8000;
+  LUT3 cmd_bit_cnt_5_s4 (
+    .F(cmd_bit_cnt_5_9),
+    .I0(n529_19),
+    .I1(res_en),
+    .I2(n519_30) 
+);
+defparam cmd_bit_cnt_5_s4.INIT=8'hD0;
+  LUT2 cmd_bit_cnt_2_s4 (
+    .F(cmd_bit_cnt_2_9),
+    .I0(cmd_bit_cnt[0]),
+    .I1(cmd_bit_cnt[1]) 
+);
+defparam cmd_bit_cnt_2_s4.INIT=4'h8;
+  LUT4 n521_s19 (
+    .F(n521_25),
+    .I0(cmd_bit_cnt[5]),
+    .I1(cmd_bit_cnt[4]),
+    .I2(\cur_state.st_send_cmd0 ),
+    .I3(n519_27) 
+);
+defparam n521_s19.INIT=16'h1C3B;
+  LUT4 n519_s21 (
+    .F(n519_28),
+    .I0(\cur_state.st_send_cmd0 ),
+    .I1(cmd_bit_cnt[4]),
+    .I2(n519_27),
+    .I3(\next_state.st_wait_cmd0_16 ) 
+);
+defparam n519_s21.INIT=16'h8FAB;
+  LUT2 \next_state.st_send_cmd55_s8  (
+    .F(\next_state.st_send_cmd55_12 ),
+    .I0(res_data[18]),
+    .I1(res_data[19]) 
+);
+defparam \next_state.st_send_cmd55_s8 .INIT=4'h1;
+  LUT3 \next_state.st_send_cmd55_s9  (
+    .F(\next_state.st_send_cmd55_13 ),
+    .I0(\cur_state.st_send_acmd41 ),
+    .I1(\cur_state.st_send_cmd55 ),
+    .I2(res_en) 
+);
+defparam \next_state.st_send_cmd55_s9 .INIT=8'hAC;
+  LUT4 \next_state.st_init_done_s8  (
+    .F(\next_state.st_init_done_13 ),
+    .I0(res_data[44]),
+    .I1(res_data[45]),
+    .I2(res_data[46]),
+    .I3(res_data[47]) 
+);
+defparam \next_state.st_init_done_s8 .INIT=16'h0001;
+  LUT4 n517_s11 (
+    .F(n517_15),
+    .I0(n517_20),
+    .I1(cmd_bit_cnt[0]),
+    .I2(cmd_bit_cnt[3]),
+    .I3(cmd_bit_cnt[5]) 
+);
+defparam n517_s11.INIT=16'h9FF7;
+  LUT4 n517_s12 (
+    .F(n517_16),
+    .I0(n517_21),
+    .I1(cmd_bit_cnt[5]),
+    .I2(cmd_bit_cnt[3]),
+    .I3(n517_20) 
+);
+defparam n517_s12.INIT=16'hD1C1;
+  LUT4 n517_s13 (
+    .F(n517_17),
+    .I0(cmd_bit_cnt[5]),
+    .I1(n517_22),
+    .I2(cmd_bit_cnt[4]),
+    .I3(cmd_bit_cnt[3]) 
+);
+defparam n517_s13.INIT=16'h4551;
+  LUT4 n517_s14 (
+    .F(n517_18),
+    .I0(cmd_bit_cnt[4]),
+    .I1(n517_23),
+    .I2(cmd_bit_cnt[5]),
+    .I3(\cur_state.st_send_cmd8 ) 
+);
+defparam n517_s14.INIT=16'hBF00;
+  LUT4 n517_s15 (
+    .F(n517_19),
+    .I0(cmd_bit_cnt[1]),
+    .I1(cmd_bit_cnt[0]),
+    .I2(cmd_bit_cnt[5]),
+    .I3(n517_24) 
+);
+defparam n517_s15.INIT=16'h0EF0;
+  LUT4 n555_s6 (
+    .F(n555_10),
+    .I0(over_time_cnt[17]),
+    .I1(over_time_cnt[23]),
+    .I2(over_time_cnt[22]),
+    .I3(over_time_cnt[24]) 
+);
+defparam n555_s6.INIT=16'h1000;
+  LUT4 n555_s7 (
+    .F(n555_11),
+    .I0(over_time_cnt[18]),
+    .I1(over_time_cnt[19]),
+    .I2(over_time_cnt[20]),
+    .I3(over_time_cnt[21]) 
+);
+defparam n555_s7.INIT=16'h8000;
+  LUT4 n555_s8 (
+    .F(n555_12),
+    .I0(over_time_cnt[8]),
+    .I1(over_time_cnt[9]),
+    .I2(over_time_cnt[10]),
+    .I3(over_time_cnt[15]) 
+);
+defparam n555_s8.INIT=16'h0001;
+  LUT4 n396_s4 (
+    .F(n396_8),
+    .I0(over_time_cnt[5]),
+    .I1(over_time_cnt[6]),
+    .I2(over_time_cnt[7]),
+    .I3(over_time_cnt[10]) 
+);
+defparam n396_s4.INIT=16'h8000;
+  LUT2 n517_s16 (
+    .F(n517_20),
+    .I0(cmd_bit_cnt[1]),
+    .I1(cmd_bit_cnt[2]) 
+);
+defparam n517_s16.INIT=4'h1;
+  LUT3 n517_s17 (
+    .F(n517_21),
+    .I0(cmd_bit_cnt[0]),
+    .I1(cmd_bit_cnt[1]),
+    .I2(cmd_bit_cnt[2]) 
+);
+defparam n517_s17.INIT=8'h69;
+  LUT4 n517_s18 (
+    .F(n517_22),
+    .I0(cmd_bit_cnt[1]),
+    .I1(cmd_bit_cnt[3]),
+    .I2(cmd_bit_cnt[0]),
+    .I3(cmd_bit_cnt[2]) 
+);
+defparam n517_s18.INIT=16'h4DDC;
+  LUT4 n517_s19 (
+    .F(n517_23),
+    .I0(cmd_bit_cnt[1]),
+    .I1(cmd_bit_cnt[0]),
+    .I2(cmd_bit_cnt[3]),
+    .I3(cmd_bit_cnt[2]) 
+);
+defparam n517_s19.INIT=16'h1CEC;
+  LUT2 n517_s20 (
+    .F(n517_24),
+    .I0(cmd_bit_cnt[3]),
+    .I1(cmd_bit_cnt[4]) 
+);
+defparam n517_s20.INIT=4'h1;
+  LUT4 n555_s9 (
+    .F(n555_14),
+    .I0(over_time_cnt[11]),
+    .I1(over_time_cnt[12]),
+    .I2(over_time_cnt[13]),
+    .I3(over_time_cnt[14]) 
+);
+defparam n555_s9.INIT=16'h8000;
+  LUT4 n525_s19 (
+    .F(n525_26),
+    .I0(n529_20),
+    .I1(cmd_bit_cnt[2]),
+    .I2(cmd_bit_cnt[0]),
+    .I3(cmd_bit_cnt[1]) 
+);
+defparam n525_s19.INIT=16'h1444;
+  LUT4 \next_state.st_send_acmd41_s11  (
+    .F(\next_state.st_send_acmd41_18 ),
+    .I0(\cur_state.st_send_cmd55 ),
+    .I1(res_data[40]),
+    .I2(res_en),
+    .I3(\next_state.st_init_done_12 ) 
+);
+defparam \next_state.st_send_acmd41_s11 .INIT=16'h8000;
+  LUT4 \next_state.st_send_cmd8_s10  (
+    .F(\next_state.st_send_cmd8_17 ),
+    .I0(\cur_state.st_wait_cmd0 ),
+    .I1(res_data[40]),
+    .I2(res_en),
+    .I3(\next_state.st_init_done_12 ) 
+);
+defparam \next_state.st_send_cmd8_s10 .INIT=16'h8000;
+  LUT4 n519_s22 (
+    .F(n519_30),
+    .I0(\cur_state.st_send_cmd0 ),
+    .I1(\cur_state.st_send_acmd41 ),
+    .I2(\cur_state.st_send_cmd55 ),
+    .I3(\cur_state.st_send_cmd8 ) 
+);
+defparam n519_s22.INIT=16'hFFFE;
+  LUT4 n384_s4 (
+    .F(n384_9),
+    .I0(over_time_cnt[22]),
+    .I1(n555_11),
+    .I2(over_time_cnt[16]),
+    .I3(over_time_cnt[17]) 
+);
+defparam n384_s4.INIT=16'h8000;
+  LUT3 n385_s4 (
+    .F(n385_9),
+    .I0(n555_11),
+    .I1(over_time_cnt[16]),
+    .I2(over_time_cnt[17]) 
+);
+defparam n385_s4.INIT=8'h80;
+  LUT4 n387_s4 (
+    .F(n387_9),
+    .I0(over_time_cnt[18]),
+    .I1(over_time_cnt[19]),
+    .I2(over_time_cnt[16]),
+    .I3(over_time_cnt[17]) 
+);
+defparam n387_s4.INIT=16'h8000;
+  LUT3 n388_s4 (
+    .F(n388_9),
+    .I0(over_time_cnt[18]),
+    .I1(over_time_cnt[16]),
+    .I2(over_time_cnt[17]) 
+);
+defparam n388_s4.INIT=8'h80;
+  LUT3 n38_s4 (
+    .F(n38_8),
+    .I0(sd_miso_d),
+    .I1(res_flag),
+    .I2(res_en_8) 
+);
+defparam n38_s4.INIT=8'h1C;
+  LUT2 n38_s5 (
+    .F(n38_10),
+    .I0(sd_miso_d),
+    .I1(res_flag) 
+);
+defparam n38_s5.INIT=4'h1;
+  LUT4 n119_s4 (
+    .F(n119_9),
+    .I0(sd_miso_d),
+    .I1(res_flag),
+    .I2(res_bit_cnt[1]),
+    .I3(res_bit_cnt[0]) 
+);
+defparam n119_s4.INIT=16'h2DF0;
+  LUT2 res_data_0_s3 (
+    .F(res_data_0_10),
+    .I0(sd_miso_d),
+    .I1(res_flag) 
+);
+defparam res_data_0_s3.INIT=4'hD;
+  LUT3 n120_s5 (
+    .F(n120_10),
+    .I0(sd_miso_d),
+    .I1(res_flag),
+    .I2(res_bit_cnt[0]) 
+);
+defparam n120_s5.INIT=8'h2D;
+  LUT4 cmd_bit_cnt_3_s4 (
+    .F(cmd_bit_cnt_3_10),
+    .I0(n529_19),
+    .I1(res_en),
+    .I2(n519_30),
+    .I3(n523_24) 
+);
+defparam cmd_bit_cnt_3_s4.INIT=16'hFFD0;
+  DFFCE poweron_cnt_6_s0 (
+    .Q(poweron_cnt[6]),
+    .D(n10_1),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(n7_30) 
+);
+  DFFCE poweron_cnt_5_s0 (
+    .Q(poweron_cnt[5]),
+    .D(n11_1),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(n7_30) 
+);
+  DFFCE poweron_cnt_4_s0 (
+    .Q(poweron_cnt[4]),
+    .D(n12_1),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(n7_30) 
+);
+  DFFCE poweron_cnt_3_s0 (
+    .Q(poweron_cnt[3]),
+    .D(n13_1),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(n7_30) 
+);
+  DFFCE poweron_cnt_2_s0 (
+    .Q(poweron_cnt[2]),
+    .D(n14_1),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(n7_30) 
+);
+  DFFCE poweron_cnt_1_s0 (
+    .Q(poweron_cnt[1]),
+    .D(n15_1),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(n7_30) 
+);
+  DFFCE poweron_cnt_0_s0 (
+    .Q(poweron_cnt[0]),
+    .D(n16_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(n7_30) 
+);
+  DFFCE res_data_47_s0 (
+    .Q(res_data[47]),
+    .D(res_data[46]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_46_s0 (
+    .Q(res_data[46]),
+    .D(res_data[45]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_45_s0 (
+    .Q(res_data[45]),
+    .D(res_data[44]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_44_s0 (
+    .Q(res_data[44]),
+    .D(res_data[43]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_43_s0 (
+    .Q(res_data[43]),
+    .D(res_data[42]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_42_s0 (
+    .Q(res_data[42]),
+    .D(res_data[41]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_41_s0 (
+    .Q(res_data[41]),
+    .D(res_data[40]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_40_s0 (
+    .Q(res_data[40]),
+    .D(res_data[39]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_39_s0 (
+    .Q(res_data[39]),
+    .D(res_data[38]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_38_s0 (
+    .Q(res_data[38]),
+    .D(res_data[37]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_37_s0 (
+    .Q(res_data[37]),
+    .D(res_data[36]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_36_s0 (
+    .Q(res_data[36]),
+    .D(res_data[35]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_35_s0 (
+    .Q(res_data[35]),
+    .D(res_data[34]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_34_s0 (
+    .Q(res_data[34]),
+    .D(res_data[33]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_33_s0 (
+    .Q(res_data[33]),
+    .D(res_data[32]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_32_s0 (
+    .Q(res_data[32]),
+    .D(res_data[31]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_31_s0 (
+    .Q(res_data[31]),
+    .D(res_data[30]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_30_s0 (
+    .Q(res_data[30]),
+    .D(res_data[29]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_29_s0 (
+    .Q(res_data[29]),
+    .D(res_data[28]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_28_s0 (
+    .Q(res_data[28]),
+    .D(res_data[27]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_27_s0 (
+    .Q(res_data[27]),
+    .D(res_data[26]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_26_s0 (
+    .Q(res_data[26]),
+    .D(res_data[25]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_25_s0 (
+    .Q(res_data[25]),
+    .D(res_data[24]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_24_s0 (
+    .Q(res_data[24]),
+    .D(res_data[23]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_23_s0 (
+    .Q(res_data[23]),
+    .D(res_data[22]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_22_s0 (
+    .Q(res_data[22]),
+    .D(res_data[21]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_21_s0 (
+    .Q(res_data[21]),
+    .D(res_data[20]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_20_s0 (
+    .Q(res_data[20]),
+    .D(res_data[19]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_19_s0 (
+    .Q(res_data[19]),
+    .D(res_data[18]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_18_s0 (
+    .Q(res_data[18]),
+    .D(res_data[17]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_17_s0 (
+    .Q(res_data[17]),
+    .D(res_data[16]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_16_s0 (
+    .Q(res_data[16]),
+    .D(res_data[15]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_15_s0 (
+    .Q(res_data[15]),
+    .D(res_data[14]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_14_s0 (
+    .Q(res_data[14]),
+    .D(res_data[13]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_13_s0 (
+    .Q(res_data[13]),
+    .D(res_data[12]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_12_s0 (
+    .Q(res_data[12]),
+    .D(res_data[11]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_11_s0 (
+    .Q(res_data[11]),
+    .D(res_data[10]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_10_s0 (
+    .Q(res_data[10]),
+    .D(res_data[9]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_9_s0 (
+    .Q(res_data[9]),
+    .D(res_data[8]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_8_s0 (
+    .Q(res_data[8]),
+    .D(res_data[7]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_7_s0 (
+    .Q(res_data[7]),
+    .D(res_data[6]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_6_s0 (
+    .Q(res_data[6]),
+    .D(res_data[5]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_5_s0 (
+    .Q(res_data[5]),
+    .D(res_data[4]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_4_s0 (
+    .Q(res_data[4]),
+    .D(res_data[3]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_3_s0 (
+    .Q(res_data[3]),
+    .D(res_data[2]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_2_s0 (
+    .Q(res_data[2]),
+    .D(res_data[1]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE res_data_1_s0 (
+    .Q(res_data[1]),
+    .D(res_data[0]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+  DFFCE \cur_state.st_send_cmd0_s0  (
+    .Q(\cur_state.st_send_cmd0 ),
+    .D(\next_state.st_send_cmd0 ),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE \cur_state.st_send_cmd55_s0  (
+    .Q(\cur_state.st_send_cmd55 ),
+    .D(\next_state.st_send_cmd55 ),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFPE sd_cs_s0 (
+    .Q(init_sd_cs),
+    .D(n515_12),
+    .CLK(clk_d),
+    .PRESET(rst_d),
+    .CE(VCC) 
+);
+  DFFPE sd_mosi_s0 (
+    .Q(init_sd_mosi),
+    .D(n517_10),
+    .CLK(clk_d),
+    .PRESET(rst_d),
+    .CE(VCC) 
+);
+  DFFCE sd_init_done_s0 (
+    .Q(sd_init_done_Z),
+    .D(VCC),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_init_done ) 
+);
+  DFFCE over_time_cnt_24_s0 (
+    .Q(over_time_cnt[24]),
+    .D(n383_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_23_s0 (
+    .Q(over_time_cnt[23]),
+    .D(n384_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_22_s0 (
+    .Q(over_time_cnt[22]),
+    .D(n385_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_21_s0 (
+    .Q(over_time_cnt[21]),
+    .D(n386_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_20_s0 (
+    .Q(over_time_cnt[20]),
+    .D(n387_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_19_s0 (
+    .Q(over_time_cnt[19]),
+    .D(n388_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_18_s0 (
+    .Q(over_time_cnt[18]),
+    .D(n389_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_17_s0 (
+    .Q(over_time_cnt[17]),
+    .D(n390_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_16_s0 (
+    .Q(over_time_cnt[16]),
+    .D(n391_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_15_s0 (
+    .Q(over_time_cnt[15]),
+    .D(n392_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_14_s0 (
+    .Q(over_time_cnt[14]),
+    .D(n393_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_13_s0 (
+    .Q(over_time_cnt[13]),
+    .D(n394_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_12_s0 (
+    .Q(over_time_cnt[12]),
+    .D(n395_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_11_s0 (
+    .Q(over_time_cnt[11]),
+    .D(n396_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_10_s0 (
+    .Q(over_time_cnt[10]),
+    .D(n397_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_9_s0 (
+    .Q(over_time_cnt[9]),
+    .D(n398_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_8_s0 (
+    .Q(over_time_cnt[8]),
+    .D(n399_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_7_s0 (
+    .Q(over_time_cnt[7]),
+    .D(n400_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_6_s0 (
+    .Q(over_time_cnt[6]),
+    .D(n401_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_5_s0 (
+    .Q(over_time_cnt[5]),
+    .D(n402_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_4_s0 (
+    .Q(over_time_cnt[4]),
+    .D(n403_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_3_s0 (
+    .Q(over_time_cnt[3]),
+    .D(n404_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_2_s0 (
+    .Q(over_time_cnt[2]),
+    .D(n405_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_1_s0 (
+    .Q(over_time_cnt[1]),
+    .D(n406_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_cnt_0_s0 (
+    .Q(over_time_cnt[0]),
+    .D(n407_7),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0 ) 
+);
+  DFFCE over_time_en_s0 (
+    .Q(over_time_en),
+    .D(n555_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE poweron_cnt_7_s0 (
+    .Q(poweron_cnt[7]),
+    .D(n9_1),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(n7_30) 
+);
+  DFFCE res_en_s1 (
+    .Q(res_en),
+    .D(res_flag),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_en_8) 
+);
+defparam res_en_s1.INIT=1'b0;
+  DFFCE res_data_0_s1 (
+    .Q(res_data[0]),
+    .D(sd_miso_d),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+defparam res_data_0_s1.INIT=1'b0;
+  DFFCE res_bit_cnt_5_s1 (
+    .Q(res_bit_cnt[5]),
+    .D(n115_7),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+defparam res_bit_cnt_5_s1.INIT=1'b0;
+  DFFCE res_bit_cnt_4_s1 (
+    .Q(res_bit_cnt[4]),
+    .D(n116_6),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+defparam res_bit_cnt_4_s1.INIT=1'b0;
+  DFFCE res_bit_cnt_3_s1 (
+    .Q(res_bit_cnt[3]),
+    .D(n117_6),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+defparam res_bit_cnt_3_s1.INIT=1'b0;
+  DFFCE res_bit_cnt_2_s1 (
+    .Q(res_bit_cnt[2]),
+    .D(n118_6),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_data_0_10) 
+);
+defparam res_bit_cnt_2_s1.INIT=1'b0;
+  DFFCE cmd_bit_cnt_5_s1 (
+    .Q(cmd_bit_cnt[5]),
+    .D(n519_26),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(cmd_bit_cnt_4_7) 
+);
+defparam cmd_bit_cnt_5_s1.INIT=1'b0;
+  DFFCE cmd_bit_cnt_4_s1 (
+    .Q(cmd_bit_cnt[4]),
+    .D(n521_24),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(cmd_bit_cnt_4_7) 
+);
+defparam cmd_bit_cnt_4_s1.INIT=1'b0;
+  DFFCE cmd_bit_cnt_3_s1 (
+    .Q(cmd_bit_cnt[3]),
+    .D(n523_24),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(cmd_bit_cnt_3_10) 
+);
+defparam cmd_bit_cnt_3_s1.INIT=1'b0;
+  DFFCE cmd_bit_cnt_2_s1 (
+    .Q(cmd_bit_cnt[2]),
+    .D(n525_26),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(cmd_bit_cnt_2_8) 
+);
+defparam cmd_bit_cnt_2_s1.INIT=1'b0;
+  DFFCE cmd_bit_cnt_1_s1 (
+    .Q(cmd_bit_cnt[1]),
+    .D(n527_24),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(cmd_bit_cnt_1_8) 
+);
+defparam cmd_bit_cnt_1_s1.INIT=1'b0;
+  DFFCE cmd_bit_cnt_0_s1 (
+    .Q(cmd_bit_cnt[0]),
+    .D(n529_18),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(n519_30) 
+);
+defparam cmd_bit_cnt_0_s1.INIT=1'b0;
+  DFFCE \cur_state.st_wait_cmd0_s1  (
+    .Q(\cur_state.st_wait_cmd0 ),
+    .D(\next_state.st_wait_cmd0_15 ),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_wait_cmd0_8 ) 
+);
+defparam \cur_state.st_wait_cmd0_s1 .INIT=1'b0;
+  DFFCE \cur_state.st_send_cmd8_s1  (
+    .Q(\cur_state.st_send_cmd8 ),
+    .D(\next_state.st_send_cmd8_17 ),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\cur_state.st_send_cmd8_8 ) 
+);
+defparam \cur_state.st_send_cmd8_s1 .INIT=1'b0;
+  DFFCE \cur_state.st_send_acmd41_s1  (
+    .Q(\cur_state.st_send_acmd41 ),
+    .D(\next_state.st_send_acmd41_18 ),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(res_en) 
+);
+defparam \cur_state.st_send_acmd41_s1 .INIT=1'b0;
+  DFFCE \cur_state.st_init_done_s1  (
+    .Q(\cur_state.st_init_done ),
+    .D(VCC),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(\next_state.st_init_done_11 ) 
+);
+defparam \cur_state.st_init_done_s1 .INIT=1'b0;
+  DFFPE \cur_state.st_idle_s1  (
+    .Q(\cur_state.st_idle ),
+    .D(GND),
+    .CLK(clk_d),
+    .PRESET(rst_d),
+    .CE(n247_5) 
+);
+defparam \cur_state.st_idle_s1 .INIT=1'b1;
+  DFFCE res_flag_s5 (
+    .Q(res_flag),
+    .D(n38_8),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam res_flag_s5.INIT=1'b0;
+  DFFCE res_bit_cnt_1_s3 (
+    .Q(res_bit_cnt[1]),
+    .D(n119_9),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam res_bit_cnt_1_s3.INIT=1'b0;
+  DFFCE res_bit_cnt_0_s3 (
+    .Q(res_bit_cnt[0]),
+    .D(n120_10),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam res_bit_cnt_0_s3.INIT=1'b0;
+  ALU n15_s (
+    .SUM(n15_1),
+    .COUT(n15_2),
+    .I0(poweron_cnt[1]),
+    .I1(poweron_cnt[0]),
+    .I3(GND),
+    .CIN(GND) 
+);
+defparam n15_s.ALU_MODE=0;
+  ALU n14_s (
+    .SUM(n14_1),
+    .COUT(n14_2),
+    .I0(poweron_cnt[2]),
+    .I1(GND),
+    .I3(GND),
+    .CIN(n15_2) 
+);
+defparam n14_s.ALU_MODE=0;
+  ALU n13_s (
+    .SUM(n13_1),
+    .COUT(n13_2),
+    .I0(poweron_cnt[3]),
+    .I1(GND),
+    .I3(GND),
+    .CIN(n14_2) 
+);
+defparam n13_s.ALU_MODE=0;
+  ALU n12_s (
+    .SUM(n12_1),
+    .COUT(n12_2),
+    .I0(poweron_cnt[4]),
+    .I1(GND),
+    .I3(GND),
+    .CIN(n13_2) 
+);
+defparam n12_s.ALU_MODE=0;
+  ALU n11_s (
+    .SUM(n11_1),
+    .COUT(n11_2),
+    .I0(poweron_cnt[5]),
+    .I1(GND),
+    .I3(GND),
+    .CIN(n12_2) 
+);
+defparam n11_s.ALU_MODE=0;
+  ALU n10_s (
+    .SUM(n10_1),
+    .COUT(n10_2),
+    .I0(poweron_cnt[6]),
+    .I1(GND),
+    .I3(GND),
+    .CIN(n11_2) 
+);
+defparam n10_s.ALU_MODE=0;
+  ALU n9_s (
+    .SUM(n9_1),
+    .COUT(n9_0_COUT),
+    .I0(poweron_cnt[7]),
+    .I1(GND),
+    .I3(GND),
+    .CIN(n10_2) 
+);
+defparam n9_s.ALU_MODE=0;
+  INV n16_s2 (
+    .O(n16_6),
+    .I(poweron_cnt[0]) 
+);
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+endmodule /* sd_init */
+module sd_read (
+  clk_d,
+  rst_d,
+  n9_6,
+  n22_3,
+  sd_miso_d,
+  rd_sec_addr_Z,
+  rd_val_en_Z,
+  rd_busy_Z,
+  rd_sd_cs,
+  rd_sd_mosi,
+  rd_val_data_Z
+)
+;
+input clk_d;
+input rst_d;
+input n9_6;
+input n22_3;
+input sd_miso_d;
+input [31:0] rd_sec_addr_Z;
+output rd_val_en_Z;
+output rd_busy_Z;
+output rd_sd_cs;
+output rd_sd_mosi;
+output [15:0] rd_val_data_Z;
+wire n380_74;
+wire n380_75;
+wire n380_76;
+wire n380_77;
+wire n380_78;
+wire n380_79;
+wire n380_80;
+wire n380_81;
+wire n380_82;
+wire n380_83;
+wire n380_84;
+wire n380_85;
+wire n380_86;
+wire n380_87;
+wire n380_88;
+wire n380_89;
+wire pos_rd_en;
+wire res_en_8;
+wire cmd_bit_cnt_5_6;
+wire n433_10;
+wire n532_12;
+wire n533_12;
+wire n534_12;
+wire n535_13;
+wire n435_13;
+wire n54_6;
+wire n53_6;
+wire n52_6;
+wire n51_7;
+wire n393_5;
+wire n391_5;
+wire n390_5;
+wire n167_6;
+wire n166_6;
+wire n147_6;
+wire n146_6;
+wire n145_6;
+wire n144_6;
+wire n143_6;
+wire n142_6;
+wire n141_6;
+wire n140_6;
+wire n428_4;
+wire n820_5;
+wire res_en_9;
+wire cmd_bit_cnt_5_7;
+wire n433_11;
+wire n435_14;
+wire n53_8;
+wire n392_6;
+wire n391_6;
+wire n232_6;
+wire n144_7;
+wire n141_7;
+wire n435_15;
+wire n435_16;
+wire n435_17;
+wire n232_7;
+wire n232_8;
+wire n435_18;
+wire n53_10;
+wire n165_8;
+wire n535_16;
+wire n831_5;
+wire n435_20;
+wire n428_6;
+wire n534_15;
+wire n392_8;
+wire n394_7;
+wire n395_7;
+wire n232_10;
+wire n231_8;
+wire n188_11;
+wire n148_10;
+wire n820_7;
+wire n16_8;
+wire n55_9;
+wire res_bit_cnt_5_11;
+wire n56_10;
+wire n97_7;
+wire n97_9;
+wire n173_11;
+wire n174_8;
+wire n175_8;
+wire n176_8;
+wire n177_8;
+wire n178_8;
+wire n179_8;
+wire n180_8;
+wire n181_8;
+wire n182_8;
+wire n183_8;
+wire n184_8;
+wire n185_8;
+wire n186_8;
+wire n187_8;
+wire n424_5;
+wire rd_en_d1;
+wire rx_en_t;
+wire rx_finish_en;
+wire rd_data_flag;
+wire rd_en_d0;
+wire res_en;
+wire res_flag;
+wire rx_flag;
+wire n380_91;
+wire n380_93;
+wire n380_95;
+wire n380_97;
+wire n380_99;
+wire n380_101;
+wire n380_103;
+wire n380_105;
+wire n380_107;
+wire n380_109;
+wire n380_111;
+wire n380_113;
+wire n380_115;
+wire n542_5;
+wire n168_8;
+wire [3:0] rx_bit_cnt;
+wire [8:0] rx_data_cnt;
+wire [3:0] rd_ctrl_cnt;
+wire [46:8] cmd_rd;
+wire [5:0] cmd_bit_cnt;
+wire [5:0] res_bit_cnt;
+wire [15:0] rx_data_t;
+wire VCC;
+wire GND;
+  LUT3 n380_s108 (
+    .F(n380_74),
+    .I0(cmd_rd[9]),
+    .I1(cmd_rd[8]),
+    .I2(cmd_bit_cnt[0]) 
+);
+defparam n380_s108.INIT=8'hCA;
+  LUT3 n380_s107 (
+    .F(n380_75),
+    .I0(cmd_rd[11]),
+    .I1(cmd_rd[10]),
+    .I2(cmd_bit_cnt[0]) 
+);
+defparam n380_s107.INIT=8'hCA;
+  LUT3 n380_s110 (
+    .F(n380_76),
+    .I0(cmd_rd[13]),
+    .I1(cmd_rd[12]),
+    .I2(cmd_bit_cnt[0]) 
+);
+defparam n380_s110.INIT=8'hCA;
+  LUT3 n380_s109 (
+    .F(n380_77),
+    .I0(cmd_rd[15]),
+    .I1(cmd_rd[14]),
+    .I2(cmd_bit_cnt[0]) 
+);
+defparam n380_s109.INIT=8'hCA;
+  LUT3 n380_s112 (
+    .F(n380_78),
+    .I0(cmd_rd[17]),
+    .I1(cmd_rd[16]),
+    .I2(cmd_bit_cnt[0]) 
+);
+defparam n380_s112.INIT=8'hCA;
+  LUT3 n380_s111 (
+    .F(n380_79),
+    .I0(cmd_rd[19]),
+    .I1(cmd_rd[18]),
+    .I2(cmd_bit_cnt[0]) 
+);
+defparam n380_s111.INIT=8'hCA;
+  LUT3 n380_s114 (
+    .F(n380_80),
+    .I0(cmd_rd[21]),
+    .I1(cmd_rd[20]),
+    .I2(cmd_bit_cnt[0]) 
+);
+defparam n380_s114.INIT=8'hCA;
+  LUT3 n380_s113 (
+    .F(n380_81),
+    .I0(cmd_rd[23]),
+    .I1(cmd_rd[22]),
+    .I2(cmd_bit_cnt[0]) 
+);
+defparam n380_s113.INIT=8'hCA;
+  LUT3 n380_s116 (
+    .F(n380_82),
+    .I0(cmd_rd[25]),
+    .I1(cmd_rd[24]),
+    .I2(cmd_bit_cnt[0]) 
+);
+defparam n380_s116.INIT=8'hCA;
+  LUT3 n380_s115 (
+    .F(n380_83),
+    .I0(cmd_rd[27]),
+    .I1(cmd_rd[26]),
+    .I2(cmd_bit_cnt[0]) 
+);
+defparam n380_s115.INIT=8'hCA;
+  LUT3 n380_s118 (
+    .F(n380_84),
+    .I0(cmd_rd[29]),
+    .I1(cmd_rd[28]),
+    .I2(cmd_bit_cnt[0]) 
+);
+defparam n380_s118.INIT=8'hCA;
+  LUT3 n380_s117 (
+    .F(n380_85),
+    .I0(cmd_rd[31]),
+    .I1(cmd_rd[30]),
+    .I2(cmd_bit_cnt[0]) 
+);
+defparam n380_s117.INIT=8'hCA;
+  LUT3 n380_s120 (
+    .F(n380_86),
+    .I0(cmd_rd[33]),
+    .I1(cmd_rd[32]),
+    .I2(cmd_bit_cnt[0]) 
+);
+defparam n380_s120.INIT=8'hCA;
+  LUT3 n380_s119 (
+    .F(n380_87),
+    .I0(cmd_rd[35]),
+    .I1(cmd_rd[34]),
+    .I2(cmd_bit_cnt[0]) 
+);
+defparam n380_s119.INIT=8'hCA;
+  LUT3 n380_s122 (
+    .F(n380_88),
+    .I0(cmd_rd[37]),
+    .I1(cmd_rd[36]),
+    .I2(cmd_bit_cnt[0]) 
+);
+defparam n380_s122.INIT=8'hCA;
+  LUT3 n380_s121 (
+    .F(n380_89),
+    .I0(cmd_rd[39]),
+    .I1(cmd_rd[38]),
+    .I2(cmd_bit_cnt[0]) 
+);
+defparam n380_s121.INIT=8'hCA;
+  LUT2 pos_rd_en_s0 (
+    .F(pos_rd_en),
+    .I0(rd_en_d1),
+    .I1(rd_en_d0) 
+);
+defparam pos_rd_en_s0.INIT=4'h4;
+  LUT2 res_en_s3 (
+    .F(res_en_8),
+    .I0(res_en_9),
+    .I1(res_flag) 
+);
+defparam res_en_s3.INIT=4'hB;
+  LUT4 cmd_bit_cnt_5_s2 (
+    .F(cmd_bit_cnt_5_6),
+    .I0(cmd_bit_cnt_5_7),
+    .I1(res_en),
+    .I2(n435_20),
+    .I3(rd_ctrl_cnt[0]) 
+);
+defparam cmd_bit_cnt_5_s2.INIT=16'hD000;
+  LUT4 n433_s6 (
+    .F(n433_10),
+    .I0(cmd_bit_cnt_5_7),
+    .I1(rd_sd_cs),
+    .I2(n433_11),
+    .I3(n428_4) 
+);
+defparam n433_s6.INIT=16'hBCFF;
+  LUT4 n532_s8 (
+    .F(n532_12),
+    .I0(rd_ctrl_cnt[2]),
+    .I1(rd_ctrl_cnt[1]),
+    .I2(rd_ctrl_cnt[0]),
+    .I3(rd_ctrl_cnt[3]) 
+);
+defparam n532_s8.INIT=16'h7F80;
+  LUT3 n533_s8 (
+    .F(n533_12),
+    .I0(rd_ctrl_cnt[1]),
+    .I1(rd_ctrl_cnt[0]),
+    .I2(rd_ctrl_cnt[2]) 
+);
+defparam n533_s8.INIT=8'h78;
+  LUT3 n534_s8 (
+    .F(n534_12),
+    .I0(n534_15),
+    .I1(rd_ctrl_cnt[1]),
+    .I2(rd_ctrl_cnt[0]) 
+);
+defparam n534_s8.INIT=8'h14;
+  LUT4 n535_s9 (
+    .F(n535_13),
+    .I0(n535_16),
+    .I1(n428_4),
+    .I2(n534_15),
+    .I3(rd_ctrl_cnt[0]) 
+);
+defparam n535_s9.INIT=16'hF077;
+  LUT3 n435_s7 (
+    .F(n435_13),
+    .I0(n435_14),
+    .I1(rd_ctrl_cnt[0]),
+    .I2(n435_20) 
+);
+defparam n435_s7.INIT=8'hB0;
+  LUT3 n54_s2 (
+    .F(n54_6),
+    .I0(res_bit_cnt[0]),
+    .I1(res_bit_cnt[1]),
+    .I2(res_bit_cnt[2]) 
+);
+defparam n54_s2.INIT=8'h78;
+  LUT3 n53_s2 (
+    .F(n53_6),
+    .I0(n53_10),
+    .I1(res_bit_cnt[3]),
+    .I2(n53_8) 
+);
+defparam n53_s2.INIT=8'h1C;
+  LUT3 n52_s2 (
+    .F(n52_6),
+    .I0(res_bit_cnt[3]),
+    .I1(n53_8),
+    .I2(res_bit_cnt[4]) 
+);
+defparam n52_s2.INIT=8'h78;
+  LUT4 n51_s3 (
+    .F(n51_7),
+    .I0(res_bit_cnt[3]),
+    .I1(res_bit_cnt[4]),
+    .I2(n53_8),
+    .I3(res_bit_cnt[5]) 
+);
+defparam n51_s3.INIT=16'h7F80;
+  LUT4 n393_s1 (
+    .F(n393_5),
+    .I0(cmd_bit_cnt[1]),
+    .I1(cmd_bit_cnt[0]),
+    .I2(cmd_bit_cnt_5_7),
+    .I3(cmd_bit_cnt[2]) 
+);
+defparam n393_s1.INIT=16'h0708;
+  LUT3 n391_s1 (
+    .F(n391_5),
+    .I0(cmd_bit_cnt[5]),
+    .I1(n391_6),
+    .I2(cmd_bit_cnt[4]) 
+);
+defparam n391_s1.INIT=8'h1C;
+  LUT3 n390_s1 (
+    .F(n390_5),
+    .I0(n391_6),
+    .I1(cmd_bit_cnt[5]),
+    .I2(cmd_bit_cnt[4]) 
+);
+defparam n390_s1.INIT=8'h2C;
+  LUT2 n167_s2 (
+    .F(n167_6),
+    .I0(rx_bit_cnt[0]),
+    .I1(rx_bit_cnt[1]) 
+);
+defparam n167_s2.INIT=4'h6;
+  LUT3 n166_s2 (
+    .F(n166_6),
+    .I0(rx_bit_cnt[0]),
+    .I1(rx_bit_cnt[1]),
+    .I2(rx_bit_cnt[2]) 
+);
+defparam n166_s2.INIT=8'h78;
+  LUT3 n147_s2 (
+    .F(n147_6),
+    .I0(n232_6),
+    .I1(rx_data_cnt[0]),
+    .I2(rx_data_cnt[1]) 
+);
+defparam n147_s2.INIT=8'h14;
+  LUT3 n146_s2 (
+    .F(n146_6),
+    .I0(rx_data_cnt[0]),
+    .I1(rx_data_cnt[1]),
+    .I2(rx_data_cnt[2]) 
+);
+defparam n146_s2.INIT=8'h78;
+  LUT4 n145_s2 (
+    .F(n145_6),
+    .I0(rx_data_cnt[0]),
+    .I1(rx_data_cnt[1]),
+    .I2(rx_data_cnt[2]),
+    .I3(rx_data_cnt[3]) 
+);
+defparam n145_s2.INIT=16'h7F80;
+  LUT2 n144_s2 (
+    .F(n144_6),
+    .I0(rx_data_cnt[4]),
+    .I1(n144_7) 
+);
+defparam n144_s2.INIT=4'h6;
+  LUT3 n143_s2 (
+    .F(n143_6),
+    .I0(rx_data_cnt[4]),
+    .I1(n144_7),
+    .I2(rx_data_cnt[5]) 
+);
+defparam n143_s2.INIT=8'h78;
+  LUT4 n142_s2 (
+    .F(n142_6),
+    .I0(rx_data_cnt[4]),
+    .I1(rx_data_cnt[5]),
+    .I2(n144_7),
+    .I3(rx_data_cnt[6]) 
+);
+defparam n142_s2.INIT=16'h7F80;
+  LUT2 n141_s2 (
+    .F(n141_6),
+    .I0(rx_data_cnt[7]),
+    .I1(n141_7) 
+);
+defparam n141_s2.INIT=4'h6;
+  LUT4 n140_s2 (
+    .F(n140_6),
+    .I0(rx_data_cnt[7]),
+    .I1(n141_7),
+    .I2(n232_6),
+    .I3(rx_data_cnt[8]) 
+);
+defparam n140_s2.INIT=16'h0708;
+  LUT2 n428_s1 (
+    .F(n428_4),
+    .I0(rd_ctrl_cnt[3]),
+    .I1(rd_ctrl_cnt[2]) 
+);
+defparam n428_s1.INIT=4'h1;
+  LUT3 n820_s2 (
+    .F(n820_5),
+    .I0(rx_bit_cnt[0]),
+    .I1(rx_bit_cnt[1]),
+    .I2(rx_bit_cnt[2]) 
+);
+defparam n820_s2.INIT=8'h80;
+  LUT4 res_en_s4 (
+    .F(res_en_9),
+    .I0(res_bit_cnt[3]),
+    .I1(res_bit_cnt[4]),
+    .I2(res_bit_cnt[5]),
+    .I3(n53_8) 
+);
+defparam res_en_s4.INIT=16'h0100;
+  LUT2 cmd_bit_cnt_5_s3 (
+    .F(cmd_bit_cnt_5_7),
+    .I0(cmd_bit_cnt[4]),
+    .I1(cmd_bit_cnt[5]) 
+);
+defparam cmd_bit_cnt_5_s3.INIT=4'h8;
+  LUT4 n433_s7 (
+    .F(n433_11),
+    .I0(rx_finish_en),
+    .I1(rd_ctrl_cnt[1]),
+    .I2(rd_sd_cs),
+    .I3(rd_ctrl_cnt[0]) 
+);
+defparam n433_s7.INIT=16'h3C0B;
+  LUT4 n435_s8 (
+    .F(n435_14),
+    .I0(n435_15),
+    .I1(n435_16),
+    .I2(cmd_bit_cnt[4]),
+    .I3(n435_17) 
+);
+defparam n435_s8.INIT=16'h03F5;
+  LUT3 n53_s4 (
+    .F(n53_8),
+    .I0(res_bit_cnt[0]),
+    .I1(res_bit_cnt[1]),
+    .I2(res_bit_cnt[2]) 
+);
+defparam n53_s4.INIT=8'h80;
+  LUT3 n392_s2 (
+    .F(n392_6),
+    .I0(cmd_bit_cnt[1]),
+    .I1(cmd_bit_cnt[2]),
+    .I2(cmd_bit_cnt[0]) 
+);
+defparam n392_s2.INIT=8'h80;
+  LUT4 n391_s2 (
+    .F(n391_6),
+    .I0(cmd_bit_cnt[3]),
+    .I1(cmd_bit_cnt[1]),
+    .I2(cmd_bit_cnt[2]),
+    .I3(cmd_bit_cnt[0]) 
+);
+defparam n391_s2.INIT=16'h8000;
+  LUT4 n232_s2 (
+    .F(n232_6),
+    .I0(rx_data_cnt[3]),
+    .I1(rx_data_cnt[4]),
+    .I2(n232_7),
+    .I3(n232_8) 
+);
+defparam n232_s2.INIT=16'h1000;
+  LUT4 n144_s3 (
+    .F(n144_7),
+    .I0(rx_data_cnt[0]),
+    .I1(rx_data_cnt[1]),
+    .I2(rx_data_cnt[2]),
+    .I3(rx_data_cnt[3]) 
+);
+defparam n144_s3.INIT=16'h8000;
+  LUT4 n141_s3 (
+    .F(n141_7),
+    .I0(rx_data_cnt[4]),
+    .I1(rx_data_cnt[5]),
+    .I2(rx_data_cnt[6]),
+    .I3(n144_7) 
+);
+defparam n141_s3.INIT=16'h8000;
+  LUT3 n435_s9 (
+    .F(n435_15),
+    .I0(cmd_rd[46]),
+    .I1(n380_107),
+    .I2(cmd_bit_cnt[3]) 
+);
+defparam n435_s9.INIT=8'h53;
+  LUT3 n435_s10 (
+    .F(n435_16),
+    .I0(n380_113),
+    .I1(n435_18),
+    .I2(cmd_bit_cnt[3]) 
+);
+defparam n435_s10.INIT=8'h53;
+  LUT3 n435_s11 (
+    .F(n435_17),
+    .I0(n380_115),
+    .I1(cmd_bit_cnt[4]),
+    .I2(cmd_bit_cnt[5]) 
+);
+defparam n435_s11.INIT=8'h07;
+  LUT3 n232_s3 (
+    .F(n232_7),
+    .I0(rx_data_cnt[5]),
+    .I1(rx_data_cnt[6]),
+    .I2(rx_data_cnt[7]) 
+);
+defparam n232_s3.INIT=8'h01;
+  LUT4 n232_s4 (
+    .F(n232_8),
+    .I0(rx_data_cnt[1]),
+    .I1(rx_data_cnt[2]),
+    .I2(rx_data_cnt[8]),
+    .I3(rx_data_cnt[0]) 
+);
+defparam n232_s4.INIT=16'h1000;
+  LUT4 n435_s12 (
+    .F(n435_18),
+    .I0(cmd_bit_cnt[2]),
+    .I1(cmd_bit_cnt[1]),
+    .I2(cmd_rd[46]),
+    .I3(cmd_bit_cnt[0]) 
+);
+defparam n435_s12.INIT=16'hD000;
+  LUT4 n53_s5 (
+    .F(n53_10),
+    .I0(res_bit_cnt[4]),
+    .I1(res_bit_cnt[5]),
+    .I2(sd_miso_d),
+    .I3(res_flag) 
+);
+defparam n53_s5.INIT=16'h1110;
+  LUT4 n165_s3 (
+    .F(n165_8),
+    .I0(rx_bit_cnt[3]),
+    .I1(rx_bit_cnt[0]),
+    .I2(rx_bit_cnt[1]),
+    .I3(rx_bit_cnt[2]) 
+);
+defparam n165_s3.INIT=16'h6AAA;
+  LUT4 n535_s11 (
+    .F(n535_16),
+    .I0(rd_en_d1),
+    .I1(rd_en_d0),
+    .I2(rx_finish_en),
+    .I3(rd_ctrl_cnt[1]) 
+);
+defparam n535_s11.INIT=16'h0FBB;
+  LUT3 n831_s1 (
+    .F(n831_5),
+    .I0(rd_en_d1),
+    .I1(rd_en_d0),
+    .I2(n424_5) 
+);
+defparam n831_s1.INIT=8'h40;
+  LUT3 n435_s13 (
+    .F(n435_20),
+    .I0(rd_ctrl_cnt[1]),
+    .I1(rd_ctrl_cnt[3]),
+    .I2(rd_ctrl_cnt[2]) 
+);
+defparam n435_s13.INIT=8'h01;
+  LUT4 n428_s2 (
+    .F(n428_6),
+    .I0(rd_ctrl_cnt[0]),
+    .I1(rd_ctrl_cnt[1]),
+    .I2(rd_ctrl_cnt[3]),
+    .I3(rd_ctrl_cnt[2]) 
+);
+defparam n428_s2.INIT=16'h0004;
+  LUT4 n534_s10 (
+    .F(n534_15),
+    .I0(cmd_bit_cnt[4]),
+    .I1(cmd_bit_cnt[5]),
+    .I2(res_en),
+    .I3(n435_20) 
+);
+defparam n534_s10.INIT=16'h7F00;
+  LUT4 n392_s3 (
+    .F(n392_8),
+    .I0(cmd_bit_cnt[4]),
+    .I1(cmd_bit_cnt[5]),
+    .I2(n392_6),
+    .I3(cmd_bit_cnt[3]) 
+);
+defparam n392_s3.INIT=16'h0770;
+  LUT4 n394_s2 (
+    .F(n394_7),
+    .I0(cmd_bit_cnt[4]),
+    .I1(cmd_bit_cnt[5]),
+    .I2(cmd_bit_cnt[1]),
+    .I3(cmd_bit_cnt[0]) 
+);
+defparam n394_s2.INIT=16'h0770;
+  LUT3 n395_s2 (
+    .F(n395_7),
+    .I0(cmd_bit_cnt[0]),
+    .I1(cmd_bit_cnt[4]),
+    .I2(cmd_bit_cnt[5]) 
+);
+defparam n395_s2.INIT=8'h15;
+  LUT4 n232_s5 (
+    .F(n232_10),
+    .I0(rx_flag),
+    .I1(rx_bit_cnt[3]),
+    .I2(n820_5),
+    .I3(n232_6) 
+);
+defparam n232_s5.INIT=16'h8000;
+  LUT4 n231_s3 (
+    .F(n231_8),
+    .I0(rx_data_cnt[8]),
+    .I1(rx_flag),
+    .I2(rx_bit_cnt[3]),
+    .I3(n820_5) 
+);
+defparam n231_s3.INIT=16'h4000;
+  LUT4 n188_s3 (
+    .F(n188_11),
+    .I0(rx_data_t[0]),
+    .I1(sd_miso_d),
+    .I2(rx_flag),
+    .I3(rd_data_flag) 
+);
+defparam n188_s3.INIT=16'hC2C0;
+  LUT4 n148_s5 (
+    .F(n148_10),
+    .I0(rx_flag),
+    .I1(rx_data_cnt[0]),
+    .I2(rx_bit_cnt[3]),
+    .I3(n820_5) 
+);
+defparam n148_s5.INIT=16'h6CCC;
+  LUT3 n820_s3 (
+    .F(n820_7),
+    .I0(rx_flag),
+    .I1(rx_bit_cnt[3]),
+    .I2(n820_5) 
+);
+defparam n820_s3.INIT=8'h80;
+  LUT3 n16_s4 (
+    .F(n16_8),
+    .I0(sd_miso_d),
+    .I1(res_flag),
+    .I2(res_en_9) 
+);
+defparam n16_s4.INIT=8'h1D;
+  LUT4 n55_s4 (
+    .F(n55_9),
+    .I0(sd_miso_d),
+    .I1(res_flag),
+    .I2(res_bit_cnt[1]),
+    .I3(res_bit_cnt[0]) 
+);
+defparam n55_s4.INIT=16'h2DF0;
+  LUT2 res_bit_cnt_5_s4 (
+    .F(res_bit_cnt_5_11),
+    .I0(sd_miso_d),
+    .I1(res_flag) 
+);
+defparam res_bit_cnt_5_s4.INIT=4'hD;
+  LUT3 n56_s5 (
+    .F(n56_10),
+    .I0(sd_miso_d),
+    .I1(res_flag),
+    .I2(res_bit_cnt[0]) 
+);
+defparam n56_s5.INIT=8'h2D;
+  LUT4 n97_s3 (
+    .F(n97_7),
+    .I0(sd_miso_d),
+    .I1(rx_flag),
+    .I2(rd_data_flag),
+    .I3(n232_10) 
+);
+defparam n97_s3.INIT=16'h10DC;
+  LUT3 n97_s4 (
+    .F(n97_9),
+    .I0(sd_miso_d),
+    .I1(rx_flag),
+    .I2(rd_data_flag) 
+);
+defparam n97_s4.INIT=8'h10;
+  LUT4 n173_s3 (
+    .F(n173_11),
+    .I0(rx_data_t[15]),
+    .I1(rx_flag),
+    .I2(rx_data_t[14]),
+    .I3(n97_9) 
+);
+defparam n173_s3.INIT=16'hAAC0;
+  LUT4 n174_s3 (
+    .F(n174_8),
+    .I0(rx_flag),
+    .I1(rx_data_t[14]),
+    .I2(n97_9),
+    .I3(rx_data_t[13]) 
+);
+defparam n174_s3.INIT=16'hCAC0;
+  LUT4 n175_s3 (
+    .F(n175_8),
+    .I0(rx_flag),
+    .I1(n97_9),
+    .I2(rx_data_t[13]),
+    .I3(rx_data_t[12]) 
+);
+defparam n175_s3.INIT=16'hE2C0;
+  LUT4 n176_s3 (
+    .F(n176_8),
+    .I0(rx_flag),
+    .I1(n97_9),
+    .I2(rx_data_t[12]),
+    .I3(rx_data_t[11]) 
+);
+defparam n176_s3.INIT=16'hE2C0;
+  LUT4 n177_s3 (
+    .F(n177_8),
+    .I0(rx_flag),
+    .I1(n97_9),
+    .I2(rx_data_t[11]),
+    .I3(rx_data_t[10]) 
+);
+defparam n177_s3.INIT=16'hE2C0;
+  LUT4 n178_s3 (
+    .F(n178_8),
+    .I0(rx_flag),
+    .I1(n97_9),
+    .I2(rx_data_t[10]),
+    .I3(rx_data_t[9]) 
+);
+defparam n178_s3.INIT=16'hE2C0;
+  LUT4 n179_s3 (
+    .F(n179_8),
+    .I0(rx_flag),
+    .I1(n97_9),
+    .I2(rx_data_t[9]),
+    .I3(rx_data_t[8]) 
+);
+defparam n179_s3.INIT=16'hE2C0;
+  LUT4 n180_s3 (
+    .F(n180_8),
+    .I0(rx_flag),
+    .I1(n97_9),
+    .I2(rx_data_t[8]),
+    .I3(rx_data_t[7]) 
+);
+defparam n180_s3.INIT=16'hE2C0;
+  LUT4 n181_s3 (
+    .F(n181_8),
+    .I0(rx_flag),
+    .I1(n97_9),
+    .I2(rx_data_t[7]),
+    .I3(rx_data_t[6]) 
+);
+defparam n181_s3.INIT=16'hE2C0;
+  LUT4 n182_s3 (
+    .F(n182_8),
+    .I0(rx_flag),
+    .I1(n97_9),
+    .I2(rx_data_t[6]),
+    .I3(rx_data_t[5]) 
+);
+defparam n182_s3.INIT=16'hE2C0;
+  LUT4 n183_s3 (
+    .F(n183_8),
+    .I0(rx_flag),
+    .I1(n97_9),
+    .I2(rx_data_t[5]),
+    .I3(rx_data_t[4]) 
+);
+defparam n183_s3.INIT=16'hE2C0;
+  LUT4 n184_s3 (
+    .F(n184_8),
+    .I0(rx_flag),
+    .I1(n97_9),
+    .I2(rx_data_t[4]),
+    .I3(rx_data_t[3]) 
+);
+defparam n184_s3.INIT=16'hE2C0;
+  LUT4 n185_s3 (
+    .F(n185_8),
+    .I0(rx_flag),
+    .I1(n97_9),
+    .I2(rx_data_t[3]),
+    .I3(rx_data_t[2]) 
+);
+defparam n185_s3.INIT=16'hE2C0;
+  LUT4 n186_s3 (
+    .F(n186_8),
+    .I0(rx_flag),
+    .I1(n97_9),
+    .I2(rx_data_t[2]),
+    .I3(rx_data_t[1]) 
+);
+defparam n186_s3.INIT=16'hE2C0;
+  LUT4 n187_s3 (
+    .F(n187_8),
+    .I0(rx_flag),
+    .I1(n97_9),
+    .I2(rx_data_t[1]),
+    .I3(rx_data_t[0]) 
+);
+defparam n187_s3.INIT=16'hE2C0;
+  LUT4 n424_s1 (
+    .F(n424_5),
+    .I0(rd_ctrl_cnt[0]),
+    .I1(rd_ctrl_cnt[1]),
+    .I2(rd_ctrl_cnt[3]),
+    .I3(rd_ctrl_cnt[2]) 
+);
+defparam n424_s1.INIT=16'h0001;
+  DFFCE rd_en_d1_s0 (
+    .Q(rd_en_d1),
+    .D(rd_en_d0),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE rx_en_t_s0 (
+    .Q(rx_en_t),
+    .D(n231_8),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE rx_bit_cnt_3_s0 (
+    .Q(rx_bit_cnt[3]),
+    .D(n165_8),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(rx_flag) 
+);
+  DFFCE rx_bit_cnt_2_s0 (
+    .Q(rx_bit_cnt[2]),
+    .D(n166_6),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(rx_flag) 
+);
+  DFFCE rx_bit_cnt_1_s0 (
+    .Q(rx_bit_cnt[1]),
+    .D(n167_6),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(rx_flag) 
+);
+  DFFCE rx_bit_cnt_0_s0 (
+    .Q(rx_bit_cnt[0]),
+    .D(n168_8),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(rx_flag) 
+);
+  DFFCE rx_data_cnt_8_s0 (
+    .Q(rx_data_cnt[8]),
+    .D(n140_6),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n820_7) 
+);
+  DFFCE rx_data_cnt_7_s0 (
+    .Q(rx_data_cnt[7]),
+    .D(n141_6),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n820_7) 
+);
+  DFFCE rx_data_cnt_6_s0 (
+    .Q(rx_data_cnt[6]),
+    .D(n142_6),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n820_7) 
+);
+  DFFCE rx_data_cnt_5_s0 (
+    .Q(rx_data_cnt[5]),
+    .D(n143_6),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n820_7) 
+);
+  DFFCE rx_data_cnt_4_s0 (
+    .Q(rx_data_cnt[4]),
+    .D(n144_6),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n820_7) 
+);
+  DFFCE rx_data_cnt_3_s0 (
+    .Q(rx_data_cnt[3]),
+    .D(n145_6),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n820_7) 
+);
+  DFFCE rx_data_cnt_2_s0 (
+    .Q(rx_data_cnt[2]),
+    .D(n146_6),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n820_7) 
+);
+  DFFCE rx_data_cnt_1_s0 (
+    .Q(rx_data_cnt[1]),
+    .D(n147_6),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n820_7) 
+);
+  DFFCE rx_finish_en_s0 (
+    .Q(rx_finish_en),
+    .D(n232_10),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE rd_val_en_s0 (
+    .Q(rd_val_en_Z),
+    .D(rx_en_t),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE rd_val_data_15_s0 (
+    .Q(rd_val_data_Z[15]),
+    .D(rx_data_t[15]),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rx_en_t) 
+);
+  DFFCE rd_val_data_14_s0 (
+    .Q(rd_val_data_Z[14]),
+    .D(rx_data_t[14]),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rx_en_t) 
+);
+  DFFCE rd_val_data_13_s0 (
+    .Q(rd_val_data_Z[13]),
+    .D(rx_data_t[13]),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rx_en_t) 
+);
+  DFFCE rd_val_data_12_s0 (
+    .Q(rd_val_data_Z[12]),
+    .D(rx_data_t[12]),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rx_en_t) 
+);
+  DFFCE rd_val_data_11_s0 (
+    .Q(rd_val_data_Z[11]),
+    .D(rx_data_t[11]),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rx_en_t) 
+);
+  DFFCE rd_val_data_10_s0 (
+    .Q(rd_val_data_Z[10]),
+    .D(rx_data_t[10]),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rx_en_t) 
+);
+  DFFCE rd_val_data_9_s0 (
+    .Q(rd_val_data_Z[9]),
+    .D(rx_data_t[9]),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rx_en_t) 
+);
+  DFFCE rd_val_data_8_s0 (
+    .Q(rd_val_data_Z[8]),
+    .D(rx_data_t[8]),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rx_en_t) 
+);
+  DFFCE rd_val_data_7_s0 (
+    .Q(rd_val_data_Z[7]),
+    .D(rx_data_t[7]),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rx_en_t) 
+);
+  DFFCE rd_val_data_6_s0 (
+    .Q(rd_val_data_Z[6]),
+    .D(rx_data_t[6]),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rx_en_t) 
+);
+  DFFCE rd_val_data_5_s0 (
+    .Q(rd_val_data_Z[5]),
+    .D(rx_data_t[5]),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rx_en_t) 
+);
+  DFFCE rd_val_data_4_s0 (
+    .Q(rd_val_data_Z[4]),
+    .D(rx_data_t[4]),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rx_en_t) 
+);
+  DFFCE rd_val_data_3_s0 (
+    .Q(rd_val_data_Z[3]),
+    .D(rx_data_t[3]),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rx_en_t) 
+);
+  DFFCE rd_val_data_2_s0 (
+    .Q(rd_val_data_Z[2]),
+    .D(rx_data_t[2]),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rx_en_t) 
+);
+  DFFCE rd_val_data_1_s0 (
+    .Q(rd_val_data_Z[1]),
+    .D(rx_data_t[1]),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rx_en_t) 
+);
+  DFFCE rd_val_data_0_s0 (
+    .Q(rd_val_data_Z[0]),
+    .D(rx_data_t[0]),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rx_en_t) 
+);
+  DFFCE rd_ctrl_cnt_3_s0 (
+    .Q(rd_ctrl_cnt[3]),
+    .D(n532_12),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE rd_ctrl_cnt_2_s0 (
+    .Q(rd_ctrl_cnt[2]),
+    .D(n533_12),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE rd_ctrl_cnt_1_s0 (
+    .Q(rd_ctrl_cnt[1]),
+    .D(n534_12),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE rd_ctrl_cnt_0_s0 (
+    .Q(rd_ctrl_cnt[0]),
+    .D(n535_13),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE cmd_rd_46_s0 (
+    .Q(cmd_rd[46]),
+    .D(VCC),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_39_s0 (
+    .Q(cmd_rd[39]),
+    .D(rd_sec_addr_Z[31]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_38_s0 (
+    .Q(cmd_rd[38]),
+    .D(rd_sec_addr_Z[30]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_37_s0 (
+    .Q(cmd_rd[37]),
+    .D(rd_sec_addr_Z[29]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_36_s0 (
+    .Q(cmd_rd[36]),
+    .D(rd_sec_addr_Z[28]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_35_s0 (
+    .Q(cmd_rd[35]),
+    .D(rd_sec_addr_Z[27]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_34_s0 (
+    .Q(cmd_rd[34]),
+    .D(rd_sec_addr_Z[26]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_33_s0 (
+    .Q(cmd_rd[33]),
+    .D(rd_sec_addr_Z[25]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_32_s0 (
+    .Q(cmd_rd[32]),
+    .D(rd_sec_addr_Z[24]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_31_s0 (
+    .Q(cmd_rd[31]),
+    .D(rd_sec_addr_Z[23]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_30_s0 (
+    .Q(cmd_rd[30]),
+    .D(rd_sec_addr_Z[22]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_29_s0 (
+    .Q(cmd_rd[29]),
+    .D(rd_sec_addr_Z[21]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_28_s0 (
+    .Q(cmd_rd[28]),
+    .D(rd_sec_addr_Z[20]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_27_s0 (
+    .Q(cmd_rd[27]),
+    .D(rd_sec_addr_Z[19]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_26_s0 (
+    .Q(cmd_rd[26]),
+    .D(rd_sec_addr_Z[18]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_25_s0 (
+    .Q(cmd_rd[25]),
+    .D(rd_sec_addr_Z[17]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_24_s0 (
+    .Q(cmd_rd[24]),
+    .D(rd_sec_addr_Z[16]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_23_s0 (
+    .Q(cmd_rd[23]),
+    .D(rd_sec_addr_Z[15]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_22_s0 (
+    .Q(cmd_rd[22]),
+    .D(rd_sec_addr_Z[14]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_21_s0 (
+    .Q(cmd_rd[21]),
+    .D(rd_sec_addr_Z[13]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_20_s0 (
+    .Q(cmd_rd[20]),
+    .D(rd_sec_addr_Z[12]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_19_s0 (
+    .Q(cmd_rd[19]),
+    .D(rd_sec_addr_Z[11]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_18_s0 (
+    .Q(cmd_rd[18]),
+    .D(rd_sec_addr_Z[10]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_17_s0 (
+    .Q(cmd_rd[17]),
+    .D(rd_sec_addr_Z[9]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_16_s0 (
+    .Q(cmd_rd[16]),
+    .D(rd_sec_addr_Z[8]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_15_s0 (
+    .Q(cmd_rd[15]),
+    .D(rd_sec_addr_Z[7]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_14_s0 (
+    .Q(cmd_rd[14]),
+    .D(rd_sec_addr_Z[6]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_13_s0 (
+    .Q(cmd_rd[13]),
+    .D(rd_sec_addr_Z[5]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_12_s0 (
+    .Q(cmd_rd[12]),
+    .D(rd_sec_addr_Z[4]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_11_s0 (
+    .Q(cmd_rd[11]),
+    .D(rd_sec_addr_Z[3]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_10_s0 (
+    .Q(cmd_rd[10]),
+    .D(rd_sec_addr_Z[2]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_9_s0 (
+    .Q(cmd_rd[9]),
+    .D(rd_sec_addr_Z[1]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_rd_8_s0 (
+    .Q(cmd_rd[8]),
+    .D(rd_sec_addr_Z[0]),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n831_5) 
+);
+  DFFCE cmd_bit_cnt_5_s0 (
+    .Q(cmd_bit_cnt[5]),
+    .D(n390_5),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(cmd_bit_cnt_5_6) 
+);
+  DFFCE cmd_bit_cnt_4_s0 (
+    .Q(cmd_bit_cnt[4]),
+    .D(n391_5),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(cmd_bit_cnt_5_6) 
+);
+  DFFCE cmd_bit_cnt_3_s0 (
+    .Q(cmd_bit_cnt[3]),
+    .D(n392_8),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(cmd_bit_cnt_5_6) 
+);
+  DFFCE cmd_bit_cnt_2_s0 (
+    .Q(cmd_bit_cnt[2]),
+    .D(n393_5),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(cmd_bit_cnt_5_6) 
+);
+  DFFCE cmd_bit_cnt_1_s0 (
+    .Q(cmd_bit_cnt[1]),
+    .D(n394_7),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(cmd_bit_cnt_5_6) 
+);
+  DFFCE cmd_bit_cnt_0_s0 (
+    .Q(cmd_bit_cnt[0]),
+    .D(n395_7),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(cmd_bit_cnt_5_6) 
+);
+  DFFCE rd_busy_s0 (
+    .Q(rd_busy_Z),
+    .D(pos_rd_en),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n424_5) 
+);
+  DFFCE rd_data_flag_s0 (
+    .Q(rd_data_flag),
+    .D(n542_5),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(n428_6) 
+);
+  DFFCE rd_en_d0_s0 (
+    .Q(rd_en_d0),
+    .D(n22_3),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFPE sd_cs_s0 (
+    .Q(rd_sd_cs),
+    .D(n433_10),
+    .CLK(n9_6),
+    .PRESET(rst_d),
+    .CE(VCC) 
+);
+  DFFCE res_en_s1 (
+    .Q(res_en),
+    .D(res_flag),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_en_8) 
+);
+defparam res_en_s1.INIT=1'b0;
+  DFFCE res_bit_cnt_5_s1 (
+    .Q(res_bit_cnt[5]),
+    .D(n51_7),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_bit_cnt_5_11) 
+);
+defparam res_bit_cnt_5_s1.INIT=1'b0;
+  DFFCE res_bit_cnt_4_s1 (
+    .Q(res_bit_cnt[4]),
+    .D(n52_6),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_bit_cnt_5_11) 
+);
+defparam res_bit_cnt_4_s1.INIT=1'b0;
+  DFFCE res_bit_cnt_3_s1 (
+    .Q(res_bit_cnt[3]),
+    .D(n53_6),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_bit_cnt_5_11) 
+);
+defparam res_bit_cnt_3_s1.INIT=1'b0;
+  DFFCE res_bit_cnt_2_s1 (
+    .Q(res_bit_cnt[2]),
+    .D(n54_6),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(res_bit_cnt_5_11) 
+);
+defparam res_bit_cnt_2_s1.INIT=1'b0;
+  DFFPE sd_mosi_s1 (
+    .Q(rd_sd_mosi),
+    .D(n435_13),
+    .CLK(n9_6),
+    .PRESET(rst_d),
+    .CE(n435_20) 
+);
+defparam sd_mosi_s1.INIT=1'b1;
+  DFFCE rx_data_t_0_s2 (
+    .Q(rx_data_t[0]),
+    .D(n188_11),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam rx_data_t_0_s2.INIT=1'b0;
+  DFFCE rx_data_cnt_0_s1 (
+    .Q(rx_data_cnt[0]),
+    .D(n148_10),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam rx_data_cnt_0_s1.INIT=1'b0;
+  DFFCE res_flag_s4 (
+    .Q(res_flag),
+    .D(n16_8),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam res_flag_s4.INIT=1'b0;
+  DFFCE res_bit_cnt_1_s3 (
+    .Q(res_bit_cnt[1]),
+    .D(n55_9),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam res_bit_cnt_1_s3.INIT=1'b0;
+  DFFCE res_bit_cnt_0_s3 (
+    .Q(res_bit_cnt[0]),
+    .D(n56_10),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam res_bit_cnt_0_s3.INIT=1'b0;
+  DFFCE rx_flag_s5 (
+    .Q(rx_flag),
+    .D(n97_7),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam rx_flag_s5.INIT=1'b0;
+  DFFCE rx_data_t_15_s5 (
+    .Q(rx_data_t[15]),
+    .D(n173_11),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam rx_data_t_15_s5.INIT=1'b0;
+  DFFCE rx_data_t_14_s2 (
+    .Q(rx_data_t[14]),
+    .D(n174_8),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam rx_data_t_14_s2.INIT=1'b0;
+  DFFCE rx_data_t_13_s2 (
+    .Q(rx_data_t[13]),
+    .D(n175_8),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam rx_data_t_13_s2.INIT=1'b0;
+  DFFCE rx_data_t_12_s2 (
+    .Q(rx_data_t[12]),
+    .D(n176_8),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam rx_data_t_12_s2.INIT=1'b0;
+  DFFCE rx_data_t_11_s2 (
+    .Q(rx_data_t[11]),
+    .D(n177_8),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam rx_data_t_11_s2.INIT=1'b0;
+  DFFCE rx_data_t_10_s2 (
+    .Q(rx_data_t[10]),
+    .D(n178_8),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam rx_data_t_10_s2.INIT=1'b0;
+  DFFCE rx_data_t_9_s2 (
+    .Q(rx_data_t[9]),
+    .D(n179_8),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam rx_data_t_9_s2.INIT=1'b0;
+  DFFCE rx_data_t_8_s2 (
+    .Q(rx_data_t[8]),
+    .D(n180_8),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam rx_data_t_8_s2.INIT=1'b0;
+  DFFCE rx_data_t_7_s2 (
+    .Q(rx_data_t[7]),
+    .D(n181_8),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam rx_data_t_7_s2.INIT=1'b0;
+  DFFCE rx_data_t_6_s2 (
+    .Q(rx_data_t[6]),
+    .D(n182_8),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam rx_data_t_6_s2.INIT=1'b0;
+  DFFCE rx_data_t_5_s2 (
+    .Q(rx_data_t[5]),
+    .D(n183_8),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam rx_data_t_5_s2.INIT=1'b0;
+  DFFCE rx_data_t_4_s2 (
+    .Q(rx_data_t[4]),
+    .D(n184_8),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam rx_data_t_4_s2.INIT=1'b0;
+  DFFCE rx_data_t_3_s2 (
+    .Q(rx_data_t[3]),
+    .D(n185_8),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam rx_data_t_3_s2.INIT=1'b0;
+  DFFCE rx_data_t_2_s2 (
+    .Q(rx_data_t[2]),
+    .D(n186_8),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam rx_data_t_2_s2.INIT=1'b0;
+  DFFCE rx_data_t_1_s2 (
+    .Q(rx_data_t[1]),
+    .D(n187_8),
+    .CLK(n9_6),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam rx_data_t_1_s2.INIT=1'b0;
+  MUX2_LUT5 n380_s100 (
+    .O(n380_91),
+    .I0(n380_75),
+    .I1(n380_74),
+    .S0(cmd_bit_cnt[1]) 
+);
+  MUX2_LUT5 n380_s99 (
+    .O(n380_93),
+    .I0(n380_77),
+    .I1(n380_76),
+    .S0(cmd_bit_cnt[1]) 
+);
+  MUX2_LUT5 n380_s102 (
+    .O(n380_95),
+    .I0(n380_79),
+    .I1(n380_78),
+    .S0(cmd_bit_cnt[1]) 
+);
+  MUX2_LUT5 n380_s101 (
+    .O(n380_97),
+    .I0(n380_81),
+    .I1(n380_80),
+    .S0(cmd_bit_cnt[1]) 
+);
+  MUX2_LUT5 n380_s104 (
+    .O(n380_99),
+    .I0(n380_83),
+    .I1(n380_82),
+    .S0(cmd_bit_cnt[1]) 
+);
+  MUX2_LUT5 n380_s103 (
+    .O(n380_101),
+    .I0(n380_85),
+    .I1(n380_84),
+    .S0(cmd_bit_cnt[1]) 
+);
+  MUX2_LUT5 n380_s106 (
+    .O(n380_103),
+    .I0(n380_87),
+    .I1(n380_86),
+    .S0(cmd_bit_cnt[1]) 
+);
+  MUX2_LUT5 n380_s105 (
+    .O(n380_105),
+    .I0(n380_89),
+    .I1(n380_88),
+    .S0(cmd_bit_cnt[1]) 
+);
+  MUX2_LUT6 n380_s92 (
+    .O(n380_107),
+    .I0(n380_93),
+    .I1(n380_91),
+    .S0(cmd_bit_cnt[2]) 
+);
+  MUX2_LUT6 n380_s98 (
+    .O(n380_109),
+    .I0(n380_97),
+    .I1(n380_95),
+    .S0(cmd_bit_cnt[2]) 
+);
+  MUX2_LUT6 n380_s97 (
+    .O(n380_111),
+    .I0(n380_101),
+    .I1(n380_99),
+    .S0(cmd_bit_cnt[2]) 
+);
+  MUX2_LUT6 n380_s95 (
+    .O(n380_113),
+    .I0(n380_105),
+    .I1(n380_103),
+    .S0(cmd_bit_cnt[2]) 
+);
+  MUX2_LUT7 n380_s96 (
+    .O(n380_115),
+    .I0(n380_111),
+    .I1(n380_109),
+    .S0(cmd_bit_cnt[3]) 
+);
+  INV n542_s2 (
+    .O(n542_5),
+    .I(rx_finish_en) 
+);
+  INV n168_s4 (
+    .O(n168_8),
+    .I(rx_bit_cnt[0]) 
+);
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+endmodule /* sd_read */
+module sd_ctrl_top (
+  rd_start_en_Z,
+  clk_d,
+  rst_d,
+  n9_6,
+  sd_miso_d,
+  rd_sec_addr_Z,
+  sd_cs_d,
+  sd_mosi_d,
+  sd_init_done_Z,
+  rd_val_en_Z,
+  rd_busy_Z,
+  rd_val_data_Z
+)
+;
+input rd_start_en_Z;
+input clk_d;
+input rst_d;
+input n9_6;
+input sd_miso_d;
+input [31:0] rd_sec_addr_Z;
+output sd_cs_d;
+output sd_mosi_d;
+output sd_init_done_Z;
+output rd_val_en_Z;
+output rd_busy_Z;
+output [15:0] rd_val_data_Z;
+wire n22_3;
+wire init_sd_cs;
+wire init_sd_mosi;
+wire rd_sd_cs;
+wire rd_sd_mosi;
+wire VCC;
+wire GND;
+  LUT4 sd_cs_d_s (
+    .F(sd_cs_d),
+    .I0(rd_sd_cs),
+    .I1(rd_busy_Z),
+    .I2(init_sd_cs),
+    .I3(sd_init_done_Z) 
+);
+defparam sd_cs_d_s.INIT=16'hBBF0;
+  LUT4 sd_mosi_d_s (
+    .F(sd_mosi_d),
+    .I0(rd_sd_mosi),
+    .I1(rd_busy_Z),
+    .I2(init_sd_mosi),
+    .I3(sd_init_done_Z) 
+);
+defparam sd_mosi_d_s.INIT=16'hBBF0;
+  LUT2 n22_s0 (
+    .F(n22_3),
+    .I0(sd_init_done_Z),
+    .I1(rd_start_en_Z) 
+);
+defparam n22_s0.INIT=4'h8;
+  sd_init u_sd_init (
+    .clk_d(clk_d),
+    .rst_d(rst_d),
+    .n9_6(n9_6),
+    .sd_miso_d(sd_miso_d),
+    .init_sd_cs(init_sd_cs),
+    .init_sd_mosi(init_sd_mosi),
+    .sd_init_done_Z(sd_init_done_Z)
+);
+  sd_read u_sd_read (
+    .clk_d(clk_d),
+    .rst_d(rst_d),
+    .n9_6(n9_6),
+    .n22_3(n22_3),
+    .sd_miso_d(sd_miso_d),
+    .rd_sec_addr_Z(rd_sec_addr_Z[31:0]),
+    .rd_val_en_Z(rd_val_en_Z),
+    .rd_busy_Z(rd_busy_Z),
+    .rd_sd_cs(rd_sd_cs),
+    .rd_sd_mosi(rd_sd_mosi),
+    .rd_val_data_Z(rd_val_data_Z[15:0])
+);
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+endmodule /* sd_ctrl_top */
+module sd_ctrl_read (
+  clk_d,
+  rst_d,
+  rd_busy_Z,
+  sd_init_done_Z,
+  wrusedw_w,
+  rd_start_en_Z,
+  rd_sec_addr_Z
+)
+;
+input clk_d;
+input rst_d;
+input rd_busy_Z;
+input sd_init_done_Z;
+input [9:9] wrusedw_w;
+output rd_start_en_Z;
+output [31:0] rd_sec_addr_Z;
+wire n96_11;
+wire n97_12;
+wire n98_10;
+wire rd_start_en_5;
+wire n86_6;
+wire n85_5;
+wire n84_5;
+wire n83_5;
+wire n82_5;
+wire n81_5;
+wire n80_5;
+wire n79_5;
+wire n77_5;
+wire n76_5;
+wire n75_5;
+wire n74_5;
+wire n73_5;
+wire n71_5;
+wire n70_5;
+wire n69_5;
+wire n68_5;
+wire n67_5;
+wire n66_5;
+wire n65_5;
+wire n64_5;
+wire n63_5;
+wire n62_5;
+wire n61_5;
+wire n60_5;
+wire n59_5;
+wire n58_5;
+wire n57_5;
+wire n56_5;
+wire n55_5;
+wire n78_6;
+wire n72_6;
+wire rd_flow_cnt_1_8;
+wire n96_12;
+wire n96_13;
+wire n96_14;
+wire n97_13;
+wire n98_11;
+wire rd_sec_addr_31_7;
+wire n83_6;
+wire n82_6;
+wire n80_6;
+wire n77_6;
+wire n76_6;
+wire n74_6;
+wire n73_6;
+wire n71_6;
+wire n70_6;
+wire n69_6;
+wire n68_6;
+wire n66_6;
+wire n64_6;
+wire n63_6;
+wire n61_6;
+wire n59_6;
+wire n58_6;
+wire n57_6;
+wire n55_6;
+wire rd_flow_cnt_1_9;
+wire n96_15;
+wire n96_16;
+wire n96_17;
+wire n96_18;
+wire n96_19;
+wire n77_7;
+wire n69_7;
+wire n63_7;
+wire n61_7;
+wire n57_7;
+wire n96_20;
+wire n96_21;
+wire n96_22;
+wire n96_23;
+wire n96_24;
+wire n96_25;
+wire n65_8;
+wire n97_16;
+wire rd_sec_addr_31_9;
+wire rd_busy_d1;
+wire rd_busy_d0;
+wire [1:0] rd_flow_cnt;
+wire VCC;
+wire GND;
+  LUT4 n96_s6 (
+    .F(n96_11),
+    .I0(n96_12),
+    .I1(rd_sec_addr_Z[16]),
+    .I2(n96_13),
+    .I3(n96_14) 
+);
+defparam n96_s6.INIT=16'hFFB0;
+  LUT4 n97_s8 (
+    .F(n97_12),
+    .I0(n96_12),
+    .I1(rd_sec_addr_Z[16]),
+    .I2(n97_13),
+    .I3(n97_16) 
+);
+defparam n97_s8.INIT=16'hFFB0;
+  LUT4 n98_s5 (
+    .F(n98_10),
+    .I0(n96_12),
+    .I1(rd_sec_addr_Z[16]),
+    .I2(n96_13),
+    .I3(n98_11) 
+);
+defparam n98_s5.INIT=16'hB0FF;
+  LUT2 rd_start_en_s3 (
+    .F(rd_start_en_5),
+    .I0(rd_flow_cnt[1]),
+    .I1(rd_flow_cnt[0]) 
+);
+defparam rd_start_en_s3.INIT=4'h7;
+  LUT2 n86_s2 (
+    .F(n86_6),
+    .I0(rd_sec_addr_Z[0]),
+    .I1(rd_flow_cnt[0]) 
+);
+defparam n86_s2.INIT=4'h4;
+  LUT3 n85_s1 (
+    .F(n85_5),
+    .I0(rd_sec_addr_Z[1]),
+    .I1(rd_sec_addr_Z[0]),
+    .I2(rd_flow_cnt[0]) 
+);
+defparam n85_s1.INIT=8'h60;
+  LUT4 n84_s1 (
+    .F(n84_5),
+    .I0(rd_sec_addr_Z[1]),
+    .I1(rd_sec_addr_Z[0]),
+    .I2(rd_sec_addr_Z[2]),
+    .I3(rd_flow_cnt[0]) 
+);
+defparam n84_s1.INIT=16'h7800;
+  LUT3 n83_s1 (
+    .F(n83_5),
+    .I0(n83_6),
+    .I1(rd_sec_addr_Z[3]),
+    .I2(rd_flow_cnt[0]) 
+);
+defparam n83_s1.INIT=8'h60;
+  LUT3 n82_s1 (
+    .F(n82_5),
+    .I0(rd_sec_addr_Z[4]),
+    .I1(n82_6),
+    .I2(rd_flow_cnt[0]) 
+);
+defparam n82_s1.INIT=8'h60;
+  LUT4 n81_s1 (
+    .F(n81_5),
+    .I0(rd_sec_addr_Z[4]),
+    .I1(n82_6),
+    .I2(rd_sec_addr_Z[5]),
+    .I3(rd_flow_cnt[0]) 
+);
+defparam n81_s1.INIT=16'h7800;
+  LUT3 n80_s1 (
+    .F(n80_5),
+    .I0(rd_sec_addr_Z[6]),
+    .I1(n80_6),
+    .I2(rd_flow_cnt[0]) 
+);
+defparam n80_s1.INIT=8'h60;
+  LUT4 n79_s1 (
+    .F(n79_5),
+    .I0(rd_sec_addr_Z[6]),
+    .I1(n80_6),
+    .I2(rd_sec_addr_Z[7]),
+    .I3(rd_flow_cnt[0]) 
+);
+defparam n79_s1.INIT=16'h7800;
+  LUT4 n77_s1 (
+    .F(n77_5),
+    .I0(rd_sec_addr_Z[8]),
+    .I1(n77_6),
+    .I2(rd_sec_addr_Z[9]),
+    .I3(rd_flow_cnt[0]) 
+);
+defparam n77_s1.INIT=16'h7800;
+  LUT3 n76_s1 (
+    .F(n76_5),
+    .I0(rd_sec_addr_Z[10]),
+    .I1(n76_6),
+    .I2(rd_flow_cnt[0]) 
+);
+defparam n76_s1.INIT=8'h60;
+  LUT4 n75_s1 (
+    .F(n75_5),
+    .I0(rd_sec_addr_Z[10]),
+    .I1(n76_6),
+    .I2(rd_sec_addr_Z[11]),
+    .I3(rd_flow_cnt[0]) 
+);
+defparam n75_s1.INIT=16'h7800;
+  LUT4 n74_s1 (
+    .F(n74_5),
+    .I0(n76_6),
+    .I1(n74_6),
+    .I2(rd_sec_addr_Z[12]),
+    .I3(rd_flow_cnt[0]) 
+);
+defparam n74_s1.INIT=16'h7800;
+  LUT3 n73_s1 (
+    .F(n73_5),
+    .I0(n73_6),
+    .I1(rd_sec_addr_Z[13]),
+    .I2(rd_flow_cnt[0]) 
+);
+defparam n73_s1.INIT=8'h60;
+  LUT4 n71_s1 (
+    .F(n71_5),
+    .I0(rd_sec_addr_Z[14]),
+    .I1(n71_6),
+    .I2(rd_sec_addr_Z[15]),
+    .I3(rd_flow_cnt[0]) 
+);
+defparam n71_s1.INIT=16'h7800;
+  LUT4 n70_s1 (
+    .F(n70_5),
+    .I0(n71_6),
+    .I1(n70_6),
+    .I2(rd_sec_addr_Z[16]),
+    .I3(rd_flow_cnt[0]) 
+);
+defparam n70_s1.INIT=16'h7800;
+  LUT4 n69_s1 (
+    .F(n69_5),
+    .I0(n77_6),
+    .I1(n69_6),
+    .I2(rd_sec_addr_Z[17]),
+    .I3(rd_flow_cnt[0]) 
+);
+defparam n69_s1.INIT=16'h7800;
+  LUT3 n68_s1 (
+    .F(n68_5),
+    .I0(rd_sec_addr_Z[18]),
+    .I1(n68_6),
+    .I2(rd_flow_cnt[0]) 
+);
+defparam n68_s1.INIT=8'h60;
+  LUT4 n67_s1 (
+    .F(n67_5),
+    .I0(rd_sec_addr_Z[18]),
+    .I1(n68_6),
+    .I2(rd_sec_addr_Z[19]),
+    .I3(rd_flow_cnt[0]) 
+);
+defparam n67_s1.INIT=16'h7800;
+  LUT4 n66_s1 (
+    .F(n66_5),
+    .I0(n68_6),
+    .I1(n66_6),
+    .I2(rd_sec_addr_Z[20]),
+    .I3(rd_flow_cnt[0]) 
+);
+defparam n66_s1.INIT=16'h7800;
+  LUT4 n65_s1 (
+    .F(n65_5),
+    .I0(n68_6),
+    .I1(n65_8),
+    .I2(rd_sec_addr_Z[21]),
+    .I3(rd_flow_cnt[0]) 
+);
+defparam n65_s1.INIT=16'h7800;
+  LUT4 n64_s1 (
+    .F(n64_5),
+    .I0(n68_6),
+    .I1(n64_6),
+    .I2(rd_sec_addr_Z[22]),
+    .I3(rd_flow_cnt[0]) 
+);
+defparam n64_s1.INIT=16'h7800;
+  LUT3 n63_s1 (
+    .F(n63_5),
+    .I0(rd_sec_addr_Z[23]),
+    .I1(n63_6),
+    .I2(rd_flow_cnt[0]) 
+);
+defparam n63_s1.INIT=8'h60;
+  LUT4 n62_s1 (
+    .F(n62_5),
+    .I0(rd_sec_addr_Z[23]),
+    .I1(n63_6),
+    .I2(rd_sec_addr_Z[24]),
+    .I3(rd_flow_cnt[0]) 
+);
+defparam n62_s1.INIT=16'h7800;
+  LUT3 n61_s1 (
+    .F(n61_5),
+    .I0(rd_sec_addr_Z[25]),
+    .I1(n61_6),
+    .I2(rd_flow_cnt[0]) 
+);
+defparam n61_s1.INIT=8'h60;
+  LUT4 n60_s1 (
+    .F(n60_5),
+    .I0(rd_sec_addr_Z[25]),
+    .I1(n61_6),
+    .I2(rd_sec_addr_Z[26]),
+    .I3(rd_flow_cnt[0]) 
+);
+defparam n60_s1.INIT=16'h7800;
+  LUT4 n59_s1 (
+    .F(n59_5),
+    .I0(n61_6),
+    .I1(n59_6),
+    .I2(rd_sec_addr_Z[27]),
+    .I3(rd_flow_cnt[0]) 
+);
+defparam n59_s1.INIT=16'h7800;
+  LUT4 n58_s1 (
+    .F(n58_5),
+    .I0(n63_6),
+    .I1(n58_6),
+    .I2(rd_sec_addr_Z[28]),
+    .I3(rd_flow_cnt[0]) 
+);
+defparam n58_s1.INIT=16'h7800;
+  LUT3 n57_s1 (
+    .F(n57_5),
+    .I0(rd_sec_addr_Z[29]),
+    .I1(n57_6),
+    .I2(rd_flow_cnt[0]) 
+);
+defparam n57_s1.INIT=8'h60;
+  LUT4 n56_s1 (
+    .F(n56_5),
+    .I0(rd_sec_addr_Z[29]),
+    .I1(n57_6),
+    .I2(rd_sec_addr_Z[30]),
+    .I3(rd_flow_cnt[0]) 
+);
+defparam n56_s1.INIT=16'h7800;
+  LUT4 n55_s1 (
+    .F(n55_5),
+    .I0(n57_6),
+    .I1(n55_6),
+    .I2(rd_sec_addr_Z[31]),
+    .I3(rd_flow_cnt[0]) 
+);
+defparam n55_s1.INIT=16'h7800;
+  LUT3 n78_s2 (
+    .F(n78_6),
+    .I0(rd_sec_addr_Z[8]),
+    .I1(n77_6),
+    .I2(rd_flow_cnt[0]) 
+);
+defparam n78_s2.INIT=8'h6F;
+  LUT3 n72_s2 (
+    .F(n72_6),
+    .I0(rd_sec_addr_Z[14]),
+    .I1(n71_6),
+    .I2(rd_flow_cnt[0]) 
+);
+defparam n72_s2.INIT=8'h6F;
+  LUT3 rd_flow_cnt_1_s3 (
+    .F(rd_flow_cnt_1_8),
+    .I0(rd_flow_cnt_1_9),
+    .I1(rd_flow_cnt[0]),
+    .I2(rd_flow_cnt[1]) 
+);
+defparam rd_flow_cnt_1_s3.INIT=8'h3E;
+  LUT4 n96_s7 (
+    .F(n96_12),
+    .I0(n96_15),
+    .I1(n96_16),
+    .I2(n96_17),
+    .I3(n96_18) 
+);
+defparam n96_s7.INIT=16'h4F00;
+  LUT2 n96_s8 (
+    .F(n96_13),
+    .I0(wrusedw_w[9]),
+    .I1(n96_19) 
+);
+defparam n96_s8.INIT=4'h4;
+  LUT3 n96_s9 (
+    .F(n96_14),
+    .I0(rd_flow_cnt[1]),
+    .I1(rd_flow_cnt[0]),
+    .I2(rd_flow_cnt_1_9) 
+);
+defparam n96_s9.INIT=8'h10;
+  LUT2 n97_s9 (
+    .F(n97_13),
+    .I0(wrusedw_w[9]),
+    .I1(n96_19) 
+);
+defparam n97_s9.INIT=4'h8;
+  LUT4 n98_s6 (
+    .F(n98_11),
+    .I0(rd_flow_cnt_1_9),
+    .I1(rd_sec_addr_31_7),
+    .I2(rd_flow_cnt[1]),
+    .I3(rd_flow_cnt[0]) 
+);
+defparam n98_s6.INIT=16'h0CF5;
+  LUT2 rd_sec_addr_31_s5 (
+    .F(rd_sec_addr_31_7),
+    .I0(rd_busy_d0),
+    .I1(rd_busy_d1) 
+);
+defparam rd_sec_addr_31_s5.INIT=4'h4;
+  LUT3 n83_s2 (
+    .F(n83_6),
+    .I0(rd_sec_addr_Z[1]),
+    .I1(rd_sec_addr_Z[0]),
+    .I2(rd_sec_addr_Z[2]) 
+);
+defparam n83_s2.INIT=8'h80;
+  LUT4 n82_s2 (
+    .F(n82_6),
+    .I0(rd_sec_addr_Z[1]),
+    .I1(rd_sec_addr_Z[0]),
+    .I2(rd_sec_addr_Z[2]),
+    .I3(rd_sec_addr_Z[3]) 
+);
+defparam n82_s2.INIT=16'h8000;
+  LUT3 n80_s2 (
+    .F(n80_6),
+    .I0(rd_sec_addr_Z[4]),
+    .I1(rd_sec_addr_Z[5]),
+    .I2(n82_6) 
+);
+defparam n80_s2.INIT=8'h80;
+  LUT4 n77_s2 (
+    .F(n77_6),
+    .I0(n77_7),
+    .I1(rd_sec_addr_Z[4]),
+    .I2(rd_sec_addr_Z[5]),
+    .I3(n82_6) 
+);
+defparam n77_s2.INIT=16'h8000;
+  LUT3 n76_s2 (
+    .F(n76_6),
+    .I0(rd_sec_addr_Z[8]),
+    .I1(rd_sec_addr_Z[9]),
+    .I2(n77_6) 
+);
+defparam n76_s2.INIT=8'h80;
+  LUT4 n74_s2 (
+    .F(n74_6),
+    .I0(rd_sec_addr_Z[8]),
+    .I1(rd_sec_addr_Z[9]),
+    .I2(rd_sec_addr_Z[10]),
+    .I3(rd_sec_addr_Z[11]) 
+);
+defparam n74_s2.INIT=16'h8000;
+  LUT3 n73_s2 (
+    .F(n73_6),
+    .I0(rd_sec_addr_Z[12]),
+    .I1(n77_6),
+    .I2(n74_6) 
+);
+defparam n73_s2.INIT=8'h80;
+  LUT4 n71_s2 (
+    .F(n71_6),
+    .I0(rd_sec_addr_Z[12]),
+    .I1(rd_sec_addr_Z[13]),
+    .I2(n77_6),
+    .I3(n74_6) 
+);
+defparam n71_s2.INIT=16'h8000;
+  LUT2 n70_s2 (
+    .F(n70_6),
+    .I0(rd_sec_addr_Z[14]),
+    .I1(rd_sec_addr_Z[15]) 
+);
+defparam n70_s2.INIT=4'h8;
+  LUT4 n69_s2 (
+    .F(n69_6),
+    .I0(n69_7),
+    .I1(rd_sec_addr_Z[12]),
+    .I2(n74_6),
+    .I3(n70_6) 
+);
+defparam n69_s2.INIT=16'h8000;
+  LUT3 n68_s2 (
+    .F(n68_6),
+    .I0(rd_sec_addr_Z[17]),
+    .I1(n77_6),
+    .I2(n69_6) 
+);
+defparam n68_s2.INIT=8'h80;
+  LUT2 n66_s2 (
+    .F(n66_6),
+    .I0(rd_sec_addr_Z[18]),
+    .I1(rd_sec_addr_Z[19]) 
+);
+defparam n66_s2.INIT=4'h8;
+  LUT4 n64_s2 (
+    .F(n64_6),
+    .I0(rd_sec_addr_Z[18]),
+    .I1(rd_sec_addr_Z[19]),
+    .I2(rd_sec_addr_Z[20]),
+    .I3(rd_sec_addr_Z[21]) 
+);
+defparam n64_s2.INIT=16'h8000;
+  LUT4 n63_s2 (
+    .F(n63_6),
+    .I0(n63_7),
+    .I1(rd_sec_addr_Z[17]),
+    .I2(n77_6),
+    .I3(n69_6) 
+);
+defparam n63_s2.INIT=16'h8000;
+  LUT4 n61_s2 (
+    .F(n61_6),
+    .I0(n61_7),
+    .I1(rd_sec_addr_Z[17]),
+    .I2(n77_6),
+    .I3(n69_6) 
+);
+defparam n61_s2.INIT=16'h8000;
+  LUT2 n59_s2 (
+    .F(n59_6),
+    .I0(rd_sec_addr_Z[25]),
+    .I1(rd_sec_addr_Z[26]) 
+);
+defparam n59_s2.INIT=4'h8;
+  LUT4 n58_s2 (
+    .F(n58_6),
+    .I0(rd_sec_addr_Z[23]),
+    .I1(rd_sec_addr_Z[24]),
+    .I2(rd_sec_addr_Z[27]),
+    .I3(n59_6) 
+);
+defparam n58_s2.INIT=16'h8000;
+  LUT4 n57_s2 (
+    .F(n57_6),
+    .I0(n57_7),
+    .I1(n77_6),
+    .I2(n69_6),
+    .I3(n58_6) 
+);
+defparam n57_s2.INIT=16'h8000;
+  LUT2 n55_s2 (
+    .F(n55_6),
+    .I0(rd_sec_addr_Z[29]),
+    .I1(rd_sec_addr_Z[30]) 
+);
+defparam n55_s2.INIT=4'h8;
+  LUT3 rd_flow_cnt_1_s4 (
+    .F(rd_flow_cnt_1_9),
+    .I0(rd_busy_Z),
+    .I1(wrusedw_w[9]),
+    .I2(sd_init_done_Z) 
+);
+defparam rd_flow_cnt_1_s4.INIT=8'h10;
+  LUT4 n96_s10 (
+    .F(n96_15),
+    .I0(rd_sec_addr_Z[1]),
+    .I1(rd_sec_addr_Z[0]),
+    .I2(n96_20),
+    .I3(rd_sec_addr_Z[6]) 
+);
+defparam n96_s10.INIT=16'hEF00;
+  LUT4 n96_s11 (
+    .F(n96_16),
+    .I0(rd_sec_addr_Z[7]),
+    .I1(rd_sec_addr_Z[8]),
+    .I2(rd_sec_addr_Z[9]),
+    .I3(n96_21) 
+);
+defparam n96_s11.INIT=16'h0100;
+  LUT2 n96_s12 (
+    .F(n96_17),
+    .I0(rd_sec_addr_Z[12]),
+    .I1(rd_sec_addr_Z[14]) 
+);
+defparam n96_s12.INIT=4'h8;
+  LUT3 n96_s13 (
+    .F(n96_18),
+    .I0(rd_sec_addr_Z[14]),
+    .I1(rd_sec_addr_Z[13]),
+    .I2(rd_sec_addr_Z[15]) 
+);
+defparam n96_s13.INIT=8'h07;
+  LUT4 n96_s14 (
+    .F(n96_19),
+    .I0(n96_22),
+    .I1(n96_23),
+    .I2(n96_24),
+    .I3(n96_25) 
+);
+defparam n96_s14.INIT=16'h8000;
+  LUT2 n77_s3 (
+    .F(n77_7),
+    .I0(rd_sec_addr_Z[6]),
+    .I1(rd_sec_addr_Z[7]) 
+);
+defparam n77_s3.INIT=4'h8;
+  LUT2 n69_s3 (
+    .F(n69_7),
+    .I0(rd_sec_addr_Z[13]),
+    .I1(rd_sec_addr_Z[16]) 
+);
+defparam n69_s3.INIT=4'h8;
+  LUT2 n63_s3 (
+    .F(n63_7),
+    .I0(rd_sec_addr_Z[22]),
+    .I1(n64_6) 
+);
+defparam n63_s3.INIT=4'h8;
+  LUT4 n61_s3 (
+    .F(n61_7),
+    .I0(rd_sec_addr_Z[22]),
+    .I1(rd_sec_addr_Z[23]),
+    .I2(rd_sec_addr_Z[24]),
+    .I3(n64_6) 
+);
+defparam n61_s3.INIT=16'h8000;
+  LUT4 n57_s3 (
+    .F(n57_7),
+    .I0(rd_sec_addr_Z[17]),
+    .I1(rd_sec_addr_Z[22]),
+    .I2(rd_sec_addr_Z[28]),
+    .I3(n64_6) 
+);
+defparam n57_s3.INIT=16'h8000;
+  LUT4 n96_s15 (
+    .F(n96_20),
+    .I0(rd_sec_addr_Z[2]),
+    .I1(rd_sec_addr_Z[3]),
+    .I2(rd_sec_addr_Z[4]),
+    .I3(rd_sec_addr_Z[5]) 
+);
+defparam n96_s15.INIT=16'h0001;
+  LUT2 n96_s16 (
+    .F(n96_21),
+    .I0(rd_sec_addr_Z[10]),
+    .I1(rd_sec_addr_Z[11]) 
+);
+defparam n96_s16.INIT=4'h1;
+  LUT4 n96_s17 (
+    .F(n96_22),
+    .I0(rd_sec_addr_Z[17]),
+    .I1(rd_sec_addr_Z[18]),
+    .I2(rd_sec_addr_Z[19]),
+    .I3(rd_flow_cnt[1]) 
+);
+defparam n96_s17.INIT=16'h0100;
+  LUT4 n96_s18 (
+    .F(n96_23),
+    .I0(rd_sec_addr_Z[28]),
+    .I1(rd_sec_addr_Z[29]),
+    .I2(rd_sec_addr_Z[30]),
+    .I3(rd_sec_addr_Z[31]) 
+);
+defparam n96_s18.INIT=16'h0001;
+  LUT4 n96_s19 (
+    .F(n96_24),
+    .I0(rd_sec_addr_Z[24]),
+    .I1(rd_sec_addr_Z[25]),
+    .I2(rd_sec_addr_Z[26]),
+    .I3(rd_sec_addr_Z[27]) 
+);
+defparam n96_s19.INIT=16'h0001;
+  LUT4 n96_s20 (
+    .F(n96_25),
+    .I0(rd_sec_addr_Z[20]),
+    .I1(rd_sec_addr_Z[21]),
+    .I2(rd_sec_addr_Z[22]),
+    .I3(rd_sec_addr_Z[23]) 
+);
+defparam n96_s20.INIT=16'h0001;
+  LUT3 n65_s3 (
+    .F(n65_8),
+    .I0(rd_sec_addr_Z[20]),
+    .I1(rd_sec_addr_Z[18]),
+    .I2(rd_sec_addr_Z[19]) 
+);
+defparam n65_s3.INIT=8'h80;
+  LUT4 n97_s11 (
+    .F(n97_16),
+    .I0(rd_flow_cnt[1]),
+    .I1(rd_flow_cnt[0]),
+    .I2(rd_busy_d0),
+    .I3(rd_busy_d1) 
+);
+defparam n97_s11.INIT=16'h0400;
+  LUT4 rd_sec_addr_31_s6 (
+    .F(rd_sec_addr_31_9),
+    .I0(rd_busy_d0),
+    .I1(rd_busy_d1),
+    .I2(rd_flow_cnt[0]),
+    .I3(rd_flow_cnt[1]) 
+);
+defparam rd_sec_addr_31_s6.INIT=16'h004F;
+  DFFCE rd_busy_d1_s0 (
+    .Q(rd_busy_d1),
+    .D(rd_busy_d0),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE rd_flow_cnt_0_s0 (
+    .Q(rd_flow_cnt[0]),
+    .D(n98_10),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE rd_sec_addr_31_s0 (
+    .Q(rd_sec_addr_Z[31]),
+    .D(n55_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_30_s0 (
+    .Q(rd_sec_addr_Z[30]),
+    .D(n56_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_29_s0 (
+    .Q(rd_sec_addr_Z[29]),
+    .D(n57_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_28_s0 (
+    .Q(rd_sec_addr_Z[28]),
+    .D(n58_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_27_s0 (
+    .Q(rd_sec_addr_Z[27]),
+    .D(n59_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_26_s0 (
+    .Q(rd_sec_addr_Z[26]),
+    .D(n60_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_25_s0 (
+    .Q(rd_sec_addr_Z[25]),
+    .D(n61_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_24_s0 (
+    .Q(rd_sec_addr_Z[24]),
+    .D(n62_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_23_s0 (
+    .Q(rd_sec_addr_Z[23]),
+    .D(n63_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_22_s0 (
+    .Q(rd_sec_addr_Z[22]),
+    .D(n64_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_21_s0 (
+    .Q(rd_sec_addr_Z[21]),
+    .D(n65_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_20_s0 (
+    .Q(rd_sec_addr_Z[20]),
+    .D(n66_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_19_s0 (
+    .Q(rd_sec_addr_Z[19]),
+    .D(n67_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_18_s0 (
+    .Q(rd_sec_addr_Z[18]),
+    .D(n68_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_17_s0 (
+    .Q(rd_sec_addr_Z[17]),
+    .D(n69_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_16_s0 (
+    .Q(rd_sec_addr_Z[16]),
+    .D(n70_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_15_s0 (
+    .Q(rd_sec_addr_Z[15]),
+    .D(n71_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_14_s0 (
+    .Q(rd_sec_addr_Z[14]),
+    .D(n72_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_13_s0 (
+    .Q(rd_sec_addr_Z[13]),
+    .D(n73_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_12_s0 (
+    .Q(rd_sec_addr_Z[12]),
+    .D(n74_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_11_s0 (
+    .Q(rd_sec_addr_Z[11]),
+    .D(n75_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_10_s0 (
+    .Q(rd_sec_addr_Z[10]),
+    .D(n76_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_9_s0 (
+    .Q(rd_sec_addr_Z[9]),
+    .D(n77_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_8_s0 (
+    .Q(rd_sec_addr_Z[8]),
+    .D(n78_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_7_s0 (
+    .Q(rd_sec_addr_Z[7]),
+    .D(n79_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_6_s0 (
+    .Q(rd_sec_addr_Z[6]),
+    .D(n80_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_5_s0 (
+    .Q(rd_sec_addr_Z[5]),
+    .D(n81_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_4_s0 (
+    .Q(rd_sec_addr_Z[4]),
+    .D(n82_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_3_s0 (
+    .Q(rd_sec_addr_Z[3]),
+    .D(n83_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_2_s0 (
+    .Q(rd_sec_addr_Z[2]),
+    .D(n84_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_1_s0 (
+    .Q(rd_sec_addr_Z[1]),
+    .D(n85_5),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_sec_addr_0_s0 (
+    .Q(rd_sec_addr_Z[0]),
+    .D(n86_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_sec_addr_31_9) 
+);
+  DFFCE rd_busy_d0_s0 (
+    .Q(rd_busy_d0),
+    .D(rd_busy_Z),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+  DFFCE rd_start_en_s1 (
+    .Q(rd_start_en_Z),
+    .D(n96_11),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_start_en_5) 
+);
+defparam rd_start_en_s1.INIT=1'b0;
+  DFFCE rd_flow_cnt_1_s1 (
+    .Q(rd_flow_cnt[1]),
+    .D(n97_12),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(rd_flow_cnt_1_8) 
+);
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+endmodule /* sd_ctrl_read */
+`pragma protect begin_protected
+`pragma protect version="2.2"
+`pragma protect author="default"
+`pragma protect author_info="default"
+`pragma protect encrypt_agent="GOWIN"
+`pragma protect encrypt_agent_info="GOWIN Encrypt Version 2.2"
+
+`pragma protect encoding=(enctype="base64", line_length=76, bytes=256)
+`pragma protect key_keyowner="GOWIN",key_keyname="GWK2022-10",key_method="rsa"
+`pragma protect key_block
+bav1I7dadVJn/9CFBsMDmeeYDXLIF8xmq5SWLepn3Mo0lll8YVVq5KdXJYDecO0E/DykpnA6+IJD
+FzESblbP5yD2PFI09VpuPXi9W28J0VGul0QLORUEGd+KxwVD9/MsdtviHXEtbsKtnJ7eOYB40CF3
+M8bbpe+Me+mmyLf7m/3qct8zhhkG4Obm2/ARx0pvehfZzTCBw4KD3oJYjZ1XslIxQSBUseiNvRa9
+gYNJ7NmIKyvs7r7h3sctr7QYbcoUp/ZPSWMkJauedoGr1Fyi65ZiTIQa7WaTKRCJof3Tq6efAOkz
+B71uhBMUBSJjzyt7vE3m9shq/cgx8Bb3FgW/qQ==
+
+`pragma protect encoding=(enctype="base64", line_length=76, bytes=37088)
+`pragma protect data_keyowner="default-ip-vendor"
+`pragma protect data_keyname="default-ip-key"
+`pragma protect data_method="aes128-cbc"
+`pragma protect data_block
+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
+`pragma protect end_protected
+module sd_ctrl_dcfifo (
+  rd_val_en_Z,
+  n57_4,
+  rst_d,
+  HP_BCK_d,
+  clk_d,
+  rd_val_data_Z,
+  rd_empty,
+  n9_6,
+  wrusedw_w,
+  q_w
+)
+;
+input rd_val_en_Z;
+input n57_4;
+input rst_d;
+input HP_BCK_d;
+input clk_d;
+input [15:0] rd_val_data_Z;
+output rd_empty;
+output n9_6;
+output [9:9] wrusedw_w;
+output [15:0] q_w;
+wire VCC;
+wire GND;
+  \~fifo.sd_ctrl_dcfifo  fifo_inst (
+    .rd_val_en_Z(rd_val_en_Z),
+    .n57_4(n57_4),
+    .rst_d(rst_d),
+    .HP_BCK_d(HP_BCK_d),
+    .clk_d(clk_d),
+    .rd_val_data_Z(rd_val_data_Z[15:0]),
+    .rd_empty(rd_empty),
+    .n9_6(n9_6),
+    .wrusedw_w(wrusedw_w[9]),
+    .q_w(q_w[15:0])
+);
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+endmodule /* sd_ctrl_dcfifo */
+module sd_ctrl_read_top (
+  clk_d,
+  rst_d,
+  rd_busy_Z,
+  sd_init_done_Z,
+  rd_val_en_Z,
+  n57_4,
+  HP_BCK_d,
+  rd_val_data_Z,
+  rd_start_en_Z,
+  rd_empty,
+  n9_6,
+  rd_sec_addr_Z,
+  q_w
+)
+;
+input clk_d;
+input rst_d;
+input rd_busy_Z;
+input sd_init_done_Z;
+input rd_val_en_Z;
+input n57_4;
+input HP_BCK_d;
+input [15:0] rd_val_data_Z;
+output rd_start_en_Z;
+output rd_empty;
+output n9_6;
+output [31:0] rd_sec_addr_Z;
+output [15:0] q_w;
+wire [9:9] wrusedw_w;
+wire VCC;
+wire GND;
+  sd_ctrl_read u_sd_ctrl_read_0 (
+    .clk_d(clk_d),
+    .rst_d(rst_d),
+    .rd_busy_Z(rd_busy_Z),
+    .sd_init_done_Z(sd_init_done_Z),
+    .wrusedw_w(wrusedw_w[9]),
+    .rd_start_en_Z(rd_start_en_Z),
+    .rd_sec_addr_Z(rd_sec_addr_Z[31:0])
+);
+  sd_ctrl_dcfifo u_sd_ctrl_dcfifo_0 (
+    .rd_val_en_Z(rd_val_en_Z),
+    .n57_4(n57_4),
+    .rst_d(rst_d),
+    .HP_BCK_d(HP_BCK_d),
+    .clk_d(clk_d),
+    .rd_val_data_Z(rd_val_data_Z[15:0]),
+    .rd_empty(rd_empty),
+    .n9_6(n9_6),
+    .wrusedw_w(wrusedw_w[9]),
+    .q_w(q_w[15:0])
+);
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+endmodule /* sd_ctrl_read_top */
+module top (
+  clk,
+  rst,
+  sd_miso,
+  sd_clk,
+  sd_cs,
+  sd_mosi,
+  HP_BCK,
+  HP_WS,
+  HP_DIN,
+  PA_EN
+)
+;
+input clk;
+input rst;
+input sd_miso;
+output sd_clk;
+output sd_cs;
+output sd_mosi;
+output HP_BCK;
+output HP_WS;
+output HP_DIN;
+output PA_EN;
+wire clk_d;
+wire rst_d;
+wire sd_miso_d;
+wire n57_4;
+wire n21_9;
+wire n11_4;
+wire n10_4;
+wire HP_BCK_d;
+wire n12_6;
+wire n22_6;
+wire req_w;
+wire HP_DIN_d;
+wire HP_WS_d;
+wire sd_cs_d;
+wire sd_mosi_d;
+wire sd_init_done_Z;
+wire rd_val_en_Z;
+wire rd_busy_Z;
+wire rd_start_en_Z;
+wire rd_empty;
+wire n9_6;
+wire [2:0] clk_6m_reg;
+wire [0:0] clk_1p5m_reg;
+wire [15:0] rd_val_data_Z;
+wire [31:0] rd_sec_addr_Z;
+wire [15:0] q_w;
+wire VCC;
+wire GND;
+  IBUF clk_ibuf (
+    .O(clk_d),
+    .I(clk) 
+);
+  IBUF rst_ibuf (
+    .O(rst_d),
+    .I(rst) 
+);
+  IBUF sd_miso_ibuf (
+    .O(sd_miso_d),
+    .I(sd_miso) 
+);
+  OBUF sd_clk_obuf (
+    .O(sd_clk),
+    .I(n9_6) 
+);
+  OBUF sd_cs_obuf (
+    .O(sd_cs),
+    .I(sd_cs_d) 
+);
+  OBUF sd_mosi_obuf (
+    .O(sd_mosi),
+    .I(sd_mosi_d) 
+);
+  OBUF HP_BCK_obuf (
+    .O(HP_BCK),
+    .I(HP_BCK_d) 
+);
+  OBUF HP_WS_obuf (
+    .O(HP_WS),
+    .I(HP_WS_d) 
+);
+  OBUF HP_DIN_obuf (
+    .O(HP_DIN),
+    .I(HP_DIN_d) 
+);
+  OBUF PA_EN_obuf (
+    .O(PA_EN),
+    .I(VCC) 
+);
+  LUT2 n57_s0 (
+    .F(n57_4),
+    .I0(rd_empty),
+    .I1(req_w) 
+);
+defparam n57_s0.INIT=4'h4;
+  LUT2 n21_s3 (
+    .F(n21_9),
+    .I0(clk_1p5m_reg[0]),
+    .I1(HP_BCK_d) 
+);
+defparam n21_s3.INIT=4'h6;
+  LUT2 n11_s0 (
+    .F(n11_4),
+    .I0(clk_6m_reg[0]),
+    .I1(clk_6m_reg[1]) 
+);
+defparam n11_s0.INIT=4'h6;
+  LUT3 n10_s0 (
+    .F(n10_4),
+    .I0(clk_6m_reg[0]),
+    .I1(clk_6m_reg[1]),
+    .I2(clk_6m_reg[2]) 
+);
+defparam n10_s0.INIT=8'h78;
+  DFFCE clk_6m_reg_1_s0 (
+    .Q(clk_6m_reg[1]),
+    .D(n11_4),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam clk_6m_reg_1_s0.INIT=1'b0;
+  DFFCE clk_6m_reg_0_s0 (
+    .Q(clk_6m_reg[0]),
+    .D(n12_6),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam clk_6m_reg_0_s0.INIT=1'b0;
+  DFFCE clk_1p5m_reg_1_s0 (
+    .Q(HP_BCK_d),
+    .D(n21_9),
+    .CLK(clk_6m_reg[2]),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam clk_1p5m_reg_1_s0.INIT=1'b0;
+  DFFCE clk_1p5m_reg_0_s0 (
+    .Q(clk_1p5m_reg[0]),
+    .D(n22_6),
+    .CLK(clk_6m_reg[2]),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam clk_1p5m_reg_0_s0.INIT=1'b0;
+  DFFCE clk_6m_reg_2_s0 (
+    .Q(clk_6m_reg[2]),
+    .D(n10_4),
+    .CLK(clk_d),
+    .CLEAR(rst_d),
+    .CE(VCC) 
+);
+defparam clk_6m_reg_2_s0.INIT=1'b0;
+  INV n12_s2 (
+    .O(n12_6),
+    .I(clk_6m_reg[0]) 
+);
+  INV n22_s2 (
+    .O(n22_6),
+    .I(clk_1p5m_reg[0]) 
+);
+  audio_drive u_audio_drive_0 (
+    .HP_BCK_d(HP_BCK_d),
+    .rst_d(rst_d),
+    .q_w(q_w[15:0]),
+    .req_w(req_w),
+    .HP_DIN_d(HP_DIN_d),
+    .HP_WS_d(HP_WS_d)
+);
+  sd_ctrl_top u_sd_ctrl_top (
+    .rd_start_en_Z(rd_start_en_Z),
+    .clk_d(clk_d),
+    .rst_d(rst_d),
+    .n9_6(n9_6),
+    .sd_miso_d(sd_miso_d),
+    .rd_sec_addr_Z(rd_sec_addr_Z[31:0]),
+    .sd_cs_d(sd_cs_d),
+    .sd_mosi_d(sd_mosi_d),
+    .sd_init_done_Z(sd_init_done_Z),
+    .rd_val_en_Z(rd_val_en_Z),
+    .rd_busy_Z(rd_busy_Z),
+    .rd_val_data_Z(rd_val_data_Z[15:0])
+);
+  sd_ctrl_read_top u_sd_ctrl_read_top_0 (
+    .clk_d(clk_d),
+    .rst_d(rst_d),
+    .rd_busy_Z(rd_busy_Z),
+    .sd_init_done_Z(sd_init_done_Z),
+    .rd_val_en_Z(rd_val_en_Z),
+    .n57_4(n57_4),
+    .HP_BCK_d(HP_BCK_d),
+    .rd_val_data_Z(rd_val_data_Z[15:0]),
+    .rd_start_en_Z(rd_start_en_Z),
+    .rd_empty(rd_empty),
+    .n9_6(n9_6),
+    .rd_sec_addr_Z(rd_sec_addr_Z[31:0]),
+    .q_w(q_w[15:0])
+);
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+  GSR GSR (
+    .GSRI(VCC) 
+);
+endmodule /* top */

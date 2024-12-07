@@ -1,0 +1,53 @@
+{
+ "Device" : "GW5AST-138B",
+ "Files" : [
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/Ten_Giga_Ethernet_MAC/Ten_Giga_Ethernet_MAC.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/XGMII_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/XGbE_Send_UDP.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/Xge_MAC_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/Xge_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/gowin_pll/gowin_pll.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/serdes/serdes.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/serdes/ten_giga_serial_ethernet/ten_giga_serial_ethernet.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/serdes/ten_giga_serial_ethernet_1/ten_giga_serial_ethernet_1.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/src/top.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "C:/Users/Think/OneDrive/Documents/GitHub/TangMega-138KPro-example/sfp+/10G_Serial_Ethernet/XGbE_UDP/impl/temp/rtl_parser.result",
+ "Top" : "",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}

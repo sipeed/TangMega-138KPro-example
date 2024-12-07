@@ -1,0 +1,118 @@
+[
+ {
+  "InstFile" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/TangMega-138KPro-example-main/sfp+/src/top.v",
+  "InstLine" : 1,
+  "InstName" : "top",
+  "Mode" : 1,
+  "ModuleFile" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/TangMega-138KPro-example-main/sfp+/src/top.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "top",
+  "Process" : 0,
+  "SetMode" : false,
+  "SetProcess" : false,
+  "SubNodes" : [
+   {
+    "InstFile" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/TangMega-138KPro-example-main/sfp+/src/top.v",
+    "InstLine" : 77,
+    "InstName" : "Serdes_Top_inst",
+    "Mode" : 1,
+    "ModuleFile" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/TangMega-138KPro-example-main/sfp+/src/serdes/serdes.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "SerDes_Top",
+    "Process" : 0,
+    "SetMode" : false,
+    "SetProcess" : false,
+    "SubNodes" : [
+     {
+      "InstFile" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/TangMega-138KPro-example-main/sfp+/src/serdes/serdes.v",
+      "InstLine" : 475,
+      "InstName" : "Customized_PHY_Top_inst",
+      "Mode" : 1,
+      "ModuleFile" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/TangMega-138KPro-example-main/sfp+/src/serdes/customized_phy/customized_phy.v",
+      "ModuleLine" : 10,
+      "ModuleName" : "Customized_PHY_Top",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/TangMega-138KPro-example-main/sfp+/src/top.v",
+    "InstLine" : 153,
+    "InstName" : "q1ln1_prbs7_single_channel",
+    "Mode" : 1,
+    "ModuleFile" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/TangMega-138KPro-example-main/sfp+/src/prbs7_single_channel.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "prbs7_single_channel",
+    "Process" : 0,
+    "SetMode" : false,
+    "SetProcess" : false,
+    "SubNodes" : [
+     {
+      "InstFile" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/TangMega-138KPro-example-main/sfp+/src/prbs7_single_channel.v",
+      "InstLine" : 27,
+      "InstName" : "prbs7_gen",
+      "Mode" : 1,
+      "ModuleFile" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/TangMega-138KPro-example-main/sfp+/src/prbs7_gen.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "prbs7_gen",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     },
+     {
+      "InstFile" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/TangMega-138KPro-example-main/sfp+/src/prbs7_single_channel.v",
+      "InstLine" : 39,
+      "InstName" : "prbs7_chk",
+      "Mode" : 1,
+      "ModuleFile" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/TangMega-138KPro-example-main/sfp+/src/prbs7_chk.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "prbs7_chk",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/TangMega-138KPro-example-main/sfp+/src/top.v",
+    "InstLine" : 195,
+    "InstName" : "q1ln0_prbs7_single_channel",
+    "Mode" : 1,
+    "ModuleFile" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/TangMega-138KPro-example-main/sfp+/src/prbs7_single_channel.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "prbs7_single_channel",
+    "Process" : 0,
+    "SetMode" : false,
+    "SetProcess" : false,
+    "SubNodes" : [
+     {
+      "InstFile" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/TangMega-138KPro-example-main/sfp+/src/prbs7_single_channel.v",
+      "InstLine" : 27,
+      "InstName" : "prbs7_gen",
+      "Mode" : 1,
+      "ModuleFile" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/TangMega-138KPro-example-main/sfp+/src/prbs7_gen.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "prbs7_gen",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     },
+     {
+      "InstFile" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/TangMega-138KPro-example-main/sfp+/src/prbs7_single_channel.v",
+      "InstLine" : 39,
+      "InstName" : "prbs7_chk",
+      "Mode" : 1,
+      "ModuleFile" : "C:/Users/Think/Documents/FPGA_Project/Gowin/138K-FC676/TangMega-138KPro-example-main/sfp+/src/prbs7_chk.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "prbs7_chk",
+      "Process" : 0,
+      "SetMode" : false,
+      "SetProcess" : false
+     }
+    ]
+   }
+  ]
+ }
+]
