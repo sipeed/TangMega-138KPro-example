@@ -26,6 +26,8 @@ TODOs:
 
 - [x] Transplant GOWIN official ref_design
 - [x] Check and upload the new demo.
+- [ ] Add a demo for PS. (in progress)
+- [ ] Transplant RTOS for ae350.
 
 <br>
 
