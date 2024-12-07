@@ -1,0 +1,43 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy_top.v'
+Analyzing included file 'usb2_0_softphy_name.v'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy_top.v":4)
+Back to file 'C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy_top.v'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy_top.v":4)
+Analyzing included file 'C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\static_macro_define.v'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy_top.v":5)
+Back to file 'C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy_top.v'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy_top.v":5)
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy.v'
+Analyzing included file 'usb2_0_softphy_name.v'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy.v":4192)
+Back to file 'C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy.v'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy.v":4192)
+Analyzing included file 'C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\static_macro_define.v'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy.v":4192)
+Back to file 'C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy.v'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy.v":4192)
+Undeclared symbol 'reset_stop', assumed default net type 'wire'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy.v":4192)
+Undeclared symbol 'reset_calib', assumed default net type 'wire'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy.v":4192)
+Undeclared symbol 'ready', assumed default net type 'wire'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy.v":4192)
+Undeclared symbol 'sclk', assumed default net type 'wire'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy.v":4192)
+Undeclared symbol 'tx_en', assumed default net type 'wire'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy.v":4192)
+Compiling module 'USB2_0_SoftPHY_Top'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy_top.v":10)
+Compiling module '**'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy.v":4192)
+Extracting RAM for identifier '**'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy.v":4192)
+WARN  (EX3791) : Expression size ** truncated to fit in target size **("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy.v":4192)
+NOTE  (EX0101) : Current top module is "USB2_0_SoftPHY_Top"
+WARN  (NL0001) : Sweep user defined dangling instance "usb2_0_softphy/u_usb_20_phy_utmi/u_usb2_0_softphy/u_usb_phy_hs/i_rx_phy/u_cdr_serdes_x8_dx/DRU_500M_Top/iodelay_inst_a"("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\USBTwoSoftPHY\data\usb2_0_softphy.v":4192)
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "C:\Users\12161\OneDrive\Desktop\HOSHI_TIMING\138K-FPG676A\src\usb2_0_softphy\temp\USBTwoSoftPHY\usb2_0_softphy.vg" completed
+Generate template file "C:\Users\12161\OneDrive\Desktop\HOSHI_TIMING\138K-FPG676A\src\usb2_0_softphy\temp\USBTwoSoftPHY\usb2_0_softphy_tmp.v" completed
+[100%] Generate report file "C:\Users\12161\OneDrive\Desktop\HOSHI_TIMING\138K-FPG676A\src\usb2_0_softphy\temp\USBTwoSoftPHY\usb2_0_softphy_syn.rpt.html" completed
+GowinSynthesis finish

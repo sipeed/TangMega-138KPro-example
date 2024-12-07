@@ -1,0 +1,35 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\Integer_Division\data\integer_division_wrap.v'
+Analyzing included file 'define.vh'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\Integer_Division\data\integer_division_wrap.v":1)
+Back to file 'C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\Integer_Division\data\integer_division_wrap.v'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\Integer_Division\data\integer_division_wrap.v":1)
+Analyzing included file 'C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\Integer_Division\data\static_macro_define.v'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\Integer_Division\data\integer_division_wrap.v":2)
+Back to file 'C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\Integer_Division\data\integer_division_wrap.v'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\Integer_Division\data\integer_division_wrap.v":2)
+Analyzing included file 'parameter.vh'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\Integer_Division\data\integer_division_wrap.v":19)
+Back to file 'C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\Integer_Division\data\integer_division_wrap.v'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\Integer_Division\data\integer_division_wrap.v":19)
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\Integer_Division\data\integer_division.v'
+Analyzing included file 'define.vh'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\Integer_Division\data\integer_division.v":520)
+Back to file 'C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\Integer_Division\data\integer_division.v'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\Integer_Division\data\integer_division.v":520)
+Compiling module 'Integer_Division_Top'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\Integer_Division\data\integer_division_wrap.v":3)
+Compiling module '**'("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\Integer_Division\data\integer_division.v":520)
+NOTE  (EX0101) : Current top module is "Integer_Division_Top"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "C:\Users\12161\OneDrive\Desktop\HOSHI_TIMING\138K-FPG676A\src\integer_division\temp\integer_division\integer_division.vg" completed
+Generate template file "C:\Users\12161\OneDrive\Desktop\HOSHI_TIMING\138K-FPG676A\src\integer_division\temp\integer_division\integer_division_tmp.v" completed
+[100%] Generate report file "C:\Users\12161\OneDrive\Desktop\HOSHI_TIMING\138K-FPG676A\src\integer_division\temp\integer_division\integer_division_syn.rpt.html" completed
+GowinSynthesis finish
