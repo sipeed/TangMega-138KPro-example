@@ -24,8 +24,8 @@ Status: Unreviewed
 
 TODOs:
 
-- [ ] Transplant GOWIN official ref_design(In progress)
-- [ ] Check and upload the new demo.
+- [x] Transplant GOWIN official ref_design
+- [x] Check and upload the new demo.
 
 <br>
 
