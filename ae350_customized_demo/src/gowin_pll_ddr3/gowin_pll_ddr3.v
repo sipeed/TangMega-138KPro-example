@@ -1,11 +1,11 @@
-//Copyright (C)2014-2023 Gowin Semiconductor Corporation.
+//Copyright (C)2014-2024 Gowin Semiconductor Corporation.
 //All rights reserved.
 //File Title: IP file
-//Tool Version: V1.9.9 (64-bit)
+//Tool Version: V1.9.10.03 (64-bit)
 //Part Number: GW5AST-LV138FPG676AES
-//Device: GW5AST-138B
+//Device: GW5AST-138
 //Device Version: B
-//Created Time: Mon Nov 27 08:28:05 2023
+//Created Time: Sat Oct 26 20:45:06 2024
 
 module Gowin_PLL_DDR3 (lock, clkout0, clkout2, clkin, reset, enclk0, enclk2);
 
@@ -85,7 +85,7 @@ defparam PLL_inst.IDIV_SEL = 1;
 defparam PLL_inst.FBDIV_SEL = 1;
 defparam PLL_inst.ODIV0_SEL = 16;
 defparam PLL_inst.ODIV1_SEL = 8;
-defparam PLL_inst.ODIV2_SEL = 4;
+defparam PLL_inst.ODIV2_SEL = 2;
 defparam PLL_inst.ODIV3_SEL = 8;
 defparam PLL_inst.ODIV4_SEL = 8;
 defparam PLL_inst.ODIV5_SEL = 8;

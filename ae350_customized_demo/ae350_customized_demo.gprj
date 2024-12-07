@@ -3,7 +3,7 @@
 <Project>
     <Template>FPGA</Template>
     <Version>5</Version>
-    <Device name="GW5AST-138B" pn="GW5AST-LV138FPG676AES">gw5ast138b-002</Device>
+    <Device name="GW5AST-138B" pn="GW5AST-LV138FPG676AC1/I0">gw5ast138b-007</Device>
     <FileList>
         <File path="src/ae350_customized_demo.v" type="file.verilog" enable="1"/>
         <File path="src/ddr3_memory/ddr3_memory_interface/ddr3_memory_interface.v" type="file.verilog" enable="1"/>

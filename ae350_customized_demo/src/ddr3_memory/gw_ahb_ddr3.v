@@ -31,11 +31,11 @@ module gw_ahb_ddr3_top
     output  wire            DDR3_CKE,
     output  wire            DDR3_RESET_N,
     output  wire            DDR3_ODT,
-    output  wire    [13:0]  DDR3_ADDR,
-    output  wire    [1:0]   DDR3_DM,
-    inout   wire    [15:0]  DDR3_DQ,
-    inout   wire    [1:0]   DDR3_DQS,
-    inout   wire    [1:0]   DDR3_DQS_N,
+    output  wire    [14:0]  DDR3_ADDR,
+    output  wire    [3:0]   DDR3_DM,
+    inout   wire    [31:0]  DDR3_DQ,
+    inout   wire    [3:0]   DDR3_DQS,
+    inout   wire    [3:0]   DDR3_DQS_N,
     // AHB bus I/F
     input   wire            HCLK,
     input   wire            HRESETN,
@@ -143,11 +143,11 @@ module gw_ahb_ddr3
     output                      ddr_cke,
     output                      ddr_odt,
     output                      ddr_reset_n,
-    output            [13 : 0]  ddr_addr,
-    output             [1 : 0]  ddr_dm,
-    inout             [15 : 0]  ddr_dq,
-    inout              [1 : 0]  ddr_dqs,
-    inout              [1 : 0]  ddr_dqs_n 
+    output            [14 : 0]  ddr_addr,
+    output             [3 : 0]  ddr_dm,
+    inout             [31 : 0]  ddr_dq,
+    inout              [3 : 0]  ddr_dqs,
+    inout              [3 : 0]  ddr_dqs_n 
 );
 
 

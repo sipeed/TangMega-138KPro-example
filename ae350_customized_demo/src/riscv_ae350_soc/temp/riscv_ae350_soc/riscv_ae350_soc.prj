@@ -4,23 +4,30 @@
     <Version>beta</Version>
     <Device id="GW5AST-138B" package="FCPBGA676A" speed="1" partNumber="GW5AST-LV138FPG676AES"/>
     <FileList>
-        <File path="D:/Gowin/Gowin_V1.9.9_x64/IDE/ipcore/RiscV_AE350_SOC/data/riscv_ae350_top.v" type="verilog"/>
-        <File path="D:/Gowin/Gowin_V1.9.9_x64/IDE/ipcore/RiscV_AE350_SOC/data/riscv_ae350_soc.v" type="verilog"/>
-        <File path="D:/Gowin/Gowin_V1.9.9_x64/IDE/ipcore/RiscV_AE350_SOC/data/riscv_ae350_ddr3.v" type="verilog"/>
-        <File path="D:/Gowin/Gowin_V1.9.9_x64/IDE/ipcore/RiscV_AE350_SOC/data/riscv_ae350_flash.v" type="verilog"/>
-        <File path="D:/Gowin/Gowin_V1.9.9_x64/IDE/ipcore/RiscV_AE350_SOC/data/ddr3_memory_interface.v" type="verilog"/>
-        <File path="D:/Gowin/Gowin_V1.9.9_x64/IDE/ipcore/RiscV_AE350_SOC/data/ddr3_memory_rdfifo.v" type="verilog"/>
-        <File path="D:/Gowin/Gowin_V1.9.9_x64/IDE/ipcore/RiscV_AE350_SOC/data/ddr3_memory_wrfifo.v" type="verilog"/>
+        <File path="C:/Gowin/Gowin_V1.9.10.03_x64/IDE/ipcore/RiscV_AE350_SOC/data/riscv_ae350_top.v" type="verilog"/>
+        <File path="C:/Gowin/Gowin_V1.9.10.03_x64/IDE/ipcore/RiscV_AE350_SOC/data/riscv_ae350_soc.v" type="verilog"/>
+        <File path="C:/Gowin/Gowin_V1.9.10.03_x64/IDE/ipcore/RiscV_AE350_SOC/data/riscv_ae350_ddr3.v" type="verilog"/>
+        <File path="C:/Gowin/Gowin_V1.9.10.03_x64/IDE/ipcore/RiscV_AE350_SOC/data/riscv_ae350_flash.v" type="verilog"/>
+        <File path="C:/Gowin/Gowin_V1.9.10.03_x64/IDE/ipcore/RiscV_AE350_SOC/data/ddr3_1_4code_hs.v" type="verilog"/>
+        <File path="C:/Gowin/Gowin_V1.9.10.03_x64/IDE/ipcore/RiscV_AE350_SOC/data/DDR3_TOP.v" type="verilog"/>
+        <File path="C:/Gowin/Gowin_V1.9.10.03_x64/IDE/ipcore/RiscV_AE350_SOC/data/fifo_top_32to128.v" type="verilog"/>
+        <File path="C:/Gowin/Gowin_V1.9.10.03_x64/IDE/ipcore/RiscV_AE350_SOC/data/fifo_top_128to32.v" type="verilog"/>
+        <File path="C:/Gowin/Gowin_V1.9.10.03_x64/IDE/ipcore/RiscV_AE350_SOC/data/gw_dtcm.v" type="verilog"/>
+        <File path="C:/Gowin/Gowin_V1.9.10.03_x64/IDE/ipcore/RiscV_AE350_SOC/data/gw_itcm.v" type="verilog"/>
     </FileList>
     <OptionList>
         <Option type="disable_insert_pad" value="1"/>
-        <Option type="include_path" value="D:/Gowin/Gowin_V1.9.9_x64/IDE/ipcore/RiscV_AE350_SOC/data"/>
-        <Option type="include_path" value="C:/Users/liukai/Desktop/ae350_customized_demo/src/riscv_ae350_soc/temp/riscv_ae350_soc"/>
+        <Option type="enable_dsrm" value="0"/>
+        <Option type="include_path" value="C:/Gowin/Gowin_V1.9.10.03_x64/IDE/ipcore/RiscV_AE350_SOC/data/ddr3_default_settings"/>
+        <Option type="include_path" value="C:/Gowin/Gowin_V1.9.10.03_x64/IDE/ipcore/RiscV_AE350_SOC/data"/>
+        <Option type="include_path" value="C:/Users/12161/OneDrive/Desktop/HOSHI_TIMING/ae350_customized_demo/src/riscv_ae350_soc/temp/riscv_ae350_soc"/>
         <Option type="output_file" value="riscv_ae350_soc.vg"/>
         <Option type="output_template" value="riscv_ae350_soc_tmp.v"/>
         <Option type="ram_balance" value="1"/>
         <Option type="ram_rw_check" value="1"/>
         <Option type="top_module" value="RiscV_AE350_SOC_Top"/>
+        <Option type="vcc" value="0.9"/>
+        <Option type="vccx" value="3.3"/>
         <Option type="verilog_language" value="sysv-2017"/>
     </OptionList>
 </Project>

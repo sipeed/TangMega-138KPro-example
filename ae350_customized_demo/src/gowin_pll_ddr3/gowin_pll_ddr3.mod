@@ -1,5 +1,5 @@
 -series GW5AST
--device GW5AST-138B
+-device GW5AST-138
 -device_version B
 -package FCPBGA676A
 -part_number GW5AST-LV138FPG676AES
@@ -7,7 +7,7 @@
 
 -mod_name Gowin_PLL_DDR3
 -file_name gowin_pll_ddr3
--path C:/Users/liukai/Desktop/ae350_customized_demo/src/gowin_pll_ddr3/
+-path C:/Users/Think/OneDrive/Documents/FPGA_Project/Gowin/138K-FC676/TangMega-138KPro-example-main/ae350_customized_demo/src/gowin_pll_ddr3/
 -type PLL_ADV
 -file_type vlg
 -ssc false
@@ -42,7 +42,7 @@
 -en_clkout2 true
 -clkout2_bypass false
 -dyn_odiv2_sel false
--odiv2_sel 4
+-odiv2_sel 2
 -dyn_dt2_sel false
 -clkout2_dt_dir 1
 -clkout2_dt_step 0

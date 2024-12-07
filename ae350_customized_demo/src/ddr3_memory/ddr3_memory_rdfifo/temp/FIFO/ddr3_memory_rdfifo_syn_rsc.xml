@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="ddr3_memory_rdfifo" Register="54" Alu="17" Lut="57" Bsram="4"/>
+<Module name="ddr3_memory_rdfifo" Register="54" Alu="17" Lut="57" Bsram="4" T_Register="54(54)" T_Alu="17(17)" T_Lut="57(57)" T_Bsram="4(4)"/>
