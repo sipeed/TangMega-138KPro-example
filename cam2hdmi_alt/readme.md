@@ -72,7 +72,7 @@ Here are the details for LEDs:(LED0 is on the far right)
 | ----------| --------------------------------|-------------------|
 | LED0      |  DDR3 initialization            | ON                |
 | LED1      |  DDR3_pll_lock                  | ON                |
-| LED2      |  TMDS_DDR_pll_lock              | ON                |
+| LED2      |  TMDS_pll_lock                  | ON                |
 | LED3      |  cmos_vs_cnt                    | Blink             |
 | LED4      |  cmos_i2c_done                  | ON                |
 
